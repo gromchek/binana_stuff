@@ -537,9 +537,12 @@ static import_symbols() {
 	set_name(0x0048BF30, "CSimpleFontString_SetDrawLayer");
 	set_name(0x0048C040, "CSimpleTexture_SetBlendMode");
 	set_name(0x0048C1C0, "CSimpleTexture_SetVertexColor");
+	set_name(0x0048C240, "CSimpleTexture_SetGradient");
+	set_name(0x0048C310, "CSimpleTexture_SetGradientAlpha");
 	set_name(0x0048C3E0, "CSimpleTexture_SetAlpha");
 	set_name(0x0048C860, "CSimpleTexture_SetRotation");
 	set_name(0x0048D030, "CSimpleFontString_SetAlpha");
+	set_name(0x0048D0F0, "CSimpleFontString_SetAlphaGradient");
 	set_name(0x0048D380, "CSimpleFontString_SetFontObject");
 	set_name(0x0048D510, "CSimpleFontString_GetFont");
 	set_name(0x0048D5B0, "CSimpleFontString_SetFont");
@@ -703,6 +706,7 @@ static import_symbols() {
 	set_name(0x004A3940, "CSimpleFont_CopyFontObject");
 	set_name(0x004A3A50, "CSimpleFont_SetFont");
 	set_name(0x004A3F90, "CSimpleFont_SetSpacing");
+	set_name(0x004A4170, "CSimpleFont_IsObjectType");
 	set_name(0x004A4930, "CSimpleFont_SetJustifyH");
 	set_name(0x004A49C0, "CSimpleFont_SetJustifyV");
 	set_name(0x004A51A0, "CSimpleAnim_SetStartDelay");
@@ -711,6 +715,7 @@ static import_symbols() {
 	set_name(0x004A5430, "CSimpleAnim_SetSmoothProgress");
 	set_name(0x004A5740, "CSimpleAnim_SetSmoothing");
 	set_name(0x004A6340, "CSimpleRotationAnim_SetDegrees");
+	set_name(0x004A6410, "CSimpleRotationAnim_SetRadians");
 	set_name(0x004A6650, "CSimpleScaleAnim_SetScale");
 	set_name(0x004A6C10, "CSimplePathAnim_SetCurve");
 	set_name(0x004A6DA0, "CSimpleAlphaAnim_SetChange");
@@ -1400,6 +1405,8 @@ static import_symbols() {
 	set_name(0x004FCCB0, "Script_IsVoiceChatAllowedByServer");
 	set_name(0x004FCCF0, "Script_UnitIsSilenced");
 	set_name(0x004FCDF0, "Script_GetMuteStatus");
+	set_name(0x004FCEF0, "ChatRegisterScriptFunctions");
+	set_name(0x004FCF20, "ChatUnregisterScriptFunctions");
 	set_name(0x004FD300, "CGChat__SaveChatSettingsCallback");
 	set_name(0x004FDBC0, "SendChatEvent");
 	set_name(0x004FDD80, "CGChat__RecordChat");
@@ -2020,6 +2027,7 @@ static import_symbols() {
 	set_name(0x0052C310, "Script_IsPartyLFG");
 	set_name(0x0052C350, "Script_HasLFGRestrictions");
 	set_name(0x0052C370, "PartyInfoRegisterScriptFunctions");
+	set_name(0x0052C3A0, "PartyInfoUnregisterScriptFunctions");
 	set_name(0x0052C460, "CGPartyInfo__OnChangePlayerDifficultyResult");
 	set_name(0x0052C680, "CGPartyInfo__IsMember");
 	set_name(0x0052C760, "CGPartyInfo__EnableMember");
@@ -2077,6 +2085,8 @@ static import_symbols() {
 	set_name(0x0052FE60, "CGBarberShop__InitializeGame");
 	set_name(0x005301D0, "Script_GetNextCompleatedTutorial");
 	set_name(0x00530240, "Script_GetPrevCompleatedTutorial");
+	set_name(0x005302B0, "TutorialRegisterScriptFunctions");
+	set_name(0x005302E0, "TutorialUnregisterScriptFunctions");
 	set_name(0x00530300, "CGTutorial__SaveFlaggedTutorials");
 	set_name(0x005303A0, "CGTutorial__LoadFlaggedTutorials");
 	set_name(0x00530450, "CGTutorial__FlagTutorial");
@@ -2157,6 +2167,7 @@ static import_symbols() {
 	set_name(0x0053B650, "Script_GetKnownSlotFromHighestRankSlot");
 	set_name(0x0053B6C0, "Script_FindSpellBookSlotByID");
 	set_name(0x0053B740, "SpellBookRegisterScriptFunctions");
+	set_name(0x0053B770, "SpellBookUnregisterScriptFunctions");
 	set_name(0x0053B900, "CGGlyphInfo__IsGlyphKnown");
 	set_name(0x0053B970, "GetActionBarPageOffset");
 	set_name(0x0053BAC0, "CGSpellBook__UpdateCooldowns");
@@ -2235,6 +2246,7 @@ static import_symbols() {
 	set_name(0x005435A0, "Script_GetWintergraspWaitTime");
 	set_name(0x00543600, "Script_CanQueueForWintergrasp");
 	set_name(0x00543650, "WorldMapRegisterScriptFunctions");
+	set_name(0x00543680, "WorldMapUnregisterScriptFunctions");
 	set_name(0x005437B0, "QSortZones");
 	set_name(0x00543860, "CGWorldMap__GetZoneID");
 	set_name(0x005438A0, "CGWorldMap__GetZoneName");
@@ -2435,6 +2447,7 @@ static import_symbols() {
 	set_name(0x00551FD0, "Script_KBSystem_GetServerStatus");
 	set_name(0x00551FF0, "Script_KBSystem_GetServerNotice");
 	set_name(0x00552010, "KnowledgeBase_RegisterScriptFunctions");
+	set_name(0x00552040, "KnowledgeBase_UnregisterScriptFunctions");
 	set_name(0x00552140, "CKBQuery__BeginLoading");
 	set_name(0x00552380, "CKBSystem__Initialize");
 	set_name(0x005523A0, "Script_KBSetup_GetSubCategoryCount");
@@ -2453,6 +2466,7 @@ static import_symbols() {
 	set_name(0x00553120, "Script_GetRandomDungeonBestChoice");
 	set_name(0x00553170, "Script_CanPartyLFGBackfill");
 	set_name(0x005531D0, "LookingForGroupRegisterScriptFunctions");
+	set_name(0x00553200, "LookingForGroupUnregisterScriptFunctions");
 	set_name(0x00553530, "CGLookingForGroup__GetLFGListEntryDisplayed");
 	set_name(0x005538B0, "PushDungeonEncounterInfo");
 	set_name(0x005539A0, "CGLookingForGroup__SetLFGComment");
@@ -2546,6 +2560,7 @@ static import_symbols() {
 	set_name(0x0055DC30, "Script_GetCurrentBindingSet");
 	set_name(0x0055DC60, "Script_GetNumModifiedClickActions");
 	set_name(0x0055DC90, "UIBindingsRegisterScriptFunctions");
+	set_name(0x0055DCC0, "UIBindingsUnegisterScriptFunctions");
 	set_name(0x0055E180, "MODIFIEDCLICK__SetBinding");
 	set_name(0x0055E2C0, "CGUIBindings__KeyEventToString");
 	set_name(0x0055E340, "CGUIBindings__MouseEventToString");
@@ -2609,6 +2624,7 @@ static import_symbols() {
 	set_name(0x00564C10, "Script_GetRunningMacro");
 	set_name(0x00564C70, "Script_GetRunningMacroButton");
 	set_name(0x00564C90, "UIMacrosRegisterScriptFunctions");
+	set_name(0x00564CC0, "UIMacrosUnegisterScriptFunctions");
 	set_name(0x00564DB0, "CGUIMacros__RunMacro");
 	set_name(0x00564E90, "Script_GetMacroIconInfo");
 	set_name(0x00564F60, "Script_GetMacroItemIconInfo");
@@ -2717,6 +2733,7 @@ static import_symbols() {
 	set_name(0x0056D690, "Script_GetSendMailCOD");
 	set_name(0x0056D6D0, "Script_GetInboxNumItems");
 	set_name(0x0056D730, "MailInfoRegisterScriptFunctions");
+	set_name(0x0056D760, "MailInfoUnregisterScriptFunctions");
 	set_name(0x0056D960, "GetSenderName");
 	set_name(0x0056DA60, "CGMailInfo__SetObject");
 	set_name(0x0056DBC0, "CGMailInfo__OnPostmasterActivate");
@@ -2789,6 +2806,7 @@ static import_symbols() {
 	set_name(0x00572C50, "Script_GetRaidRosterSelection");
 	set_name(0x00572C80, "Script_GetReadyCheckTimeLeft");
 	set_name(0x00572D10, "RaidInfoRegisterScriptFunctions");
+	set_name(0x00572D40, "RaidInfoUnregisterScriptFunctions");
 	set_name(0x00572E40, "CGRaidInfo__EnterWorld");
 	set_name(0x00572ED0, "CGRaidInfo__SetRaidTarget");
 	set_name(0x00572F50, "CGRaidInfo__IsPVPRaid");
@@ -2864,6 +2882,8 @@ static import_symbols() {
 	set_name(0x0057B7C0, "CGAutoCompleteName__AddFlags");
 	set_name(0x0057B940, "Script_BankButtonIDToInvSlotID");
 	set_name(0x0057B9C0, "Script_CloseBankFrame");
+	set_name(0x0057B9E0, "BankRegisterScriptFunctions");
+	set_name(0x0057BA10, "BankUnregisterScriptFunctions");
 	set_name(0x0057BAB0, "Script_GetNumBankSlots");
 	set_name(0x0057BB30, "Script_GetBankSlotCost");
 	set_name(0x0057BBC0, "Script_PurchaseSlot");
@@ -2873,6 +2893,8 @@ static import_symbols() {
 	set_name(0x0057BF50, "CGMiniMapFrame__GetZoomLevels");
 	set_name(0x0057BF90, "CGMiniMapFrame__GetZoom");
 	set_name(0x0057BFD0, "Script_SetZoom");
+	set_name(0x0057C090, "MinimapRegisterScriptFunctions");
+	set_name(0x0057C0C0, "MinimapUnregisterScriptFunctions");
 	set_name(0x0057C340, "CGxMatrixStack__Identity");
 	set_name(0x0057C420, "GxXformPop");
 	set_name(0x0057C720, "CGMinimapFrame__OnLayerTrackUpdate");
@@ -2919,6 +2941,7 @@ static import_symbols() {
 	set_name(0x005843B0, "Script_InRepairMode");
 	set_name(0x005843F0, "Script_GetNumBuybackItems");
 	set_name(0x00584450, "MerchantRegisterScriptFunctions");
+	set_name(0x00584480, "MerchantUnregisterScriptFunctions");
 	set_name(0x00584500, "CGMerchantInfo__SetMerchant");
 	set_name(0x005845B0, "CGMerchantInfo__CanRepair");
 	set_name(0x00584600, "CGMerchantInfo__CloseMerchant");
@@ -2954,6 +2977,8 @@ static import_symbols() {
 	set_name(0x005867D0, "Script_GetTargetTradeMoney");
 	set_name(0x00586810, "Script_PickupTradeMoney");
 	set_name(0x00586870, "Script_SetTradeMoney");
+	set_name(0x005868E0, "TradeInfoRegisterScriptFunctions");
+	set_name(0x00586910, "TradeInfoUnregisterScriptFunctions");
 	set_name(0x005869A0, "CGTradeInfo__SetPlayerItem");
 	set_name(0x00586B50, "CGTradeInfo__AddCursorItem");
 	set_name(0x00586C00, "CGTradeInfo__SetEnchantingItem");
@@ -2990,6 +3015,7 @@ static import_symbols() {
 	set_name(0x00588D60, "Script_RollOnLoot");
 	set_name(0x00588DD0, "Script_ConfirmLootRoll");
 	set_name(0x00588E60, "LootInfoRegisterScriptFunctions");
+	set_name(0x00588E90, "LootInfoUnregisterScriptFunctions");
 	set_name(0x00588EB0, "CGLootInfo__HasLoot");
 	set_name(0x00588F00, "Script_SetLootPortrait");
 	set_name(0x00588F90, "CGLootInfo__DoAutoLoot");
@@ -3003,6 +3029,8 @@ static import_symbols() {
 	set_name(0x005896B0, "CGLootInfo__SetObject");
 	set_name(0x00589B50, "Script_ItemTextGetPage");
 	set_name(0x00589B90, "Script_ItemTextGetText");
+	set_name(0x00589BB0, "ItemTextRegisterScriptFunctions");
+	set_name(0x00589BE0, "ItemTextUnregisterScriptFunctions");
 	set_name(0x00589C40, "Script_ItemTextGetItem");
 	set_name(0x00589C90, "Script_ItemTextGetMaterial");
 	set_name(0x00589D70, "Script_ItemTextHasNextPage");
@@ -3026,6 +3054,8 @@ static import_symbols() {
 	set_name(0x0058A9A0, "Script_GetNumGossipActiveQuests");
 	set_name(0x0058A9E0, "Script_GetGossipOptions");
 	set_name(0x0058AA40, "Script_CloseGossip");
+	set_name(0x0058AA60, "GossipInfoRegisterScriptFunctions");
+	set_name(0x0058AA90, "GossipInfoUnregisterScriptFunctions");
 	set_name(0x0058AAE0, "GossipTextCallback");
 	set_name(0x0058AB50, "Script_ForceGossip");
 	set_name(0x0058ABA0, "CGQuestInfo_C__IsLowLevel");
@@ -3142,6 +3172,7 @@ static import_symbols() {
 	set_name(0x00593E10, "Script_GetTrainerServiceTypeFilter");
 	set_name(0x00593EB0, "Script_GetTrainerSkillLineFilter");
 	set_name(0x00593F70, "ClassTrainerRegisterScriptFunctions");
+	set_name(0x00593FA0, "ClassTrainerUnregisterScriptFunctions");
 	set_name(0x005940E0, "CGClassTrainer__SetTrainer");
 	set_name(0x00594170, "CGClassTrainer__GetSelectionIndex");
 	set_name(0x00594240, "CGClassTrainer__GetService");
@@ -3208,12 +3239,15 @@ static import_symbols() {
 	set_name(0x00599500, "Script_CycleVariation");
 	set_name(0x005995D0, "CGTabardModelFrame__OnModelLoaded");
 	set_name(0x00599670, "CGTabardModelFrame__InitializeTabardColors");
+	set_name(0x00599890, "CGTabardModelFrame_GetUpperEmblemTexture");
 	set_name(0x00599B20, "CGTabardModelFrame_GetLowerEmblemTexture");
 	set_name(0x00599DD0, "CGGuildRegistrar__EnterWorld");
 	set_name(0x00599E00, "CGGuildRegistrar__SetRegistrar");
 	set_name(0x00599ED0, "CGGuildRegistrar__ValidateAndReportGuildName");
 	set_name(0x00599F00, "Script_CloseGuildRegistrar");
 	set_name(0x00599F40, "Script_GetGuildCharterCost");
+	set_name(0x00599F80, "GuildRegistrarRegisterScriptFunctions");
+	set_name(0x00599FB0, "GuildRegistrarUnregisterScriptFunctions");
 	set_name(0x0059A050, "CGGuildRegistrar__BuyGuildCharter");
 	set_name(0x0059A130, "Script_BuyGuildCharter");
 	set_name(0x0059A1C0, "Script_TurnInGuildCharter");
@@ -3230,6 +3264,7 @@ static import_symbols() {
 	set_name(0x0059B040, "Script_CancelSell");
 	set_name(0x0059B0B0, "Script_SetAuctionsTabShowing");
 	set_name(0x0059B100, "AuctionHouseRegisterScriptFunctions");
+	set_name(0x0059B130, "AuctionHouseUnregisterScriptFunctions");
 	set_name(0x0059BA10, "CGAuctionHouse__ClearOutbidID");
 	set_name(0x0059BA80, "CGAuctionHouse__SellNextItem");
 	set_name(0x0059BC90, "Script_GetAuctionHouseDepositRate");
@@ -3279,6 +3314,8 @@ static import_symbols() {
 	set_name(0x005A0FE0, "Script_PickupStablePet");
 	set_name(0x005A1060, "Script_GetSelectedStablePet");
 	set_name(0x005A1090, "Script_IsAtStableMaster");
+	set_name(0x005A10D0, "StableInfoRegisterScriptFunctions");
+	set_name(0x005A1100, "StableInfoUnregisterScriptFunctions");
 	set_name(0x005A1160, "CGStableInfo__LeaveWorld");
 	set_name(0x005A11A0, "CGStableInfo__OnStableList");
 	set_name(0x005A1330, "Script_GetStablePetInfo");
@@ -3306,6 +3343,8 @@ static import_symbols() {
 	set_name(0x005A2A00, "Script_GetArenaTeamRosterShowOffline");
 	set_name(0x005A2A40, "Script_GetCurrentArenaSeason");
 	set_name(0x005A2A70, "Script_GetPreviousArenaSeason");
+	set_name(0x005A2AA0, "ArenaTeamInfoRegisterScriptFunctions");
+	set_name(0x005A2AD0, "ArenaTeamInfoUnregisterScriptFunctions");
 	set_name(0x005A2FC0, "Script_GetArenaTeamRosterInfo");
 	set_name(0x005A3260, "Script_GetArenaTeamGdfInfo");
 	set_name(0x005A3370, "Script_SetArenaTeamRosterSelection");
@@ -3337,6 +3376,7 @@ static import_symbols() {
 	set_name(0x005A45B0, "Script_GetNumGuildBankMoneyTransactions");
 	set_name(0x005A45E0, "Script_GetGuildBankText");
 	set_name(0x005A46A0, "GuildBankRegisterScriptFunctions");
+	set_name(0x005A46D0, "GuildBankUnregisterScriptFunctions");
 	set_name(0x005A4800, "CGGuildBankInfo__OnGuildBankLog");
 	set_name(0x005A4AB0, "CGGuildBankInfo__OnGuildBankMoneyWithdrawn");
 	set_name(0x005A4AE0, "CGGuildBankInfo__OnGuildBankText");
@@ -3393,6 +3433,7 @@ static import_symbols() {
 	set_name(0x005A7F60, "Script_ChangeActionBarPage");
 	set_name(0x005A7FD0, "Script_GetActionBarPage");
 	set_name(0x005A8020, "ActionBarRegisterScriptFunctions");
+	set_name(0x005A8050, "ActionBarUnregisterScriptFunctions");
 	set_name(0x005A8070, "CGActionBar__GetItem");
 	set_name(0x005A8160, "CGActionBar__HasAction");
 	set_name(0x005A8220, "Script_HasAction");
@@ -3459,6 +3500,8 @@ static import_symbols() {
 	set_name(0x005AC320, "Script_RegisterStaticConstants");
 	set_name(0x005AC390, "Script_GMSurveyAnswerSubmit");
 	set_name(0x005AC480, "Script_GMSurveyCommentSubmit");
+	set_name(0x005AC4D0, "GMTicketInfoRegisterScriptFunctions");
+	set_name(0x005AC500, "GMTicketInfoUnregisterScriptFunctions");
 	set_name(0x005AC530, "CGGMSurveyInfo__GetQuestion");
 	set_name(0x005AC5B0, "CGGMSurveyInfo__GetAnswer");
 	set_name(0x005AC680, "CGGMSurveyInfo__GetNumAnswers");
@@ -3491,6 +3534,7 @@ static import_symbols() {
 	set_name(0x005AD830, "Script_EquipmentManagerUnignoreSlotForSave");
 	set_name(0x005AD880, "Script_CanUseEquipmentSets");
 	set_name(0x005AD8F0, "EquipmentManagerRegisterScriptFunctions");
+	set_name(0x005AD920, "EquipmentManagerUnregisterScriptFunctions");
 	set_name(0x005AD940, "CGEquipmentManager__SetContainsLockedItems");
 	set_name(0x005ADA20, "CGEquipmentManager__UseEquipmentSet");
 	set_name(0x005ADE50, "CGEquipmentManager__SaveSet");
@@ -3523,6 +3567,8 @@ static import_symbols() {
 	set_name(0x005AFC40, "CGCurrencyTypes__CurrencyCategorySortCallback");
 	set_name(0x005AFCB0, "CGCurrencyTypes__SetCategoryExpand");
 	set_name(0x005AFD10, "Script_GetCurrencyListSize");
+	set_name(0x005AFD40, "CurrencyTypesRegisterScriptFunctions");
+	set_name(0x005AFD70, "CurrencyTypesUnregisterScriptFunctions");
 	set_name(0x005AFD90, "CGCurrencyTypes__InitializeGame");
 	set_name(0x005AFE30, "CGCurrencyTypes__CategoryHasKnownTypes");
 	set_name(0x005AFF10, "CGCurrencyTypes__DisplayListSortCallback");
@@ -3535,6 +3581,8 @@ static import_symbols() {
 	set_name(0x005B0A20, "Script_SetCurrencyBackpack");
 	set_name(0x005B0A90, "Script_GetBackpackCurrencyInfo");
 	set_name(0x005B0CE0, "Script_CanShowAchievementUI");
+	set_name(0x005B0D00, "AchievementInfoRegisterScriptFunctions");
+	set_name(0x005B0D30, "AchievementInfoUnregisterScriptFunctions");
 	set_name(0x005B0D50, "CGAchievementInfo__IsRealAchievement");
 	set_name(0x005B0DE0, "CGAchievementInfo__IsCriteriaStat");
 	set_name(0x005B0EA0, "CGAchievementInfo__BuildOutputString");
@@ -3590,6 +3638,8 @@ static import_symbols() {
 	set_name(0x005B6110, "Script_GetAchievementLink");
 	set_name(0x005B6DF0, "CGAchievementInfo__InitializeGame");
 	set_name(0x005B71E0, "Script_GetNumGlyphSockets");
+	set_name(0x005B7210, "GlyphInfoRegisterScriptFunctions");
+	set_name(0x005B7240, "GlyphInfoUnregisterScriptFunctions");
 	set_name(0x005B7260, "Script_GetGlyphSocketInfo");
 	set_name(0x005B7410, "Script_GlyphMatchesSocket");
 	set_name(0x005B75A0, "Script_PlaceGlyphInSocket");
@@ -3750,6 +3800,7 @@ static import_symbols() {
 	set_name(0x005C44F0, "CGItemSocketInfo__EnterWorld");
 	set_name(0x005C4550, "Script_GetSocketTypes");
 	set_name(0x005C4630, "ItemSocketInfoRegisterScriptFunctions");
+	set_name(0x005C4660, "ItemSocketInfoUnregisterScriptFunctions");
 	set_name(0x005C4680, "CGItemSocketInfo__SetItem");
 	set_name(0x005C4780, "CGItemSocketInfo__SetGem");
 	set_name(0x005C49C0, "Script_CloseSocketInfo");
@@ -3777,6 +3828,7 @@ static import_symbols() {
 	set_name(0x005C57C0, "CGTalentInfo_Inspect__EnterWorld");
 	set_name(0x005C5810, "Script_GetActiveTalentGroup");
 	set_name(0x005C5880, "TalentInfoRegisterScriptFunctions");
+	set_name(0x005C58B0, "TalentInfoUnregisterScriptFunctions");
 	set_name(0x005C5B30, "CGTalentGroup_C__GetTabFromID");
 	set_name(0x005C5C60, "CGTalentInfo__GetTab");
 	set_name(0x005C5CC0, "Script_GetNumTalentTabs");
@@ -3820,6 +3872,7 @@ static import_symbols() {
 	set_name(0x005CA330, "Script_GetGuildInfoText");
 	set_name(0x005CA350, "Script_GetNumGuildEvents");
 	set_name(0x005CA380, "GuildInfoRegisterScriptFunctions");
+	set_name(0x005CA3B0, "GuildInfoUnregisterScriptFunctions");
 	set_name(0x005CA870, "CGGuildInfo__SetShowOffline");
 	set_name(0x005CAAF0, "CGGuildInfo__InvalidatePlayer");
 	set_name(0x005CABB0, "Script_GetGuildRosterLastOnline");
@@ -3876,6 +3929,7 @@ static import_symbols() {
 	set_name(0x005CEA60, "CGPetitionInfo__SetPetitionStats");
 	set_name(0x005CEAC0, "Script_GetNumPetitionNames");
 	set_name(0x005CEB00, "PetitionInfoRegisterScriptFunctions");
+	set_name(0x005CEB30, "PetitionInfoUnregisterScriptFunctions");
 	set_name(0x005CEC20, "PetitionQueryCallback");
 	set_name(0x005CEC40, "CGPetitionInfo__InitializeGame");
 	set_name(0x005CEC60, "CGPetitionInfo__ClearSignatures");
@@ -3907,6 +3961,8 @@ static import_symbols() {
 	set_name(0x005CFDD0, "CGDuelInfo__InitializeGame");
 	set_name(0x005CFE70, "CGReputationInfo__AddHeader");
 	set_name(0x005CFF20, "Script_GetNumFactions");
+	set_name(0x005CFF60, "ReputationInfoRegisterScriptFunctions");
+	set_name(0x005CFF90, "ReputationInfoUnregisterScriptFunctions");
 	set_name(0x005D01F0, "CGReputationInfo__AddFactionHeader");
 	set_name(0x005D02F0, "QSortFactions");
 	set_name(0x005D05B0, "CGReputationInfo__GetFactionStanding");
@@ -3949,6 +4005,7 @@ static import_symbols() {
 	set_name(0x005D3160, "Script_IsPetAttackActive");
 	set_name(0x005D3180, "Script_GetPetTimeRemaining");
 	set_name(0x005D31F0, "PetInfoRegisterScriptFunctions");
+	set_name(0x005D3220, "PetInfoUnregisterScriptFunctions");
 	set_name(0x005D3360, "CGPetInfo__LeaveWorld");
 	set_name(0x005D3390, "CGPetInfo__GetPet");
 	set_name(0x005D33C0, "CGPetInfo__GetTarget");
@@ -4013,6 +4070,7 @@ static import_symbols() {
 	set_name(0x005D6F60, "Script_ContainerIDToInventoryID");
 	set_name(0x005D6FF0, "Script_GetMaxArenaCurrency");
 	set_name(0x005D7020, "ContainerRegisterScriptFunctions");
+	set_name(0x005D7050, "ContainerUnregisterScriptFunctions");
 	set_name(0x005D7070, "CGContainerInfo__UpdateContents");
 	set_name(0x005D7110, "CGContainerInfo__OpenContainer");
 	set_name(0x005D7180, "Script_SetBagPortraitTexture");
@@ -4054,6 +4112,7 @@ static import_symbols() {
 	set_name(0x005DA2E0, "Script_StopTradeSkillRepeat");
 	set_name(0x005DA310, "Script_IsTradeSkillLinked");
 	set_name(0x005DA3A0, "TradeSkillRegisterScriptFunctions");
+	set_name(0x005DA3D0, "TradeSkillUnregisterScriptFunctions");
 	set_name(0x005DA5A0, "CGTradeSkillInfo__Close");
 	set_name(0x005DA5F0, "CGTradeSkillInfo__GetSkillLineRec");
 	set_name(0x005DA670, "CGTradeSkillInfo__GetSelectionIndex");
@@ -4133,6 +4192,7 @@ static import_symbols() {
 	set_name(0x005DFBA0, "Script_ShiftQuestWatches");
 	set_name(0x005DFC40, "Script_GetQuestWatchIndex");
 	set_name(0x005DFD20, "QuestLogRegisterScriptFunctions");
+	set_name(0x005DFD50, "QuestLogUnregisterScriptFunctions");
 	set_name(0x005DFEF0, "CGQuestLog__UpdateWatchTimers");
 	set_name(0x005DFFA0, "CGQuestLog__SetSelectedQuest");
 	set_name(0x005E0000, "CGQuestLog__GetQuestName");
@@ -4218,6 +4278,7 @@ static import_symbols() {
 	set_name(0x005E77C0, "Script_GetInspectHonorData");
 	set_name(0x005E7890, "Script_ClearInspectPlayer");
 	set_name(0x005E78F0, "CharacterInfoRegisterScriptFunctions");
+	set_name(0x005E7920, "CharacterInfoUnregisterScriptFunctions");
 	set_name(0x005E7A00, "CGCharacterInfo__CanInspect");
 	set_name(0x005E7D60, "Script_GetInventorySlotInfo");
 	set_name(0x005E7E60, "Script_GetInventoryItemCooldown");
@@ -4353,6 +4414,8 @@ static import_symbols() {
 	set_name(0x005F91E0, "LoadAddOnEnableState");
 	set_name(0x005F9540, "GetJoystick");
 	set_name(0x005F9550, "Script_VehicleAimGetNormPower");
+	set_name(0x005F9580, "InputControlRegisterScriptFunctions");
+	set_name(0x005F95B0, "InputControlUnregisterScriptFunctions");
 	set_name(0x005F95D0, "CGInputControl__GetActive");
 	set_name(0x005F95E0, "CGInputControl__UpdateHalted");
 	set_name(0x005F95F0, "CGInputControl__UpdateMoveStopped");
@@ -4436,6 +4499,8 @@ static import_symbols() {
 	set_name(0x005FD2C0, "InputControlInitialize");
 	set_name(0x005FD550, "Script_SetMouselookOverrideBinding");
 	set_name(0x005FD910, "CameraRegisterCVars");
+	set_name(0x005FE2C0, "CameraRegisterScriptFunctions");
+	set_name(0x005FE2F0, "CameraUnregisterScriptFunctions");
 	set_name(0x005FE310, "CGCamera__HasModelCamera");
 	set_name(0x005FE320, "CGCamera__ResetModelCamera");
 	set_name(0x005FE360, "CGCamera__ClearModelCamera");
@@ -6020,6 +6085,7 @@ static import_symbols() {
 	set_name(0x006CDE90, "CGPlayer_C__GetProficiency");
 	set_name(0x006CDEB0, "OnProficiency");
 	set_name(0x006CE140, "AreaTriggerContains");
+	set_name(0x006CE480, "CGPlayer_C__PlayerShutdownMessageHandlers");
 	set_name(0x006CEAF0, "CGPlayer_C__GetNewContinentID");
 	set_name(0x006CEB00, "CGPlayer_C__CanDualWield");
 	set_name(0x006CECA0, "CGPlayer_C__OnLootMoneyNotify");
@@ -6045,7 +6111,9 @@ static import_symbols() {
 	set_name(0x006CFFF0, "CrossedInebriationThresholdItemCallback");
 	set_name(0x006D01B0, "OnCrossedInebriationThreshold");
 	set_name(0x006D0240, "CGPlayer_C__OnQuestGiverListQuests");
+	set_name(0x006D0460, "CGPlayer_C__OnQuestGiverSendQuest");
 	set_name(0x006D08F0, "CGPlayer_C__OnQuestGiverRequestItems");
+	set_name(0x006D0AB0, "CGPlayer_C__OnQuestGiverChooseReward");
 	set_name(0x006D0E10, "QuestCompleteCallback");
 	set_name(0x006D1110, "CGPlayer_C__OnQuestGiverQuestComplete");
 	set_name(0x006D11C0, "CGPlayer_C__OnQuestGiverStatus");
@@ -6066,8 +6134,14 @@ static import_symbols() {
 	set_name(0x006D2070, "CGPlayer_C__CheckTalentMasterDistance");
 	set_name(0x006D2120, "CGPlayer_C__TalkToBinder");
 	set_name(0x006D2290, "CGPlayer_C__CheckBinderDistance");
+	set_name(0x006D2340, "CGPlayer_C__TalkToBanker");
 	set_name(0x006D23C0, "CGPlayer_C__TalkToGuildBanker");
+	set_name(0x006D2480, "CGPlayer_C__TalkToNpcPetition");
 	set_name(0x006D2500, "CGPlayer_C__TalkToTabardVendor");
+	set_name(0x006D25C0, "CGPlayer_C__TalkToBattlemaster");
+	set_name(0x006D2640, "CGPlayer_C__TalkToAuctioneer");
+	set_name(0x006D26C0, "CGPlayer_C__TalkToStableMaster");
+	set_name(0x006D2740, "CGPlayer_C__SpellClick");
 	set_name(0x006D2840, "CGPlayer_C__TabardDrawCallback");
 	set_name(0x006D2900, "CGPlayer_C__TurnOnGuildTabardPurchase");
 	set_name(0x006D2950, "CGPlayer_C__HandleRepopRequest");
@@ -6115,6 +6189,7 @@ static import_symbols() {
 	set_name(0x006D5F70, "CGPlayer_C__MeleeModeLeave");
 	set_name(0x006D5FC0, "CGPlayer_C__OnTaxiNodeStatus");
 	set_name(0x006D6050, "CGPlayer_C__ShowTaxiNodes");
+	set_name(0x006D62A0, "CGPlayer_C__EnableTaxi");
 	set_name(0x006D6320, "CGPlayer_C__QueryTaxiNodes");
 	set_name(0x006D63A0, "CGPlayer_C__StartTaxi");
 	set_name(0x006D64E0, "CGPlayer_C__GetClientStandState");
@@ -6144,6 +6219,7 @@ static import_symbols() {
 	set_name(0x006D78C0, "CGPlayer_C__UpdateUnitCollisionBox");
 	set_name(0x006D7AA0, "CGPlayer_C__VehicleAllowsInteraction");
 	set_name(0x006D7B30, "CGPlayer_C__CastRandomCritter");
+	set_name(0x006D7B70, "CGPlayer_C__GetCreatureTracking");
 	set_name(0x006D7BB0, "Player_C_ZoneUpdateHandler");
 	set_name(0x006D7C30, "OnQuestItemLoot");
 	set_name(0x006D7D70, "QuestLootQuestQueryCallback");
@@ -6165,6 +6241,7 @@ static import_symbols() {
 	set_name(0x006DAD90, "CGPlayer_C__LootUnit");
 	set_name(0x006DAF60, "CGPlayer_C__ShopFromMerchant");
 	set_name(0x006DB010, "CGPlayer_C__TalkToSpiritHealer");
+	set_name(0x006DB180, "CGPlayer_C__TalkToSpiritGuide");
 	set_name(0x006DB320, "CGPlayer_C__SaveTabard");
 	set_name(0x006DB5F0, "CGPlayer_C__TurnOffGuildTabardPurchase");
 	set_name(0x006DB6A0, "CGPlayer_C__GetPlayerGuildNameText");
@@ -7283,6 +7360,8 @@ static import_symbols() {
 	set_name(0x0074D580, "Script_CombatTextSetActiveUnit");
 	set_name(0x0074D5B0, "Script_CombatLogSetRetentionTime");
 	set_name(0x0074D600, "Script_CombatLog_Object_IsA");
+	set_name(0x0074D6B0, "UnitCombatLogRegisterScriptFunctions");
+	set_name(0x0074D6E0, "UnitCombatLogUnregisterScriptFunctions");
 	set_name(0x0074D700, "UnitCombatLogProcGo");
 	set_name(0x0074D750, "GetCombatLogObjectName");
 	set_name(0x0074D920, "CombatLogEntry__constructor");
@@ -8404,6 +8483,8 @@ static import_symbols() {
 	set_name(0x007DB6B0, "ComSatClient_IsTalkerSquelchedInChannel");
 	set_name(0x007DB860, "ComSatClient_DetermineSessionTypeFromName");
 	set_name(0x007DB8D0, "Script_GetVoiceStatus");
+	set_name(0x007DB9B0, "VoiceRegisterScriptFunctions");
+	set_name(0x007DB9E0, "VoiceUnregisterScriptFunctions");
 	set_name(0x007DBAB0, "ComSatClient_IsComsatDisabledByClient");
 	set_name(0x007DC770, "EnableMicrophoneHandler");
 	set_name(0x007DC830, "FillComsatData");
@@ -8605,6 +8686,8 @@ static import_symbols() {
 	set_name(0x007FDCD0, "Script_SpellIsTargeting");
 	set_name(0x007FDD10, "Script_SpellCanTargetItem");
 	set_name(0x007FDD60, "Script_SpellCanTargetGlyph");
+	set_name(0x007FDDB0, "SpellRegisterScriptFunctions");
+	set_name(0x007FDDE0, "SpellUnregisterScriptFunctions");
 	set_name(0x007FDE00, "Spell_C_GetPowerDisplayMod");
 	set_name(0x007FE130, "Spell_C_GetAutoRepeatingSpell");
 	set_name(0x007FE140, "Spell_C_SetAutoRangedCombatSpell");
