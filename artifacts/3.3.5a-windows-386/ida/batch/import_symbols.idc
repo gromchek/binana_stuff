@@ -19,6 +19,7 @@ static import_symbols() {
 	set_name(0x004017C0, "ErrorDisplayMinLevelCallback");
 	set_name(0x00401800, "ErrorDisplayMaxLevelCallback");
 	set_name(0x004018D0, "ErrorDisplayFilterCallback");
+	set_name(0x00401A30, "GammaCallback");
 	set_name(0x00401B00, "CCommand_ReloadUI");
 	set_name(0x00402250, "UIFasterCallback");
 	set_name(0x004022E0, "ProcessAffinityMaskCallback");
@@ -759,6 +760,8 @@ static import_symbols() {
 	set_name(0x004B5600, "TextureDiscoverFileType");
 	set_name(0x004B5670, "TexturePickAlternateFilename");
 	set_name(0x004B5A00, "LoadPredrawnMips");
+	set_name(0x004B5BB0, "RequestImageDimensions");
+	set_name(0x004B5FE0, "GetTextureFormats");
 	set_name(0x004B6180, "TextureCacheGetMaxSize");
 	set_name(0x004B62A0, "TextureIsReadyNow");
 	set_name(0x004B6580, "TextureSetCacheSize");
@@ -772,6 +775,8 @@ static import_symbols() {
 	set_name(0x004B7220, "TextureAllocMippedImg");
 	set_name(0x004B7300, "TextureFreeMippedImg@2");
 	set_name(0x004B78A0, "LoadTgaMips");
+	set_name(0x004B7AA0, "UpdateTgaTexture");
+	set_name(0x004B7BD0, "PumpBlpTextureAsync");
 	set_name(0x004B7F80, "TextureInitialize");
 	set_name(0x004B8070, "LoadBlpMips");
 	set_name(0x004B81D0, "TextureLoadImage");
@@ -779,6 +784,7 @@ static import_symbols() {
 	set_name(0x004B8D70, "TextureCreateBlob");
 	set_name(0x004B9200, "TextureCreate@2");
 	set_name(0x004B9550, "TextureCreateSolid");
+	set_name(0x004B95B0, "CreateTgaTexture");
 	set_name(0x004B9760, "TextureCreate@3");
 	set_name(0x004B9910, "AsyncFileReadProgressCallback");
 	set_name(0x004B9930, "AsyncFileReadIngameProgressCallback");
@@ -1378,6 +1384,7 @@ static import_symbols() {
 	set_name(0x004FBA10, "CGChat__FormatTime");
 	set_name(0x004FBAB0, "CGChat__IsVoiceChatEnabled");
 	set_name(0x004FBAF0, "CGChat__IsVoiceChatAllowed");
+	set_name(0x004FBB20, "StringToChatType");
 	set_name(0x004FBC60, "Script_EnableLogging");
 	set_name(0x004FBD00, "Script_LoggingChat");
 	set_name(0x004FBD20, "Script_LoggingCombat");
@@ -1694,6 +1701,7 @@ static import_symbols() {
 	set_name(0x00513DA0, "CGGameUI__InvalidatePlayer");
 	set_name(0x00513DD0, "CGGameUI__GetErrorToken");
 	set_name(0x00513DF0, "CGGameUI__LastErrorMessage");
+	set_name(0x00513E00, "MirrorTimerToName");
 	set_name(0x00513E40, "CGGameUI__MirrorTimerToIndex");
 	set_name(0x00513EA0, "CGGameUI__CancelMirrorTimers");
 	set_name(0x00513F20, "CGGameUI__MirrorTimerGetInfo");
@@ -3236,6 +3244,8 @@ static import_symbols() {
 	set_name(0x00598F40, "CGTabardCreationFrame__LeaveWorld");
 	set_name(0x00598FA0, "CGTabardModelFrame_CanSaveTabardNow");
 	set_name(0x00599390, "CGTabardModelFrame__CreateScriptMetaTable");
+	set_name(0x00599410, "CGTabardModelFrame__SaveTabard");
+	set_name(0x005994C0, "CGTabardModelFrame_Save");
 	set_name(0x00599500, "Script_CycleVariation");
 	set_name(0x005995D0, "CGTabardModelFrame__OnModelLoaded");
 	set_name(0x00599670, "CGTabardModelFrame__InitializeTabardColors");
@@ -4158,6 +4168,7 @@ static import_symbols() {
 	set_name(0x005DE300, "CGTradeSkillInfo__SetLink");
 	set_name(0x005DE400, "Script_GetTradeSkillReagentInfo");
 	set_name(0x005DE620, "Script_GetTradeSkillTools");
+	set_name(0x005DE8F0, "QuestQueryCounterCallback");
 	set_name(0x005DE960, "QuestSelectQueryCallback");
 	set_name(0x005DEAE0, "CGQuestLog__GetQuestSortIndex");
 	set_name(0x005DEB60, "CGQuestLog__UpdateSelection");
@@ -4886,6 +4897,7 @@ static import_symbols() {
 	set_name(0x00625470, "CGTooltip_SetPetAction");
 	set_name(0x00625630, "CGTooltip_SetShapeshift");
 	set_name(0x006257C0, "CGTooltip_SetPossession");
+	set_name(0x006259E0, "CGTooltip_SetSpell");
 	set_name(0x00625D00, "CGTooltip_SetGlyph");
 	set_name(0x00625E10, "CGTooltip_SetUnit");
 	set_name(0x00626240, "CGTooltip_SetUnitAura");
@@ -4907,6 +4919,7 @@ static import_symbols() {
 	set_name(0x0062E790, "CGTooltip_SetQuestLogItem");
 	set_name(0x0062E900, "CGTooltip_SetTrainerService");
 	set_name(0x0062EAE0, "CGTooltip_SetTradeSkillItem");
+	set_name(0x0062ED70, "CGTooltip_SetMerchantItem");
 	set_name(0x0062EFF0, "CGTooltip_SetTradePlayerItem");
 	set_name(0x0062F1E0, "CGTooltip_SetTradeTargetItem");
 	set_name(0x0062F9E0, "CGTooltip_SetInboxItem");
@@ -6007,8 +6020,10 @@ static import_symbols() {
 	set_name(0x006BD900, "GxuFontGetWrappedTextHeight");
 	set_name(0x006BDC50, "GxuFontStripEscapeCodes");
 	set_name(0x006BDE80, "GxuFontCreateFont");
+	set_name(0x006BDF90, "GxuFontDestroyFont");
 	set_name(0x006BDFC0, "GxuFontDestroyString");
 	set_name(0x006BE020, "GxuFontWindowSizeChanged");
+	set_name(0x006BE230, "GxuFontInitialize");
 	set_name(0x006BE2B0, "GxuFontCreateString");
 	set_name(0x006BE390, "GxuFontClearBatch");
 	set_name(0x006BE3B0, "GxuFontDestroyBatch");
@@ -6251,6 +6266,7 @@ static import_symbols() {
 	set_name(0x006DB9D0, "CGPlayer_C__SplitItem");
 	set_name(0x006DBAE0, "CGPlayer_C__AutoStoreItemInBag");
 	set_name(0x006DBBE0, "AutoEquipStatsCallback");
+	set_name(0x006DBC60, "ResurrectNameQueryCallback");
 	set_name(0x006DBD00, "OnResurrectRequest");
 	set_name(0x006DBE30, "AreaTriggerCheck");
 	set_name(0x006DC070, "CGPlayer_C__UpdateRepopTimer");
@@ -6730,6 +6746,7 @@ static import_symbols() {
 	set_name(0x00709840, "CGItem_C__constructor");
 	set_name(0x00709A10, "CGItem_C__Shutdown");
 	set_name(0x00709DE0, "CGItem_C__GetItemByFullName");
+	set_name(0x0070A850, "AddInventoryArtHash");
 	set_name(0x0070A910, "CGItem_C__GetInventoryArt");
 	set_name(0x0070AA00, "CGItem_C__GetInventoryArt@2");
 	set_name(0x0070AFC0, "CGItem_C__Disable");
@@ -7634,6 +7651,7 @@ static import_symbols() {
 	set_name(0x0076A630, "RegisterGxCVars");
 	set_name(0x0076AB80, "ConsoleDeviceInitialize");
 	set_name(0x0076B2A0, "AddLineToExecFile");
+	set_name(0x0076B3B0, "AddToHistory");
 	set_name(0x0076B3F0, "ConsoleDetectSetDefaults");
 	set_name(0x0076B520, "ConsoleDetectSetDefaultsFormat");
 	set_name(0x0076B540, "SetVideoIdx");
@@ -7718,6 +7736,8 @@ static import_symbols() {
 	set_name(0x00770840, "SRegLoadValue");
 	set_name(0x007708F0, "SRegSaveString");
 	set_name(0x007709A0, "SRegSaveValue");
+	set_name(0x00770F70, "GetErrorString");
+	set_name(0x00771070, "CanBreakToDebugger");
 	set_name(0x00771870, "SErrSetLastError");
 	set_name(0x00771890, "SErrSetLogTitleString");
 	set_name(0x00771900, "SErrSetLogTitleCallback");
@@ -7726,7 +7746,17 @@ static import_symbols() {
 	set_name(0x00771D10, "SErrDisplayError");
 	set_name(0x00772A80, "CConsole__PrintError");
 	set_name(0x00772B20, "SErrCatchUnhandledExceptions");
+	set_name(0x00772B30, "ConvertBool");
+	set_name(0x00772BA0, "ConvertNumber");
+	set_name(0x00772C20, "ConvertString");
+	set_name(0x00772C90, "GenerateError");
+	set_name(0x00772DA0, "ProcessFile");
+	set_name(0x00772F60, "PerformConversion");
+	set_name(0x007730E0, "ProcessCurrentFlag");
+	set_name(0x00773160, "ProcessFlags");
+	set_name(0x007732F0, "ProcessToken");
 	set_name(0x00773590, "SCmdRegisterArgList");
+	set_name(0x007737D0, "ProcessString");
 	set_name(0x00773890, "SCmdProcess");
 	set_name(0x00773990, "SCmdProcessCommandLine");
 	set_name(0x007739E0, "StormInitialize");
@@ -7739,6 +7769,7 @@ static import_symbols() {
 	set_name(0x00774660, "TInstanceIdTable_EvtContext__Unlock");
 	set_name(0x00774680, "SSyncObject__Valid");
 	set_name(0x00774690, "SSyncObject__Wait");
+	set_name(0x007746B0, "WaitMultiplePtr");
 	set_name(0x00774720, "SEvent__Set");
 	set_name(0x00774730, "SEvent__Reset");
 	set_name(0x00774740, "SThread__Create");
@@ -7752,6 +7783,7 @@ static import_symbols() {
 	set_name(0x00775250, "OutputIndent");
 	set_name(0x007752A0, "OutputTime");
 	set_name(0x00775380, "UnlockDeleteLog");
+	set_name(0x007753E0, "PrependDefaultDir");
 	set_name(0x007754A0, "SLogClose");
 	set_name(0x00775500, "SLogFlush");
 	set_name(0x007755F0, "SLogInitialize");
@@ -8624,6 +8656,7 @@ static import_symbols() {
 	set_name(0x007F5760, "SetupTextureHandles");
 	set_name(0x007F5930, "MinimapUpdatePosition");
 	set_name(0x007F5BA0, "MinimapUpdate");
+	set_name(0x007F6540, "LoadMD5Names");
 	set_name(0x007F6730, "MinimapInitialize");
 	set_name(0x007F6990, "GameFormulaEvaluateTable");
 	set_name(0x007F6C70, "InitializeRandomSeed");
@@ -8698,6 +8731,7 @@ static import_symbols() {
 	set_name(0x007FE4B0, "Spell_C_GetPowerTypeToken");
 	set_name(0x007FE520, "Spell_C_EncodeSequenceIntoMissileTrajectory");
 	set_name(0x007FE850, "Spell_C_SpellHasShapeshiftMask");
+	set_name(0x007FEA80, "SpellMissingItemCallback");
 	set_name(0x007FEF10, "Spell_C_SpellFailedCustomError");
 	set_name(0x007FF070, "Spell_C_GetSpellLevel");
 	set_name(0x007FF100, "Spell_C_GetPowerCostPerSecond");
@@ -8833,8 +8867,12 @@ static import_symbols() {
 	set_name(0x008152A0, "StringToLoopType");
 	set_name(0x00815370, "StringToCurveType");
 	set_name(0x008154E0, "StringToBOOL");
+	set_name(0x00815600, "LoadXML_Value");
+	set_name(0x00815740, "LoadXML_Dimensions");
+	set_name(0x00815910, "LoadXML_Insets");
 	set_name(0x00815C30, "LoadXML_Color");
 	set_name(0x00815F40, "LoadXML_Texture");
+	set_name(0x00815FA0, "LoadXML_String");
 	set_name(0x00816000, "LoadXML_AnimGroup");
 	set_name(0x008165E0, "FrameXML_CheckSignature");
 	set_name(0x00816790, "FrameScript_Object__CreateScriptMetaTable");
@@ -9179,6 +9217,7 @@ static import_symbols() {
 	set_name(0x0086B2A0, "OsSetSleepInBackground");
 	set_name(0x0086B2B0, "OsGetBackgroundSleepMs");
 	set_name(0x0086B2C0, "OsSetBackgroundSleepMs");
+	set_name(0x0086B2D0, "OsGetVersion");
 	set_name(0x0086B430, "OsGetVersionString");
 	set_name(0x0086B480, "OsGetComputerName");
 	set_name(0x0086B4A0, "OsGetUserName");
@@ -9200,8 +9239,11 @@ static import_symbols() {
 	set_name(0x0086C6A0, "OsGuiGetWindow");
 	set_name(0x0086C6D0, "OsGuiSetGxWindow");
 	set_name(0x0086C6E0, "OsGuiMessageBox");
+	set_name(0x0086CDB0, "OsIMEGetClauseInfo");
+	set_name(0x0086CF90, "OsIMEEnable");
 	set_name(0x0086D0A0, "OsIMEInitialize");
 	set_name(0x0086D0C0, "OsIMEDestroy");
+	set_name(0x0086D1D0, "OsIMEGetCandidates");
 	set_name(0x0086D430, "OsTimeStartup");
 	set_name(0x0086D440, "OsTimeShutdown");
 	set_name(0x0086D490, "OsGetTimeStamp");
@@ -9982,7 +10024,9 @@ static import_symbols() {
 	set_name(0x009769A0, "CSimpleEditBox_SetCursorPosition");
 	set_name(0x00976C70, "CSimpleCheckbox_SetCheckedTexture");
 	set_name(0x00976E50, "CSimpleCheckbox_SetDisabledCheckedTexture");
+	set_name(0x00976FD0, "StringToButtonState");
 	set_name(0x009771D0, "CSimpleButton_GetButtonState");
+	set_name(0x00977280, "CSimpleButton_SetButtonState");
 	set_name(0x00977340, "CSimpleButton_SetNormalFontObject");
 	set_name(0x009774C0, "CSimpleButton_SetDisabledFontObject");
 	set_name(0x00977640, "CSimpleButton_SetHighlightFontObject");
