@@ -638,7 +638,6 @@ static import_data_types() {
 	apply_type(0x00960620, "int32_t __stdcall func(lua_State* L)");
 	apply_type(0x00960660, "int32_t __stdcall func(lua_State* L)");
 	apply_type(0x009606E0, "int32_t __stdcall func(lua_State* L)");
-	apply_type(0x00960760, "int32_t __stdcall func(lua_State* L)");
 	apply_type(0x009607E0, "int32_t __stdcall func(lua_State* L)");
 	apply_type(0x009608B0, "int32_t __stdcall func(lua_State* L)");
 	apply_type(0x00960970, "int32_t __stdcall func(lua_State* L)");
@@ -647,7 +646,6 @@ static import_data_types() {
 	apply_type(0x00960DD0, "int32_t __stdcall func(lua_State* L)");
 	apply_type(0x00960FC0, "int32_t __stdcall func(lua_State* L)");
 	apply_type(0x00961040, "int32_t __stdcall func(lua_State* L)");
-	apply_type(0x00961090, "int32_t __stdcall func(lua_State* L)");
 	apply_type(0x009610E0, "int32_t __stdcall func(lua_State* L)");
 	apply_type(0x00961120, "int32_t __stdcall func(lua_State* L)");
 	apply_type(0x009611A0, "int32_t __stdcall func(lua_State* L)");
