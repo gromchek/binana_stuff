@@ -17,8 +17,11 @@ static import_functions() {
 	set_func_cmt(0x00427500, "Blizzard::File::MakeAbsolutePath(char const*, char*, int, bool)", 0);
 	set_func_cmt(0x00427560, "Blizzard::File::Move(char const*, char const*)", 0);
 	set_func_cmt(0x00427720, "Blizzard::File::Read(Blizzard::File::StreamRecord*, void*, long long, int*, int)", 0);
+	set_func_cmt(0x004278B0, "Blizzard::File::SetEOF(Blizzard::File::StreamRecord*, long long, int)", 0);
 	set_func_cmt(0x00428300, "WowConnection::AddRef()", 0);
+	set_func_cmt(0x00429790, "Compiler magic converted this OOP constructor into a variadic __stdcall\\nBlizzard::String::QuickFormat<1024>::QuickFormat()", 0);
 	set_func_cmt(0x00433510, "Blizzard::String::JoinPath(char*, int, char const*, char const*)", 0);
+	set_func_cmt(0x00433650, "Blizzard::StringConversion_CodepageToUTF8::ToNative::ToNative(const char*)", 0);
 	set_func_cmt(0x0044FA10, "Blizzard::File::RemoveDirectoryAndContents(char const*, bool)::Internal::Callback(Blizzard::File::ProcessDirParms const&)", 0);
 	set_func_cmt(0x00454220, "Blizzard::File::SetLastErrorStack(Blizzard::Debug::ErrorStackRecord*)", 0);
 	set_func_cmt(0x00465450, "ClientConnection::~ClientConnection()", 0);
@@ -494,6 +497,7 @@ static import_functions() {
 	set_func_cmt(0x0083D9F0, "CM2Shared::LowPrioritySequenceFailedCallback(void*)", 0);
 	set_func_cmt(0x0083DA10, "CM2Shared::LoadLowPrioritySequence(unsigned short)", 0);
 	set_func_cmt(0x0083DC90, "CM2Shared::Release()", 0);
+	set_func_cmt(0x0086B5A0, "Prevents code outside the .text section from running", 0);
 	set_func_cmt(0x0086B9A0, "OsGetProcessorFeaturesEx(int&)", 0);
 	set_func_cmt(0x0086BBA0, "Invented name", 0);
 	set_func_cmt(0x0086E200, "00005410", 0);
