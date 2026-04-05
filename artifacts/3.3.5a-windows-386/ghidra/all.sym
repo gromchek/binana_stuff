@@ -13076,9 +13076,19 @@ System_File__Stacked__s_nullstack 00AB91C0 l type="Blizzard__File__Filesystem"
 System_File__Stacked__s_basestack 00AB92C0 l type="Blizzard__File__Filesystem"
 s_threadListContention 00AC0DC0 l type="int32_t"
 s_threadList 00AC0DC4 l type="TSList_EvtThread"
+CSimpleTexture__s_metatable 00AC1110 l
+CSimpleFontString__s_metatable 00AC1114 l
 CSimpleTitleRegion__s_metatable 00AC1548 l
 CSimpleFrame__s_metatable 00AC154C l
 CSimpleFont__s_metatable 00AC18D8 l
+CSimpleAnim__s_metatable 00AC19D8 l
+CSimpleTranslationAnim__s_metatable 00AC19EC l
+CSimpleRotationAnim__s_metatable 00AC1A20 l
+CSimpleScaleAnim__s_metatable 00AC1A44 l
+CSimpleControlPoint__s_metatable 00AC1A70 l
+CSimplePathAnim__s_metatable 00AC1A9C l
+CSimpleAlphaAnim__s_metatable 00AC1AB0 l
+CSimpleAnimGroup__s_metatable 00AC1AB4 l
 s_zorderlist 00AC1B9C l type="TSExplicitList_CILayer"
 ClientServices__m_loginState 00AC3DA4 l
 CCharacterCreation__m_selectedClassID 00AC4220 l
@@ -13093,9 +13103,15 @@ CGBattlefieldInfo__m_activeIndex 00ACD16C l
 CGBattlefieldInfo__m_logFilterFaction 00ACD170 l
 CGBattlefieldInfo__m_allowJoin 00ACD174 l
 CGMailInfo__m_nextMailTime 00ACE60C l
+CGMinimapFrame__s_metatable 00ACEBB4 l
+CGCharacterModelBase__s_metatable 00ACF534 l
+CGDressUpModelFrame__s_metatable 00ACF568 l
+CGTabardModelFrame__s_metatable 00ACF584 l
 CGAuctionHouse__m_desiredDelayTime 00ACF628 l
 CGTradeSkillInfo__m_invTypeFilter 00AD0E08 l
+CGCooldown__s_metatable 00AD13CC l
 s_cursorNames 00AD2808 l type="char*[53]"
+CGTooltip__s_metatable 00AD2D08 l
 s_physicalDamageClassID 00AD2F90 l
 g_achievementDB 00AD305C l type="WowClientDB_AchievementRec" ; 0xEB
 g_achievement_CriteriaDB 00AD3080 l type="WowClientDB_Achievement_CriteriaRec" ; 0xEC
@@ -13388,7 +13404,14 @@ NvApi__s_initialized 00B2376C l
 result 00B23770 l type="int32_t"
 NvApi__s_interface_table 00B23778 l type="NvApi__InterfaceTable[253]"
 CSimpleModel__s_metatable 00B2CBD0 l
+CSimpleColorSelect__s_metatable 00B2CDB0 l
+CSimpleStatusBar__s_metatable 00B2CE18 l
 CSimpleSlider__s_metatable 00B2CE88 l
+CSimpleScrollFrame__s_metatable 00B2CED8 l
+CSimpleMessageScrollFrame__s_metatable 00B2D060 l
+CSimpleMessageFrame__s_metatable 00B2D148 l
+CSimpleHTML__s_metatable 00B2D208 l
+CSimpleEditBox__s_metatable 00B2D3E0 l
 CSimpleCheckbox__s_metatable 00B2D414 l
 CSimpleButton__s_metatable 00B2D528 l
 s_cvM2ForceAdditiveParticleSort 00B2F000 l type="CVar*"
