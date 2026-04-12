@@ -78,6 +78,7 @@ static import_functions() {
 	set_func_cmt(0x00481620, "CSimpleTexture::SetBlendMode(EGxBlend)", 0);
 	set_func_cmt(0x00481640, "CSimpleTexture::SetTexCoord(C2Vector const*)", 0);
 	set_func_cmt(0x004831D0, "CSimpleTexture::SetTexCoord(CRect const&)", 0);
+	set_func_cmt(0x00483910, "type=\"void __thiscall func(CSimpleFontString* this, char* a1, int32_t a2)\"", 0);
 	set_func_cmt(0x00484470, "CSimpleTexture::CSimpleTexture(CSimpleFrame*, unsigned int, int)", 0);
 	set_func_cmt(0x00485F40, "CSimpleTexture::LoadXML(XMLNode*, CStatus*)", 0);
 	set_func_cmt(0x00488CF0, "CLayoutFrame::IsResizePending()", 0);

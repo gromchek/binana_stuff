@@ -1,4 +1,4 @@
-operator_new 00401010 f end=00401067 type="void* __stdcall func(uint32_t count)" ; void* operator new(size_t)
+operator_new 00401010 f end=00401027 type="void* __stdcall func(uint32_t count)" ; void* operator new(size_t)
 operator_delete 00401030 f end=0040104B type="void __stdcall func(void* ptr)" ; void operator delete(void*)
 CDataStore__constructor 00401050 f end=0040106E type="CDataStore* __thiscall func(CDataStore* this)"
 CDataStore__FetchWrite 00401070 f ; protected: int __thiscall CDataStore::FetchWrite(unsigned int,unsigned int,char const *,int)
@@ -17,6 +17,7 @@ ErrorDisplayMinLevelCallback 004017C0 f end=004017F9
 ErrorDisplayMaxLevelCallback 00401800 f end=00401839
 ErrorDisplayFilterCallback 004018D0 f end=00401A01
 GammaCallback 00401A30 f end=00401A79
+DesktopGammaCallback 00401A80 f end=00401B00
 CCommand_ReloadUI 00401B00 f end=00401B15
 UIFasterCallback 00402250 f end=004022D7
 ProcessAffinityMaskCallback 004022E0 f end=0040231E
@@ -27,7 +28,7 @@ ForceAdditiveParticleSortCallback 004024D0 f end=00402525
 AsyncFileReadThreadSleepCallback 00402670 f end=00402684
 AsyncFileReadHandlerTimeoutCallback 00402690 f end=004026A9
 AsyncFileInitialize 004026B0 f end=00402719
-WowClientDestroy 00402910 f end=004B509B
+WowClientDestroy 00402910 f end=004029AE
 SetPaths 00402B20 f end=00402B8B
 LoadMopaqFileSigningData 00402F60 f end=004031BB
 TimingMethodCallback 00403200 f end=00403294
@@ -35,7 +36,7 @@ CCommand_TimingInfo 004032A0 f end=004032FF
 ClientIdle 00403340 f end=00403362
 ClientSetTimer 00403370 f end=00403379
 ClientSetTimer 00403380 f end=004033A1
-ClientKillTimer 004033B0 f end=004033B9 type="void __stdcall ClientKillTimer(uint32_t timerId, void* handlerAddress, char* handlerName)"
+ClientKillTimer 004033B0 f end=004033B9 type="void __stdcall func(uint32_t timerId, void* handlerAddress, char* handlerName)"
 ClientPostClose 004033C0 f end=004033D1
 StartupStreaming 00403600 f end=004036A4 type="void __stdcall func(char* manifest@<eax>)"
 StartupReport 004036B0 f end=0040371B
@@ -515,13 +516,13 @@ Blizzard__Memory__Free 00428480 f end=004284A4
 Blizzard__String__FindFilename 00428500 f end=00428538 type="char* __stdcall func(char* str)"
 Blizzard__String__FindExtension 00428600 f end=00428613
 Blizzard__String__FirstPathSeparator 00428640 f end=00428668
-Blizzard__String__Copy 00428670 f end=004286BB type="int32_t __stdcall func(char* dst, const char* src, int32_t count)"
+Blizzard__String__Copy 00428670 f end=004286BB type="int32_t __stdcall func(char* dst, char* src, int32_t count)"
 Blizzard__String__Append 004286C0 f end=00428721 type="int32_t __stdcall func(char* dst, char* src, int32_t count)"
 Blizzard__String__EqualI 00428780 f end=004287A8
 Blizzard__String__Length 004287E0 f end=004287FD
 Blizzard__String__MemFill 00428920 f end=0042893A
-Blizzard__Unicode__ConvertUTF16to8 00428940 f end=00428AFC type="int32_t __stdcall func(uint8_t* dst, uint32_t dstmaxchars, const uint16_t* src, uint32_t srcmaxchars, uint32_t* dstchars, uint32_t* srcchars)"
-Blizzard__Unicode__ConvertUTF8to16 00428B00 f end=00428C94 type="int32_t __stdcall func(uint16_t* dst, uint32_t dstmaxchars, const uint8_t* src, uint32_t srcmaxchars, uint32_t* dstchars, uint32_t* srcchars)"
+Blizzard__Unicode__ConvertUTF16to8 00428940 f end=00428AFC type="int32_t __stdcall func(uint8_t* dst, uint32_t dstmaxchars, uint16_t* src, uint32_t srcmaxchars, uint32_t* dstchars, uint32_t* srcchars)"
+Blizzard__Unicode__ConvertUTF8to16 00428B00 f end=00428C94 type="int32_t __stdcall func(uint16_t* dst, uint32_t dstmaxchars, uint8_t* src, uint32_t srcmaxchars, uint32_t* dstchars, uint32_t* srcchars)"
 Blizzard__Time__FromFileTime 00428F00 f end=00428F56 type="Blizzard__Time__Timestamp __stdcall func(uint64_t fileTime)"
 Blizzard__Time__BreakTime 00429070 f end=0042916C
 Blizzard__Time__MakeTime 00429170 f end=00429214
@@ -547,7 +548,7 @@ Blizzard__Debug__AddErrorToStack 00432210 f end=004324D3 type="Blizzard__Debug__
 System_File__GetRootChars 004325C0 f type="int32_t __stdcall func(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
 Blizzard__Streaming__Manifests__TimeslotItem__HandleTag 00432720 f end=004327CA
 Blizzard__String__JoinPath 00433510 f end=0043356B type="void __stdcall func(char* a1, int32_t a2, char* a3, char* a4)" ; Blizzard::String::JoinPath(char*, int, char const*, char const*)
-System_File__FromNativeName 00433590 f end=00433650 type="void __stdcall func(uint8_t *buffer, uint32_t buffersize, const char *str)"
+System_File__FromNativeName 00433590 f end=00433650 type="void __stdcall func(uint8_t* buffer, uint32_t buffersize, char* str)"
 Blizzard__StringConversion_CodepageToUTF8__ToNative__constructor 00433650 f end=0043375A type="void __thiscall func(Blizzard__StringConversion_CodepageToUTF8__ToNative* this, char* str)" ; Blizzard::StringConversion_CodepageToUTF8::ToNative::ToNative(const char*)
 System_Thread__AllocateLocalStorage 00433760 f end=004337B7 type="bool __stdcall func(Blizzard__Thread__TLSSlot* slot, Blizzard__Thread__TLSDestructor destructorFn)"
 Blizzard__Using__DependsOn 00433870 f end=004338E6 type="void __stdcall func(char* me, char* dependsOn)"
@@ -753,6 +754,7 @@ BaseInitializeGlobal 0047B740 f end=0047B74A
 j_nullsub_3 0047B760 f
 quicksort 0047B800 f ; void __cdecl quicksort(unsigned int, unsigned int, int, int (__cdecl *)(unsigned int, unsigned int, int), int)
 ConvertUTF16toUTF8 0047B9E0 f end=0047BB9C type="int __stdcall func(char* dst, uint32_t dstMaxChars, uint16_t* src, uint32_t srcMaxChars, uint32_t* dstChars, uint32_t* srcChars)"
+ConvertUTF8toUTF16 0047BBA0 f end=0047BD1D
 sgetu8 0047BD40 f ; int __cdecl sgetu8(_BYTE *, _DWORD *)
 TextureRelease 0047BF30 f end=0047BF46
 HandleCreate 0047BF50 f end=0047BF6B
@@ -841,6 +843,7 @@ IEvtQueueCheckSyncKeyState 00480A50 f end=00480AC2
 IEvtQueueDispatch 00480AD0 f end=00480BCB
 IEvtQueueDispatchAll 00480BD0 f end=00480D28
 IEvtQueueUnregister 00480D30 f end=00480DD1
+CMouseEvent__operator_assign 00480DE0 f end=00480E39
 InputObserverDestroy 00480E70 f end=00480E98
 EventDestroy_cleanup 00480EA0 f end=00480ED9
 IEvtTimerGetNextTime 00480F70 f end=00480FCA
@@ -884,7 +887,7 @@ CSimpleTexture__OnFrameSizeChanged 004832C0 f end=00483454
 CSimpleFontString__PostLoadXML 004836D0 f end=00483750
 CSimpleFontString__SetFont 00483750 f end=0048388A
 CSimpleFontString__SetTextHeight 00483890 f end=00483908
-CSimpleFontString__SetText 00483910 f end=00483A3D type="void __thiscall func(CSimpleFontString* this, char* a1, int32_t a2)"
+CSimpleFontString__SetText 00483910 f end=00483A3D ; type="void __thiscall func(CSimpleFontString* this, char* a1, int32_t a2)"
 CSimpleFontString__GetDisplayText 00483A40 f end=00483C3C
 CSimpleFontString__SetJustificationOffset 00483C40 f end=00483CC8
 CSimpleFontString__AddShadow 00483CD0 f end=00483DCF
@@ -1503,6 +1506,7 @@ RequestImageDimensions 004B5BB0 f end=004B5C21
 GetTextureFormats 004B5FE0 f end=004B6159
 TextureCacheGetMaxSize 004B6180 f end=004B61B5
 TextureIsReadyNow 004B62A0 f end=004B62C1
+TextureCanUpdate 004B62D0 f end=004B62F1
 CTextureAtlas__Reload 004B63B0 f end=004B64DC
 TextureSetCacheSize 004B6580 f end=004B65D5
 TextureNotifyGxRestart 004B65E0 f end=004B660D
@@ -1520,7 +1524,7 @@ UpdateTgaTexture 004B7AA0 f end=004B7BA0
 PumpBlpTextureAsync 004B7BD0 f end=004B7E7C
 TextureInitialize 004B7F80 f end=004B7FF7
 LoadBlpMips 004B8070 f end=004B81CE type="int32_t __usercall func@<eax>(char* ext@<eax>, char* filename@<ebx>, int32_t a3, MipBits** mipBits, uint32_t* width, uint32_t* height, uint32_t* isOpaque, uint32_t* alphaBits, PIXEL_FORMAT* dataFormat)"
-TextureLoadImage 004B81D0 f end=004B8385 type="MipBits* func(const char* filename, uint32_t* width, uint32_t* height, PIXEL_FORMAT* dataFormat, int32_t* isOpaque, CStatus* status, uint32_t* alphaBits, int32_t a8)"
+TextureLoadImage 004B81D0 f end=004B8385 type="MipBits* __stdcall func(char* filename, uint32_t* width, uint32_t* height, PIXEL_FORMAT* dataFormat, int32_t* isOpaque, CStatus* status, uint32_t* alphaBits, int32_t a8)"
 TSGrowableArray_TSExplicitList_CTexture__SetCount 004B8610 f end=004B8714
 CTexture__constructor 004B8770 f end=004B881F
 TextureCreate 004B8C80 f end=004B8D6A
@@ -1551,8 +1555,11 @@ AsyncFileReadIsReading 004BAD80 f end=004BAE09
 AsyncFileReadWaitAll 004BAE10 f end=004BAEEE
 ModelBlobQuery 004BB3E0 f end=004BB404
 ModelBlobLoad 004BBC20 f end=004BBCA8
+ProfileInternal__PrfStrToInt 004BBD00 f end=004BBD36
 TSGrowableArray_1__CalcChunkSize 004BBD60 f end=004BBD9B
+ProfileInternal__STRINGBLOCK__AllocBlock 004BBEA0 f end=004BBEF8
 ProfileCreate 004BD150 f end=004BD1A6
+ProfileInternal__TokenizeStringValues 004BD580 f end=004BD5F7
 ProfileReadFile 004BD840 f end=004BD870
 TextBlockSetGradient 004BD900 f end=004BD91C
 TextBlockGetFontName 004BD960 f end=004BD983
@@ -2024,6 +2031,7 @@ CCharacterComponent__GetTabardBackgroundFileName 004E81C0 f end=004E8206
 CCharacterComponent__GetTabardEmblemFileName 004E8210 f end=004E825E
 CCharacterComponent__GetTabardBorderFileName 004E8260 f end=004E82AE
 CCharacterComponent__SetItemSlotUsingAttachSlot 004E82B0 f end=004E82C9
+CCharacterComponent__PasteOpaque 004E89F0 f end=004E8D28
 CCharacterComponent__CreateRequestAU 004E8E70 f end=004E8EF4
 CCharacterComponent__CreateRequestAL 004E8F00 f end=004E8F84
 CCharacterComponent__CreateRequestHA 004E8F90 f end=004E8FE9
@@ -2066,6 +2074,7 @@ CCharacterComponent__SetRandomFacialFeature 004EC050 f end=004EC0E0
 CCharacterComponent__ClearGuildTabard 004EC0E0 f end=004EC1B8
 CCharacterComponent__ApplyGuildColor 004EC1C0 f end=004EC509
 CCharacterComponent__TurnOffGuildTabardPurchase 004EC510 f end=004EC54B
+CCharacterComponent__PasteScale 004EC550 f end=004EC68E
 CCharacterComponent__GeosRenderPrep 004ED900 f end=004EE0C1
 CCharacterComponent__PrepSections 004EE0D0 f end=004EE1F8
 CCharacterComponent__RenderPrepAll 004EE2A0 f end=004EE37C
@@ -2076,6 +2085,7 @@ CCharacterComponent__AddHelm 004EF0D0 f end=004EF250
 CCharacterComponent__BuildShoulderItemPaths 004EF4B0 f end=004EF70C
 CCharacterComponent__AreShoulderModelsCorrect 004EF710 f end=004EF839
 CCharacterComponent__AddShoulders 004EF840 f end=004EF8F9
+CCharacterComponent__Paste 004EF9D0 f end=004EFAA8
 CCharacterComponent__constructor 004EFBE0 f end=004EFC96
 CCharacterComponent__destructor 004EFCA0 f end=004EFDE5
 CCharacterComponent__UpdateBaseTexture 004EFDF0 f end=004EFEB1
@@ -2108,10 +2118,13 @@ CCharacterComponent__AddItemBySlot 004F2880 f end=004F2974
 CCharacterComponent__AddItemByType 004F29C0 f end=004F2AE2
 CACHEENTRY__LoadTexture 004F2BE0 f end=004F2CDD
 TextureCacheCopyTexture 004F2CE0 f end=004F2CF5
+TextureCacheGetMip 004F2D00 f end=004F2D3C
+TextureCacheGetPal 004F2D40 f end=004F2D71
 TextureCacheHasMips 004F2D80 f end=004F2DA7
 TextureCacheResetLoadCount 004F2DB0 f end=004F2DBB
 TextureCacheComputeLoadProgress 004F2DC0 f end=004F2E15
 CACHEENTRY__destructor 004F2EF0 f end=004F2F51
+CACHEENTRY__constructor 004F2F60 f end=004F2FA8
 TSGrowableArray_TSExplicitList_CACHEENTRY__ReallocData 004F2FB0 f end=004F3107
 TextureCacheAllocEntry 004F3110 f end=004F31A0
 TextureCacheDestroyTexture 004F31A0 f end=004F31EA
@@ -2510,7 +2523,7 @@ Script_DownloadSettings 00511FA0 f end=00511FA8
 Script_IsDesaturateSupported 00511FB0 f end=00511FE0
 Script_GetThreatStatusColor 00511FE0 f end=0051208A
 Script_ConsoleAddMessage 00512090 f end=005120DD
-LoadScriptFunctions 005120E0 f end=00530F86
+LoadScriptFunctions 005120E0 f end=00512272
 CGGameUI__CameraMusicIsPlaying 005124B0 f end=005124C1
 CGGameUI__SequenceMusicIsPlaying 005124D0 f end=005124D6
 CGGameUI__ClearLootSlot 005124E0 f end=005124E9
@@ -2520,6 +2533,7 @@ CGGameUI__OpenGuildInvite 00512570 f end=0051258F
 CGGameUI__SetAspect 005126E0 f end=005126F6
 AutoInteractStateChangedCallback 00512700 f end=0051272B
 GuildShowOfflineCallback 00512730 f end=00512749
+ShowClassColorInNameplateCallback 00512770 f end=0051279F
 SetCalendarFilterCVarCallback 005127A0 f end=005127C6
 SaveGameCVarsCallback 00512890 f end=005128C1
 CGGameUI__IsPartyMember 005129F0 f end=005129F9
@@ -3650,7 +3664,7 @@ CGUIMacros__SetMacroBody 005663A0 f end=00566400
 Script_RunMacroText 00566400 f end=00566487
 Script_GetNumMacroIcons 00566490 f end=005664D2
 Script_GetNumMacroItemIcons 005664E0 f end=00566522
-CGUIMacros__Shutdown 00566530 f end=005F03AD
+CGUIMacros__Shutdown 00566530 f end=00566612
 CGUIMacros__UpdateDynamicMacros 00566660 f end=005666A0
 Script_GetMacroIndexByName 005666A0 f end=005666FE
 TSGrowableArray_TSExplicitList_MACRONODE__ReallocData 00566790 f end=005668E7
@@ -3884,6 +3898,7 @@ CFormula__GetToken 00576BB0 f end=00576C7D
 CFormula__Expect 00576C80 f end=00576CC6
 GenderConditional 00576CD0 f end=00576E11
 ParseCountDownTimerText 00576E50 f end=00576EE6
+SpellParserVerifyConditional 00577030 f end=005770C7
 WorldStateParseText 005770D0 f end=0057721A
 TSGrowableArray_SpellVariables__ReallocData 00577410 f end=005774AB
 CFormula__CompileElement 00577530 f end=00577799
@@ -3898,6 +3913,8 @@ CFormula__GetVariableValue 005782D0 f end=00578BB5
 CFormula__Evaluate 00578D10 f end=00578EEA
 QuestParserParseText 00578F20 f end=00579520
 TSGrowableArray_SpellVariables__New 00579AD0 f end=00579B22
+SpellParserConditional 00579BA0 f end=00579D5A
+SpellParserVariables 00579D60 f end=00579E4C
 SpellParserParseText 0057ABC0 f end=0057AC93
 CGAutoCompleteName__NodeMatchesParams 0057ACA0 f end=0057ADAC
 AutoCompleteRegisterScriptFunctions 0057ADB0 f end=0057ADD3
@@ -5288,6 +5305,7 @@ TSGrowableArray_SkillLineAbilityRec__ReallocData 005DA510 f end=005DA5A0
 CGTradeSkillInfo__Close 005DA5A0 f end=005DA5E9
 CGTradeSkillInfo__GetSkillLineRec 005DA5F0 f end=005DA66E
 CGTradeSkillInfo__GetSelectionIndex 005DA670 f end=005DA6A8
+QSortSubClasses 005DA6B0 f end=005DA7C7
 CGTradeSkillInfo__GetSubClassIndexFromSkill 005DA7D0 f end=005DA82E
 CGTradeSkillInfo__IsCollapsedHeader 005DA830 f end=005DA8A6
 Script_CloseTradeSkill 005DA8B0 f end=005DA8FB
@@ -5298,6 +5316,7 @@ Script_GetTradeSkillSubClasses 005DAA70 f end=005DAB6C
 Script_GetFirstTradeSkill 005DAB70 f end=005DABF6
 Script_DoTradeSkill 005DAC00 f end=005DACD2
 CGTradeSkillInfo__ClearItemCallbacks 005DAD10 f end=005DADF1
+QSortSkills 005DAE60 f end=005DB05F
 CGTradeSkillInfo__GetTradeSkillListLink 005DB060 f end=005DB292
 Script_GetTradeSkillInfo 005DB2A0 f end=005DB543
 Script_GetTradeSkillIcon 005DB550 f end=005DB6D2
@@ -5721,10 +5740,12 @@ CGCamera__ClearModelCamera 005FE360 f end=005FE398
 CGCamera__IsFirstPersonView 005FE3A0 f end=005FE3BC
 CGCamera__CCommand_PitchLimit 005FE400 f end=005FE433
 CGCamera__CreateViewFromCamera 005FE4E0 f end=005FE510
+CGCamera__GetDefaultZoomMaxDistance 005FE570 f end=005FE577
 CGCamera__UpdateYaw 005FE5F0 f end=005FE696
 CGCamera__UpdateAutoInteractState 005FE6A0 f end=005FE6BF
 CGCamera__AddShakeOffset 005FE6C0 f end=005FE7B0
 CGCamera__CheckUnderwater 005FE7B0 f end=005FE7F3
+CGCamera__SetVehicleExitZoomDistance 005FE920 f end=005FE937
 CGCamera__GetCollisionQueryFlags 005FEC50 f end=005FEC67
 TSGrowableArray_CFacet__ReallocData 005FEF70 f end=005FEFFF
 Script_MoveViewInStart 005FF080 f end=005FF093
@@ -5742,6 +5763,7 @@ Script_MoveViewDownStop 005FF230 f end=005FF25C
 Script_SaveView 005FF260 f end=005FF2B7
 Script_FlipCameraYaw 005FF2C0 f end=005FF31B
 CGCamera__SaveCameraSettings 005FF320 f end=005FF3D7
+CGCamera__SetPositionAndTargetWithRoll 005FF440 f end=005FF4FB
 CGCamera__ZoomIn 005FF950 f end=005FFA5D
 CGCamera__ZoomOut 005FFA60 f end=005FFB6D
 CGCamera__ZoomToDistance 005FFB70 f end=005FFC1B
@@ -5806,6 +5828,8 @@ CSimpleCamera__SetFacing 00607BD0 f end=00607BF6
 CSimpleCamera__GetScene 00607C00 f end=00607C16
 CSimpleCamera__constructor 00607C20 f end=00607C90
 CCameraManager__SetScreenAspect 00607C90 f end=00607CAA
+FaceDirectionWithRoll 00607F40 f end=00608074
+BuildBillboardMatrixWithRoll 00608080 f end=006080F0
 FindItem 006081E0 f end=006081F0
 Script_GetTime 006081F0 f end=0060822A
 Script_GetGameTime 00608230 f end=00608266
@@ -6769,6 +6793,7 @@ GxTexUpdate 006813D0 f end=006813EC
 GxTexSetCannotUpdate 006813F0 f end=00681404
 GxTexSetWrap 00681450 f end=0068146C
 GxTexDestroy 00681470 f
+GxTexParameters 00681490 f end=006814A8
 GxTexCopy 006814D0 f end=00681524
 GxTexReusable 006815C0 f end=006815E8
 GxQueryCreate 00681630 f end=0068165B type="void __stdcall func(CGxQuery** query, EGxQueryType type)"
@@ -6800,18 +6825,21 @@ GxScenePresent 00682A00 f end=00682A33
 GxDevDestroy 00682B80 f end=00682C35
 EmergencyMem__Unlock 00682C40 f end=00682C45
 CGxDevice__InitLights 00682C50 f end=00682CA8 type="void __thiscall func(CGxDevice* this)"
-CGxDevice__DeviceCreate 00682CB0 f end=00682CCB type="void __thiscall func(CGxDevice* this, int32_t (*windowProc)(void*, uint32_t, uintptr_t, intptr_t), CGxFormat* format)"
+CGxDevice__DeviceCreate 00682CB0 f end=00682CCB type="void __thiscall func(CGxDevice* this, GxWindowProc windowProc, CGxFormat* format)"
 CGxDevice__DeviceCreate 00682CD0 f end=00682CF0 type="void __thiscall func(CGxDevice* this, uintptr_t hwnd, CGxFormat* format)"
 CGxDevice__DeviceDestroy 00682CF0 f end=00682CFB type="void __thiscall func(CGxDevice* this)"
 CGxDevice__DeviceSetBaseMipLevel 00682D00 f end=00682D10 type="void __thiscall func(CGxDevice* this, uint32_t baseMipLevel)"
+CGxDevice__DeviceBaseMipLevel 00682D10 f end=00682D17
 CGxDevice__DeviceApi 00682D20 f end=00682D27 type="EGxApi __thiscall func(CGxDevice* this)"
 CGxDevice__DeviceTakeScreenShot 00682D30 f end=00682D3B type="void __thiscall func(CGxDevice* this)"
 CGxDevice__IDevIsWindowed 00682D40 f end=00682D48 type="int32_t __thiscall func(CGxDevice* this)"
 CGxDevice__DeviceCurWindow 00682D70 f end=00682D76 type="CRect* __thiscall func(CGxDevice* this)"
 CGxDevice__DeviceDefWindow 00682D80 f end=00682D87 type="CRect* __thiscall func(CGxDevice* this)"
 CGxDevice__CapsIsWindowVisible 00682DC0 f end=00682DE7 type="int32_t __thiscall func(CGxDevice* this, int32_t a2)"
+CGxDevice__CapsWindowHasFocus 00682DF0 f end=00682E17
 CGxDevice__CapsHasContext 00682E20 f end=00682E47 type="int32_t __thiscall func(CGxDevice* this, int32_t a2)"
 CGxDevice__ScenePresent 00682E50 f end=00682E66 type="void __thiscall func(CGxDevice* this)"
+CGxDevice__SetScissor 00682E70 f end=00682EA7
 CGxDevice__PrimIndexPtr 00682F10 f end=00682F3C type="void __thiscall func(CGxDevice* this, CGxBuf* buf)"
 CGxDevice__PrimCalcCount 00682F40 f end=00682F66 type="uint32_t __stdcall func(EGxPrim primType, uint32_t indexCount)"
 CGxDevice__PrimNormal 00682F70 f end=00682F9E type="void __thiscall func(CGxDevice* this, C3Vector* n)"
@@ -6824,7 +6852,9 @@ CGxDevice__BufLock 00683150 f end=00683171 type="uint8_t* __thiscall func(CGxDev
 CGxDevice__BufUnlock 00683180 f end=006831A0 type="int32_t __thiscall func(CGxDevice* this, CGxBuf* buf, uint32_t size)"
 CGxDevice__BuffSizeSet 006831A0 f end=006831C0
 CGxDevice__TexIsReadyNow 006831C0 f end=006831E7
+CGxDevice__TexCanUpdate 006831F0 f end=00683202
 CGxDevice__TexSetCannotUpdate 00683320 f end=00683332
+CGxDevice__TexParameters 00683350 f end=00683392
 CGxDevice__ShaderConstantsClear 006833A0 f end=006833DD type="void __thiscall func(CGxDevice* this)"
 CGxDevice__ShaderConstantsSet 006833E0 f end=00683554 type="void __thiscall func(CGxDevice* this, EGxShTarget target, uint32_t index, float* constants, uint32_t count)"
 CGxDevice__ShaderConstantsLock 00683560 f end=00683577 type="uint8_t* __thiscall func(CGxDevice* this, EGxShTarget target)"
@@ -6854,6 +6884,7 @@ CGxGammaRamp__Set 00684070 f end=006840ED type="void __thiscall func(CGxGammaRam
 CGxDevice__DeviceSetFormat 006840F0 f end=0068416C type="int32_t __thiscall func(CGxDevice* this, CGxFormat* format)"
 CGxDevice__DeviceSetGamma 00684170 f end=00684189 type="void __thiscall func(CGxDevice* this, float gamma)"
 CGxDevice__DeviceSetGamma 00684190 f end=006841AF type="int32_t __thiscall func(CGxDevice* this, CGxGammaRamp* ramp)"
+CGxDevice__DeviceGamma 006841B0 f end=006841CF
 CGxDevice__DeviceScreenShot 006841D0 f end=00684254 type="void __thiscall func(CGxDevice* this)"
 CGxDevice__DeviceReadScreenShot 00684260 f end=0068429E type="void __thiscall func(CGxDevice* this, uint32_t* w, uint32_t* h, CImVector** pixels)"
 CGxDevice__DeviceSetRenderTarget 006842A0 f end=0068435D type="void __thiscall func(CGxDevice* this, EGxBuffer buffer, CGxTex* texture, uint32_t plane)"
@@ -6893,7 +6924,7 @@ CGxDevice__IRsDirty 00685970 f end=006859DB type="void __thiscall func(CGxDevice
 CGxDevice__IRsForceUpdate_EGxRenderState 006859E0 f end=00685A65 type="void __thiscall func(CGxDevice* this, EGxRenderState which)" ; CGxDevice::IRsForceUpdate(EGxRenderState)
 CGxDevice__IRsForceUpdate 00685A70 f end=00685B4E type="void __thiscall func(CGxDevice* this)" ; CGxDevice::IRsForceUpdate()
 CGxDevice__IRsSync 00685B50 f end=00685BFE type="void __thiscall func(CGxDevice* this, int32_t force)"
-CGxDevice__TexCreate 00685C60 f end=00685CCB type="void __thiscall func(CGxDevice* this, EGxTexTarget target, uint32_t width, uint32_t height, uint32_t depth, EGxTexFormat format, EGxTexFormat dataFormat, CGxTexFlags flags, void* userArg, void (*userFunc)(EGxTexCommand, uint32_t, uint32_t, uint32_t, uint32_t, void*, uint32_t*, void**), char* name, CGxTex** texId)"
+CGxDevice__TexCreate 00685C60 f end=00685CCB type="void __thiscall func(CGxDevice* this, EGxTexTarget target, uint32_t width, uint32_t height, uint32_t depth, EGxTexFormat format, EGxTexFormat dataFormat, CGxTexFlags flags, void* userArg, GxTexCallback userFunc, char* name, CGxTex** texId)"
 CGxDevice__TexSetWrap 00685D40 f end=00685DBF
 EmergencyMem__Lock 00685E90 f end=00685EB0 type="void* __thiscall func(EmergencyMem* this, uint32_t a1)"
 CGxDevice__MasterEnableSet 00685EB0 f end=00685F33 type="void __thiscall func(CGxDevice* this, EGxMasterEnables state, int32_t enable)"
@@ -6925,7 +6956,7 @@ CGxDevice__scalar_deleting_destructor 00689690 f end=006896BB type="void __thisc
 TSHashTable__CGxShader__MonitorFullness 006896C0 f end=00689756
 CGxDevice__ShaderCreate 006897C0 f end=00689A49 type="void __thiscall func(CGxDevice* this, CGxShader**, EGxShTarget, char*, char*, int32_t)"
 CGxShader__Valid 00689A50 f end=00689A6F
-HToI 00689B90 f end=00689C02 type="__int16 __usercall func@<ax>(char* h@<eax>, int count)"
+HToI 00689B90 f end=00689C02 type="int16_t __usercall func@<ax>(char* h@<eax>, int count)"
 CGxDevice__AdapterID 00689C10 f end=00689DA2
 CGxDevice__AdapterInfer 00689DB0 f end=00689E7B
 CGxMonitorModeSort 00689E80 f type="int32_t __stdcall func(void* a, void* b)"
@@ -6937,11 +6968,17 @@ TSGrowableArray_CGxFormat__New 0068A030 f end=0068A084
 TSGrowableArray_CGxMonitorMode__New 0068A090 f end=0068A0ED type="CGxMonitorMode* __thiscall func(TSGrowableArray_CGxMonitorMode* this)"
 TSGrowableArray_CGxMonitorMode__SetCount 0068A0F0 f end=0068A165 type="void __thiscall func(TSGrowableArray_CGxMonitorMode* this, uint32_t count)"
 CGxDevice__AdapterMonitorModes 0068A4C0 f end=0068A589 type="void __stdcall func(TSGrowableArray_CGxMonitorMode* modes)"
-CGxVboBroker1__CGxVboBroker1 0068A590 f end=0068A6FB
+CGxVboBroker1__constructor 0068A590 f end=0068A6FB
+CGxVboBroker1__destructor 0068A700 f end=0068A758
+CGxVboBroker1__SelectVbo 0068A760 f end=0068A7CF
+CGxVboBroker1__GetLastSelectedVbo 0068A7D0 f end=0068A7EB
 CGxDeviceOpenGl__ISetGlCaps 0068A9A0 f end=0068AF34 type="void __thiscall func(CGxDeviceOpenGl* this, CGxFormat* format)"
+CGxVboBroker1__destructor 0068B2D0 f end=0068B2FB
 CGxDeviceOpenGl__constructor 0068BBC0 f end=0068BD15 type="void __thiscall func(CGxDeviceOpenGl* this)"
 CGxDevice__NewOpenGl 0068BF20 f end=0068BF44 type="CGxDevice* __stdcall func()"
 CGxDevice__NewD3d9Ex 0068C220 f end=0068C244 type="CGxDevice* __stdcall func()"
+CGxDeviceOpenGl__SetFormatMode 0068C9B0 f end=0068CA76
+CGxDeviceOpenGl__DeviceCreate 0068D610 f end=0068D6C6
 CGxDeviceOpenGl__DeviceSetFormat 0068D6D0 f end=0068D7AF
 CGxDeviceD3d__IUnloadD3dLib 0068E140 f end=0068E174 type="void __stdcall func(HINSTANCE* hInstance, LPDIRECT3D9* d3dLib)" ; void CGxDeviceD3d::IUnloadD3dLib(HINSTANCE& d3dLib, LPDIRECT3D9& d3d)
 CGxDeviceD3d__ICreateD3dIB 0068E180 f end=0068E1E8 type="LPDIRECT3DINDEXBUFFER9 __thiscall func(CGxDeviceD3d* this, EGxPoolUsage usage, uint32_t size)" ; LPDIRECT3DINDEXBUFFER9 CGxDeviceD3d::ICreateD3dIB(EGxPoolUsage usage, uint32_t size)
@@ -6974,7 +7011,7 @@ CGxDeviceD3d__IBufUnlock 0068FA60 f end=0068FADC type="int32_t __thiscall func(C
 CGxDeviceD3d__BufUnlock 0068FAE0 f end=0068FB07 type="int32_t __thiscall func(CGxDeviceD3d* this, CGxBuf* buf, uint32_t size)"
 CGxDeviceD3d__IBufLock 0068FB10 f end=0068FCDC type="uint8_t* __thiscall func(CGxDeviceD3d* this, CGxBuf* buf)"
 CGxDeviceD3d__BufLock 0068FCE0 f end=0068FCFE type="char* __thiscall func(CGxDeviceD3d* this, CGxBuf* buf)"
-CGxDeviceD3d__BufData 0068FD00 f end=0068FD49 type="void __thiscall func(CGxDeviceD3d* this, CGxBuf* buf, const void* data, uint32_t size, uint32_t offset)"
+CGxDeviceD3d__BufData 0068FD00 f end=0068FD49 type="void __thiscall func(CGxDeviceD3d* this, CGxBuf* buf, void* data, uint32_t size, uint32_t offset)"
 CGxDeviceD3d__constructor 0068FD50 f end=0068FE80 type="void __thiscall func(CGxDeviceD3d* this)"
 CGxDeviceD3d__scalar_deleting_destructor 0068FE80 f end=0068FEC8 type="void __thiscall func(CGxDeviceD3d* this, uint8_t __flags)"
 CGxDeviceD3d__DeviceReadPixels 0068FED0 f end=00690144 type="void __thiscall func(CGxDeviceD3d* this, CiRect* rect, TSGrowableArray_CImVector* pixels)"
@@ -6984,7 +7021,7 @@ CGxDeviceD3d__IDestroyD3d 006903B0 f end=006904C4
 CGxDeviceD3d__DeviceSetFormat 006904D0 f end=006905E8 type="int32_t __thiscall func(CGxDeviceD3d* this, CGxFormat* format)"
 CGxDeviceD3d__DeviceDestroy 006905F0 f end=00690679 type="void __thiscall func(CGxDeviceD3d* this)"
 CGxDeviceD3d__ICreateD3d 00690680 f end=00690742 type="int32_t __thiscall func(CGxDeviceD3d* this)"
-CGxDeviceD3d__DeviceCreate 00690750 f end=00690821 type="int32_t __thiscall func(CGxDeviceD3d* this, int32_t (*windowProc)(void*, uint32_t, uintptr_t, intptr_t), CGxFormat* format)"
+CGxDeviceD3d__DeviceCreate 00690750 f end=00690821 type="int32_t __thiscall func(CGxDeviceD3d* this, GxWindowProc windowProc, CGxFormat* format)"
 CGxDeviceD3d__DeviceCreate 00690830 f end=00690897 type="int32_t __thiscall func(CGxDeviceD3d* this, void* hwnd, CGxFormat* format)"
 ScanString 006908B0 f end=0069090D
 FindGlExt 00690910 f end=00690954
@@ -7031,7 +7068,7 @@ CGxDeviceD3d__ISetTexCoordIndex 006A4100 f end=006A4190 type="void __thiscall fu
 CGxDeviceD3d__ISetColorOp 006A4190 f end=006A41EC type="void __thiscall func(CGxDeviceD3d* this, uint32_t tmu, uint32_t op)"
 CGxDeviceD3d__ISetAlphaOp 006A41F0 f end=006A424C type="void __thiscall func(CGxDeviceD3d* this, uint32_t tmu, uint32_t op)"
 CGxDeviceD3d__ISetMaterial 006A4250 f end=006A439B type="void __thiscall func(CGxDeviceD3d* this, CImVector diffuse, CImVector emissive, CImVector specular, float specularExp)"
-C44Matrix__Inverse 006A43A0 f type="C44Matrix* __thiscall func(C44Matrix *this, C44Matrix* __return_ptr result)"
+C44Matrix__Inverse 006A43A0 f type="C44Matrix* __thiscall func(C44Matrix* this, C44Matrix* __return_ptr result)"
 CGxDeviceD3d__IStateSyncLights 006A43D0 f end=006A46F9 type="void __thiscall func(CGxDeviceD3d* this)"
 CGxDeviceD3d__IStateSyncMaterial 006A4700 f end=006A4846 type="void __thiscall func(CGxDeviceD3d* this)"
 CGxDeviceD3d__IStateSyncXforms 006A4850 f end=006A48FE type="void __thiscall func(CGxDeviceD3d* this)"
@@ -7047,7 +7084,7 @@ CGxDeviceD3d__CapsWindowSize 006A5A00 f end=006A5A25 type="void __thiscall func(
 CGxDeviceD3d__IXformSetWorld 006A5A30 f end=006A5A92 type="void __thiscall func(CGxDeviceD3d* this)"
 CGxDeviceD3d__IXformSetTex 006A5AA0 f end=006A5C65 type="void __thiscall func(CGxDeviceD3d* this, uint32_t tmu)"
 CGxDeviceD3d__IBindPixelShader 006A5C70 f end=006A5D48 type="void __thiscall func(CGxDeviceD3d* this, CGxShader* ps)"
-CGxDeviceD3d__IShaderReload 006A5D50 f end=006A5E07 type="void __thiscall func(CGxDeviceD3d* this, CGxShader* shader, const char* a2, const char* a3)"
+CGxDeviceD3d__IShaderReload 006A5D50 f end=006A5E07 type="void __thiscall func(CGxDeviceD3d* this, CGxShader* shader, char* a2, char* a3)"
 CGxDeviceD3d__IShaderCreate 006A5E10 f end=006A5E36 type="void __thiscall func(CGxDeviceD3d* this, CGxShader* shader)"
 CGxDeviceD3d__IReleaseD3dShaders 006A5E40 f end=006A5EEC type="void __thiscall func(CGxDeviceD3d* this, int32_t freeShaders)"
 CGxDevice__ITexWHDStartEnd 006A5EF0 f end=006A5FDF type="void __thiscall func(CGxDevice* this, CGxTex* texId, uint32_t* width, uint32_t* height, uint32_t* baseMip, uint32_t* mipCount)"
@@ -7073,6 +7110,7 @@ CTgaFile__RLEDecompressImage 006AA630 f end=006AA6F2 type="int32_t __thiscall fu
 CTgaFile__SetTopDown 006AA700 f end=006AA81D type="void __thiscall func(CTgaFile* this, int32_t set)"
 CTgaFile__ImageTGA32Pixel 006AA840 f end=006AA867 type="TGA32Pixel* __thiscall func(CTgaFile* this)"
 CTgaFile__RemoveAlphaChannels 006AA870 f end=006AA948 type="int32_t __thiscall func(CTgaFile* this)"
+CTgaFile__Compress 006AACE0 f end=006AADD2
 CTgaFile__Close 006AAF40 f end=006AAFA5 type="int32_t __thiscall func(CTgaFile* this)"
 CTgaFile__Open 006AAFB0 f end=006AB0D4 type="int32_t __thiscall func(CTgaFile* this, char* filename, int32_t a3)"
 CTgaFile__ConvertColorMapped 006AB0E0 f end=006AB212
@@ -7118,7 +7156,7 @@ CBLPFile__DecompPalARGB565DitherFloydSteinberg 006AF140 f end=006AF33F type="voi
 CBLPFile__DecompPalARGB2565DitherFloydSteinberg 006AF340 f end=006AF65D type="void __thiscall func(CBLPFile* this, uint8_t* data, void* tempbuffer, uint32_t width, uint32_t height)"
 CBLPFile__Pixels 006AF6A0 f end=006AF6D1 type="uint32_t __thiscall func(CBLPFile* this, uint32_t mipLevel)"
 CBLPFile__Unlock 006AF6E0 f end=006AF728
-CBLPFile__GetFormatSize 006AF730 f end=006AF7E9 type="int32_t __thiscall func(CBLPFile *this, PIXEL_FORMAT format, uint32_t mipLevel, uint32_t* size, uint32_t* stride)"
+CBLPFile__GetFormatSize 006AF730 f end=006AF7E9 type="int32_t __thiscall func(CBLPFile* this, PIXEL_FORMAT format, uint32_t mipLevel, uint32_t* size, uint32_t* stride)"
 CBLPFile__DecompPal 006AF810 f end=006AF984 type="int32_t __thiscall func(CBLPFile* this, PIXEL_FORMAT format, uint32_t mipLevel, uint8_t* data, void* tempBuffer)"
 CBLPFile__Lock 006AF990 f end=006AFB55
 CBLPFile__Lock2 006AFCE0 f end=006AFF06 type="int32_t __thiscall func(CBLPFile* this, char* fileName, PIXEL_FORMAT format, uint32_t mipLevel, unsigned char* data, uint32_t* stride)"
@@ -7209,6 +7247,7 @@ FriendList__GetIgnoreSelectionIndex 006B3800 f end=006B383F
 FriendList__IsFriend 006B3920 f end=006B395D
 QSortFriends 006B3960 f end=006B3A23
 QSortIgnore 006B3A60 f end=006B3B51
+FriendList__Removed 006B3B90 f end=006B3C05
 FriendList__SetName 006B3C90 f end=006B3D04
 Script_GetNumFriends 006B4060 f end=006B412B
 Script_GetFriendInfo 006B4130 f end=006B43F3
@@ -7333,6 +7372,7 @@ InternalGetTextExtent 006C1430 f end=006C16E5
 InternalGetMaxCharsWithinWidth 006C1710 f end=006C1AC3
 CGxFont__UpdateDimensions 006C22F0 f end=006C2478
 CGxFont__GetGlyphData 006C2480 f end=006C24EA
+CGxFont__RegisterEvictNotice 006C2600 f end=006C2642
 TSGrowableArray_TSExplicitList_KERNNODE__ReallocData 006C2840 f end=006C2997
 CGxFont__CheckStringGlyphs 006C29A0 f end=006C29F7
 TSGrowableArray_TSExplicitList_KERNNODE__SetCount 006C2F70 f end=006C3074
@@ -7351,12 +7391,14 @@ BATCHEDRENDERFONTDESC__UnlockVertexPtrAndRender 006C48D0 f end=006C49A2
 BATCHEDRENDERFONTDESC__RenderBatch 006C4AD0 f end=006C4CCA
 TEXTLINETEXTURE__destructor 006C4CD0 f end=006C4D7C
 TSGrowableArray_TSExplicitList_BATCHEDRENDERFONTDES__ReallocData 006C4E20 f end=006C4F77
+TEXTURECACHEROW__EvictGlyph 006C4F80 f end=006C511D
 CGxStringBatch__RenderBatch 006C53A0 f end=006C5885
 TEXTLINETEXTURE__Recycle 006C5930 f end=006C59AC
 TSGrowableArray_TSExplicitList_BATCHEDRENDERFONTDES__SetCount 006C59D0 f end=006C5AD4
 TSHashTable__BATCHEDRENDERFONTDES__Initialize 006C5AE0 f end=006C5B3A
 TSHashTable__BATCHEDRENDERFONTDES__GrowListArray 006C5B40 f end=006C5D0B
 TSHashTable__BATCHEDRENDERFONTDES__MonitorFullness 006C5D10 f end=006C5DA6
+CGxString__TexturePageEvicted 006C5E70 f end=006C5E8F
 CGxString__WriteGeometry 006C5E90 f end=006C5EE0 ; CGxString::WriteGeometry(CGxVertexPCT*, int, int, int) const
 TSGrowableArray_GXUFONTHYPERLINKINFO__ReallocData 006C5EE0 f end=006C5F77
 TSGrowableArray_GXUEMBEDDEDTEXTUREINFO__ReallocData 006C5F80 f end=006C6017
@@ -8243,6 +8285,7 @@ GameObjectStatsCallback 00712AE0 f end=00712B3E
 CGGameObject_C__GetRotation 00712E20 f end=00712E3A
 CGGameObject_C__IsPointInside 00712E90 f end=00712EA1
 CGGameObject_C__AddPassenger 00712EB0 f end=00712ED1
+CGGameObject_C__GetMatrix 00712EE0 f end=00712EFD
 CGGameObject_C__PostInit 00712F30 f end=00713093
 CGGameObject_C__Disable 007130A0 f end=0071312E
 CGGameObject_C__PostReenable 00713130 f end=007131A9
@@ -8289,6 +8332,7 @@ CGUnit_C__SetCastImmunities 00715AB0 f end=00715AC0
 CGUnit_C__SetCastingAutoRepeat 00715AC0 f end=00715AE5
 CGUnit_C__SetCastingAnim 00715AF0 f end=00715B15
 CGUnit_C__StopNamePlateSpellbar 00715B20 f end=00715B46
+CGUnit_C__ClearWeaponTrailHandles 00715B70 f end=00715BA0
 CGUnit_C__GetNamePlateFocus 00715C30 f end=00715C36
 CGUnit_C__ClearNamePlateFocus 00715C40 f end=00715C5A
 CGUnit_C__GetTrackingType 00715C60 f end=00715C66
@@ -8318,6 +8362,7 @@ CGUnit_C__GetModelData 00717A20 f end=00717AC1
 CGUnit_C__GetStandHeight 00717AD0 f end=00717B11
 CGUnit_C__GetModelFileName 00717B20 f end=00717B53
 CGUnit_C__CanBeLooted 00717B60 f end=00717B98
+CGUnit_C__RemoveLootEffect 00717C20 f end=00717C45
 CGUnit_C__InitActiveMover 00717C50 f end=00717D84
 CGUnit_C__SendTimeSkip 00717D90 f end=00717E47
 CGUnit_C__GetSmoothFacing 00717E50 f end=00717EB3
@@ -8447,6 +8492,7 @@ CGUnit_C__GetAppropriateSpellVisual 00720F80 f end=0072118F
 CGUnit_C__ClearOrphanedAuraEffects 00721190 f end=00721206
 CGUnit_C__OnSwimStart 00721210 f end=00721289
 CGUnit_C__UpdateObjectEffectMovementStates 00721300 f end=007219EB
+CGUnit_C__UpdateFloodsafeMoveEvents 00721B90 f end=00721C16
 CGUnit_C__IsShapeShifted 00721CA0 f end=00721CEE
 CGUnit_C__PreemptivelyCancelShapeshift 00721CF0 f end=00721D93
 CGUnit_C__CanCurrentFormMount 00721DA0 f end=00721E68
@@ -8742,6 +8788,7 @@ CGUnit_C__GetWeaponSwingType 00746360 f end=007463D7
 CheckUnitSoundTimer 007464A0 f end=007464CE
 CGUnit_C__PlayFoleySound 007464D0 f end=00746536
 CGUnit_C__PlayParrySound 00746540 f end=007465DA
+CGUnit_C__PlayStandSound 007465E0 f end=0074660E
 CGUnit_C__PlayDeathThud 00746610 f end=0074671F
 CGUnit_C__CheckLoopSound 007467F0 f end=007468FE
 CGUnit_C__GetNewNPCSoundCount 00746900 f end=007469B1
@@ -8749,6 +8796,7 @@ CGUnit_C__PlayAISound 007469C0 f end=00746AC3
 CGUnit_C__PlayEmoteStateSound 00746AD0 f end=00746B26
 CGUnit_C__PlayEmoteSound 00746D60 f end=00746FF2
 CGUnit_C__PlayTextEmoteSound 00747000 f end=007470C2
+CGUnit_C__HandlePlayStandSound 007471A0 f end=0074723B
 CGUnit_C__HandleFootfallAnimEvent 00747240 f end=00747304
 CGUnit_C__PlayUnitSound 00747310 f end=007474A2
 CGUnit_C__PlayUnitEventSound 007474B0 f end=007476DC
@@ -9059,6 +9107,7 @@ CVar__Load 00766530 f end=007665C2 type="int32_t __stdcall func(char* filename)"
 CVar__Delete 007665D0 f end=00766634
 CVar__SaveCvar 00766640 f end=007666A1 type="bool __stdcall func(char* name, char* value, void* param)"
 CVar__LogCvar 007666B0 f end=007666F9 ; CVar::LogCvar(char const*, char const*, void*)
+CVar__SetReadOnly 00766700 f end=00766719
 CVarIntListWrapper__AddNextValue 00766720 f end=007667A5
 CVar__InternalSet 007667B0 f end=00766855 ; CVar::InternalSet(char const*, bool, bool, bool, bool)
 CVarArrayWrapper__RawGetValue 00766860 f end=007668BC
@@ -9087,7 +9136,7 @@ TSGrowableArray_TSExplicitList_CVar__SetCount 00767AB0 f end=00767BB4
 TSHashTable__CVar__Initialize 00767CF0 f end=00767D4A
 TSHashTable__CVar__GrowListArray 00767D50 f end=00767F1B
 TSHashTable__CVar__MonitorFullness 00767F20 f end=00767FB6
-CVar__Register 00767FC0 f end=007681E9 type="CVar* __stdcall func(char* name, char* help, uint32_t flags, const char* value, void* fcn, uint32_t category, bool a7, void* arg, bool a9)"
+CVar__Register 00767FC0 f end=007681E9 type="CVar* __stdcall func(char* name, char* help, uint32_t flags, char* value, void* fcn, uint32_t category, bool a7, void* arg, bool a9)"
 CVar__Initialize 00768340 f end=00768402 type="void __stdcall func(char* filename)"
 ConsoleCommand_Quit 00768410 f end=0076841B type="int32_t __stdcall func(char* command, char* arguments)"
 ConsoleCommandHistory 00768440 f end=0076845B type="char* __stdcall func(uint32_t index)"
@@ -9142,7 +9191,7 @@ AddToHistory 0076B3B0 f end=0076B3E5
 ConsoleDetectSetDefaults 0076B3F0 f type="void __stdcall func(DefaultSettings* defaults, Hardware* hardware)" ; void SetDefaults(DefaultSettings&, const Hardware&)
 ConsoleDetectSetDefaultsFormat 0076B520 f end=0076B53D type="void __stdcall func(DefaultSettings* defaults, Hardware* hardware)" ; ConsoleDetectSetDefaultsFormat(DefaultSettings&, const Hardware&)
 SetVideoIdx 0076B540 f end=0076B594 type="void __stdcall func(Hardware* hardware@<edi>)"
-PrintStartupError 0076B5A0 f end=0076B616 type="void __usercall __noreturn func(int32_t messageID, const char* fallbackMessage)"
+PrintStartupError 0076B5A0 f end=0076B616 type="void __usercall __noreturn func(int32_t messageID, char* fallbackMessage)"
 ConsoleDetectSaveHardware 0076B620 f end=0076B7DB
 WowClientDB__VideoHardwareRec__Load 0076B7E0 f end=0076BA2D
 ConsoleDetectDetectHardware 0076BA30 f end=0076BBE9 type="void __stdcall func(Hardware* hardware, bool* hwChanged)" ; ConsoleDetectDetectHardware(Hardware&, bool&)
@@ -9230,7 +9279,7 @@ SSetCurrentProcessAffinityMask 0076FE00 f end=0076FE18
 SCreateProcess 00770290 f end=00770397
 ILoadValue 007703A0 f end=00770483 type="int32_t __usercall func@<eax>(void* parentKey, char* subKeyName@<eax>, char* valuename, uint32_t* datatype, uint8_t* buffer@<ebx>, uint32_t bytes@<edi>, uint32_t* bytesread@<ecx>)"
 InternalLoadEntry 00770490 f end=00770575 type="int32_t __usercall func@<eax>(char* keyname, char* valuename, uint32_t flags, uint32_t* datatype, void* buffer, uint32_t bytes, uint32_t* bytesread@<esi>)"
-InternalSaveEntry 00770580 f end=00770719 type="int32_t __usercall func@<eax>(char* keyname, char* valuename, uint32_t flags@<ebx>, uint32_t datatype, const void* buffer, uint32_t bytes@<edi>)"
+InternalSaveEntry 00770580 f end=00770719 type="int32_t __usercall func@<eax>(char* keyname, char* valuename, uint32_t flags@<ebx>, uint32_t datatype, void* buffer, uint32_t bytes@<edi>)"
 SRegLoadString 00770720 f end=0077083B
 SRegLoadValue 00770840 f end=007708E9 type="int32_t __stdcall func(char* keyname, char* valuename, uint32_t flags, uint32_t* value)"
 SRegSaveString 007708F0 f end=0077099C
@@ -9263,9 +9312,9 @@ StormDestroy 00773A00 f end=00773A2F
 StormSetOption 00773A80 f end=00773C81 type="int32_t __stdcall func(int optname, void* optval, uint32_t optlen)"
 Blizzard__String__VFormat 00773E60 f end=00774182 type="uint32_t __stdcall func(char* dest, uint32_t maxchars, char* format, va_list* arglist)"
 SCritSect__constructor 00774620 f end=0077462E type="SCritSect* __thiscall func(SCritSect* this)"
-SCritSect__destructor 00774630 f end=00774638 type="void __thiscall func(SCritSect *this)"
-SCritSect__Enter 00774640 f end=00774648 type="void __thiscall func(SCritSect *this)"
-SCritSect__Leave 00774650 f end=00774658 type="void __thiscall func(SCritSect *this)"
+SCritSect__destructor 00774630 f end=00774638 type="void __thiscall func(SCritSect* this)"
+SCritSect__Enter 00774640 f end=00774648 type="void __thiscall func(SCritSect* this)"
+SCritSect__Leave 00774650 f end=00774658 type="void __thiscall func(SCritSect* this)"
 TInstanceIdTable_EvtContext__Unlock 00774660 f end=00774675
 SSyncObject__Valid 00774680 f end=00774688
 SSyncObject__Wait 00774690 f end=007746A4
@@ -9416,7 +9465,7 @@ World__UnloadMap 00783180 f end=0078319E
 World__PrepareUpdate 007831A0 f end=007834FE
 World__ObjectCreate 00783500 f end=00783629
 CGObject_C__PrepareToFadeInt 00783630 f end=00783776
-World__Destroy 007837F0 f end=007BA834
+World__Destroy 007837F0 f end=00783902
 World__GetFacets 00783910 f end=00783A36
 World__GetFacets 00783A40 f end=00783A5E
 World__ObjectSetRenderEnabled 00783A60 f end=00783B05
@@ -9516,6 +9565,7 @@ CWorldScene__FrustumXform 0078FB00 f end=0078FB20
 CWorldScene__FrustumCull 0078FB20 f end=0078FB47
 CWorldScene__FrustumPop 0078FB50 f end=0078FB58
 CWorldScene__ClipBufferCull 0078FDC0 f end=0078FF99
+ClipInfo__Set 0078FFA0 f end=00790020
 TSGrowableArray_CMapObjDefGroup__ReallocData 00790250 f end=007902E0
 TSGrowableArray_CGxVertexPCT0T1__ReallocData 007902E0 f end=0079036F
 TSGrowableArray_CBarrier__Contact__ReallocData 00790370 f end=007903FF
@@ -9525,6 +9575,7 @@ CWorldScene__FrustumSet 00790AF0 f end=00790E1B
 CWorldScene__FrustumSet 00790E20 f end=007910FE
 CWorldScene__FrustumSet 00791100 f end=00791120
 CFacet__Set 007912C0 f end=00791378
+World__NDCClip 00791380 f end=00791634
 World__NDCXform 00791640 f end=007917A7
 TSGrowableArray_CGxVertexPC__ReallocData 007917D0 f end=00791862
 TSGrowableArray_CPortalView__ReallocData 00791870 f end=00791909
@@ -9553,7 +9604,7 @@ CBarrier__Render 00794B50 f end=007953F6
 CWorldScene__Update 00795400 f end=00795CF3
 CWorldScene__LocateViewer3 00795D40 f end=00795F7F
 CWorldScene__RenderMapObjDefGroups 007964A0 f end=007968C2
-CWorldScene__Destroy 00798310 f end=007CCBD4
+CWorldScene__Destroy 00798310 f end=007983A6
 CWorldScene__RenderDetailDoodads 007984A0 f end=00798794
 CWorldScene__CullDoodads 007987A0 f end=007989B5
 CWorldScene__RenderChunksSinglePass 007989C0 f end=00798D9F
@@ -9596,6 +9647,7 @@ CMap__ClearChunkBufs 0079E780 f end=0079E7B6
 CMap__Initialize 0079E7C0 f end=0079EFD4
 CMap__Destroy 0079F320 f end=0079F646
 TSGrowableArray_CGxVertexPT0T1__ReallocData 0079F650 f end=0079F6E9
+CWorldMath__MakeAaBox 0079F6F0 f end=0079F757
 TSGrowableArray_CGxVertexPT0T1__SetCount 0079F980 f end=0079FA08
 CMap__NewFootprint 0079FA70 f end=0079FCBE
 TSGrowableArray_CMapFootprintTexture__ReallocData 007A01C0 f end=007A02E3
@@ -9666,6 +9718,7 @@ CMap__GetHeightTerrain 007AD3B0 f end=007AD6F1
 CMapObj__Delete 007AE030 f end=007AE050
 CMapObj__DesrtoyPools 007AE050 f end=007AE05B
 CMapObj__UpdatePools 007AE060 f end=007AE06B
+CMapObj__InitPtrs 007AE070 f end=007AE109
 CMapObj__AsyncFailedCallback 007AE110 f end=007AE138
 CMapObj__CreateWmoIgnoreFlags 007AE140 f end=007AE199
 CMapObj__ReadGroup 007AE1A0 f end=007AE1B2
@@ -10317,6 +10370,7 @@ SpellVisualsInitialize 007FC5A0 f end=007FC5E6
 SpellVisualsCancelMountTransition 007FC9D0 f end=007FC9E7
 SpellVisualsClear 007FC9F0 f end=007FCA29
 SpellVisualsTick 007FCA30 f end=007FCBB7
+SpellVisualsShutdown 007FCBC0 f end=007FCC26
 Spell_C_SpellUsesReagent 007FD5F0 f end=007FD61D
 Spell_C_IsTargeting 007FD620 f end=007FD62C
 Spell_C_GetTargetingSpell 007FD630 f end=007FD640
@@ -10542,6 +10596,7 @@ FrameScript_Object__CreateScriptMetaTable 00816790 f end=008167D3 ; FrameScript_
 FrameScript_Object__FillScriptMethodTable 008167E0 f end=00816822 ; FrameScript_Object::FillScriptMethodTable(lua_State*, FrameScript_Method*, int)
 FrameScript_Object__GetScriptByName 00816830 f end=00816865
 FrameScript_Object__GetScriptTime 00816870 f end=008168C5
+strjoin 00816B60 f end=00816C31
 issecurevariable 00816DE0 f end=00816EF2
 FrameScript_HookWrapper 00817050 f end=00817162
 seterrorhandler 008173C0 f end=0081741B
@@ -10570,7 +10625,7 @@ FrameScript_Object__constructor 00819830 f end=0081984B type="void __thiscall fu
 FrameScript_Object__destructor 00819850 f end=00819872 ; FrameScript_Object::~FrameScript_Object()
 FrameScript_Object__RegisterScriptObject 00819880 f end=008199B8
 FrameScript_Object__UnregisterScriptObject 008199C0 f end=00819A58 ; FrameScript_Object::UnregisterScriptObject(char const*)
-FrameScript_Initialize 00819BB0 f end=00819D38
+FrameScript_Initialize 00819BB0 f end=00819D38 type="void __stdcall func(int32_t profileEnabled)"
 FrameScript_GetText 00819D40 f end=00819E4F
 FrameScript_Execute 00819EA0 f end=0081A2B5 type="void __stdcall func(int32_t function, FrameScript_Object* object, int32_t args, char* args_fmt, FrameScript_EventObject* eventObject)"
 FrameScript_Object__RunScript 0081A2C0 f end=0081A2E7 ; FrameScript_Object__RunScript(FrameScript_Object::ScriptIx const&, int, char const*)
@@ -10664,6 +10719,7 @@ CM2Scene__Release 00823040 f end=00823062 ; CM2Scene::Release()
 CM2SceneRender__DrawCallback 008230D0 f end=0082312A ; CM2SceneRender::DrawCallback()
 CM2SceneRender__Draw 00823130 f end=00823C8D ; CM2SceneRender::Draw(M2PASS, M2Element*, unsigned int*, unsigned int*)
 CM2Scene__Draw 00823CB0 f end=00823D4D ; CM2Scene::Draw(M2PASS)
+CM2Model__CanUpdateNonReadyTextures 00823E40 f end=00823ECF
 CM2Model__WaitForLoad 00823ED0 f end=00823F0A ; CM2Model::WaitForLoad(char const*)
 CM2Model__SetAnimating 00823F10 f end=00823F89 ; CM2Model::SetAnimating(int)
 CM2Model__SetSequenceCallback 00823FE0 f end=0082405E ; CM2Model::SetSequenceCallback(void (*)(CM2Model*, unsigned int, unsigned int, int, unsigned int, unsigned long long, int), unsigned long long)
@@ -10679,6 +10735,7 @@ CM2Model__UnlinkFromCallbackList 00824510 f end=00824542 ; CM2Model::UnlinkFromC
 CM2Model__IsBatchDoodadCompatible 00824550 f end=008245A4 ; CM2Model::IsBatchDoodadCompatible(M2Batch*) const
 TSGrowableArray_CRibbonMat__ReallocData 00824660 f end=008246FA
 TSGrowableArray_M2ModelCallback__ReallocData 00824700 f end=00824797
+CM2Model__FreeExternalResources 00824D30 f end=00824EC1
 CM2Model__Release 00824ED0 f end=00824EFD ; CM2Model::Release()
 CM2Model__IsLoaded 00824F00 f end=00824FB1 ; CM2Model::IsLoaded(int, int)
 CM2Model__IsDrawable 00824FC0 f end=008250AA ; CM2Model::IsDrawable(int, int)
@@ -10868,136 +10925,195 @@ CGLCD__LoadLCDElement 0084CC00 f end=0084CCBA
 CGLCD__GeneratePOIs 0084CCF0 f end=0084CFE3
 CGLCD__LoadScreen 0084CFF0 f end=0084D196
 CGLCD__LoadLayout 0084D1A0 f end=0084D389
-luaO_fb2int 0084D3D0 f end=0084D3ED
-luaO_rawequalObj 0084D420 f end=0084D467
-luaO_pushvfstring 0084D580 f end=0084D7C6
+luaO_int2fb 0084D390 f end=0084D3C4
+luaO_fb2int 0084D3D0 f end=0084D3ED type="int32_t __stdcall func(uint32_t x)"
+luaO_log2 0084D3F0 f end=0084D418 type="int32_t __stdcall func(uint32_t x)"
+luaO_rawequalObj 0084D420 f end=0084D467 type="bool __stdcall func(TValue* t1, TValue* t2)"
+luaO_str2d 0084D480 f end=0084D51D
+pushstr 0084D520 f end=0084D57F type="void __usercall func(lua_State* L@<esi>, char* str@<ecx>)"
+luaO_pushvfstring 0084D580 f end=0084D7C6 type="char* __stdcall func(lua_State* L, char* fmt, va_list argp)"
 luaO_chunkid 0084D860 f end=0084D9B2 type="void __stdcall func(char* out, char* src, size_t bufflen)"
 index2adr 0084D9C0 f end=0084DA48 type="TValue* __usercall func@<eax>(lua_State* L@<ecx>, int32_t idx@<eax>)"
-_luaA_pushobject 0084DA50 f end=0084DAA8
-_lua_checkstack 0084DAB0 f end=0084DB06
-_lua_xmove 0084DB10 f end=0084DB90
-_lua_newthread 0084DB90 f end=0084DBD0
+luaA_pushobject 0084DA50 f end=0084DAA8 type="void __stdcall func(lua_State* L, TValue* o)"
+lua_checkstack 0084DAB0 f end=0084DB06
+lua_xmove 0084DB10 f end=0084DB90
+lua_newthread 0084DB90 f end=0084DBD0
 lua_gettop 0084DBD0 f end=0084DBE1 type="int32_t __stdcall func(lua_State* L)"
 lua_settop 0084DBF0 f end=0084DC49 type="void __stdcall func(lua_State* L, int32_t idx)"
 lua_remove 0084DC50 f end=0084DCC0
 lua_insert 0084DCC0 f
 lua_pushvalue 0084DE50 f end=0084DEAE
 lua_type 0084DEB0 f
-_lua_iscfunction 0084DEF0 f end=0084DF17
+lua_typename 0084DED0 f end=0084DEEB
+lua_iscfunction 0084DEF0 f end=0084DF17
 lua_isnumber 0084DF20 f
 lua_isstring 0084DF60 f
-_lua_rawequal 0084DF90 f end=0084DFD1
+lua_rawequal 0084DF90 f end=0084DFD1
 lua_tonumber 0084E030 f
-_lua_tointeger 0084E070 f end=0084E0AE
-_lua_toboolean 0084E0B0 f end=0084E0DA
+lua_tointeger 0084E070 f end=0084E0AE
+lua_toboolean 0084E0B0 f end=0084E0DA
 lua_tolstring 0084E0E0 f
-_lua_objlen 0084E150 f end=0084E1AB
+lua_objlen 0084E150 f end=0084E1AB
 lua_touserdata 0084E1C0 f
-_lua_tothread 0084E1F0 f end=0084E20C
-_lua_topointer 0084E210 f end=0084E261
+lua_tothread 0084E1F0 f end=0084E20C
+lua_topointer 0084E210 f end=0084E261
 lua_pushnil 0084E280 f end=0084E29F type="void __stdcall func(lua_State* L)"
 lua_pushnumber 0084E2A0 f
-_lua_pushinteger 0084E2D0 f end=0084E2F4
+lua_pushinteger 0084E2D0 f end=0084E2F4
 lua_pushlstring 0084E300 f end=0084E34A type="void __stdcall func(lua_State* L, char* s, size_t len)"
 lua_pushstring 0084E350 f
 lua_pushvfstring 0084E3A0 f end=0084E3CF
 lua_pushfstring 0084E3D0 f end=0084E3FF
 lua_pushcclosure 0084E400 f end=0084E4C9 type="void __stdcall func(lua_State* L, lua_CFunction fn, int n)"
-_lua_pushboolean 0084E4D0 f end=0084E4F9
+lua_pushboolean 0084E4D0 f end=0084E4F9
 lua_pushlightuserdata 0084E500 f end=0084E524
-_lua_pushthread 0084E530 f end=0084E55E
-_lua_gettable 0084E560 f end=0084E586
-_lua_getfield 0084E590 f end=0084E5F2
+lua_pushthread 0084E530 f end=0084E55E
+lua_gettable 0084E560 f end=0084E586
+lua_getfield 0084E590 f end=0084E5F2
 lua_rawget 0084E600 f
 lua_rawgeti 0084E670 f
 lua_createtable 0084E6E0 f end=0084E72A type="void __stdcall func(lua_State* L, int32_t narray, int32_t nrec)"
 lua_getmetatable 0084E730 f end=0084E792
-_lua_settable 0084E8D0 f end=0084E8FD
-_lua_setfield 0084E900 f end=0084E965
+lua_getfenv 0084E7A0 f end=0084E8CB
+lua_settable 0084E8D0 f end=0084E8FD
+lua_setfield 0084E900 f end=0084E965
 lua_rawset 0084E970 f
+lua_rawseti 0084EA00 f end=0084EA90
 lua_setmetatable 0084EA90 f end=0084EB35
-_lua_setfenv 0084EB40 f end=0084EBE8
+lua_setfenv 0084EB40 f end=0084EBE8
 lua_call 0084EBF0 f end=0084EC2B
 lua_pcall 0084EC50 f end=0084ECBB
-_lua_dump 0084ED00 f end=0084ED3A
+lua_dump 0084ED00 f end=0084ED3A
+lua_status 0084ED40 f end=0084ED4C
 lua_gc 0084ED50 f end=0084EE28 type="int32_t __stdcall func(lua_State* L, int32_t what, int32_t data)"
 lua_gcupdatesizes 0084EE50 f end=0084EE59
 lua_gcgetsize 0084EE60 f end=0084EE69
 lua_gcupdatetimes 0084EE70 f end=0084EE79
 lua_gcgettime 0084EE80 f end=0084EE89
 lua_gcgetfunctiontime 0084EE90 f end=0084EF1C
+lua_gcresettimes 0084EF20 f end=0084EF29
 lua_error 0084EF30 f end=0084EF43
-_lua_next 0084EF50 f end=0084EF86
+lua_next 0084EF50 f end=0084EF86
 lua_concat 0084EF90 f end=0084F010
 lua_setdecimalconversion 0084F010 f end=0084F022
 lua_convertdecimal 0084F030 f end=0084F0C6
-_lua_settaint 0084F0D0 f end=0084F0E6
-_lua_newuserdata 0084F0F0 f end=0084F14D
+lua_settaint 0084F0D0 f end=0084F0E6
+lua_newuserdata 0084F0F0 f end=0084F14D
+luaL_where 0084F210 f end=0084F275
 luaL_error 0084F280 f
-_luaL_pushresult 0084F5C0 f end=0084F603
-_luaL_buffinit 0084F6A0 f end=0084F6BA
+luaL_checkstack 0084F2C0 f end=0084F2ED
+luaL_getmetafield 0084F2F0 f end=0084F34C
+luaL_callmeta 0084F350 f end=0084F3A8
+luaL_findtable 0084F3B0 f end=0084F49B
+luaL_pushresult 0084F5C0 f end=0084F603
+luaL_buffinit 0084F6A0 f end=0084F6BA
 luaL_ref 0084F6C0 f end=0084F793 type="int32_t __stdcall func(lua_State* L, int32_t t)"
 luaL_unref 0084F7A0 f
+luaL_argerror 0084F8B0 f end=0084F95D
+luaL_checktype 0084F960 f end=0084F9B1
+luaL_checkany 0084F9C0 f end=0084F9ED
+luaL_checklstring 0084F9F0 f end=0084FA4E
 luaL_optlstring 0084FA50 f end=0084FAAB
-_luaL_optnumber 0084FB30 f end=0084FB5E
-_luaL_optinteger 0084FBD0 f end=0084FBFE
-_luaL_checkoption 0084FD20 f end=0084FDCF
+luaL_checknumber 0084FAB0 f end=0084FB21
+luaL_optnumber 0084FB30 f end=0084FB5E
+luaL_checkinteger 0084FB60 f end=0084FBC8
+luaL_optinteger 0084FBD0 f end=0084FBFE
+luaL_openlib 0084FC00 f end=0084FD1E
+luaL_checkoption 0084FD20 f end=0084FDCF
 luaL_register 0084FDD0 f end=0084FDEB type="void __stdcall func(lua_State* L, char* libname, luaL_Reg* l)"
 lua_getstack 0084FE40 f end=0084FEBB
+lua_getlocal 0084FEC0 f end=0084FF26
+checkArgMode 008500E0 f end=0085012C
+symbexec 00850130 f end=0085050D type="Instruction __stdcall func(Proto* pt, int32_t lastpc, int32_t reg)"
+getobjname 008505A0 f end=008506F9 type="char* __usercall func@<eax>(lua_State* L, CallInfo* ci, int32_t stackpos@<eax>, char** name)"
+luaG_errormsg 00850830 f end=0085091E
 luaG_runerror 00850920 f
 lua_getinfo 00850A90 f end=00850B59
+luaG_typeerror 00850B60 f end=00850BEC type="void __stdcall func(lua_State* L, TValue* o, char* op)"
+luaG_concaterror 00850BF0 f end=00850C13 type="void __stdcall func(lua_State* L, StkId p1, StkId p2)"
+luaG_ordererror 00850C60 f end=00850CB2
 luaopen_bit 00851010 f end=00851032 type="int32_t __stdcall func(lua_State* L)"
 luaopen_math 00851760 f end=008517C0 type="int32_t __stdcall func(lua_State* L)"
 luaopen_table 008521F0 f end=00852210 type="int32_t __stdcall func(lua_State* L)"
 caseD_2a 00853182 f end=00853193 type="void __fastcall func(undefined4 param_1, undefined4 param_2)" auto
+_luaopen_string 00854070 f end=008540C3
 luaopen_string 008540D0 f end=008540F7 type="int32_t __stdcall func(lua_State* L)"
+_luaopen_base 00854F40 f end=0085505E
 luaopen_base 00855060 f end=00855087 type="int32_t __stdcall func(lua_State* L)"
-_luaE_newthread 00855240 f end=00855304
-_luaE_freethread 00855310 f end=00855366
-lua_newstate 00855370 f end=008554E3 type="lua_State* __stdcall func(lua_Alloc f, void* ud, int32_t a3)"
+stack_init 00855090 f end=00855118 type="void __usercall func(lua_State* L1@<esi>, lua_State* L@<edi>)"
+f_luaopen 00855120 f end=008551AB type="void __stdcall func(lua_State* L, void* ud)"
+luaE_newthread 00855240 f end=00855304
+luaE_freethread 00855310 f end=00855366
+lua_newstate 00855370 f end=008554E3 type="lua_State* __stdcall func(lua_Alloc f, void* ud, int32_t profile)"
 lua_close 00855510 f end=00855570
 luaM_initPool 00855740 f end=008557CA type="int32_t __stdcall func()"
 luaM_freePool 008557D0 f end=0085581C
 luaM_reallocPool 008558E0 f end=00855A11 type="void* __stdcall func(void* ud, void* ptr, size_t osize, size_t nsize)"
-_luaD_rawrunprotected 00855AF0 f end=00855B55
-_luaD_growstack 00855CD0 f end=00855CFC
+luaD_pcall 00855A20 f end=00855AD6
+luaD_rawrunprotected 00855AF0 f end=00855B55
+luaD_growstack 00855CD0 f end=00855CFC
+lua_yield 00856150 f end=00856184
 luaD_throw 008562E0 f
 luaD_precall 00856370 f
 luaD_precall_profile 00856550 f end=00856756
 luaD_call 00856760 f
-_luaS_newlstr 00856C80 f end=00856DC6
-_luaS_newudata 00856DD0 f end=00856E4C
-_luaV_tonumber 00856E50 f end=00856E9E
+luaS_newlstr 00856C80 f end=00856DC6
+luaS_newudata 00856DD0 f end=00856E4C
+luaV_tonumber 00856E50 f end=00856E9E
+luaV_tostring 00856EA0 f end=00856F0F type="int32_t __stdcall func(lua_State* L, StkId obj)"
+luaV_gettable 00857250 f end=008573B5
+luaV_settable 008573C0 f end=00857552
+luaV_lessthan 008576F0 f end=00857775
+luaV_concat 00857900 f end=00857AC7
 luaV_execute 00857CA0 f
 luaC_separateudata 0085A8B0 f end=0085A952
 luaC_sizeall 0085B4E0 f end=0085B52D
 luaC_getsize 0085B530 f end=0085B557
 luaC_timeall 0085B560 f end=0085B598
 luaC_gettime 0085B5A0 f end=0085B602
+luaC_timereset 0085B610 f end=0085B65F
 luaC_step 0085B950 f end=0085B9D2
 luaC_fullgc 0085B9E0 f end=0085BA4B
-_luaC_barrierf 0085BA50 f end=0085BA83
+luaC_barrierf 0085BA50 f end=0085BA83
 luaC_barrierback 0085BA90 f end=0085BAAB
 luaC_link 0085BAB0 f end=0085BAF1
-_luaT_gettm 0085BBE0 f end=0085BC09
+luaT_init 0085BB70 f end=0085BBD8
+luaT_gettm 0085BBE0 f end=0085BC09
 luaT_gettmbyobj 0085BC10 f end=0085BC67
-_luaH_new 0085C2E0 f end=0085C337
-_luaH_free 0085C340 f end=0085C39B
+luaH_next 0085BD70 f end=0085BE28
+setarrayvector 0085C190 f end=0085C1F6 type="void __stdcall func(lua_State* L@<eax>, Table* t@<esi>, int32_t size@<edi>)"
+setnodevector 0085C200 f end=0085C2DC type="void __usercall func(lua_State* L, Table* t@<edi>, int32_t size@<eax>)"
+luaH_new 0085C2E0 f end=0085C337 type="Table* __stdcall func(lua_State* L, int32_t narray, int32_t nhash)"
+luaH_free 0085C340 f end=0085C39B
+luaH_getnum 0085C3A0 f end=0085C427
 luaH_getstr 0085C430 f end=0085C46F
-_luaH_get 0085C470 f end=0085C515
-_luaH_resizearray 0085C960 f end=0085C9A3
+luaH_get 0085C470 f end=0085C515
+luaH_set 0085C520 f end=0085C582
+luaH_setnum 0085C590 f end=0085C5DA
+luaH_getn 0085C690 f end=0085C6F0
+luaH_resizearray 0085C960 f end=0085C9A3
 luaF_newCclosure 0085CC10 f end=0085CC86
-_luaF_newLclosure 0085CC90 f end=0085CD33
-_luaF_findupval 0085CD80 f end=0085CE2D
-_luaF_freeupval 0085CE30 f end=0085CE63
+luaF_newLclosure 0085CC90 f end=0085CD33
+luaF_findupval 0085CD80 f end=0085CE2D
+luaF_freeupval 0085CE30 f end=0085CE63
 luaF_close 0085CE70 f end=0085CF3F
-_luaF_freeproto 0085CFB0 f end=0085D04A
-_luaF_freeclosure 0085D050 f end=0085D09C
+luaF_newproto 0085CF40 f end=0085CFA3
+luaF_freeproto 0085CFB0 f end=0085D04A
+luaF_freeclosure 0085D050 f end=0085D09C
 luaF_getlocalname 0085D0A0 f end=0085D0ED
 luaZ_openspace 0085D170 f end=0085D1CC
-_luaU_dump 0085D660 f end=0085D6C7
+luaU_dump 0085D660 f end=0085D6C7
+luaM_toobig 0085D6D0 f end=0085D6E8 type="void* __stdcall func(lua_State* L)"
+luaM_realloc_ 0085D6F0 f end=0085D739 type="void* __stdcall func(lua_State* L, void* block, size_t osize, size_t nsize)"
+luaM_growaux_ 0085D740 f end=0085D805
+luaX_init 0085D890 f end=0085D8DF
+luaX_token2str 0085D8E0 f end=0085D935
+luaX_lexerror 0085D940 f end=0085D9D3
 luaX_syntaxerror 0085D9E0 f end=0085D9F9
-_luaU_header 00861B90 f end=00861BD0
+luaX_newstring 0085DA00 f end=0085DA50
+luaY_parser 00861A20 f end=00861A9E
+luaU_header 00861B90 f end=00861BD0
+luaK_reserveregs 00861F10 f end=00861F51
 RestoreMouse 008695B0 f end=008695FB
 OsInputSetWindowResizeLock 00869620 f end=0086962D
 OsInputGetMouseSpeed 00869630 f end=0086963D
@@ -11054,7 +11170,7 @@ OsGetExePath 0086BEA0 f end=0086BEBE
 OsGuiSetWindowTitle 0086C650 f end=0086C696
 OsGuiGetWindow 0086C6A0 f end=0086C6CE
 OsGuiSetGxWindow 0086C6D0 f end=0086C6DD
-OsGuiMessageBox 0086C6E0 f end=0086C7D0 type="int32_t __stdcall func(void* parentWindow, int32_t style, const char* message, const char* title)"
+OsGuiMessageBox 0086C6E0 f end=0086C7D0 type="int32_t __stdcall func(void* parentWindow, int32_t style, char* message, char* title)"
 OsIMEGetClauseInfo 0086CDB0 f end=0086CF84
 OsIMEEnable 0086CF90 f end=0086CFE2
 OsIMEInitialize 0086D0A0 f end=0086D0B8
@@ -11668,13 +11784,20 @@ FFX__Init 008C12F0 f end=008C1513
 FFX__Start 008C1770 f end=008C1867
 Catch_All@008c363a 008C363A f end=008C3648 type="undefined4 __stdcall func()" auto
 Catch_All@008c4230 008C4230 f end=008C424A type="void __stdcall func()" auto
+BattlenetLogin__Connected 008C52E0 f end=008C5369
 BattlenetLogin__LogConnectionStatus 008C6350 f end=008C638E
+BattlenetLogin__CantConnect 008C6A60 f end=008C6AEC
 BattlenetLogin__GetNumGameAccounts 008C6AF0 f end=008C6AF7
 BattlenetLogin__GetGameAccountName 008C6B00 f end=008C6B28
 BattlenetLogin__GetGameAccountRegion 008C6B60 f end=008C6B87
+BattlenetLogin__HandleUpdateInvoke 008C7030 f end=008C712B
 BattlenetLogin__CreateTumorManager 008C7590 f end=008C7AAC
 BattlenetLogin__SetGameAccount 008C80E0 f end=008C8272
 stub_return_int32_one 008C8DE0 f type="int32_t __stdcall func()" ; Known names: GxDefaultApi, CCommand_Perf
+BattlenetLogin__DestroyTumorManager 008C8DF0 f end=008C8EF9
+BattlenetLogin__HandleDisconnectEvents 008C9140 f end=008C9304
+BattlenetLogin__destructor 008C9A40 f end=008C9C6D
+BattlenetApplication__RecvEvent 008C9EA0 f end=008C9F62
 OrganicSmooth 008CA080 f end=008CA0A8
 GruntLogin__Connected 008CA0B0 f end=008CA135 ; GruntLogin::Connected(NETADDR const&)
 GruntLogin__CantConnect 008CA140 f end=008CA1C5 ; GruntLogin::CantConnect()
@@ -11748,9 +11871,11 @@ CEzLcd__GetGlobalPage 009597B0 f end=00959883
 CEzLcd__HideGlobals 00959890 f end=0095B42C
 CEzLcd__ModifyControlsOnPage 009598B0 f end=0095993F
 CEzLcd__constructor 00959940 f end=00959ADD
+CLCDOutput__constructor 00959C80 f end=00959D48
 CLCDOutput__SetGlobalPage 00959D50 f end=00959D5D
 CLCDOutput__IsOpened 00959D60 f end=00959D6A
 CLCDOutput__ShowPage 00959F20 f end=00959F7D
+CLCDConnection__Disconnect 0095A440 f end=0095A472
 CLCDConnection__MonoOutput 0095A4A0 f end=0095A4A4
 CLCDConnection__constructor 0095A6E0 f end=0095A725
 CLCDBitmap__constructor 0095AD90 f end=0095ADF0
@@ -11870,6 +11995,7 @@ CSimpleEditBox__CreateClauseHighlight 00963570 f end=00963604
 CSimpleEditBox__UpdateClauseInfo 009636A0 f end=00963735
 CSimpleEditBox__UpdateSizes 00963740 f end=00963946
 CSimpleEditBox__Delete 00963950 f end=009639AA
+CSimpleEditBox__DeleteForward 009639B0 f end=00963A04
 CSimpleEditBox__AddHistoryLine 00964690 f end=0096471E
 CSimpleEditBox__ClearHistory 00964720 f end=00964788
 CSimpleEditBox__ConvertCoordinateToIndex 00964790 f end=009649CD
@@ -12340,6 +12466,7 @@ CParticleEmitter2__EmitNewParticles 0097D8C0 f end=0097DB71
 CParticleEmitter2__UpdateLiveParticle 0097DB80 f end=0097DD13
 CParticleEmitter2__StepUpdate 0097DD20 f end=0097DF87
 CParticleEmitter2__constructor 0097E150 f end=0097E3E6 ; CParticleEmitter2::CParticleEmitter2()
+CParticleEmitter2__SyncReserve 0097E3F0 f end=0097E47F
 CParticleEmitter2__SyncAllocation 0097E480 f end=0097E571
 CParticleEmitter2__BuildParticleVertices 0097E580 f end=0097E721
 CParticleEmitter2__RenderParticles 0097E730 f end=0097E8CA
@@ -13177,6 +13304,10 @@ CGxDeviceD3d__s_cullMode 00A2FA24 l type="D3DCULL[3]"
 CMap__s_holeMask 00A3FAF0 l
 extra_funcs 00A443A8 l type="luaL_Reg[31]"
 luaO_nilobject_ 00A46F78 l type="TValue"
+log_2 00A46F88 l type="lu_byte[256]"
+luaT_typenames 00A48208 l type="char*[11]"
+dummynode_ 00A48280 l type="Node"
+luaP_opmodes 00A484B4 l type="lu_byte[38]"
 g_startup_StringsDB 00AB6350 l type="WowClientDB_Startup_StringsRec"
 System_File__Stacked__s_manager 00AB90AC l type="Blizzard__File__Filesystem*"
 System_File__read_func 00AB912C l ; type="int32_t (*)(Blizzard__File__Filesystem* fs, System_File__Stacked__FileParms* parms)"
@@ -13509,9 +13640,9 @@ s_errorHandlerFunc 00AF5770 l type="int32_t"
 s_recursiveTableHash 00AF5774 l type="int32_t"
 s_compat_lua 00AF57F0 l type="char*" ; this is statically defined inside FrameScript_Initialize()
 s_sleepInBackground 00B1D2AC l type="int32_t"
-NvApi__s_initialized 00B2376C l
+NvAPI__s_initialized 00B2376C l
 result 00B23770 l type="int32_t"
-NvApi__s_interface_table 00B23778 l type="NvApi__InterfaceTable[253]"
+NvAPI__s_interface_table 00B23778 l type="NvAPI_InterfaceTable[253]"
 CSimpleModel__s_metatable 00B2CBD0 l
 CSimpleColorSelect__s_metatable 00B2CDB0 l
 CSimpleStatusBar__s_metatable 00B2CE18 l
@@ -13567,6 +13698,7 @@ System_Thread__s_mutex 00B33718 l type="Blizzard__Lock__Mutex"
 System_Thread__s_slotList 00B33730 l type="Blizzard__Thread__TLSSlot[128]"
 System_Thread__s_registryMutex 00B33930 l type="Blizzard__Lock__Mutex"
 System_Thread__s_slotListUsed 00B33948 l type="int32_t"
+System_Thread__s_ThreadRegistry 00B3394C l
 System_Thread__s_initialized 00B33C58 l type="bool"
 Blizzard__Streaming__s_streamingReady 00B38180 l type="bool"
 Blizzard__Streaming__s_isStreamingTrial 00B38181 l type="bool"
@@ -14248,6 +14380,9 @@ s_context 00D3F78C l type="lua_State*"
 s_scriptTimeUsed 00D3F790 l type="int64_t"
 s_scriptProfileEnabled 00D3F798 l type="int32_t"
 lua_tainted 00D4139C l
+lua_taintexpected 00D413A0 l type="int32_t"
+lua_taintedclosure 00D413A4 l type="int32_t"
+lua_gctag 00D413AC l type="int32_t"
 s_WindowResizeLock 00D41580 l type="int32_t"
 s_OsTimeMgr 00D4159C l type="OsTimeManager*"
 s_haveProcessorFeatures 00D415A0 l type="int32_t"

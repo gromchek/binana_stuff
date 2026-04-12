@@ -2,7 +2,7 @@
   "types": [
     {
       "type": "void**",
-      "name": "BLIT_FUNCTION"
+      "name": "BLIT_FUNCTION_interface"
     },
     {
       "type": "uint32_t",
@@ -30,7 +30,7 @@
     },
     {
       "type": "void**",
-      "name": "Blizzard__File__ProcessDirCallback"
+      "name": "Blizzard__File__ProcessDirCallback_interface"
     },
     {
       "type": "Blizzard__File__StreamRecord*",
@@ -38,7 +38,7 @@
     },
     {
       "type": "void**",
-      "name": "Blizzard__Thread__TLSDestructor"
+      "name": "Blizzard__Thread__TLSDestructor_interface"
     },
     {
       "type": "Blizzard__Thread__ThreadRecord*",
@@ -90,11 +90,11 @@
     },
     {
       "type": "void**",
-      "name": "CMDERRORCALLBACK"
+      "name": "CMDERRORCALLBACK_interface"
     },
     {
       "type": "void**",
-      "name": "CMDEXTRACALLBACK"
+      "name": "CMDEXTRACALLBACK_interface"
     },
     {
       "type": "int",
@@ -102,7 +102,7 @@
     },
     {
       "type": "void**",
-      "name": "CMDPARAMSCALLBACK"
+      "name": "CMDPARAMSCALLBACK_interface"
     },
     {
       "type": "int",
@@ -114,7 +114,7 @@
     },
     {
       "type": "void**",
-      "name": "COMMANDHANDLER"
+      "name": "COMMANDHANDLER_interface"
     },
     {
       "type": "int",
@@ -129,8 +129,20 @@
       "name": "CURSORMODE"
     },
     {
+      "type": "int",
+      "name": "D3DBLEND"
+    },
+    {
+      "type": "int",
+      "name": "D3DCMPFUNC"
+    },
+    {
       "type": "long long",
       "name": "D3DCUBEMAP_FACES"
+    },
+    {
+      "type": "int",
+      "name": "D3DCULL"
     },
     {
       "type": "int",
@@ -177,8 +189,16 @@
       "name": "D3DSWAPEFFECT"
     },
     {
+      "type": "int",
+      "name": "D3DTEXTUREADDRESS"
+    },
+    {
+      "type": "int",
+      "name": "D3DTEXTUREFILTERTYPE"
+    },
+    {
       "type": "void**",
-      "name": "DEVICERESTOREDCALLBACK"
+      "name": "DEVICERESTOREDCALLBACK_interface"
     },
     {
       "type": "int",
@@ -231,6 +251,10 @@
     {
       "type": "int",
       "name": "EGxPrimMask"
+    },
+    {
+      "type": "int",
+      "name": "EGxQueryParam"
     },
     {
       "type": "int",
@@ -313,16 +337,28 @@
       "name": "FRAMEPOINT"
     },
     {
+      "type": "void**",
+      "name": "GxTexCallback_interface"
+    },
+    {
+      "type": "void**",
+      "name": "GxWindowProc_interface"
+    },
+    {
       "type": "HCOLORMAP__*",
       "name": "HCOLORMAP"
     },
     {
-      "type": "void*",
+      "type": "HEVENTCONTEXT__*",
       "name": "HEVENTCONTEXT"
     },
     {
       "type": "HFACE__*",
       "name": "HFACE"
+    },
+    {
+      "type": "int",
+      "name": "HIGHLIGHTSTATE"
     },
     {
       "type": "HLAYER__*",
@@ -474,7 +510,11 @@
     },
     {
       "type": "void**",
-      "name": "STEREOCHANGEDCALLBACK"
+      "name": "STEREOCHANGEDCALLBACK_interface"
+    },
+    {
+      "type": "void*",
+      "name": "StereoHandle"
     },
     {
       "type": "TValue*",
@@ -486,7 +526,7 @@
     },
     {
       "type": "void**",
-      "name": "TEXTURERECREATIONCALLBACK"
+      "name": "TEXTURERECREATIONCALLBACK_interface"
     },
     {
       "type": "long long",
@@ -514,11 +554,11 @@
     },
     {
       "type": "void**",
-      "name": "lua_Alloc"
+      "name": "lua_Alloc_interface"
     },
     {
       "type": "void**",
-      "name": "lua_CFunction"
+      "name": "lua_CFunction_interface"
     },
     {
       "type": "void**",
@@ -565,6 +605,46 @@
       "name": "va_list"
     },
     {
+      "type": "BLIT_FUNCTION_interface",
+      "name": "BLIT_FUNCTION"
+    },
+    {
+      "type": "Blizzard__File__ProcessDirCallback_interface",
+      "name": "Blizzard__File__ProcessDirCallback"
+    },
+    {
+      "type": "Blizzard__Thread__TLSDestructor_interface",
+      "name": "Blizzard__Thread__TLSDestructor"
+    },
+    {
+      "type": "CMDERRORCALLBACK_interface",
+      "name": "CMDERRORCALLBACK"
+    },
+    {
+      "type": "CMDEXTRACALLBACK_interface",
+      "name": "CMDEXTRACALLBACK"
+    },
+    {
+      "type": "CMDPARAMSCALLBACK_interface",
+      "name": "CMDPARAMSCALLBACK"
+    },
+    {
+      "type": "COMMANDHANDLER_interface",
+      "name": "COMMANDHANDLER"
+    },
+    {
+      "type": "DEVICERESTOREDCALLBACK_interface",
+      "name": "DEVICERESTOREDCALLBACK"
+    },
+    {
+      "type": "GxTexCallback_interface",
+      "name": "GxTexCallback"
+    },
+    {
+      "type": "GxWindowProc_interface",
+      "name": "GxWindowProc"
+    },
+    {
       "type": "HOBJECT",
       "name": "HDATAMGR"
     },
@@ -573,8 +653,24 @@
       "name": "HTEXTURE"
     },
     {
+      "type": "STEREOCHANGEDCALLBACK_interface",
+      "name": "STEREOCHANGEDCALLBACK"
+    },
+    {
+      "type": "TEXTURERECREATIONCALLBACK_interface",
+      "name": "TEXTURERECREATIONCALLBACK"
+    },
+    {
       "type": "lu_int32",
       "name": "Instruction"
+    },
+    {
+      "type": "lua_Alloc_interface",
+      "name": "lua_Alloc"
+    },
+    {
+      "type": "lua_CFunction_interface",
+      "name": "lua_CFunction"
     },
     {
       "type": "uintptr_t",
@@ -617,16 +713,16 @@
       "name": "TSExplicitList_CVar"
     },
     {
-      "type": "TSList_EvtMessage",
-      "name": "TSExplicitList_EvtMessage"
-    },
-    {
       "type": "TSList_EvtHandler",
       "name": "TSExplicitList_EvtHandler"
     },
     {
       "type": "TSList_EvtKeyDown",
       "name": "TSExplicitList_EvtKeyDown"
+    },
+    {
+      "type": "TSList_EvtMessage",
+      "name": "TSExplicitList_EvtMessage"
     },
     {
       "type": "TSList_EvtContext",
@@ -1696,7 +1792,7 @@
       ]
     },
     {
-      "name": "BannedAddonsRec",
+      "name": "BannedAddOnsRec",
       "size": 44,
       "members": [
         {
@@ -10746,6 +10842,17 @@
       ]
     },
     {
+      "name": "DayNight__DNGlare",
+      "size": 4,
+      "members": [
+        {
+          "type": "int32_t",
+          "name": "unk00",
+          "offset": 0
+        }
+      ]
+    },
+    {
       "name": "DeathThudLookupsRec",
       "size": 20,
       "members": [
@@ -12953,7 +13060,7 @@
       ]
     },
     {
-      "name": "IDatabase_BannedAddonsRec",
+      "name": "IDatabase_BannedAddOnsRec",
       "size": 12,
       "members": [
         {
@@ -12962,12 +13069,12 @@
           "offset": 0
         },
         {
-          "type": "BannedAddonsRec*",
+          "type": "BannedAddOnsRec*",
           "name": "m_records",
           "offset": 4
         },
         {
-          "type": "BannedAddonsRec**",
+          "type": "BannedAddOnsRec**",
           "name": "m_recordsById",
           "offset": 8
         }
@@ -15095,69 +15202,6 @@
       ]
     },
     {
-      "name": "IDatabase_LFGDungeonExpansionRec",
-      "size": 12,
-      "members": [
-        {
-          "type": "IDatabase__vtable*",
-          "name": "v_table",
-          "offset": 0
-        },
-        {
-          "type": "LFGDungeonExpansionRec*",
-          "name": "m_records",
-          "offset": 4
-        },
-        {
-          "type": "LFGDungeonExpansionRec**",
-          "name": "m_recordsById",
-          "offset": 8
-        }
-      ]
-    },
-    {
-      "name": "IDatabase_LFGDungeonGroupRec",
-      "size": 12,
-      "members": [
-        {
-          "type": "IDatabase__vtable*",
-          "name": "v_table",
-          "offset": 0
-        },
-        {
-          "type": "LFGDungeonGroupRec*",
-          "name": "m_records",
-          "offset": 4
-        },
-        {
-          "type": "LFGDungeonGroupRec**",
-          "name": "m_recordsById",
-          "offset": 8
-        }
-      ]
-    },
-    {
-      "name": "IDatabase_LFGDungeonsRec",
-      "size": 12,
-      "members": [
-        {
-          "type": "IDatabase__vtable*",
-          "name": "v_table",
-          "offset": 0
-        },
-        {
-          "type": "LFGDungeonsRec*",
-          "name": "m_records",
-          "offset": 4
-        },
-        {
-          "type": "LFGDungeonsRec**",
-          "name": "m_recordsById",
-          "offset": 8
-        }
-      ]
-    },
-    {
       "name": "IDatabase_LanguageWordsRec",
       "size": 12,
       "members": [
@@ -15194,6 +15238,69 @@
         },
         {
           "type": "LanguagesRec**",
+          "name": "m_recordsById",
+          "offset": 8
+        }
+      ]
+    },
+    {
+      "name": "IDatabase_LfgDungeonExpansionRec",
+      "size": 12,
+      "members": [
+        {
+          "type": "IDatabase__vtable*",
+          "name": "v_table",
+          "offset": 0
+        },
+        {
+          "type": "LfgDungeonExpansionRec*",
+          "name": "m_records",
+          "offset": 4
+        },
+        {
+          "type": "LfgDungeonExpansionRec**",
+          "name": "m_recordsById",
+          "offset": 8
+        }
+      ]
+    },
+    {
+      "name": "IDatabase_LfgDungeonGroupRec",
+      "size": 12,
+      "members": [
+        {
+          "type": "IDatabase__vtable*",
+          "name": "v_table",
+          "offset": 0
+        },
+        {
+          "type": "LfgDungeonGroupRec*",
+          "name": "m_records",
+          "offset": 4
+        },
+        {
+          "type": "LfgDungeonGroupRec**",
+          "name": "m_recordsById",
+          "offset": 8
+        }
+      ]
+    },
+    {
+      "name": "IDatabase_LfgDungeonsRec",
+      "size": 12,
+      "members": [
+        {
+          "type": "IDatabase__vtable*",
+          "name": "v_table",
+          "offset": 0
+        },
+        {
+          "type": "LfgDungeonsRec*",
+          "name": "m_records",
+          "offset": 4
+        },
+        {
+          "type": "LfgDungeonsRec**",
           "name": "m_recordsById",
           "offset": 8
         }
@@ -15830,27 +15937,6 @@
       ]
     },
     {
-      "name": "IDatabase_PVPDifficultyRec",
-      "size": 12,
-      "members": [
-        {
-          "type": "IDatabase__vtable*",
-          "name": "v_table",
-          "offset": 0
-        },
-        {
-          "type": "PVPDifficultyRec*",
-          "name": "m_records",
-          "offset": 4
-        },
-        {
-          "type": "PVPDifficultyRec**",
-          "name": "m_recordsById",
-          "offset": 8
-        }
-      ]
-    },
-    {
       "name": "IDatabase_PackageRec",
       "size": 12,
       "members": [
@@ -16055,6 +16141,27 @@
         },
         {
           "type": "PowerDisplayRec**",
+          "name": "m_recordsById",
+          "offset": 8
+        }
+      ]
+    },
+    {
+      "name": "IDatabase_PvpDifficultyRec",
+      "size": 12,
+      "members": [
+        {
+          "type": "IDatabase__vtable*",
+          "name": "v_table",
+          "offset": 0
+        },
+        {
+          "type": "PvpDifficultyRec*",
+          "name": "m_records",
+          "offset": 4
+        },
+        {
+          "type": "PvpDifficultyRec**",
           "name": "m_recordsById",
           "offset": 8
         }
@@ -21175,7 +21282,65 @@
       ]
     },
     {
-      "name": "LFGDungeonExpansionRec",
+      "name": "L_Umaxalign",
+      "size": 8,
+      "members": [
+        {
+          "type": "double",
+          "name": "u",
+          "offset": 0
+        },
+        {
+          "type": "void*",
+          "name": "s",
+          "offset": 0
+        },
+        {
+          "type": "long",
+          "name": "l",
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "LanguageWordsRec",
+      "size": 12,
+      "members": [
+        {
+          "type": "int32_t",
+          "name": "m_ID",
+          "offset": 0
+        },
+        {
+          "type": "int32_t",
+          "name": "m_languageID",
+          "offset": 4
+        },
+        {
+          "type": "char*",
+          "name": "m_word",
+          "offset": 8
+        }
+      ]
+    },
+    {
+      "name": "LanguagesRec",
+      "size": 8,
+      "members": [
+        {
+          "type": "int32_t",
+          "name": "m_ID",
+          "offset": 0
+        },
+        {
+          "type": "char*",
+          "name": "m_name",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "LfgDungeonExpansionRec",
       "size": 32,
       "members": [
         {
@@ -21221,7 +21386,7 @@
       ]
     },
     {
-      "name": "LFGDungeonGroupRec",
+      "name": "LfgDungeonGroupRec",
       "size": 20,
       "members": [
         {
@@ -21252,7 +21417,7 @@
       ]
     },
     {
-      "name": "LFGDungeonsRec",
+      "name": "LfgDungeonsRec",
       "size": 68,
       "members": [
         {
@@ -21339,64 +21504,6 @@
           "type": "char*",
           "name": "m_description",
           "offset": 64
-        }
-      ]
-    },
-    {
-      "name": "L_Umaxalign",
-      "size": 8,
-      "members": [
-        {
-          "type": "double",
-          "name": "u",
-          "offset": 0
-        },
-        {
-          "type": "void*",
-          "name": "s",
-          "offset": 0
-        },
-        {
-          "type": "long",
-          "name": "l",
-          "offset": 0
-        }
-      ]
-    },
-    {
-      "name": "LanguageWordsRec",
-      "size": 12,
-      "members": [
-        {
-          "type": "int32_t",
-          "name": "m_ID",
-          "offset": 0
-        },
-        {
-          "type": "int32_t",
-          "name": "m_languageID",
-          "offset": 4
-        },
-        {
-          "type": "char*",
-          "name": "m_word",
-          "offset": 8
-        }
-      ]
-    },
-    {
-      "name": "LanguagesRec",
-      "size": 8,
-      "members": [
-        {
-          "type": "int32_t",
-          "name": "m_ID",
-          "offset": 0
-        },
-        {
-          "type": "char*",
-          "name": "m_name",
-          "offset": 4
         }
       ]
     },
@@ -22807,6 +22914,22 @@
       ]
     },
     {
+      "name": "NvAPI_InterfaceTable",
+      "size": 8,
+      "members": [
+        {
+          "type": "void*",
+          "name": "func",
+          "offset": 0
+        },
+        {
+          "type": "uint32_t",
+          "name": "id",
+          "offset": 4
+        }
+      ]
+    },
+    {
       "name": "OS_FILE_DATA",
       "size": 268,
       "members": [
@@ -23041,42 +23164,6 @@
         {
           "type": "int32_t",
           "name": "namelength",
-          "offset": 20
-        }
-      ]
-    },
-    {
-      "name": "PVPDifficultyRec",
-      "size": 24,
-      "members": [
-        {
-          "type": "int32_t",
-          "name": "m_ID",
-          "offset": 0
-        },
-        {
-          "type": "int32_t",
-          "name": "m_mapID",
-          "offset": 4
-        },
-        {
-          "type": "int32_t",
-          "name": "m_rangeIndex",
-          "offset": 8
-        },
-        {
-          "type": "int32_t",
-          "name": "m_minLevel",
-          "offset": 12
-        },
-        {
-          "type": "int32_t",
-          "name": "m_maxLevel",
-          "offset": 16
-        },
-        {
-          "type": "int32_t",
-          "name": "m_difficulty",
           "offset": 20
         }
       ]
@@ -23694,6 +23781,42 @@
           "type": "uint32_t",
           "name": "ext_4d",
           "offset": 88
+        }
+      ]
+    },
+    {
+      "name": "PvpDifficultyRec",
+      "size": 24,
+      "members": [
+        {
+          "type": "int32_t",
+          "name": "m_ID",
+          "offset": 0
+        },
+        {
+          "type": "int32_t",
+          "name": "m_mapID",
+          "offset": 4
+        },
+        {
+          "type": "int32_t",
+          "name": "m_rangeIndex",
+          "offset": 8
+        },
+        {
+          "type": "int32_t",
+          "name": "m_minLevel",
+          "offset": 12
+        },
+        {
+          "type": "int32_t",
+          "name": "m_maxLevel",
+          "offset": 16
+        },
+        {
+          "type": "int32_t",
+          "name": "m_difficulty",
+          "offset": 20
         }
       ]
     },
@@ -28211,6 +28334,27 @@
       ]
     },
     {
+      "name": "TSFixedArray_uint32_t",
+      "size": 12,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "m_alloc",
+          "offset": 0
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_count",
+          "offset": 4
+        },
+        {
+          "type": "uint32_t*",
+          "name": "m_data",
+          "offset": 8
+        }
+      ]
+    },
+    {
       "name": "TSGrowableArray_C2Vector",
       "size": 16,
       "members": [
@@ -28980,6 +29124,32 @@
         },
         {
           "type": "TSList_RGN*",
+          "name": "m_data",
+          "offset": 8
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_chunk",
+          "offset": 12
+        }
+      ]
+    },
+    {
+      "name": "TSGrowableArray_XMLAttribute",
+      "size": 16,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "m_alloc",
+          "offset": 0
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_count",
+          "offset": 4
+        },
+        {
+          "type": "XMLAttribute*",
           "name": "m_data",
           "offset": 8
         },
@@ -32269,27 +32439,6 @@
       ]
     },
     {
-      "name": "Blizzard__Thread__TLSSlot",
-      "size": 12,
-      "members": [
-        {
-          "type": "uint32_t",
-          "name": "key",
-          "offset": 0
-        },
-        {
-          "type": "Blizzard__Thread__TLSDestructor",
-          "name": "destructor",
-          "offset": 4
-        },
-        {
-          "type": "bool",
-          "name": "initialized",
-          "offset": 8
-        }
-      ]
-    },
-    {
       "name": "Blizzard__File__FileInfo",
       "size": 56,
       "members": [
@@ -34599,32 +34748,6 @@
           "type": "float",
           "name": "unk",
           "offset": 32
-        }
-      ]
-    },
-    {
-      "name": "ARGLIST",
-      "size": 16,
-      "members": [
-        {
-          "type": "uint32_t",
-          "name": "flags",
-          "offset": 0
-        },
-        {
-          "type": "uint32_t",
-          "name": "id",
-          "offset": 4
-        },
-        {
-          "type": "char*",
-          "name": "name",
-          "offset": 8
-        },
-        {
-          "type": "CMDPARAMSCALLBACK",
-          "name": "callback",
-          "offset": 12
         }
       ]
     },
@@ -40029,7 +40152,7 @@
       ]
     },
     {
-      "name": "WowClientDB_Common_BannedAddonsRec",
+      "name": "WowClientDB_Common_BannedAddOnsRec",
       "size": 24,
       "members": [
         {
@@ -41151,7 +41274,7 @@
       ]
     },
     {
-      "name": "WowClientDB_Common_LFGDungeonExpansionRec",
+      "name": "WowClientDB_Common_LfgDungeonExpansionRec",
       "size": 24,
       "members": [
         {
@@ -41162,7 +41285,7 @@
       ]
     },
     {
-      "name": "WowClientDB_Common_LFGDungeonGroupRec",
+      "name": "WowClientDB_Common_LfgDungeonGroupRec",
       "size": 24,
       "members": [
         {
@@ -41173,7 +41296,7 @@
       ]
     },
     {
-      "name": "WowClientDB_Common_LFGDungeonsRec",
+      "name": "WowClientDB_Common_LfgDungeonsRec",
       "size": 24,
       "members": [
         {
@@ -41536,7 +41659,7 @@
       ]
     },
     {
-      "name": "WowClientDB_Common_PVPDifficultyRec",
+      "name": "WowClientDB_Common_PvpDifficultyRec",
       "size": 24,
       "members": [
         {
@@ -43076,7 +43199,7 @@
     },
     {
       "name": "Proto",
-      "size": 76,
+      "size": 80,
       "members": [
         {
           "type": "GCObject*",
@@ -43084,114 +43207,119 @@
           "offset": 0
         },
         {
-          "type": "lu_byte",
-          "name": "tt",
+          "type": "uint32_t",
+          "name": "unk04",
           "offset": 4
         },
         {
           "type": "lu_byte",
+          "name": "tt",
+          "offset": 8
+        },
+        {
+          "type": "lu_byte",
           "name": "marked",
-          "offset": 5
+          "offset": 9
         },
         {
           "type": "TValue*",
           "name": "k",
-          "offset": 8
+          "offset": 12
         },
         {
           "type": "Instruction*",
           "name": "code",
-          "offset": 12
+          "offset": 16
         },
         {
           "type": "Proto**",
           "name": "p",
-          "offset": 16
+          "offset": 20
         },
         {
           "type": "int32_t*",
           "name": "lineinfo",
-          "offset": 20
+          "offset": 24
         },
         {
           "type": "LocVar*",
           "name": "locvars",
-          "offset": 24
+          "offset": 28
         },
         {
           "type": "TString**",
           "name": "upvalues",
-          "offset": 28
+          "offset": 32
         },
         {
           "type": "TString*",
           "name": "source",
-          "offset": 32
-        },
-        {
-          "type": "int32_t",
-          "name": "sizeupvalues",
           "offset": 36
         },
         {
           "type": "int32_t",
-          "name": "sizek",
+          "name": "sizeupvalues",
           "offset": 40
         },
         {
           "type": "int32_t",
-          "name": "sizecode",
+          "name": "sizek",
           "offset": 44
         },
         {
           "type": "int32_t",
-          "name": "sizelineinfo",
+          "name": "sizecode",
           "offset": 48
         },
         {
           "type": "int32_t",
-          "name": "sizep",
+          "name": "sizelineinfo",
           "offset": 52
         },
         {
           "type": "int32_t",
-          "name": "sizelocvars",
+          "name": "sizep",
           "offset": 56
         },
         {
           "type": "int32_t",
-          "name": "linedefined",
+          "name": "sizelocvars",
           "offset": 60
         },
         {
           "type": "int32_t",
-          "name": "lastlinedefined",
+          "name": "linedefined",
           "offset": 64
+        },
+        {
+          "type": "int32_t",
+          "name": "lastlinedefined",
+          "offset": 68
         },
         {
           "type": "GCObject*",
           "name": "gclist",
-          "offset": 68
-        },
-        {
-          "type": "lu_byte",
-          "name": "nups",
           "offset": 72
         },
         {
           "type": "lu_byte",
+          "name": "nups",
+          "offset": 76
+        },
+        {
+          "type": "lu_byte",
           "name": "numparams",
-          "offset": 73
+          "offset": 77
         },
         {
           "type": "lu_byte",
           "name": "is_vararg",
-          "offset": 74
+          "offset": 78
         },
         {
           "type": "lu_byte",
           "name": "maxstacksize",
-          "offset": 75
+          "offset": 79
         }
       ]
     },
@@ -43249,7 +43377,7 @@
     },
     {
       "name": "Table",
-      "size": 32,
+      "size": 36,
       "members": [
         {
           "type": "GCObject*",
@@ -43257,54 +43385,59 @@
           "offset": 0
         },
         {
-          "type": "lu_byte",
-          "name": "tt",
+          "type": "uint32_t",
+          "name": "unk04",
           "offset": 4
         },
         {
           "type": "lu_byte",
+          "name": "tt",
+          "offset": 8
+        },
+        {
+          "type": "lu_byte",
           "name": "marked",
-          "offset": 5
+          "offset": 9
         },
         {
           "type": "lu_byte",
           "name": "flags",
-          "offset": 6
+          "offset": 10
         },
         {
           "type": "lu_byte",
           "name": "lsizenode",
-          "offset": 7
+          "offset": 11
         },
         {
           "type": "Table*",
           "name": "metatable",
-          "offset": 8
+          "offset": 12
         },
         {
           "type": "TValue*",
           "name": "array",
-          "offset": 12
-        },
-        {
-          "type": "Node*",
-          "name": "node",
           "offset": 16
         },
         {
           "type": "Node*",
-          "name": "lastfree",
+          "name": "node",
           "offset": 20
+        },
+        {
+          "type": "Node*",
+          "name": "lastfree",
+          "offset": 24
         },
         {
           "type": "GCObject*",
           "name": "gclist",
-          "offset": 24
+          "offset": 28
         },
         {
           "type": "int32_t",
           "name": "sizearray",
-          "offset": 28
+          "offset": 32
         }
       ]
     },
@@ -43326,22 +43459,6 @@
           "type": "int32_t",
           "name": "size",
           "offset": 8
-        }
-      ]
-    },
-    {
-      "name": "luaL_Reg",
-      "size": 8,
-      "members": [
-        {
-          "type": "char*",
-          "name": "name",
-          "offset": 0
-        },
-        {
-          "type": "lua_CFunction",
-          "name": "func",
-          "offset": 4
         }
       ]
     },
@@ -43500,22 +43617,6 @@
       ]
     },
     {
-      "name": "TSList_EvtMessage",
-      "size": 12,
-      "members": [
-        {
-          "type": "ptrdiff_t",
-          "name": "m_linkoffset",
-          "offset": 0
-        },
-        {
-          "type": "TSLink_EvtMessage",
-          "name": "m_terminator",
-          "offset": 4
-        }
-      ]
-    },
-    {
       "name": "TSList_EvtHandler",
       "size": 12,
       "members": [
@@ -43542,6 +43643,22 @@
         },
         {
           "type": "TSLink_EvtKeyDown",
+          "name": "m_terminator",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TSList_EvtMessage",
+      "size": 12,
+      "members": [
+        {
+          "type": "ptrdiff_t",
+          "name": "m_linkoffset",
+          "offset": 0
+        },
+        {
+          "type": "TSLink_EvtMessage",
           "name": "m_terminator",
           "offset": 4
         }
@@ -44334,18 +44451,23 @@
       ]
     },
     {
-      "name": "NvAPI_InterfaceTable",
-      "size": 8,
+      "name": "Blizzard__Thread__TLSSlot",
+      "size": 12,
       "members": [
         {
-          "type": "uintptr_t",
-          "name": "func",
+          "type": "uint32_t",
+          "name": "key",
           "offset": 0
         },
         {
-          "type": "uint32_t",
-          "name": "id",
+          "type": "Blizzard__Thread__TLSDestructor",
+          "name": "destructor",
           "offset": 4
+        },
+        {
+          "type": "bool",
+          "name": "initialized",
+          "offset": 8
         }
       ]
     },
@@ -46044,6 +46166,32 @@
       ]
     },
     {
+      "name": "ARGLIST",
+      "size": 16,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "flags",
+          "offset": 0
+        },
+        {
+          "type": "uint32_t",
+          "name": "id",
+          "offset": 4
+        },
+        {
+          "type": "char*",
+          "name": "name",
+          "offset": 8
+        },
+        {
+          "type": "CMDPARAMSCALLBACK",
+          "name": "callback",
+          "offset": 12
+        }
+      ]
+    },
+    {
       "name": "EvtTimer",
       "size": 56,
       "members": [
@@ -46490,6 +46638,73 @@
           "type": "RCString",
           "name": "m_name",
           "offset": 16
+        }
+      ]
+    },
+    {
+      "name": "XMLNode",
+      "size": 56,
+      "members": [
+        {
+          "type": "void*",
+          "name": "m_userData",
+          "offset": 0
+        },
+        {
+          "type": "XMLNode*",
+          "name": "m_parent",
+          "offset": 4
+        },
+        {
+          "type": "XMLNode*",
+          "name": "m_child",
+          "offset": 8
+        },
+        {
+          "type": "RCString",
+          "name": "m_name",
+          "offset": 12
+        },
+        {
+          "type": "char*",
+          "name": "m_body",
+          "offset": 24
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_bodyLen",
+          "offset": 28
+        },
+        {
+          "type": "TSGrowableArray_XMLAttribute",
+          "name": "m_attributes",
+          "offset": 32
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_offset",
+          "offset": 48
+        },
+        {
+          "type": "XMLNode*",
+          "name": "m_next",
+          "offset": 52
+        }
+      ]
+    },
+    {
+      "name": "XMLAttribute",
+      "size": 24,
+      "members": [
+        {
+          "type": "RCString",
+          "name": "m_name",
+          "offset": 0
+        },
+        {
+          "type": "RCString",
+          "name": "m_value",
+          "offset": 12
         }
       ]
     },
@@ -47044,7 +47259,7 @@
       "members": [
         {
           "type": "TSHashObject_CONSOLECOMMAND_HASHKEY_STRI",
-          "name": "b_base",
+          "name": "_",
           "offset": 0
         },
         {
@@ -47703,16 +47918,16 @@
       ]
     },
     {
-      "name": "WowClientDB_BannedAddonsRec",
+      "name": "WowClientDB_BannedAddOnsRec",
       "size": 36,
       "members": [
         {
-          "type": "WowClientDB_Common_BannedAddonsRec",
+          "type": "WowClientDB_Common_BannedAddOnsRec",
           "name": "b_base_01",
           "offset": 0
         },
         {
-          "type": "IDatabase_BannedAddonsRec",
+          "type": "IDatabase_BannedAddOnsRec",
           "name": "b_base_02",
           "offset": 24
         }
@@ -49335,48 +49550,48 @@
       ]
     },
     {
-      "name": "WowClientDB_LFGDungeonExpansionRec",
+      "name": "WowClientDB_LfgDungeonExpansionRec",
       "size": 36,
       "members": [
         {
-          "type": "WowClientDB_Common_LFGDungeonExpansionRec",
+          "type": "WowClientDB_Common_LfgDungeonExpansionRec",
           "name": "b_base_01",
           "offset": 0
         },
         {
-          "type": "IDatabase_LFGDungeonExpansionRec",
+          "type": "IDatabase_LfgDungeonExpansionRec",
           "name": "b_base_02",
           "offset": 24
         }
       ]
     },
     {
-      "name": "WowClientDB_LFGDungeonGroupRec",
+      "name": "WowClientDB_LfgDungeonGroupRec",
       "size": 36,
       "members": [
         {
-          "type": "WowClientDB_Common_LFGDungeonGroupRec",
+          "type": "WowClientDB_Common_LfgDungeonGroupRec",
           "name": "b_base_01",
           "offset": 0
         },
         {
-          "type": "IDatabase_LFGDungeonGroupRec",
+          "type": "IDatabase_LfgDungeonGroupRec",
           "name": "b_base_02",
           "offset": 24
         }
       ]
     },
     {
-      "name": "WowClientDB_LFGDungeonsRec",
+      "name": "WowClientDB_LfgDungeonsRec",
       "size": 36,
       "members": [
         {
-          "type": "WowClientDB_Common_LFGDungeonsRec",
+          "type": "WowClientDB_Common_LfgDungeonsRec",
           "name": "b_base_01",
           "offset": 0
         },
         {
-          "type": "IDatabase_LFGDungeonsRec",
+          "type": "IDatabase_LfgDungeonsRec",
           "name": "b_base_02",
           "offset": 24
         }
@@ -49895,16 +50110,16 @@
       ]
     },
     {
-      "name": "WowClientDB_PVPDifficultyRec",
+      "name": "WowClientDB_PvpDifficultyRec",
       "size": 36,
       "members": [
         {
-          "type": "WowClientDB_Common_PVPDifficultyRec",
+          "type": "WowClientDB_Common_PvpDifficultyRec",
           "name": "b_base_01",
           "offset": 0
         },
         {
-          "type": "IDatabase_PVPDifficultyRec",
+          "type": "IDatabase_PvpDifficultyRec",
           "name": "b_base_02",
           "offset": 24
         }
@@ -52103,6 +52318,22 @@
       ]
     },
     {
+      "name": "luaL_Reg",
+      "size": 8,
+      "members": [
+        {
+          "type": "char*",
+          "name": "name",
+          "offset": 0
+        },
+        {
+          "type": "lua_CFunction",
+          "name": "func",
+          "offset": 4
+        }
+      ]
+    },
+    {
       "name": "lua_TValue",
       "size": 16,
       "members": [
@@ -52203,6 +52434,39 @@
           "type": "uint32_t",
           "name": "m_slotmask",
           "offset": 36
+        }
+      ]
+    },
+    {
+      "name": "TInstanceIdTable_EvtContext",
+      "size": 240,
+      "members": [
+        {
+          "type": "SCritSect",
+          "name": "m_idCritSect",
+          "offset": 0
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_id",
+          "offset": 40
+        },
+        {
+          "type": "int32_t",
+          "name": "m_idWrapped",
+          "offset": 44
+        },
+        {
+          "type": "CSRWLock",
+          "name": "m_idLock",
+          "arrsize": 8,
+          "offset": 48
+        },
+        {
+          "type": "TSList_EvtContext",
+          "name": "m_idList",
+          "arrsize": 8,
+          "offset": 144
         }
       ]
     },
@@ -57605,7 +57869,7 @@
     },
     {
       "name": "lua_State",
-      "size": 120,
+      "size": 128,
       "members": [
         {
           "type": "GCObject*",
@@ -57613,104 +57877,109 @@
           "offset": 0
         },
         {
-          "type": "lu_byte",
-          "name": "tt",
+          "type": "int32_t",
+          "name": "unk04",
           "offset": 4
         },
         {
           "type": "lu_byte",
+          "name": "tt",
+          "offset": 8
+        },
+        {
+          "type": "lu_byte",
           "name": "marked",
-          "offset": 5
+          "offset": 9
         },
         {
           "type": "lu_byte",
           "name": "status",
-          "offset": 6
+          "offset": 10
         },
         {
           "type": "StkId",
           "name": "top",
-          "offset": 8
+          "offset": 12
         },
         {
           "type": "StkId",
           "name": "base",
-          "offset": 12
+          "offset": 16
         },
         {
           "type": "global_State*",
           "name": "l_G",
-          "offset": 16
+          "offset": 20
         },
         {
           "type": "CallInfo*",
           "name": "ci",
-          "offset": 20
+          "offset": 24
         },
         {
           "type": "Instruction*",
           "name": "savedpc",
-          "offset": 24
-        },
-        {
-          "type": "StkId",
-          "name": "stack_last",
           "offset": 28
         },
         {
           "type": "StkId",
-          "name": "stack",
+          "name": "stack_last",
           "offset": 32
         },
         {
-          "type": "CallInfo*",
-          "name": "end_ci",
+          "type": "StkId",
+          "name": "stack",
           "offset": 36
         },
         {
           "type": "CallInfo*",
-          "name": "base_ci",
+          "name": "end_ci",
           "offset": 40
         },
         {
-          "type": "int32_t",
-          "name": "stacksize",
+          "type": "CallInfo*",
+          "name": "base_ci",
           "offset": 44
         },
         {
           "type": "int32_t",
-          "name": "size_ci",
+          "name": "stacksize",
           "offset": 48
+        },
+        {
+          "type": "int32_t",
+          "name": "size_ci",
+          "offset": 52
         },
         {
           "type": "uint16_t",
           "name": "nCcalls",
-          "offset": 52
+          "offset": 56
         },
         {
           "type": "lu_byte",
           "name": "hookmask",
-          "offset": 54
+          "offset": 58
         },
         {
           "type": "lu_byte",
           "name": "allowhook",
-          "offset": 55
+          "offset": 59
         },
         {
           "type": "int32_t",
           "name": "basehookcount",
-          "offset": 56
+          "offset": 60
         },
         {
           "type": "int32_t",
           "name": "hookcount",
-          "offset": 60
+          "offset": 64
         },
         {
           "type": "lua_Hook",
           "name": "hook",
-          "offset": 64
+          "offset": 68
         },
         {
           "type": "TValue",
@@ -57741,6 +58010,16 @@
           "type": "ptrdiff_t",
           "name": "errfunc",
           "offset": 116
+        },
+        {
+          "type": "uint32_t",
+          "name": "unk78",
+          "offset": 120
+        },
+        {
+          "type": "uint32_t",
+          "name": "unk7C",
+          "offset": 124
         }
       ]
     },
@@ -58512,6 +58791,97 @@
       ]
     },
     {
+      "name": "CSimpleModel",
+      "size": 868,
+      "members": [
+        {
+          "type": "CSimpleFrame",
+          "name": "b_base",
+          "offset": 0
+        },
+        {
+          "type": "CM2Scene*",
+          "name": "m_scene",
+          "offset": 664
+        },
+        {
+          "type": "CM2Model*",
+          "name": "m_model",
+          "offset": 668
+        },
+        {
+          "type": "CCamera*",
+          "name": "m_camera",
+          "offset": 672
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_pendingCameraIndex",
+          "offset": 676
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_pendingCameraId",
+          "offset": 680
+        },
+        {
+          "type": "CM2Light",
+          "name": "m_light",
+          "offset": 684
+        },
+        {
+          "type": "C3Vector",
+          "name": "m_position",
+          "offset": 792
+        },
+        {
+          "type": "float",
+          "name": "m_facing",
+          "offset": 804
+        },
+        {
+          "type": "float",
+          "name": "m_scale",
+          "offset": 808
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_flags",
+          "offset": 812
+        },
+        {
+          "type": "CImVector",
+          "name": "m_fogColor",
+          "offset": 816
+        },
+        {
+          "type": "float",
+          "name": "m_fogNear",
+          "offset": 820
+        },
+        {
+          "type": "float",
+          "name": "m_fogFar",
+          "offset": 824
+        },
+        {
+          "type": "CAaBox",
+          "name": "m_bounds",
+          "offset": 828
+        },
+        {
+          "type": "FrameScript_Object__ScriptIx",
+          "name": "m_onUpdateModel",
+          "offset": 852
+        },
+        {
+          "type": "FrameScript_Object__ScriptIx",
+          "name": "m_onAnimFinished",
+          "offset": 860
+        }
+      ]
+    },
+    {
       "name": "CSimpleTexture",
       "size": 352,
       "members": [
@@ -58567,7 +58937,7 @@
     },
     {
       "name": "GCObject",
-      "size": 120,
+      "size": 128,
       "members": [
         {
           "type": "GCheader",
@@ -58613,7 +58983,7 @@
     },
     {
       "name": "global_State",
-      "size": 192,
+      "size": 264,
       "members": [
         {
           "type": "stringtable",
@@ -58632,13 +59002,18 @@
         },
         {
           "type": "lu_byte",
-          "name": "currentwhite",
+          "name": "profile",
           "offset": 20
         },
         {
           "type": "lu_byte",
-          "name": "gcstate",
+          "name": "currentwhite",
           "offset": 21
+        },
+        {
+          "type": "lu_byte",
+          "name": "gcstate",
+          "offset": 22
         },
         {
           "type": "int32_t",
@@ -58737,9 +59112,36 @@
           "offset": 152
         },
         {
+          "type": "uint32_t",
+          "name": "unkBC",
+          "offset": 188
+        },
+        {
+          "type": "uint32_t",
+          "name": "unkC0",
+          "offset": 192
+        },
+        {
           "type": "TString*",
           "name": "tmname",
-          "offset": 188
+          "arrsize": 17,
+          "offset": 196
+        }
+      ]
+    },
+    {
+      "name": "LG",
+      "size": 392,
+      "members": [
+        {
+          "type": "lua_State",
+          "name": "l",
+          "offset": 0
+        },
+        {
+          "type": "global_State",
+          "name": "g",
+          "offset": 128
         }
       ]
     }
