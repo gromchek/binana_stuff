@@ -498,6 +498,7 @@ static import_functions() {
 	set_func_cmt(0x0083D9F0, "CM2Shared::LowPrioritySequenceFailedCallback(void*)", 0);
 	set_func_cmt(0x0083DA10, "CM2Shared::LoadLowPrioritySequence(unsigned short)", 0);
 	set_func_cmt(0x0083DC90, "CM2Shared::Release()", 0);
+	set_func_cmt(0x0085ECB0, "TODO: understand changes to structures", 0);
 	set_func_cmt(0x0086B5A0, "Prevents code outside the .text section from running", 0);
 	set_func_cmt(0x0086B9A0, "OsGetProcessorFeaturesEx(int&)", 0);
 	set_func_cmt(0x0086BBA0, "Invented name", 0);

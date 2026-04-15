@@ -498,6 +498,18 @@
     },
     {
       "type": "int",
+      "name": "OpArgMask"
+    },
+    {
+      "type": "int",
+      "name": "OpCode"
+    },
+    {
+      "type": "int",
+      "name": "OpMode"
+    },
+    {
+      "type": "int",
       "name": "PIXEL_FORMAT"
     },
     {
@@ -562,11 +574,15 @@
     },
     {
       "type": "void**",
-      "name": "lua_Hook"
+      "name": "lua_Hook_interface"
     },
     {
       "type": "double",
       "name": "lua_Number"
+    },
+    {
+      "type": "void**",
+      "name": "lua_Reader_interface"
     },
     {
       "type": "CBaseManaged*",
@@ -671,6 +687,14 @@
     {
       "type": "lua_CFunction_interface",
       "name": "lua_CFunction"
+    },
+    {
+      "type": "lua_Hook_interface",
+      "name": "lua_Hook"
+    },
+    {
+      "type": "lua_Reader_interface",
+      "name": "lua_Reader"
     },
     {
       "type": "uintptr_t",
@@ -883,6 +907,10 @@
     {
       "type": "lua_TValue",
       "name": "TValue"
+    },
+    {
+      "type": "Zio",
+      "name": "ZIO"
     }
   ],
   "structs": [
@@ -43177,23 +43205,49 @@
       ]
     },
     {
-      "name": "GCheader",
-      "size": 8,
+      "name": "upvaldesc",
+      "size": 2,
       "members": [
         {
-          "type": "GCObject*",
-          "name": "next",
+          "type": "lu_byte",
+          "name": "k",
           "offset": 0
         },
         {
           "type": "lu_byte",
-          "name": "tt",
+          "name": "info",
+          "offset": 1
+        }
+      ]
+    },
+    {
+      "name": "BlockCnt",
+      "size": 12,
+      "members": [
+        {
+          "type": "BlockCnt*",
+          "name": "previous",
+          "offset": 0
+        },
+        {
+          "type": "int32_t",
+          "name": "breaklist",
           "offset": 4
         },
         {
           "type": "lu_byte",
-          "name": "marked",
-          "offset": 5
+          "name": "nactvar",
+          "offset": 8
+        },
+        {
+          "type": "lu_byte",
+          "name": "upval",
+          "offset": 9
+        },
+        {
+          "type": "lu_byte",
+          "name": "isbreakable",
+          "offset": 10
         }
       ]
     },
@@ -43324,58 +43378,6 @@
       ]
     },
     {
-      "name": "LClosure",
-      "size": 24,
-      "members": [
-        {
-          "type": "GCObject*",
-          "name": "next",
-          "offset": 0
-        },
-        {
-          "type": "lu_byte",
-          "name": "tt",
-          "offset": 4
-        },
-        {
-          "type": "lu_byte",
-          "name": "marked",
-          "offset": 5
-        },
-        {
-          "type": "lu_byte",
-          "name": "isC",
-          "offset": 6
-        },
-        {
-          "type": "lu_byte",
-          "name": "nupvalues",
-          "offset": 7
-        },
-        {
-          "type": "GCObject*",
-          "name": "gclist",
-          "offset": 8
-        },
-        {
-          "type": "Table*",
-          "name": "env",
-          "offset": 12
-        },
-        {
-          "type": "Proto*",
-          "name": "p",
-          "offset": 16
-        },
-        {
-          "type": "UpVal*",
-          "name": "upvals",
-          "arrsize": 1,
-          "offset": 20
-        }
-      ]
-    },
-    {
       "name": "Table",
       "size": 36,
       "members": [
@@ -43442,6 +43444,79 @@
       ]
     },
     {
+      "name": "GCheader",
+      "size": 8,
+      "members": [
+        {
+          "type": "GCObject*",
+          "name": "next",
+          "offset": 0
+        },
+        {
+          "type": "lu_byte",
+          "name": "tt",
+          "offset": 4
+        },
+        {
+          "type": "lu_byte",
+          "name": "marked",
+          "offset": 5
+        }
+      ]
+    },
+    {
+      "name": "LClosure",
+      "size": 24,
+      "members": [
+        {
+          "type": "GCObject*",
+          "name": "next",
+          "offset": 0
+        },
+        {
+          "type": "lu_byte",
+          "name": "tt",
+          "offset": 4
+        },
+        {
+          "type": "lu_byte",
+          "name": "marked",
+          "offset": 5
+        },
+        {
+          "type": "lu_byte",
+          "name": "isC",
+          "offset": 6
+        },
+        {
+          "type": "lu_byte",
+          "name": "nupvalues",
+          "offset": 7
+        },
+        {
+          "type": "GCObject*",
+          "name": "gclist",
+          "offset": 8
+        },
+        {
+          "type": "Table*",
+          "name": "env",
+          "offset": 12
+        },
+        {
+          "type": "Proto*",
+          "name": "p",
+          "offset": 16
+        },
+        {
+          "type": "UpVal*",
+          "name": "upvals",
+          "arrsize": 1,
+          "offset": 20
+        }
+      ]
+    },
+    {
       "name": "stringtable",
       "size": 12,
       "members": [
@@ -43459,6 +43534,22 @@
           "type": "int32_t",
           "name": "size",
           "offset": 8
+        }
+      ]
+    },
+    {
+      "name": "SemInfo",
+      "size": 8,
+      "members": [
+        {
+          "type": "lua_Number",
+          "name": "r",
+          "offset": 0
+        },
+        {
+          "type": "TString*",
+          "name": "ts",
+          "offset": 0
         }
       ]
     },
@@ -44289,6 +44380,27 @@
       ]
     },
     {
+      "name": "Mbuffer",
+      "size": 12,
+      "members": [
+        {
+          "type": "char*",
+          "name": "buffer",
+          "offset": 0
+        },
+        {
+          "type": "size_t",
+          "name": "n",
+          "offset": 4
+        },
+        {
+          "type": "size_t",
+          "name": "buffsize",
+          "offset": 8
+        }
+      ]
+    },
+    {
       "name": "TString_tsv",
       "size": 16,
       "members": [
@@ -44357,27 +44469,6 @@
           "type": "size_t",
           "name": "len",
           "offset": 16
-        }
-      ]
-    },
-    {
-      "name": "Mbuffer",
-      "size": 12,
-      "members": [
-        {
-          "type": "char*",
-          "name": "buffer",
-          "offset": 0
-        },
-        {
-          "type": "size_t",
-          "name": "n",
-          "offset": 4
-        },
-        {
-          "type": "size_t",
-          "name": "buffsize",
-          "offset": 8
         }
       ]
     },
@@ -52318,6 +52409,94 @@
       ]
     },
     {
+      "name": "FuncState",
+      "size": 572,
+      "members": [
+        {
+          "type": "Proto*",
+          "name": "f",
+          "offset": 0
+        },
+        {
+          "type": "Table*",
+          "name": "h",
+          "offset": 4
+        },
+        {
+          "type": "FuncState*",
+          "name": "prev",
+          "offset": 8
+        },
+        {
+          "type": "LexState*",
+          "name": "ls",
+          "offset": 12
+        },
+        {
+          "type": "lua_State*",
+          "name": "L",
+          "offset": 16
+        },
+        {
+          "type": "BlockCnt*",
+          "name": "bl",
+          "offset": 20
+        },
+        {
+          "type": "int32_t",
+          "name": "pc",
+          "offset": 24
+        },
+        {
+          "type": "int32_t",
+          "name": "lasttarget",
+          "offset": 28
+        },
+        {
+          "type": "int32_t",
+          "name": "jpc",
+          "offset": 32
+        },
+        {
+          "type": "int32_t",
+          "name": "freereg",
+          "offset": 36
+        },
+        {
+          "type": "int32_t",
+          "name": "nk",
+          "offset": 40
+        },
+        {
+          "type": "int32_t",
+          "name": "np",
+          "offset": 44
+        },
+        {
+          "type": "int16_t",
+          "name": "nlocvars",
+          "offset": 48
+        },
+        {
+          "type": "lu_byte",
+          "name": "nactvar",
+          "offset": 50
+        },
+        {
+          "type": "upvaldesc",
+          "name": "upvalues",
+          "arrsize": 60,
+          "offset": 51
+        },
+        {
+          "type": "uint16_t",
+          "name": "actvar",
+          "arrsize": 200,
+          "offset": 172
+        }
+      ]
+    },
+    {
       "name": "luaL_Reg",
       "size": 8,
       "members": [
@@ -52330,6 +52509,22 @@
           "type": "lua_CFunction",
           "name": "func",
           "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "Token",
+      "size": 16,
+      "members": [
+        {
+          "type": "int32_t",
+          "name": "token",
+          "offset": 0
+        },
+        {
+          "type": "Token__seminfo",
+          "name": "seminfo",
+          "offset": 8
         }
       ]
     },
@@ -52372,6 +52567,37 @@
           "type": "Node*",
           "name": "next",
           "offset": 12
+        }
+      ]
+    },
+    {
+      "name": "Zio",
+      "size": 20,
+      "members": [
+        {
+          "type": "size_t",
+          "name": "n",
+          "offset": 0
+        },
+        {
+          "type": "char*",
+          "name": "p",
+          "offset": 4
+        },
+        {
+          "type": "lua_Reader",
+          "name": "reader",
+          "offset": 8
+        },
+        {
+          "type": "void*",
+          "name": "data",
+          "offset": 12
+        },
+        {
+          "type": "lua_State*",
+          "name": "L",
+          "offset": 16
         }
       ]
     },
@@ -54468,6 +54694,67 @@
           "type": "TInstanceId_EvtContext",
           "name": "b_base",
           "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "LexState",
+      "size": 72,
+      "members": [
+        {
+          "type": "int32_t",
+          "name": "current",
+          "offset": 0
+        },
+        {
+          "type": "int32_t",
+          "name": "linenumber",
+          "offset": 4
+        },
+        {
+          "type": "int32_t",
+          "name": "lastline",
+          "offset": 8
+        },
+        {
+          "type": "Token",
+          "name": "t",
+          "offset": 16
+        },
+        {
+          "type": "Token",
+          "name": "lookahead",
+          "offset": 32
+        },
+        {
+          "type": "FuncState*",
+          "name": "fs",
+          "offset": 48
+        },
+        {
+          "type": "lua_State*",
+          "name": "L",
+          "offset": 52
+        },
+        {
+          "type": "ZIO*",
+          "name": "z",
+          "offset": 56
+        },
+        {
+          "type": "Mbuffer*",
+          "name": "buff",
+          "offset": 60
+        },
+        {
+          "type": "TString*",
+          "name": "source",
+          "offset": 64
+        },
+        {
+          "type": "char",
+          "name": "decpoint",
+          "offset": 68
         }
       ]
     },
@@ -57784,90 +58071,6 @@
       ]
     },
     {
-      "name": "UpVal_u",
-      "size": 16,
-      "members": [
-        {
-          "type": "TValue",
-          "name": "value",
-          "offset": 0
-        },
-        {
-          "type": "UpVal_u_l",
-          "name": "l",
-          "offset": 0
-        }
-      ]
-    },
-    {
-      "name": "CClosure",
-      "size": 40,
-      "members": [
-        {
-          "type": "GCObject*",
-          "name": "next",
-          "offset": 0
-        },
-        {
-          "type": "lu_byte",
-          "name": "tt",
-          "offset": 4
-        },
-        {
-          "type": "lu_byte",
-          "name": "marked",
-          "offset": 5
-        },
-        {
-          "type": "lu_byte",
-          "name": "isC",
-          "offset": 6
-        },
-        {
-          "type": "lu_byte",
-          "name": "nupvalues",
-          "offset": 7
-        },
-        {
-          "type": "GCObject*",
-          "name": "gclist",
-          "offset": 8
-        },
-        {
-          "type": "Table*",
-          "name": "env",
-          "offset": 12
-        },
-        {
-          "type": "lua_CFunction",
-          "name": "f",
-          "offset": 16
-        },
-        {
-          "type": "TValue",
-          "name": "upvalue",
-          "arrsize": 1,
-          "offset": 24
-        }
-      ]
-    },
-    {
-      "name": "TKey",
-      "size": 16,
-      "members": [
-        {
-          "type": "TKey_nk",
-          "name": "nk",
-          "offset": 0
-        },
-        {
-          "type": "TValue",
-          "name": "tvk",
-          "offset": 0
-        }
-      ]
-    },
-    {
       "name": "lua_State",
       "size": 128,
       "members": [
@@ -58020,6 +58223,95 @@
           "type": "uint32_t",
           "name": "unk7C",
           "offset": 124
+        }
+      ]
+    },
+    {
+      "name": "UpVal_u",
+      "size": 16,
+      "members": [
+        {
+          "type": "TValue",
+          "name": "value",
+          "offset": 0
+        },
+        {
+          "type": "UpVal_u_l",
+          "name": "l",
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "CClosure",
+      "size": 40,
+      "members": [
+        {
+          "type": "GCObject*",
+          "name": "next",
+          "offset": 0
+        },
+        {
+          "type": "uint32_t",
+          "name": "unk04",
+          "offset": 4
+        },
+        {
+          "type": "lu_byte",
+          "name": "tt",
+          "offset": 8
+        },
+        {
+          "type": "lu_byte",
+          "name": "marked",
+          "offset": 9
+        },
+        {
+          "type": "lu_byte",
+          "name": "isC",
+          "offset": 10
+        },
+        {
+          "type": "lu_byte",
+          "name": "nupvalues",
+          "offset": 11
+        },
+        {
+          "type": "GCObject*",
+          "name": "gclist",
+          "offset": 12
+        },
+        {
+          "type": "Table*",
+          "name": "env",
+          "offset": 16
+        },
+        {
+          "type": "lua_CFunction",
+          "name": "f",
+          "offset": 20
+        },
+        {
+          "type": "TValue",
+          "name": "upvalue",
+          "arrsize": 1,
+          "offset": 24
+        }
+      ]
+    },
+    {
+      "name": "TKey",
+      "size": 16,
+      "members": [
+        {
+          "type": "TKey_nk",
+          "name": "nk",
+          "offset": 0
+        },
+        {
+          "type": "TValue",
+          "name": "tvk",
+          "offset": 0
         }
       ]
     },
@@ -59841,6 +60133,19 @@
         {
           "type": "TGAImageDesc",
           "name": "desc"
+        }
+      ]
+    },
+    {
+      "name": "Token__seminfo",
+      "members": [
+        {
+          "type": "lua_Number",
+          "name": "r"
+        },
+        {
+          "type": "TString*",
+          "name": "ts"
         }
       ]
     },
