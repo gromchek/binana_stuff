@@ -5364,6 +5364,7 @@ static import_symbols() {
 	set_name(0x005C55F0, "Script_GetMinigameState");
 	set_name(0x005C5610, "MinigameInfoRegisterScriptFunctions");
 	set_name(0x005C5640, "MinigameInfoUnregisterScriptFunctions");
+	set_name(0x005C5660, "CGMinigameInfo__LeaveWorld");
 	set_name(0x005C5690, "CGMinigameInfo__OnMinigameSetup");
 	set_name(0x005C5720, "CGMinigameInfo__InitializeGame");
 	set_name(0x005C5770, "CGTalentGroup_C__GetGlyph");
