@@ -1628,6 +1628,9 @@ TSHashTable__CModelBlob__CHashEntry__destructor 004BB410 f end=004BB4A7
 TSHashTable__CModelBlob__CHashEntry__Destroy 004BB4B0 f end=004BB504
 TSHashTable__CModelBlob__CHashEntry__destructor 004BB510 f end=004BB53B
 TSGrowableArray_TSExplicitList_CModelBlob__CHashEntry__SetCount 004BB540 f end=004BB644
+TSHashTable__CModelBlob__CHashEntry__Initialize 004BB7A0 f end=004BB7FA
+TSHashTable__CModelBlob__CHashEntry__GrowListArray 004BB800 f end=004BB9CB
+TSHashTable__CModelBlob__CHashEntry__MonitorFullness 004BB9D0 f end=004BBA66
 ModelBlobLoad 004BBC20 f end=004BBCA8
 ProfileInternal__PrfStrToInt 004BBD00 f end=004BBD36
 TSGrowableArray_1__CalcChunkSize 004BBD60 f end=004BBD9B
@@ -1647,8 +1650,11 @@ TSHashTable__ProfileInternal__SECTION__Destroy 004BC9D0 f end=004BCA24
 TSHashTable__ProfileInternal__KEYVALUE__destructor 004BCA30 f end=004BCA5B
 TSHashTable__ProfileInternal__SECTION__destructor 004BCA60 f end=004BCA8B
 TSHashTable__ProfileInternal__KEYVALUE__Initialize 004BCA90 f end=004BCAEA
+TSHashTable__ProfileInternal__SECTION__Initialize 004BCAF0 f end=004BCB4A
 TSHashTable__ProfileInternal__KEYVALUE__GrowListArray 004BCB50 f end=004BCD1B
+TSHashTable__ProfileInternal__SECTION__GrowListArray 004BCD20 f end=004BCEEB
 TSHashTable__ProfileInternal__KEYVALUE__MonitorFullness 004BD010 f end=004BD0A6
+TSHashTable__ProfileInternal__SECTION__MonitorFullness 004BD0B0 f end=004BD146
 ProfileCreate 004BD150 f end=004BD1A6
 TSHashTable__ProfileInternal__SECTION__InternalDelete 004BD1B0 f end=004BD1E7
 TSHashTable__ProfileInternal__SECTION__InternalNew 004BD1F0 f end=004BD258
@@ -1787,6 +1793,9 @@ TSHashTable__VSOUND_LOOKUP__InternalDelete 004CADB0 f end=004CADF8
 TSHashTable__VSOUND_LOOKUP__destructor 004CAE00 f end=004CAE97
 TSHashTable__VSOUND_LOOKUP__Destroy 004CAEA0 f end=004CAEF4
 TSHashTable__VSOUND_LOOKUP__destructor 004CAF00 f end=004CAF2B
+TSHashTable__VSOUND_LOOKUP__Initialize 004CAF30 f end=004CAF8A
+TSHashTable__VSOUND_LOOKUP__GrowListArray 004CAF90 f end=004CB15B
+TSHashTable__VSOUND_LOOKUP__MonitorFullness 004CB310 f end=004CB3A6
 TSGrowableArray_VSOUNDKITDEF__ReallocData 004CB930 f end=004CB9C0
 TSGrowableArray_WorldStateZoneSoundOverride__ReallocData 004CB9C0 f end=004CBA50
 TSGrowableArray_TSExplicitList_SOUNDKITLOOKUP__ReallocData 004CC360 f end=004CC4B7
@@ -3147,13 +3156,17 @@ TSHashTable__TaintEvent__destructor 00529A60 f end=00529AF7
 TSHashTable__TaintEvent__Destroy 00529B00 f end=00529B54
 TSHashTable__TaintEvent__destructor 00529B90 f end=00529BBB
 TSGrowableArray_TSExplicitList_THREATMAP__SetCount 00529BC0 f end=00529CC4
+TSHashTable__SAVEDVARIABLE__Initialize 00529CD0 f end=00529D2A
 TSHashTable__TaintEvent__Initialize 00529D30 f end=00529D8A
+TSHashTable__SAVEDVARIABLE__GrowListArray 00529D90 f end=00529F5B
 TSHashTable__TaintEvent__GrowListArray 00529F60 f end=0052A12B
 TSHashTable__CGGameUI__THREATMAP__destructor 0052A130 f end=0052A15B
 TSHashTable__THREATMAP__Initialize 0052A1E0 f end=0052A23A
 TSHashTable__THREATMAP__GrowListArray 0052A240 f end=0052A40B
+TSHashTable__SAVEDVARIABLE__MonitorFullness 0052A410 f end=0052A4A6
 TSHashTable__TaintEvent__MonitorFullness 0052A4B0 f end=0052A546
 TSHashTable__THREATMAP__MonitorFullness 0052A550 f end=0052A5E6
+SetTaintLogCallback 0052A930 f end=0052A97A type="int32_t __stdcall func(CVar* h, char* oldValue, char* newValue, void* arg)"
 CGGameUI__Initialize 0052A980 f end=0052AEC6
 CGGameUI__RegisterSavedVariable 0052AED0 f end=0052AF3F
 CGGameUI__Idle 0052AF40 f end=0052B36B
@@ -3919,6 +3932,7 @@ CGUIBindings__GetReducedKeyBinding 005622E0 f end=00562487
 CGUIBindings__GetCommandAction 00562490 f end=0056254F
 Script_GetBindingAction 00562550 f end=005625F0
 Script_GetBindingByKey 005625F0 f end=0056269B
+TSHashTable__KEYCOMMAND__InternalNewNode 005626A0 f end=005626FB
 CGUIBindings__Shutdown 00562820 f end=00562861
 GetClickFrame 00562990 f end=00562B77
 CGUIBindings__CopyBindings 00562B80 f end=00562D5E
@@ -5143,6 +5157,12 @@ TSHashTable__ACHIEVEMENT__InternalDelete 005B64C0 f end=005B64E2
 TSHashTable__ACHIEVEMENT__destructor 005B64F0 f end=005B6587
 TSHashTable__ACHIEVEMENT__Destroy 005B6590 f end=005B65E4
 TSHashTable__ACHIEVEMENT__destructor 005B6790 f end=005B67BB
+TSHashTable__ACHIEVEMENT__Initialize 005B67F0 f end=005B684A
+TSHashTable__ACHIEVEMENTCRITERIALIST__Initialize 005B6850 f end=005B68AA
+TSHashTable__ACHIEVEMENT__GrowListArray 005B68B0 f end=005B6A7B
+TSHashTable__ACHIEVEMENTCRITERIALIST__GrowListArray 005B6A80 f end=005B6C4B
+TSHashTable__ACHIEVEMENT__MonitorFullness 005B6C50 f end=005B6CE6
+TSHashTable__ACHIEVEMENTCRITERIALIST__MonitorFullness 005B6CF0 f end=005B6D86
 CGAchievementInfo__InitializeGame 005B6DF0 f end=005B71DD
 Script_GetNumGlyphSockets 005B71E0 f end=005B7202
 GlyphInfoRegisterScriptFunctions 005B7210 f end=005B7233
@@ -5411,6 +5431,12 @@ TSHashTable__TalentGroupTierItem_C__destructor 005C8820 f end=005C88B7
 TSHashTable__TalentGroupTierItem_C__Destroy 005C88C0 f end=005C8914
 TSHashTable__TalentGroupItem_C__destructor 005C8920 f end=005C894B
 TSHashTable__TalentGroupTierItem_C__destructor 005C8950 f end=005C897B
+TSHashTable__TalentGroupItem_C__Initialize 005C8980 f end=005C89DA
+TSHashTable__TalentGroupTierItem_C__Initialize 005C89E0 f end=005C8A3A
+TSHashTable__TalentGroupItem_C__GrowListArray 005C8A40 f end=005C8C0B
+TSHashTable__TalentGroupTierItem_C__GrowListArray 005C8C10 f end=005C8DDB
+TSHashTable__TalentGroupItem_C__MonitorFullness 005C8E50 f end=005C8EE6
+TSHashTable__TalentGroupTierItem_C__MonitorFullness 005C8EF0 f end=005C8F86
 CGTalentGroup_C__AddTalentItem 005C9310 f end=005C944C
 Script_AddPreviewTalentPoints 005C9590 f end=005C968E
 CGTalentGroup_C__Reset 005C9910 f end=005C995A
@@ -6073,7 +6099,7 @@ TSHashTable__ADDONSTATE__MonitorFullness 005F7100 f end=005F7196
 TSHashTable__UIADDON__MonitorFullness 005F71A0 f end=005F7236
 TSHashTable__UIADDON__InternalDelete 005F7240 f end=005F7262
 TSHashTable__UIADDON__InternalNew 005F7270 f end=005F72C7
-GetAddOnName 005F7410 f end=005F742E
+GetAddOnName 005F7410 f end=005F742E type="char* __stdcall func(char* name)"
 GetAddOnURL 005F74B0 f end=005F74DD
 GetAddOnMetadata 005F74E0 f end=005F7511
 GetAddonDeps 005F7520 f end=005F753E
@@ -7203,6 +7229,7 @@ DBCache__ArenaTeamCache__ClearPending 0066C710 f end=0066C786
 DBCache__ArenaTeamCache__Save 0066C790 f end=0066CA01
 DBCache__DanceCache__Save 0066CA10 f end=0066CC8A
 DBCache__Clear 0066CC90 f end=0066CCA9
+TSList_DBCACHECALLBACK__LinkNode 0066CCB0 f end=0066CD02
 TSGrowableArray_TSExplicitList_DBCache__CreatureStats_C__DBCACHEHASH__ReallocData 0066CD10 f end=0066CE67
 TSGrowableArray_TSExplicitList_DBCache__GameObjectStats_C__DBCACHEHASH__ReallocData 0066CE70 f end=0066CFC7
 TSGrowableArray_TSExplicitList_DBCache__ItemName_C__DBCACHEHASH__ReallocData 0066CFD0 f end=0066D127
@@ -7426,6 +7453,38 @@ TSHashTable__DBCache__ArenaTeamCache__DBCACHEHASH__destructor 00675990 f end=006
 TSHashTable__DBCache__ArenaTeamCache__REVERSEENTRY__destructor 006759C0 f end=006759EB
 TSHashTable__DBCache__DanceCache__DBCACHEHASH__destructor 006759F0 f end=00675A1B
 TSHashTable__DBCache__DanceCache__REVERSEENTRY__destructor 00675A20 f end=00675A4B
+TSHashTable__DBCache__NameCache__REVERSEENTRY__Initialize 00675A50 f end=00675AAA
+TSHashTable__DBCache__NameCache__REVERSEENTRY__GrowListArray 00675AB0 f end=00675C7B
+TSHashTable__DBCache__CreatureStats_C__DBCACHEHASH__Initialize 00676E50 f end=00676EAA
+TSHashTable__DBCache__GameObjectStats_C__DBCACHEHASH__Initialize 00676EB0 f end=00676F0A
+TSHashTable__DBCache__ItemName_C__DBCACHEHASH__Initialize 00676F10 f end=00676F6A
+TSHashTable__DBCache__ItemStats_C__DBCACHEHASH__Initialize 00676F70 f end=00676FCA
+TSHashTable__DBCache__NPCText__DBCACHEHASH__Initialize 00676FD0 f end=0067702A
+TSHashTable__DBCache__NameCache__DBCACHEHASH__Initialize 00677030 f end=0067708A
+TSHashTable__DBCache__GuildStats_C__DBCACHEHASH__Initialize 00677090 f end=006770EA
+TSHashTable__DBCache__QuestCache__DBCACHEHASH__Initialize 006770F0 f end=0067714A
+TSHashTable__DBCache__PageTextCache_C__DBCACHEHASH__Initialize 00677150 f end=006771AA
+TSHashTable__DBCache__PetNameCache__DBCACHEHASH__Initialize 006771B0 f end=0067720A
+TSHashTable__DBCache__CGPetition__DBCACHEHASH__Initialize 00677210 f end=0067726A
+TSHashTable__DBCache__ItemTextCache_C__DBCACHEHASH__Initialize 00677270 f end=006772CA
+TSHashTable__DBCache__WardenCachedModule__DBCACHEHASH__Initialize 006772D0 f end=0067732A
+TSHashTable__DBCache__ArenaTeamCache__DBCACHEHASH__Initialize 00677330 f end=0067738A
+TSHashTable__DBCache__DanceCache__DBCACHEHASH__Initialize 00677390 f end=006773EA
+TSHashTable__DBCache__CreatureStats_C__DBCACHEHASH__GrowListArray 006773F0 f end=006775BB
+TSHashTable__DBCache__GameObjectStats_C__DBCACHEHASH__GrowListArray 006775C0 f end=0067778B
+TSHashTable__DBCache__ItemName_C__DBCACHEHASH__GrowListArray 00677790 f end=0067795B
+TSHashTable__DBCache__ItemStats_C__DBCACHEHASH__GrowListArray 00677960 f end=00677B2B
+TSHashTable__DBCache__NPCText__DBCACHEHASH__GrowListArray 00677B30 f end=00677CFB
+TSHashTable__DBCache__NameCache__DBCACHEHASH__GrowListArray 00677D00 f end=00677ECB
+TSHashTable__DBCache__GuildStats_C__DBCACHEHASH__GrowListArray 00677ED0 f end=0067809B
+TSHashTable__DBCache__QuestCache__DBCACHEHASH__GrowListArray 006780A0 f end=0067826B
+TSHashTable__DBCache__PageTextCache_C__DBCACHEHASH__GrowListArray 00678270 f end=0067843B
+TSHashTable__DBCache__PetNameCache__DBCACHEHASH__GrowListArray 00678440 f end=0067860B
+TSHashTable__DBCache__CGPetition__DBCACHEHASH__GrowListArray 00678610 f end=006787DB
+TSHashTable__DBCache__ItemTextCache_C__DBCACHEHASH__GrowListArray 006787E0 f end=006789AB
+TSHashTable__DBCache__WardenCachedModule__DBCACHEHASH__GrowListArray 006789B0 f end=00678B7B
+TSHashTable__DBCache__ArenaTeamCache__DBCACHEHASH__GrowListArray 00678B80 f end=00678D4B
+TSHashTable__DBCache__DanceCache__DBCACHEHASH__GrowListArray 00678D50 f end=00678F1B
 TSHashTable__DBCache__CreatureStats_C__DBCACHEHASH__InternalDelete 00678F70 f end=00678F92
 TSHashTable__DBCache__GameObjectStats_C__DBCACHEHASH__InternalDelete 00678FA0 f end=00678FC2
 TSHashTable__DBCache__ItemName_C__DBCACHEHASH__InternalDelete 00678FD0 f end=00678FF2
@@ -7441,6 +7500,22 @@ TSHashTable__DBCache__ItemTextCache_C__DBCACHEHASH__InternalDelete 00679180 f en
 TSHashTable__DBCache__WardenCacheModule__DBCACHEHASH__InternalDelete 006791B0 f end=006791D2
 TSHashTable__DBCache__ArenaTeamCache__DBCACHEHASH__InternalDelete 006791E0 f end=00679202
 TSHashTable__DBCache__DanceCache__DBCACHEHASH__InternalDelete 00679210 f end=00679232
+TSHashTable__DBCache__NameCache__REVERSEENTRY__MonitorFullness 00679240 f end=006792D6
+TSHashTable__DBCache__CreatureStats_C__DBCACHEHASH__MonitorFullness 006793D0 f end=00679466
+TSHashTable__DBCache__GameObjectStats_C__DBCACHEHASH__MonitorFullness 00679470 f end=00679506
+TSHashTable__DBCache__ItemName_C__DBCACHEHASH__MonitorFullness 00679510 f end=006795A6
+TSHashTable__DBCache__ItemStats_C__DBCACHEHASH__MonitorFullness 006795B0 f end=00679646
+TSHashTable__DBCache__NPCText__DBCACHEHASH__MonitorFullness 00679650 f end=006796E6
+TSHashTable__DBCache__NameCache__DBCACHEHASH__MonitorFullness 006796F0 f end=00679786
+TSHashTable__DBCache__GuildStats_C__DBCACHEHASH__MonitorFullness 00679790 f end=00679826
+TSHashTable__DBCache__QuestCache__DBCACHEHASH__MonitorFullness 00679830 f end=006798C6
+TSHashTable__DBCache__PageTextCache_C__DBCACHEHASH__MonitorFullness 006798D0 f end=00679966
+TSHashTable__DBCache__PetNameCache__DBCACHEHASH__MonitorFullness 00679970 f end=00679A06
+TSHashTable__DBCache__CGPetition__DBCACHEHASH__MonitorFullness 00679A10 f end=00679AA6
+TSHashTable__DBCache__ItemTextCache_C__DBCACHEHASH__MonitorFullness 00679AB0 f end=00679B46
+TSHashTable__DBCache__WardenCachedModule__DBCACHEHASH__MonitorFullness 00679B50 f end=00679BE6
+TSHashTable__DBCache__ArenaTeamCache__DBCACHEHASH__MonitorFullness 00679BF0 f end=00679C86
+TSHashTable__DBCache__DanceCache__DBCACHEHASH__MonitorFullness 00679C90 f end=00679D26
 DBCache__CreatureStats_C__CancelCallback 00679E10 f end=00679E8F
 DBCache__GameObjectStats_C__CancelCallback 00679F00 f end=00679F7F
 DBCache__ItemStats_C__CancelCallback 0067A0F0 f end=0067A16F
@@ -7556,6 +7631,7 @@ GxPrimVertexPtr 00682400 f end=00682781 type="void __stdcall func(uint32_t verte
 TSGrowableArray_GxDrawListEntry__SetCount 00682790 f end=006828B1
 GxPrimLockVertexPtrs 006828C0 f end=006828FE type="void __stdcall func(uint32_t vertexCount, C3Vector* pos, uint32_t posStride, C3Vector* normal, uint32_t normalStride, CImVector* color, uint32_t colorStride, uint8_t* bone, uint32_t boneStride, C2Vector* tex0, uint32_t tex0Stride, C2Vector* tex1, uint32_t tex1Stride)"
 GxScenePresent 00682A00 f end=00682A33
+CGxDevice__AdapterFormats 00682B00 f end=00682B79
 GxDevDestroy 00682B80 f end=00682C35
 EmergencyMem__Unlock 00682C40 f end=00682C45
 CGxDevice__InitLights 00682C50 f end=00682CA8 type="void __thiscall func(CGxDevice* this)"
@@ -7716,12 +7792,30 @@ CGxVboBroker1__constructor 0068A590 f end=0068A6FB
 CGxVboBroker1__destructor 0068A700 f end=0068A758
 CGxVboBroker1__SelectVbo 0068A760 f end=0068A7CF
 CGxVboBroker1__GetLastSelectedVbo 0068A7D0 f end=0068A7EB
+CGxDeviceOpenGl__DeviceOverride 0068A7F0 f end=0068A8B4
+CGxDeviceOpenGl__LogCrashInfo 0068A8E0 f end=0068A993
 CGxDeviceOpenGl__ISetGlCaps 0068A9A0 f end=0068AF34 type="void __thiscall func(CGxDeviceOpenGl* this, CGxFormat* format)"
+CGxDeviceOpenGl__DestroyPoolAPI 0068AF40 f end=0068B022
+CGxDeviceOpenGl__PoolDestroy 0068B030 f end=0068B04E
+CGxDeviceOpenGl__QueryCreate 0068B050 f end=0068B087
+CGxDeviceOpenGl__QueryDestroy 0068B090 f end=0068B0C7
+CGxDeviceOpenGl__QueryBegin 0068B0D0 f end=0068B134
+CGxDeviceOpenGl__QueryEnd 0068B140 f end=0068B17C
+CGxDeviceOpenGl__QueryGetParam 0068B180 f end=0068B228
+CGxDeviceOpenGl__QueryGetData 0068B230 f end=0068B292
 CGxVboBroker1__destructor 0068B2D0 f end=0068B2FB
+CGxDeviceOpenGl__CreatePoolAPI 0068B300 f end=0068B408
+CGxDeviceOpenGl__BufLock 0068B4D0 f end=0068B664
+CGxDeviceOpenGl__BufData 0068B670 f end=0068B820
 CGxDeviceOpenGl__constructor 0068BBC0 f end=0068BD15 type="void __thiscall func(CGxDeviceOpenGl* this)"
+CGxDeviceOpenGl__BufUnlock 0068BDD0 f end=0068BF13
 CGxDevice__NewOpenGl 0068BF20 f end=0068BF44 type="CGxDevice* __stdcall func()"
+CGxDeviceOpenGl__DeviceReadPixels 0068BF80 f end=0068C068
+CGxDeviceOpenGl__DeviceReadDepths 0068C070 f end=0068C1E6
 CGxDevice__NewD3d9Ex 0068C220 f end=0068C244 type="CGxDevice* __stdcall func()"
+CGxDevice__OpenGlAdapterFormats 0068C250 f end=0068C541
 CGxDeviceOpenGl__SetFormatMode 0068C9B0 f end=0068CA76
+CGxDeviceOpenGl__DeviceSetBaseMipLevel 0068CC00 f end=0068CC1B
 CGxDeviceOpenGl__DeviceCreate 0068D610 f end=0068D6C6
 CGxDeviceOpenGl__DeviceSetFormat 0068D6D0 f end=0068D7AF
 CGxDeviceD3d__IUnloadD3dLib 0068E140 f end=0068E174 type="void __stdcall func(HINSTANCE* hInstance, LPDIRECT3D9* d3dLib)" ; void CGxDeviceD3d::IUnloadD3dLib(HINSTANCE& d3dLib, LPDIRECT3D9& d3d)
@@ -7770,6 +7864,10 @@ CGxDeviceD3d__DeviceCreate 00690830 f end=00690897 type="int32_t __thiscall func
 ScanString 006908B0 f end=0069090D
 FindGlExt 00690910 f end=00690954
 BindGlExtensions 006909A0 f end=0069186D
+CGxDeviceOpenGl__DsSet 006918F0 f end=00691EEB
+CGxDeviceOpenGl__IStateSyncViewport 006920E0 f end=006921C7
+CGxDeviceOpenGl__ITexForceRecreation 0069D820 f end=0069D911
+CGxDeviceOpenGl__SceneClear 0069E150 f end=0069E220
 CGxDeviceD3d__Sub69FAA0 0069FAA0 f end=0069FAFE type="int32_t __thiscall func(CGxDeviceD3d* this, D3DFORMAT format)"
 CGxDeviceD3d__ICreateD3dVB 0069FB00 f end=0069FB68 type="LPDIRECT3DVERTEXBUFFER9 __thiscall func(EGxPoolUsage usage, uint32_t size)"
 CGxDeviceD3d__CreatePoolAPI 0069FB70 f end=0069FBB8 type="int32_t __thiscall func(CGxDeviceD3d* this, CGxPool* pool)"
@@ -8511,6 +8609,7 @@ CGPlayer_C__CanGrantLevel 006DE9E0 f end=006DEB2B
 CGPlayer_C__UpdateActiveMoverDisplay 006DEB30 f end=006DEC6B
 TSGrowableArray_InitialSpellStruct__New 006DEC70 f end=006DECB9
 TSGrowableArray_ITEMSWAP__SetCount 006DECC0 f end=006DED53
+TSList__LinkToTail 006DED60 f end=006DEDC3
 InventoryUpdate 006DEDD0 f end=006DEEEA
 OnNpcPetitionEvent 006DEEF0 f end=006DEF98
 OnInitialSpells 006DF050 f end=006DF19D
@@ -8826,9 +8925,30 @@ TSHashTable__OBJ_EFFECT_REF_LIST_LOOKUP__destructor 006F4820 f end=006F484B
 TSHashTable__OBJ_EFFECT_DEF_LOOKUP__destructor 006F4850 f end=006F487B
 TSHashTable__OBJ_EFFECT_GROUP_DEF_LOOKUP__destructor 006F4880 f end=006F48AB
 TSHashTable__OBJ_EFFECT_PACKAGE_DEF_LOOKUP__destructor 006F48B0 f end=006F48DB
+TSHashTable__OBJ_EFFECT_GROUP_DEF_REF_LIST_LOOKUP__Initialize 006F48E0 f end=006F493A
+TSHashTable__OBJ_EFFECT_REF_LOOKUP__Initialize 006F4940 f end=006F499A
+TSHashTable__OBJ_EFFECT_GROUP_LOOKUP__Initialize 006F49A0 f end=006F49FA
+TSHashTable__OBJ_EFFECT_REF_LIST_LOOKUP__Initialize 006F4A00 f end=006F4A5A
+TSHashTable__OBJ_EFFECT_DEF_LOOKUP__Initialize 006F4A60 f end=006F4ABA
+TSHashTable__OBJ_EFFECT_GROUP_DEF_LOOKUP__Initialize 006F4AC0 f end=006F4B1A
+TSHashTable__OBJ_EFFECT_PACKAGE_DEF_LOOKUP__Initialize 006F4B20 f end=006F4B7A
+TSHashTable__OBJ_EFFECT_GROUP_DEF_REF_LIST_LOOKUP__GrowListArray 006F4B80 f end=006F4D4B
+TSHashTable__OBJ_EFFECT_REF_LOOKUP__GrowListArray 006F4D50 f end=006F4F1B
+TSHashTable__OBJ_EFFECT_GROUP_LOOKUP__GrowListArray 006F4F20 f end=006F50EB
+TSHashTable__OBJ_EFFECT_REF_LIST_LOOKUP__GrowListArray 006F50F0 f end=006F52BB
+TSHashTable__OBJ_EFFECT_DEF_LOOKUP__GrowListArray 006F52C0 f end=006F548B
+TSHashTable__OBJ_EFFECT_GROUP_DEF_LOOKUP__GrowListArray 006F5490 f end=006F565B
+TSHashTable__OBJ_EFFECT_PACKAGE_DEF_LOOKUP__GrowListArray 006F5660 f end=006F582B
 CObjectEffectManager__constructor 006F5900 f end=006F5966
 TSHashTable__OBJ_EFFECT_GROUP_DEF_LOOKUP__InternalDelete 006F5970 f end=006F599A
 TSHashTable__OBJ_EFFECT_GROUP_DEF_LOOKUP__InternalNew 006F59A0 f end=006F59F4
+TSHashTable__OBJ_EFFECT_GROUP_DEF_REF_LIST_LOOKUP__MonitorFullness 006F5A00 f end=006F5A96
+TSHashTable__OBJ_EFFECT_REF_LOOKUP__MonitorFullness 006F5AA0 f end=006F5B36
+TSHashTable__OBJ_EFFECT_REF_LIST_LOOKUP__MonitorFullness 006F5B40 f end=006F5BD6
+TSHashTable__OBJ_EFFECT_DEF_LOOKUP__MonitorFullness 006F5BE0 f end=006F5C76
+TSHashTable__OBJ_EFFECT_GROUP_DEF_LOOKUP__MonitorFullness 006F5C80 f end=006F5D16
+TSHashTable__OBJ_EFFECT_GROUP_LOOKUP__MonitorFullness 006F5D80 f end=006F5E16
+TSHashTable__OBJ_EFFECT_PACKAGE_DEF_LOOKUP__MonitorFullness 006F5E20 f end=006F5EB6
 TSHashTable__OBJ_EFFECT_GROUP_LOOKUP__InternalDelete 006F5EC0 f end=006F5EF7
 TSHashTable__OBJ_EFFECT_GROUP_LOOKUP__InternalNew 006F5F00 f end=006F5F65
 TSHashTable__OBJ_EFFECT_PACKAGE_DEF_LOOKUP__InternalDelete 006F5F70 f end=006F5F9A
@@ -9447,6 +9567,7 @@ CGUnit_C__CanCurrentFormMount 00721DA0 f end=00721E68
 CGUnit_C__IsCancelShapeshiftAtFlightMaster 00721E70 f end=00721EC5
 CGUnit_C__CanAutoInteract 00721F50 f end=00721F89
 CGUnit_C__TrackingMakeRelativeTo 00722010 f end=00722082
+CGUnit_C__OnAuraRemoved 00722090 f end=0072217A
 CGUnit_C__DoNotPlayWoundAnim 00722180 f end=007221C4
 CGUnit_C__AddWorldDamageText 00722340 f end=00722439
 CGUnit_C__AddWorldHealingText 00722440 f end=007224CD
@@ -9497,6 +9618,7 @@ CGUnit_C__SetNamePlateFocus 007271D0 f end=007272B5
 CGUnit_C__ClearTrackingTarget 007272C0 f end=007273F7
 CGUnit_C__InitializeTrackingState 00727400 f end=007275B4
 CGUnit_C__RenderAutoTrackCursor 007275C0 f end=0072775A
+CGUnit_C__OnAuraAdded 00727760 f end=00727851
 CGUnit_C__CheckSelfResurrect 00727860 f end=0072799A
 CGUnit_C__GetPlayerDiscount 007279A0 f end=00727A60
 CGUnit_C__AuraVisionUpdated 00727A70 f end=00727BFD
@@ -9864,6 +9986,8 @@ UnitCombatLogProcGo 0074D700 f end=0074D746
 GetCombatLogObjectName 0074D750 f end=0074D912
 CombatLogEntry__constructor 0074D920 f end=0074D97F
 Script_CombatLogGetRetentionTime 0074D9E0 f end=0074D9FF
+DisplayMechanicEffect 0074DA70 f end=0074DB7A
+UnitCombatLogSpellMechanic 0074DB80 f end=0074DCA7
 CombatLogFilter__SetFilterData 0074E050 f end=0074E191
 CombatLogFilter__MatchesFilter 0074E1A0 f end=0074E282
 CombatLogEntry__PushEvent 0074E290 f end=0074E878
@@ -9883,13 +10007,21 @@ AddCombatLogEntry 0074FF20 f end=0074FF6C
 Script_CombatLogAddFilter 0074FF70 f end=00750206
 CombatLogEntry__CancelPendingCallbacks 00750270 f end=0075037C
 UnitCombatLogHeal 00750860 f end=00750A81
+PartyKillLogHandler 00750C90 f end=00750D38
+ProcResistHandler 00750D40 f end=00750E93
+DispelFailedHandler 00750EA0 f end=0075104A
+EnchantmentLogHandler 00751050 f end=0075111C
 Script_CombatLogClearEntries 00751120 f end=0075114B
 UnitCombatLog 00751150 f end=007512A1
+UnitCombatLogSpellFail 00751AD0 f end=00751B7F
 UnitCombatLogSpellMissed 00751B80 f end=00751C3E
 UnitCombatLogInstakill 00752210 f end=00752296
+UnitCombatLogInterrupt 007523D0 f end=00752511
+UnitCombatLogAuraAddedOrRemoved 00752710 f end=0075285B
 UnitCombatLogSplitDamage 00752DE0 f end=00752ECB
 CGUnit_C__UnitCombatLogUnitDead 00752ED0 f end=00752FF9
 PeriodicAuraLogInternal 007531F0 f end=00753697
+PeriodicAuraLogHandler 00753710 f end=00753723
 FindBagFamilyCallback 00753B00 f end=00753B16
 FindItemNameCallback 00753B20 f end=00753B65
 FindItemFullNameCallback 00753B70 f end=00753BAD
@@ -9920,6 +10052,7 @@ CGBag_C__ItemCountValid 00754DD0 f end=00754ECA
 CGUnit_C__ShowPlayerPVPHonorGained 00754ED0 f end=00754EEC
 CGUnit_C__GetParryingItem 00754EF0 f end=00754F3A
 CGUnit_C__GetUnitSize 00754F40 f end=00754F58
+UnitCombatClientShutdown 00754F60 f end=00754FCC
 ShouldShowFeedback 00754FD0 f end=00754FED
 CGUnit_C__PlayAttackerRound 00755130 f end=00755234
 CGUnit_C__HandleEnvironmentDamage 00755270 f end=00755373
@@ -9931,6 +10064,7 @@ CGUnit_C__PlayVictimRound 00755E40 f end=00756032
 CGUnit_C__OnDeathAnimate 007561E0 f end=0075623E
 CGUnit_C__HandleCombatAnimEvent 00756240 f end=00756767
 CGUnit_C__OnAttackStop 00756770 f end=007567FD
+OnUnitCombatEvent 00756800 f end=00756BA3
 UnitCombatClientInitialize 00756BD0 f end=00756C85
 CVehicle_C__InstallBoneAnimListener 00756D10 f end=00756D6D
 CVehicle_C__UninstallBoneAnimListener 00756D70 f end=00756DAB
@@ -9948,6 +10082,7 @@ CVehicle_C__FindPassengerUnit 00757680 f end=007576DF
 CVehicle_C__RemoveAllPassengersLocally 007576E0 f end=007577D5
 CVehicle_C__GetVehicleAndSeatFromVirtualSeat 00757960 f end=00757978
 CVehicle_C__GetVirtualSeatInfo 007579E0 f end=00757AD9
+CVehicle_C__constructor 00757AE0 f end=00757B33
 CVehicle_C__Destroy 00757BB0 f end=00757BD2
 CVehicle_C__BuildWorldMatrix 00757BE0 f end=00757D0B
 CVehicle_C__UpdateLargestPassengerBoundsRadius 00757D10 f end=00757E61
@@ -9981,6 +10116,7 @@ CVehicleCamera_C__InitSystem 00759160 f end=007591CF
 CVehicleCamera_C__UninitSystem 007591D0 f end=007591FD
 CVehicleCamera_C__ComputeEndWorldPosition 00759200 f end=0075957C
 CVehicleCamera_C__ComputeSafeCurWorldPos 00759580 f end=007597C1
+CVehicleCamera_C__IsHierarchyChasingFacing 007597D0 f end=00759879
 CVehicleCamera_C__GetRelativeTo 007599D0 f end=00759A56
 CVehicleCamera_C__WouldAddingNextCameraCreateLoop 00759AE0 f end=00759B4B
 CVehicleCamera_C__ConvertFromWorldToRawOrOffset 00759BD0 f end=00759C57
@@ -10043,6 +10179,7 @@ ConsoleSetHotKey 00763C40 f end=00763C4D
 ConsolePostClose 00763C50 f end=00763C5D type="void __stdcall func()"
 ConsoleGetActive 00763C60 f end=00763C66
 EventCloseCallback 00763D60 f end=00763D71 type="int32_t __stdcall func(void* param)"
+CONSOLELINE__destructor 00763D80 f end=00763DE2
 DrawBackground 00763DF0 f end=00764039 type="void __stdcall func()"
 DrawHighLight 00764040 f end=00764196 type="void __stdcall func()"
 DrawCaret 007641A0 f end=007643EA type="void __stdcall func(C3Vector* caretpos)"
@@ -10115,6 +10252,7 @@ TSHashTable__CVar__MonitorFullness 00767F20 f end=00767FB6
 CVar__Register 00767FC0 f end=007681E9 type="CVar* __stdcall func(char* name, char* help, uint32_t flags, char* value, void* fcn, uint32_t category, bool a7, void* arg, bool a9)"
 CVar__Initialize 00768340 f end=00768402 type="void __stdcall func(char* filename)"
 ConsoleCommand_Quit 00768410 f end=0076841B type="int32_t __stdcall func(char* command, char* arguments)"
+ConsoleCommand_Ver 00768420 f end=00768435
 ConsoleCommandHistory 00768440 f end=0076845B type="char* __stdcall func(uint32_t index)"
 TSGrowableArray_TSExplicitList_CONSOLECOMMAND__ReallocData 00768460 f end=007685B7
 ConsoleCommand_Help 00768660 f end=007688FD
@@ -10233,6 +10371,8 @@ SStrChr 0076E6E0 f end=0076E712
 SStrChrR 0076E720 f end=0076E756
 SStrCmp 0076E760 f end=0076E77B
 SStrCmpI 0076E780 f end=0076E79B
+GetNextTextUpper 0076E7A0 f end=0076E8B2
+SStrCmpGetNextTextUpper 0076E8D0 f end=0076EA1A
 SStrCmpUTF8I 0076EA40 f end=0076EAA3
 SStrSortUTF8I 0076EC80 f end=0076ED1B
 SStrCopy 0076ED20 f end=0076ED98
@@ -11143,6 +11283,7 @@ Script_GetVoiceSessionInfo 007DB0B0 f end=007DB1E3
 Script_GetVoiceCurrentSessionID 007DB1F0 f end=007DB277
 Script_SetActiveVoiceChannelBySessionID 007DB280 f end=007DB36C
 Script_GetNumVoiceSessionMembersBySessionID 007DB370 f end=007DB3FB
+ComSatClient_FindSessionByTypeAndName 007DB400 f end=007DB49E
 ComSatClient_SendEvent 007DB4D0 f end=007DB555
 ComSatClient_IsCurrentSession 007DB580 f end=007DB5B3
 ComSatClient_GetCurrentSessionType 007DB5C0 f end=007DB5DC
@@ -11194,6 +11335,7 @@ ComSatClient_OnSessionLeave 007DEBF0 f end=007DED5B
 ComSatClient_LeaveAllSessions 007DED60 f end=007DEEB2
 Script_GetVoiceSessionMemberInfoBySessionID 007DEEF0 f end=007DF0AF
 Script_UnitIsTalking 007DF0B0 f end=007DF142
+ComSatClient_SetCurrentSessionI 007DF150 f end=007DF28A
 ComSatClient_SetCurrentSession 007DF290 f end=007DF2B8
 ComSatClient_DisableCurrentSession 007DF2C0 f end=007DF2C8
 TSHashTable__TALKINGPLAYER__MonitorFullness 007DF2D0 f end=007DF366
@@ -11217,6 +11359,7 @@ ValidateStringIsUTF8 007E0EC0 f end=007E0F0A
 IsNumeric 007E0F10 f end=007E0F27
 IsAlphaLatin1 007E0F30 f end=007E0F86
 IsAlphaEnglish 007E0F90 f end=007E0FB6
+IsAlphaKorean 007E0FC0 f end=007E0FEF
 IsRussian 007E1030 f end=007E1049
 IsAlphaRussian 007E1050 f end=007E107A
 IsAlphaInCharSet 007E1080 f end=007E10DC
@@ -11381,6 +11524,7 @@ GameFormulaEvaluateTable 007F6990 f end=007F69AD
 InitializeRandomSeed 007F6C70 f end=007F6CB9
 QuestCache__Pack 007F6D60 f end=007F70DC
 QuestCache__Unpack 007F70E0 f end=007F73FF
+NameCache__Pack 007F7400 f end=007F749D
 NameCache__Unpack 007F74A0 f end=007F754D
 PetNameCache__Pack 007F7550 f end=007F75C2
 PetNameCache__Unpack 007F75D0 f end=007F765B
@@ -11406,6 +11550,7 @@ SpellVisualsGetMountTransitionHeight 007F9F00 f end=007F9F0B
 SpellVisualsFlagMountTransitionFinished 007F9F60 f end=007F9F6C
 SpellVisualsIsMountTransitionFinished 007F9F70 f end=007F9F80
 TSGrowableArray_LightningObject__Bolt__ReallocData 007F9F80 f end=007FA01D
+TSGrowableArray_SpellVisualKitModelAttachRec_ptr__ReallocData 007FA020 f end=007FA0B0
 TSGrowableArray_SpellVisualKitModelAttachRec__ReallocData 007FA0B0 f end=007FA140
 BlizzardObject__SetFrameOfReference 007FA1B0 f end=007FA282
 SpellVisualsHandleEclipse 007FA450 f end=007FA4D0
@@ -11454,6 +11599,7 @@ Spell_C_GetCursorWorldObjectModel 007FD7A0 f end=007FD7A6
 Spell_C_SetCursorWorldObjectPosition 007FD7B0 f end=007FD7D1
 Spell_C_IsCursorWorldObjectHousing 007FD7F0 f end=007FD7F6
 Spell_C_CursorWorldObjectRotate 007FD800 f end=007FD82F
+GameObjectResetStateHandler 007FD900 f end=007FD942
 Spell_C_GetSpellModifiers 007FD970 f end=007FDB46
 Spell_C_ModifySpellValue 007FDB50 f end=007FDB97
 Script_SpellIsTargeting 007FDCD0 f end=007FDD0A
@@ -11470,6 +11616,7 @@ SpellFaction 007FE1B0 f end=007FE278
 GetRequiredAuraVisionBitmask 007FE3E0 f end=007FE46F
 Spell_C_GetPowerTypeToken 007FE4B0 f end=007FE500
 Spell_C_EncodeSequenceIntoMissileTrajectory 007FE520 f end=007FE819
+Spell_C_IsOverride 007FE820 f end=007FE84A
 Spell_C_SpellHasShapeshiftMask 007FE850 f end=007FE890
 SpellMissingItemCallback 007FEA80 f end=007FEB4D
 Spell_C_SpellFailedCustomError 007FEF10 f end=007FEF5E
@@ -11486,6 +11633,8 @@ Spell_C_CanTargetCorpse 007FFEA0 f end=007FFF1B
 Spell_C_CanTargetObject 007FFF20 f end=007FFF5E
 Spell_C_GetCursorWorldObjectFacing 007FFF60 f end=007FFFA5
 Spell_C_PetTameFailure 00800390 f end=0080043C
+UpdateChainTargetsHandler 00800470 f end=00800510
+NotifyMissileTrajectoryCollisionHandler 008005A0 f end=00800610
 Spell_C_HasSpellModifiers 00800770 f end=00800797
 Spell_C_SetPlayerClass 008007A0 f end=008007D2
 Script_SpellTargetItem 008007E0 f end=008008C7
@@ -11503,6 +11652,13 @@ Spell_C_GetMinMaxPoints 008016C0 f end=00801766
 Spell_C_GetSpellReagentUses 00801770 f end=008017D2
 Spell_C_HaveSpellPower 008017E0 f end=00801874
 Spell_C_GetSpellRadius 008019C0 f end=00801B0B
+SpellDelayed 00801B80 f end=00801C81
+SpellChannelStart 00801C90 f end=00801DAB
+SpellChannelUpdate 00801DB0 f end=00801F02
+PlayImpactVisual 00801F10 f end=0080203B
+PlayImpactVisual 00802040 f end=0080208A
+PetTameFailure 00802090 f end=008020B5
+OnResumeCastBar 008020C0 f end=008021CE
 Script_CancelItemTempEnchantment 008021D0 f end=0080226B
 Script_CannotBeResurrected 00802270 f end=008022C9
 Spell_C_PlayDestLocVisualsWithoutCaster 008022D0 f end=00802843
@@ -11511,11 +11667,20 @@ Spell_C_ModifyCooldown 00802BA0 f end=00802BE1
 Spell_C__GetSpellRange 00802C30 f end=00802CA6
 Spell_C_IsActiveSpell 00802CB0 f end=00802F7C
 Spell_C_CancelActiveSpell 00802F80 f end=008034F7
+RangeCheck 00803850 f end=008038E3
 Spell_C_IsCastingInterruptedByCombat 008038F0 f end=00803A45
 Spell_C_HandleSpriteRay 00803A50 f end=00803ED6
 Spell_C_HandleTerrainRay 00803EE0 f end=0080400A
+CooldownCheat 00804110 f end=00804187
 Script_SpellCanTargetUnit 00804190 f end=0080421D
 Script_CancelUnitBuff 00804220 f end=00804420
+Spell_C_CancelsAuraEffect 00804430 f end=00804585
+Spell_C_CancelsStun 00804590 f end=008045B6
+Spell_C_CancelsSilence 008045C0 f end=0080460A
+Spell_C_CancelsPacify 00804610 f end=0080465A
+Spell_C_CancelsFear 00804660 f end=00804686
+Spell_C_CancelsConfuse 00804690 f end=008046B6
+Spell_C_CancelsCharm 008046C0 f end=0080471D
 SpellHistory__RemoveStartCooldown 00804720 f end=00804779
 Spell_C_PetSpellFailedUpdateCooldowns 00804780 f end=00804797
 TSGrowableArray_TSExplicitList_ITEMCOOLDOWNHASHNODE__ReallocData 00804830 f end=00804987
@@ -11534,6 +11699,10 @@ Spell_C_CancelSpellByCaster 00806390 f end=008063D8
 Spell_C_CancelSpellByTarget 008063E0 f end=00806431
 Spell_C_CancelMeleeSpells 00806480 f end=0080654E
 Spell_C_CancelRangedSpells 00806550 f end=0080661B
+PetSpellFailedHandler 00806C30 f end=00806DCB
+SpellCooldownHandler 00806DD0 f end=00807057
+ItemCooldownHandler 00807060 f end=008071BC
+OnResetRangedCombatTimer 008071C0 f end=00807395
 Spell_C_CancelAutoRepeat 00807560 f end=00807645
 TSGrowableArray_TSExplicitList_ITEMCOOLDOWNHASHNODE__SetCount 008076C0 f end=008077C4
 TSGrowableArray_TSExplicitList_DESTLOCSPELLCASTINDEXHASHNODE__SetCount 008077D0 f end=008078D4
@@ -11544,6 +11713,7 @@ Spell_C_SpellFailed 00808200 f end=00808B8E
 Spell_C__GetSpellCooldown 00809000 f end=00809029
 Spell_C__GetItemCooldown 00809030 f end=008090B1
 Spell_C_GetItemCooldown 008090C0 f end=008090FA
+Spell_C_WasSpellRecentlyUsed 00809100 f end=0080912C
 Spell_C_WasItemRecentlyUsed 00809130 f end=008091A5
 Spell_C_HaveSpellTokens 008091D0 f end=008093C9
 Spell_C_HaveEquippedSpellItems 008093D0 f end=00809608
@@ -11551,6 +11721,7 @@ Spell_C_RangeCheckSelected 00809610 f end=008099E5
 Spell_C_StopTargeting 00809A60 f end=00809A79
 Spell_C_StopCasting 00809A80 f end=00809ABD
 Spell_C_CancelPlayerSpells 00809AC0 f end=00809AE1
+CastFailedHandler 00809AF0 f end=00809C6B
 Script_SpellStopTargeting 00809E30 f end=00809E96
 Script_SpellStopCasting 00809EA0 f end=00809F7E
 Spell_C_PrepareMissileTrajectoryCast 00809F80 f end=0080A33F
@@ -11588,6 +11759,8 @@ Spell_C_SendDelayedMissileTrajectoryCast 0080DE60 f end=0080DF01
 Spell_C_AddPeriodicClientTrigger 0080DF10 f end=0080DFD4
 Spell_C_RemovePeriodicClientTrigger 0080DFE0 f end=0080E052
 Spell_C_AddProcessedDestLocSpellCast 0080E100 f end=0080E1AC
+OnSpellGo 0080E1B0 f end=0080FED1
+SpellStartHandler 0080FEE0 f end=00810050
 NotifyDestLocSpellCastHandler 00810050 f end=008100D8
 Spell_C__SystemInitialize 008100E0 f end=00810320
 SpellTableMatchRaceClass 00810320 f end=0081036D
@@ -11676,6 +11849,8 @@ FrameXML_RegisterFactory 00813D20 f end=00813DEF
 FrameXML_RegisterDefault 00813DF0 f end=00813EDC
 FrameXML_ProcessFile 00813EE0 f end=00814333
 FrameXML_CreateFrames 00814340 f end=008145A3
+end_element 008145B0 f end=008145C1
+handle_body 008145D0 f end=0081464E
 XMLNode__GetChildByName 008146F0 f end=0081472A
 XMLNode__GetAttributeByName 00814730 f end=00814793
 XMLTree_Cleanup 008147A0 f end=008147FB
@@ -11683,6 +11858,7 @@ TSGrowableArray_CXMLAttribute__ReallocData 00814800 f end=0081490C
 XMLNode__destructor 00814960 f end=008149D7
 TSGrowableArray_CXMLAttribute__SetCount 008149E0 f end=00814AC6
 XMLNode__Init 00814AD0 f end=00814B45
+begin_element 00814B50 f end=00814C35
 XMLNode__SetAttribute 00814C40 f end=00814CD5
 XMLNode__Recycle 00814CE0 f end=00814D53
 XMLTree__Free 00814D60 f end=00814D87
@@ -11703,7 +11879,9 @@ LoopTypeToString 008152F0 f end=00815321
 LoopStateToString 00815330 f end=00815361
 StringToCurveType 00815370 f end=008153BA
 CurveTypeToString 008153C0 f end=008153F1
-StringToBOOL 008154E0 f end=008154F4
+StringToBOOL 00815400 f end=00815480 type="int32_t __usercall func@<eax>(char* str, int32_t def@<esi>)"
+StringToBOOL 008154E0 f end=008154F4 type="int32_t __stdcall func(char* str)"
+StringToBOOL 00815500 f end=00815573 type="int32_t __stdcall func(lua_State* L, int32_t idx, int32_t def)"
 SmoothWeightsToString 00815590 f end=008155F3
 LoadXML_Value 00815600 f end=0081573A
 LoadXML_Dimensions 00815740 f end=00815902
@@ -11712,6 +11890,7 @@ LoadXML_Color 00815C30 f end=00815DEF
 LoadXML_Texture 00815F40 f end=00815F9E
 LoadXML_String 00815FA0 f end=00815FFE
 LoadXML_AnimGroup 00816000 f end=00816056
+ProcessFileForMakeSign 008162B0 f end=008164C5
 FrameXML_CheckSignature 008165E0 f end=00816767
 FrameScript_Object__CreateScriptMetaTable 00816790 f end=008167D3 ; FrameScript_Object::CreateScriptMetaTable(lua_State*, void (*)(lua_State*))
 FrameScript_Object__FillScriptMethodTable 008167E0 f end=00816822 ; FrameScript_Object::FillScriptMethodTable(lua_State*, FrameScript_Method*, int)
@@ -11797,6 +11976,7 @@ CM2Cache__CreateShared 0081C390 f end=0081C6D5 ; CM2Cache::CreateShared(char con
 M2Initialize 0081C6E0 f end=0081C747
 CM2Cache__UpdateShared 0081C790 f end=0081C832 ; CM2Cache::UpdateShared()
 CM2Cache__LinkToSharedUpdateList 0081C840 f end=0081C862 ; CM2Cache::LinkToSharedUpdateList(CM2Shared*)
+CM2Cache__destructor 0081C870 f end=0081C8F5
 CM2Cache__constructor 0081C900 f end=0081C988 ; CM2Cache::CM2Cache()
 CM2Scene__SetTime 0081C990 f end=0081C9B3
 CM2Scene__AdvanceTime 0081C9C0 f end=0081CA09 ; CM2Scene::AdvanceTime(unsigned int)
@@ -11921,6 +12101,7 @@ TSGrowableArray_M2ModelCallback__SetCount 0082DBC0 f end=0082DC09
 CM2Model__SetWorldTransform 0082DD80 f end=0082E0B3 ; CM2Model::SetWorldTransform(C3Vector const&, float, float, C3Vector const&, unsigned int)
 CM2Model__AnimateMTSimple 0082E140 f end=0082E548 ; CM2Model::AnimateMTSimple(C44Matrix const*, C3Vector const&, C3Vector const&, float, float)
 CM2Model__AnimateAttachmentsMT 0082E550 f end=0082E71A ; CM2Model::AnimateAttachmentsMT()
+CM2Model__SequenceCallback 0082E720 f end=0082E78E
 CM2Model__ProcessSequenceCallback 0082E790 f end=0082E83C ; CM2Model::ProcessSequenceCallback(unsigned int, unsigned int, unsigned int, unsigned int)
 CM2Model__GetCollisionFacets 0082EC30 f end=0082F0EE ; CM2Model::GetCollisionFacets(CAaBox const&, C44Matrix const&, TSGrowableArray<CFacet>&)
 CM2Model__AnimateMT 0082F0F0 f end=0083096B ; CM2Model::AnimateMT(C44Matrix const*, C3Vector const&, C3Vector const&, float, float)
@@ -12064,7 +12245,7 @@ CGLCD__LoadLCDElement 0084CC00 f end=0084CCBA
 CGLCD__GeneratePOIs 0084CCF0 f end=0084CFE3
 CGLCD__LoadScreen 0084CFF0 f end=0084D196
 CGLCD__LoadLayout 0084D1A0 f end=0084D389
-luaO_int2fb 0084D390 f end=0084D3C4
+luaO_int2fb 0084D390 f end=0084D3C4 type="int32_t __stdcall func(uint32_t x)"
 luaO_fb2int 0084D3D0 f end=0084D3ED type="int32_t __stdcall func(uint32_t x)"
 luaO_log2 0084D3F0 f end=0084D418 type="int32_t __stdcall func(uint32_t x)"
 luaO_rawequalObj 0084D420 f end=0084D467 type="bool __stdcall func(TValue* t1, TValue* t2)"
@@ -12075,95 +12256,107 @@ luaO_pushfstring 0084D840 f end=0084D859 type="char* __stdcall func(lua_State* L
 luaO_chunkid 0084D860 f end=0084D9B2 type="void __stdcall func(char* out, char* src, size_t bufflen)"
 index2adr 0084D9C0 f end=0084DA48 type="TValue* __usercall func@<eax>(lua_State* L@<ecx>, int32_t idx@<eax>)"
 luaA_pushobject 0084DA50 f end=0084DAA8 type="void __stdcall func(lua_State* L, TValue* o)"
-lua_checkstack 0084DAB0 f end=0084DB06
-lua_xmove 0084DB10 f end=0084DB90
-lua_newthread 0084DB90 f end=0084DBD0
+lua_checkstack 0084DAB0 f end=0084DB06 type="int32_t __stdcall func(lua_State* L, int32_t sz)"
+lua_xmove 0084DB10 f end=0084DB90 type="void __stdcall func(lua_State* from, lua_State* to, int32_t n)"
+lua_newthread 0084DB90 f end=0084DBD0 type="lua_State* __stdcall func(lua_State* L)"
 lua_gettop 0084DBD0 f end=0084DBE1 type="int32_t __stdcall func(lua_State* L)"
 lua_settop 0084DBF0 f end=0084DC49 type="void __stdcall func(lua_State* L, int32_t idx)"
-lua_remove 0084DC50 f end=0084DCC0
-lua_insert 0084DCC0 f
-lua_pushvalue 0084DE50 f end=0084DEAE
-lua_type 0084DEB0 f
-lua_typename 0084DED0 f end=0084DEEB
-lua_iscfunction 0084DEF0 f end=0084DF17
-lua_isnumber 0084DF20 f
-lua_isstring 0084DF60 f
-lua_rawequal 0084DF90 f end=0084DFD1
-lua_tonumber 0084E030 f
-lua_tointeger 0084E070 f end=0084E0AE
-lua_toboolean 0084E0B0 f end=0084E0DA
-lua_tolstring 0084E0E0 f
-lua_objlen 0084E150 f end=0084E1AB
-lua_touserdata 0084E1C0 f
-lua_tothread 0084E1F0 f end=0084E20C
-lua_topointer 0084E210 f end=0084E261
+lua_remove 0084DC50 f end=0084DCC0 type="void __stdcall func(lua_State* L, int32_t idx)"
+lua_insert 0084DCC0 f end=0084DD70 type="void __stdcall func(lua_State* L, int32_t idx)"
+lua_replace 0084DD70 f end=0084DE4D type="void __stdcall func(lua_State* L, int32_t idx)"
+lua_pushvalue 0084DE50 f end=0084DEAE type="void __stdcall func(lua_State* L, int32_t idx)"
+lua_type 0084DEB0 f end=0084DECF type="int32_t __stdcall func(lua_State* L, int32_t idx)"
+lua_typename 0084DED0 f end=0084DEEB type="char* __stdcall func(lua_State* L, int32_t idx)"
+lua_iscfunction 0084DEF0 f end=0084DF17 type="int32_t __stdcall func(lua_State* L, int32_t idx)"
+lua_isnumber 0084DF20 f end=0084DF55 type="int32_t __stdcall func(lua_State* L, int32_t idx)"
+lua_isstring 0084DF60 f end=0084DF8D type="int32_t __stdcall func(lua_State* L, int32_t idx)"
+lua_rawequal 0084DF90 f end=0084DFD1 type="bool __stdcall func(lua_State* L, int32_t index1, int32_t index2)"
+lua_lessthan 0084DFE0 f end=0084E022 type="int32_t __stdcall func(lua_State* L, int32_t index1, int32_t index2)"
+lua_tonumber 0084E030 f end=0084E064 type="lua_Number __stdcall func(lua_State* L, int32_t idx)"
+lua_tointeger 0084E070 f end=0084E0AE type="lua_Integer __stdcall func(lua_State* L, int32_t idx)"
+lua_toboolean 0084E0B0 f end=0084E0DA type="int32_t __stdcall func(lua_State* L, int32_t idx)"
+lua_tolstring 0084E0E0 f end=0084E14F type="int32_t __stdcall func(lua_State* L, int32_t idx, size_t* len)"
+lua_objlen 0084E150 f end=0084E1AB type="size_t __stdcall func(lua_State* L, int32_t idx)"
+lua_touserdata 0084E1C0 f end=0084E1EA type="void* __stdcall func(lua_State* L, int32_t idx)"
+lua_tothread 0084E1F0 f end=0084E20C type="lua_State* __stdcall func(lua_State* L, int32_t idx)"
+lua_topointer 0084E210 f end=0084E261 type="void* __stdcall func(lua_State* L, int32_t idx)"
 lua_pushnil 0084E280 f end=0084E29F type="void __stdcall func(lua_State* L)"
-lua_pushnumber 0084E2A0 f
-lua_pushinteger 0084E2D0 f end=0084E2F4
+lua_pushnumber 0084E2A0 f end=0084E2C4 type="void __stdcall func(lua_State* L, lua_Number n)"
+lua_pushinteger 0084E2D0 f end=0084E2F4 type="void __stdcall func(lua_State* L, lua_Integer n)"
 lua_pushlstring 0084E300 f end=0084E34A type="void __stdcall func(lua_State* L, char* s, size_t len)"
-lua_pushstring 0084E350 f
-lua_pushvfstring 0084E3A0 f end=0084E3CF
-lua_pushfstring 0084E3D0 f end=0084E3FF
-lua_pushcclosure 0084E400 f end=0084E4C9 type="void __stdcall func(lua_State* L, lua_CFunction fn, int n)"
-lua_pushboolean 0084E4D0 f end=0084E4F9
-lua_pushlightuserdata 0084E500 f end=0084E524
-lua_pushthread 0084E530 f end=0084E55E
-lua_gettable 0084E560 f end=0084E586
-lua_getfield 0084E590 f end=0084E5F2
-lua_rawget 0084E600 f
-lua_rawgeti 0084E670 f
+lua_pushstring 0084E350 f end=0084E39C type="void __stdcall func(lua_State* L, char* s)"
+lua_pushvfstring 0084E3A0 f end=0084E3CF type="char* __stdcall func(lua_State* L, char* fmt, va_list argp)"
+lua_pushfstring 0084E3D0 f end=0084E3FF type="char* __stdcall func(lua_State* L, char* fmt, ...)"
+lua_pushcclosure 0084E400 f end=0084E4C9 type="void __stdcall func(lua_State* L, lua_CFunction fn, int32_t n)"
+lua_pushboolean 0084E4D0 f end=0084E4F9 type="void __stdcall func(lua_State* L, int32_t b)"
+lua_pushlightuserdata 0084E500 f end=0084E524 type="void __stdcall func(lua_State* L, void* p)"
+lua_pushthread 0084E530 f end=0084E55E type="bool __stdcall func(lua_State* L)"
+lua_gettable 0084E560 f end=0084E586 type="void __stdcall func(lua_State* L, int32_t idx)"
+lua_getfield 0084E590 f end=0084E5F2 type="void __stdcall func(lua_State* L, int32_t idx, char* k)"
+lua_rawget 0084E600 f end=0084E66A type="void __stdcall func(lua_State* L, int32_t idx)"
+lua_rawgeti 0084E670 f end=0084E6DD type="void __stdcall func(lua_State* L, int32_t idx, int32_t n)"
 lua_createtable 0084E6E0 f end=0084E72A type="void __stdcall func(lua_State* L, int32_t narray, int32_t nrec)"
-lua_getmetatable 0084E730 f end=0084E792
-lua_getfenv 0084E7A0 f end=0084E8CB
-lua_settable 0084E8D0 f end=0084E8FD
-lua_setfield 0084E900 f end=0084E965
-lua_rawset 0084E970 f
-lua_rawseti 0084EA00 f end=0084EA90
-lua_setmetatable 0084EA90 f end=0084EB35
-lua_setfenv 0084EB40 f end=0084EBE8
-lua_call 0084EBF0 f end=0084EC2B
-lua_pcall 0084EC50 f end=0084ECBB
-lua_dump 0084ED00 f end=0084ED3A
-lua_status 0084ED40 f end=0084ED4C
+lua_getmetatable 0084E730 f end=0084E792 type="int32_t __stdcall func(lua_State* L, int32_t objindex)"
+lua_getfenv 0084E7A0 f end=0084E8CB type="void __stdcall func(lua_State* L, int32_t idx)"
+lua_settable 0084E8D0 f end=0084E8FD type="void __stdcall func(lua_State* L, int32_t idx)"
+lua_setfield 0084E900 f end=0084E965 type="void __stdcall func(lua_State* L, int32_t idx, char* k)"
+lua_rawset 0084E970 f end=0084E9FE type="void __stdcall func(lua_State* L, int32_t idx)"
+lua_rawseti 0084EA00 f end=0084EA90 type="void __stdcall func(lua_State* L, int32_t idx, int32_t n)"
+lua_setmetatable 0084EA90 f end=0084EB35 type="int32_t __stdcall func(lua_State* L, int32_t objindex)"
+lua_setfenv 0084EB40 f end=0084EBE8 type="int32_t __stdcall func(lua_State* L, int32_t idx)"
+lua_call 0084EBF0 f end=0084EC2B type="void __stdcall func(lua_State* L, int32_t nargs, int32_t nresults)"
+f_call 0084EC30 f end=0084EC4B type="void __stdcall func(lua_State* L, void* ud)"
+lua_pcall 0084EC50 f end=0084ECBB type="int32_t __stdcall func(lua_State* L, int32_t nargs, int32_t nresults, int32_t errfunc)"
+lua_load 0084ECC0 f end=0084ECFD type="int32_t __stdcall func(lua_State* L, lua_Reader reader, void* data, char* chunkname)"
+lua_dump 0084ED00 f end=0084ED3A type="int32_t __stdcall func(lua_State* L, lua_Writer writer, void* data)"
+lua_status 0084ED40 f end=0084ED4C type="lu_byte __stdcall func(lua_State* L)"
 lua_gc 0084ED50 f end=0084EE28 type="int32_t __stdcall func(lua_State* L, int32_t what, int32_t data)"
-lua_gcupdatesizes 0084EE50 f end=0084EE59
-lua_gcgetsize 0084EE60 f end=0084EE69
-lua_gcupdatetimes 0084EE70 f end=0084EE79
-lua_gcgettime 0084EE80 f end=0084EE89
-lua_gcgetfunctiontime 0084EE90 f end=0084EF1C
-lua_gcresettimes 0084EF20 f end=0084EF29
-lua_error 0084EF30 f end=0084EF43
-lua_next 0084EF50 f end=0084EF86
-lua_concat 0084EF90 f end=0084F010
-lua_setdecimalconversion 0084F010 f end=0084F022
-lua_convertdecimal 0084F030 f end=0084F0C6
-lua_settaint 0084F0D0 f end=0084F0E6
-lua_newuserdata 0084F0F0 f end=0084F14D
-luaL_where 0084F210 f end=0084F275
-luaL_error 0084F280 f
-luaL_checkstack 0084F2C0 f end=0084F2ED
-luaL_getmetafield 0084F2F0 f end=0084F34C
-luaL_callmeta 0084F350 f end=0084F3A8
-luaL_findtable 0084F3B0 f end=0084F49B
-luaL_pushresult 0084F5C0 f end=0084F603
-luaL_buffinit 0084F6A0 f end=0084F6BA
+lua_gcupdatesizes 0084EE50 f end=0084EE59 type="void __stdcall func(lua_State* L)"
+lua_gcgetsize 0084EE60 f end=0084EE69 type="lu_mem __stdcall func(lua_State* L, char* tag)"
+lua_gcupdatetimes 0084EE70 f end=0084EE79 type="void __stdcall func(lua_State* L)"
+lua_gcgettime 0084EE80 f end=0084EE89 type="double __stdcall func(lua_State* L, char* tag)"
+lua_gcgetfunctiontime 0084EE90 f end=0084EF1C type="int32_t __stdcall func(lua_State* L, lua_Number* flat, lua_Number* total, int32_t* ncalls)"
+lua_gcresettimes 0084EF20 f end=0084EF29 type="void __stdcall func(lua_State* L)"
+lua_error 0084EF30 f end=0084EF43 type="int32_t __stdcall func(lua_State* L)"
+lua_next 0084EF50 f end=0084EF86 type="int32_t __stdcall func(lua_State* L, int32_t idx)"
+lua_concat 0084EF90 f end=0084F010 type="void __stdcall func(lua_State* L, int32_t n)"
+lua_setdecimalconversion 0084F010 f end=0084F022 type="void __stdcall func(int32_t convert)"
+lua_convertdecimal 0084F030 f end=0084F0C6 type="void __stdcall func(char* str)"
+lua_settaint 0084F0D0 f end=0084F0E6 type="void __stdcall func(lua_State* L, int32_t idx, char* tainted)"
+lua_newuserdata 0084F0F0 f end=0084F14D type="void* __stdcall func(lua_State* L, size_t size)"
+lua_getupvalue 0084F150 f end=0084F210 type="char* __stdcall func(lua_State* L, int32_t funcindex, int32_t n)"
+luaL_where 0084F210 f end=0084F275 type="void __stdcall func(lua_State* L, int32_t level, ...)"
+luaL_error 0084F280 f end=0084F2B1 type="int32_t __stdcall func(lua_State* L, char* fmt, ...)"
+luaL_checkstack 0084F2C0 f end=0084F2ED type="void __stdcall func(lua_State* L, int32_t space, char* mes)"
+luaL_getmetafield 0084F2F0 f end=0084F34C type="int32_t __stdcall func(lua_State* L, int32_t obj, char* event)"
+luaL_callmeta 0084F350 f end=0084F3A8 type="int32_t __stdcall func(lua_State* L, int32_t obj, char* event)"
+luaL_findtable 0084F3B0 f end=0084F49B type="char* __stdcall func(lua_State* L, int32_t idx, char* fname, int32_t szhint)"
+adjuststack 0084F4A0 f end=0084F51C type="void __stdcall func(luaL_Buffer* B)"
+luaL_prepbuffer 0084F520 f end=0084F555 type="char* __stdcall func(luaL_Buffer* B)"
+luaL_addlstring 0084F560 f end=0084F5BE type="void __stdcall func(luaL_Buffer* B, char* s, size_t l)"
+luaL_pushresult 0084F5C0 f end=0084F603 type="void __stdcall func(luaL_Buffer* B)"
+luaL_addvalue 0084F610 f end=0084F693 type="void __stdcall func(luaL_Buffer* B)"
+luaL_buffinit 0084F6A0 f end=0084F6BA type="void __stdcall func(lua_State* L, luaL_Buffer* B)"
 luaL_ref 0084F6C0 f end=0084F793 type="int32_t __stdcall func(lua_State* L, int32_t t)"
-luaL_unref 0084F7A0 f
-luaL_argerror 0084F8B0 f end=0084F95D
-luaL_checktype 0084F960 f end=0084F9B1
-luaL_checkany 0084F9C0 f end=0084F9ED
-luaL_checklstring 0084F9F0 f end=0084FA4E
-luaL_optlstring 0084FA50 f end=0084FAAB
-luaL_checknumber 0084FAB0 f end=0084FB21
-luaL_optnumber 0084FB30 f end=0084FB5E
-luaL_checkinteger 0084FB60 f end=0084FBC8
-luaL_optinteger 0084FBD0 f end=0084FBFE
-luaL_openlib 0084FC00 f end=0084FD1E
-luaL_checkoption 0084FD20 f end=0084FDCF
+luaL_unref 0084F7A0 f end=0084F829 type="void __stdcall func(lua_State* L, int32_t t, int32_t ref)"
+getS 0084F830 f end=0084F851 type="char* __stdcall func(lua_State* L, void* ud, size_t* size)"
+luaL_loadbuffer 0084F860 f end=0084F8AB type="int32_t __stdcall func(lua_State* L, char* buff, size_t size, char* name)"
+luaL_argerror 0084F8B0 f end=0084F95D type="void __stdcall func(lua_State* L, int32_t narg, char* extramsg)"
+luaL_checktype 0084F960 f end=0084F9B1 type="void __stdcall func(lua_State* L, int32_t narg, int32_t t)"
+luaL_checkany 0084F9C0 f end=0084F9ED type="void __stdcall func(lua_State* L, int32_t narg)"
+luaL_checklstring 0084F9F0 f end=0084FA4E type="char* __stdcall func(lua_State* L, int32_t narg, size_t* len)"
+luaL_optlstring 0084FA50 f end=0084FAAB type="char* __stdcall func(lua_State* L, int32_t narg, char* def, size_t* len)"
+luaL_checknumber 0084FAB0 f end=0084FB21 type="lua_Number __stdcall func(lua_State* L, int32_t narg)"
+luaL_optnumber 0084FB30 f end=0084FB5E type="lua_Number __stdcall func(lua_State* L, int32_t narg, lua_Number def)"
+luaL_checkinteger 0084FB60 f end=0084FBC8 type="lua_Integer __stdcall func(lua_State* L, int32_t narg)"
+luaL_optinteger 0084FBD0 f end=0084FBFE type="lua_Integer __stdcall func(lua_State* L, int32_t narg, lua_Integer def)"
+luaL_openlib 0084FC00 f end=0084FD1E type="void __stdcall func(lua_State* L, char* libname, luaL_Reg* l, int32_t nup)"
+luaL_checkoption 0084FD20 f end=0084FDCF type="int32_t __stdcall func(lua_State* L, int32_t narg, char* def, char** lst)"
 luaL_register 0084FDD0 f end=0084FDEB type="void __stdcall func(lua_State* L, char* libname, luaL_Reg* l)"
 currentline 0084FDF0 f end=0084FE33 type="int32_t __usercall func@<eax>(lua_State* L@<edx>, CallInfo* ci@<eax>)"
-lua_getstack 0084FE40 f end=0084FEBB
-lua_getlocal 0084FEC0 f end=0084FF26
+lua_getstack 0084FE40 f end=0084FEBB type="int32_t __stdcall func(lua_State* L, int32_t level, lua_Debug* ar)"
+findlocal 0084FEC0 f end=0084FF26 type="char* __usercall func@<eax>(lua_State* L@<ebx>, CallInfo* ci@<esi>, int32_t n@<edi>)"
+lua_getlocal 0084FF30 f end=0084FF73 type="char* __stdcall func(lua_State* L, lua_Debug* ar, int32_t n)"
 funcinfo 0084FF80 f end=0084FFF4 type="void __usercall func(lua_Debug* ar@<eax>, Closure* cl@<ecx>)"
 collectvalidlines 00850000 f end=008500AD type="void __usercall func(lua_State* L@<edi>, Closure* f@<ebx>)"
 luaG_checkopenop 008500B0 f end=008500DC type="bool __stdcall func(Instruction i)"
@@ -12172,104 +12365,288 @@ symbexec 00850130 f end=0085050D type="Instruction __stdcall func(Proto* pt, int
 kname 00850570 f end=00850596 type="char* __usercall func@<eax>(Proto* p@<ecx>, int32_t c@<eax>)"
 getobjname 008505A0 f end=008506F9 type="char* __usercall func@<eax>(lua_State* L, CallInfo* ci, int32_t stackpos@<eax>, char** name)"
 getfuncname 00850720 f end=008507C0 type="char* __usercall func@<eax>(lua_State* L@<edi>, CallInfo* ci@<ecx>, char** name)"
-luaG_errormsg 00850830 f end=0085091E
-luaG_runerror 00850920 f
+addinfo 008507C0 f end=0085082E type="void __usercall func(lua_State* L@<edi>, char* msg)"
+luaG_errormsg 00850830 f end=0085091E type="void __stdcall func(lua_State* L)"
+luaG_runerror 00850920 f end=00850947 type="void __stdcall func(lua_State* L, char* fmt, ...)"
 auxgetinfo 00850950 f end=00850A4C type="int32_t __usercall func@<eax>(lua_State* L, char* what, lua_Debug* ar@<esi>, Closure* f, CallInfo* ci@<ebx>)"
-lua_getinfo 00850A90 f end=00850B59
+lua_getinfo 00850A90 f end=00850B59 type="int32_t __stdcall func(lua_State* L, char* what, lua_Debug* ar)"
 luaG_typeerror 00850B60 f end=00850BEC type="void __stdcall func(lua_State* L, TValue* o, char* op)"
 luaG_concaterror 00850BF0 f end=00850C13 type="void __stdcall func(lua_State* L, StkId p1, StkId p2)"
-luaG_ordererror 00850C60 f end=00850CB2
+luaG_aritherror 00850C20 f end=00850C57 type="void __stdcall func(lua_State* L, TValue* p1, TValue* p2)"
+luaG_ordererror 00850C60 f end=00850CB2 type="int32_t __stdcall func(lua_State* L, TValue* p1, TValue* p2)"
+bit_bnot 00850CC0 f end=00850CFD type="int32_t __stdcall func(lua_State* L)"
+bit_band 00850D00 f end=00850D74 type="int32_t __stdcall func(lua_State* L)"
+bit_bor 00850D80 f end=00850DF4 type="int32_t __stdcall func(lua_State* L)"
+bit_bxor 00850E00 f end=00850E74 type="int32_t __stdcall func(lua_State* L)"
+bit_lshift 00850E80 f end=00850ED3 type="int32_t __stdcall func(lua_State* L)"
+bit_rshift 00850EE0 f end=00850F33 type="int32_t __stdcall func(lua_State* L)"
+bit_arshift 00850F40 f end=00850F89 type="int32_t __stdcall func(lua_State* L)"
+bit_mod_safe 00850F90 f end=0085100E type="int32_t __stdcall func(lua_State* L)"
 luaopen_bit 00851010 f end=00851032 type="int32_t __stdcall func(lua_State* L)"
+math_abs 00851040 f end=00851065 type="int32_t __stdcall func(lua_State* L)"
+math_sin 00851070 f end=00851095 type="int32_t __stdcall func(lua_State* L)"
+math_sinh 008510A0 f end=008510CE type="int32_t __stdcall func(lua_State* L)"
+math_cos 008510D0 f end=008510F5 type="int32_t __stdcall func(lua_State* L)"
+math_cosh 00851100 f end=0085112E type="int32_t __stdcall func(lua_State* L)"
+math_tan 00851130 f end=00851157 type="int32_t __stdcall func(lua_State* L)"
+math_tanh 00851160 f end=0085118E type="int32_t __stdcall func(lua_State* L)"
+math_asin 00851190 f end=008511BE type="int32_t __stdcall func(lua_State* L)"
+math_acos 008511C0 f end=008511EE type="int32_t __stdcall func(lua_State* L)"
+math_atan 008511F0 f end=00851217 type="int32_t __stdcall func(lua_State* L)"
+math_atan2 00851220 f end=0085125D type="int32_t __stdcall func(lua_State* L)"
+math_ceil 00851260 f end=0085128B type="int32_t __stdcall func(lua_State* L)"
+math_floor 00851290 f end=008512BB type="int32_t __stdcall func(lua_State* L)"
+math_fmod 008512C0 f end=00851303 type="int32_t __stdcall func(lua_State* L)"
+math_modf 00851310 f end=0085135C type="int32_t __stdcall func(lua_State* L)"
+math_sqrt 00851360 f end=00851385 type="int32_t __stdcall func(lua_State* L)"
+math_pow 00851390 f end=008513D3 type="int32_t __stdcall func(lua_State* L)"
+math_log 008513E0 f end=00851409 type="int32_t __stdcall func(lua_State* L)"
+math_log10 00851410 f end=00851439 type="int32_t __stdcall func(lua_State* L)"
+math_exp 00851440 f end=00851479 type="int32_t __stdcall func(lua_State* L)"
+math_deg 00851480 f end=008514A9 type="int32_t __stdcall func(lua_State* L)"
+math_rad 008514B0 f end=008514D9 type="int32_t __stdcall func(lua_State* L)"
+math_frexp 008514E0 f end=00851520 type="int32_t __stdcall func(lua_State* L)"
+math_ldexp 00851520 f end=0085155B type="int32_t __stdcall func(lua_State* L)"
+math_min 00851560 f end=008515CE type="int32_t __stdcall func(lua_State* L)"
+math_max 008515D0 f end=0085163E type="int32_t __stdcall func(lua_State* L)"
+math_random 00851640 f end=00851751 type="int32_t __stdcall func(lua_State* L)"
 luaopen_math 00851760 f end=008517C0 type="int32_t __stdcall func(lua_State* L)"
+foreachi 008517C0 f end=00851847 type="int32_t __stdcall func(lua_State* L)"
+foreach 00851850 f end=008518D5 type="int32_t __stdcall func(lua_State* L)"
+maxn 008518E0 f end=00851971 type="int32_t __stdcall func(lua_State* L)"
+getn 00851980 f end=008519AB type="int32_t __stdcall func(lua_State* L)"
+setn 008519B0 f end=008519DF type="int32_t __stdcall func(lua_State* L)"
+tinsert 008519E0 f end=00851A8D type="int32_t __stdcall func(lua_State* L)"
+tremove 00851A90 f end=00851B20 type="int32_t __stdcall func(lua_State* L)"
+tremovemulti 00851B20 f end=00851C2A type="int32_t __stdcall func(lua_State* L)"
+tconcat 00851C30 f end=00851D17 type="int32_t __stdcall func(lua_State* L)"
+auxsort 00851D20 f end=0085211A type="void __stdcall func(lua_State* L, int32_t l, int32_t u)"
+sort 00852120 f end=0085217F type="int32_t __stdcall func(lua_State* L)"
+wipe 00852180 f end=008521E8 type="int32_t __stdcall func(lua_State* L)"
 luaopen_table 008521F0 f end=00852210 type="int32_t __stdcall func(lua_State* L)"
+sgetu8 00852210 f end=00852312 type="uint32_t __usercall func@<eax>(uint8_t* strptr@<edx>, int32_t* chars)"
+sputu8 00852320 f end=008523F2 type="void __usercall func(uint32_t c@<ecx>, char* strptr@<eax>)"
+str_len 00852400 f end=0085242B type="int32_t __stdcall func(lua_State* L)"
+str_sub 00852430 f end=008524D2 type="int32_t __stdcall func(lua_State* L)"
+str_reverse 008524E0 f end=00852572 type="int32_t __stdcall func(lua_State* L)"
+str_lower 00852580 f end=0085267A type="int32_t __stdcall func(lua_State* L)"
+str_upper 00852680 f end=0085277A type="int32_t __stdcall func(lua_State* L)"
+str_rep 00852780 f end=008527F6 type="int32_t __stdcall func(lua_State* L)"
+str_byte 00852800 f end=008528C4 type="int32_t __stdcall func(lua_State* L)"
+str_char 008528D0 f end=00852971 type="int32_t __stdcall func(lua_State* L)"
+writer 00852980 f end=0085299B type="int32_t __stdcall func(lua_State* L, void* b, size_t size, void* B)"
+str_dump 008529A0 f end=00852A0C type="int32_t __stdcall func(lua_State* L)"
+classend 00852A10 f end=00852A7D type="char* __usercall func@<eax>(MatchState* ms@<edi>, char* p@<eax>)"
+match_class 00852A80 f end=00852B47 type="int32_t __stdcall func@<eax>(int32_t c@<eax>, int32_t cl@<edi>)"
+matchbracketclass 00852B90 f end=00852C2D type="int32_t __usercall func@<eax>(int32_t c, char* p@<eax>, char* ec)"
+matchbalance 00852C30 f end=00852CA0 type="char* __usercall func@<eax>(MatchState* ms@<ebx>, char* s@<ecx>, char* p@<eax>)"
+max_expand 00852CA0 f end=00852D32 type="char* __stdcall func(MatchState* ms, char* s, char* p, char* ep)"
+min_expand 00852D40 f end=00852DCD type="char* __usercall func@<eax>(MatchState* ms, char* s@<eax>, void* p@<ebx>, char* ep)"
+start_capture 00852DD0 f end=00852E17 type="char* __usercall func@<eax>(MatchState* ms@<esi>, char* s@<ebx>, char* p, int32_t what)"
+end_capture 00852E20 f end=00852E79 type="char* __usercall func@<eax>(MatchState* ms@<esi>, char* s@<ebx>, char* p)"
+match_capture 00852E80 f end=00852F5C type="char* __usercall func@<eax>(MatchState* ms@<ecx>, char* s, int32_t l@<eax>)"
+match 00852F60 f end=008531C3 type="char* __stdcall func(MatchState* ms, char* s, char* p)"
 caseD_2a 00853182 f end=00853193 type="void __fastcall func(undefined4 param_1, undefined4 param_2)" auto
+lmemfind 00853240 f end=0085333B type="char* __stdcall func(char* s1, size_t l1, char* s2, size_t l2)"
+push_onecapture 00853340 f end=008533B8 type="void __usercall func(MatchState* ms@<esi>, int32_t i@<edi>, char* s@<ecx>, char* e@<eax>)"
+push_captures 008533C0 f end=0085340A type="int32_t __usercall func@<eax>(MatchState* ms@<eax>, char* s, char* p)"
+str_find_aux 00853410 f end=008535A8 type="int32_t __stdcall func(lua_State* L, int32_t find)"
+str_find 008535B0 f end=008535C4 type="int32_t __stdcall func(lua_State* L)"
+str_match 008535D0 f end=008535E4 type="int32_t __stdcall func(lua_State* L)"
+gmatch_aux 008535F0 f end=00853706 type="int32_t __stdcall func(lua_State* L)"
+gmatch 00853710 f end=00853753 type="int32_t __stdcall func(lua_State* L)"
+gfind_nodef 00853760 f end=00853776 type="void __stdcall func(lua_State* L)"
+add_s 00853780 f end=0085385D type="void __usercall func(MatchState* ms, luaL_Buffer* b@<ebx>, char* s, char* e)"
+add_value 00853860 f end=0085396D type="void __usercall func(MatchState* ms@<eax>, luaL_Buffer* b, char* s, char* e)"
+str_gsub 00853980 f end=00853AE5 type="int32_t __stdcall func(lua_State* L)"
+addquoted 00853AF0 f end=00853BDA type="void __usercall func(lua_State* L@<edx>, luaL_Buffer* b@<esi>, int32_t arg@<ecx>)"
+str_format 00853C50 f end=00854019 type="int32_t __stdcall func(lua_State* L)"
 createmetatable 00854070 f end=008540C3 type="void __usercall func(lua_State* L@<esi>)"
 luaopen_string 008540D0 f end=008540F7 type="int32_t __stdcall func(lua_State* L)"
+luaB_tonumber 00854100 f end=0085420F type="int32_t __stdcall func(lua_State* L)"
+luaB_error 00854210 f end=00854266 type="int32_t __stdcall func(lua_State* L)"
+luaB_getmetatable 00854270 f end=008542B7 type="int32_t __stdcall func(lua_State* L)"
+luaB_setmetatable 008542C0 f end=00854336 type="int32_t __stdcall func(lua_State* L)"
+getfunc 00854340 f end=008543DD type="void __usercall func(lua_State* L@<esi>)"
+luaB_getfenv 008543E0 f end=0085442B type="int32_t __stdcall func(lua_State* L)"
+luaB_setfenv 00854430 f end=008544C7 type="int32_t __stdcall func(lua_State* L)"
+luaB_rawequal 008544D0 f end=00854503 type="int32_t __stdcall func(lua_State* L)"
+luaB_rawget 00854510 f end=00854544 type="int32_t __stdcall func(lua_State* L)"
+luaB_rawset 00854550 f end=0085458C type="int32_t __stdcall func(lua_State* L)"
+luaB_gcinfo 00854590 f end=008545B3 type="int32_t __stdcall func(lua_State* L)"
+luaB_collectgarbage 008545C0 f end=0085465F type="int32_t __stdcall func(lua_State* L)"
+luaB_type 00854660 f end=00854690 type="int32_t __stdcall func(lua_State* L)"
+luaB_next 00854690 f end=008546D1 type="int32_t __stdcall func(lua_State* L)"
+luaB_pairs 008546E0 f end=00854715 type="int32_t __stdcall func(lua_State* L)"
+ipairsaux 00854720 f end=00854765 type="int32_t __stdcall func(lua_State* L)"
+luaB_ipairs 00854770 f end=008547A7 type="int32_t __stdcall func(lua_State* L)"
+luaB_loadstring 008547B0 f end=0085480C type="int32_t __stdcall func(lua_State* L)"
+luaB_assert 00854810 f end=0085485A type="int32_t __stdcall func(lua_State* L)"
+luaB_unpack 00854860 f end=008548ED type="int32_t __stdcall func(lua_State* L)"
+luaB_select 008548F0 f end=00854972 type="int32_t __stdcall func(lua_State* L)"
+luaB_pcall 00854980 f end=008549CB type="int32_t __stdcall func(lua_State* L)"
+luaB_xpcall 008549D0 f end=00854A1D type="int32_t __stdcall func(lua_State* L)"
+luaB_tostring 00854A20 f end=00854B05 type="int32_t __stdcall func(lua_State* L)"
+luaB_newproxy 00854B20 f end=00854BF8 type="int32_t __stdcall func(lua_State* L)"
+auxresume 00854C00 f end=00854C4E type="int32_t __usercall func@<eax>(lua_State* L@<edi>, lua_State* co@<esi>, int32_t narg@<eax>)"
+luaB_coresume 00854CB0 f end=00854D2A type="int32_t __stdcall func(lua_State* L)"
+luaB_auxwrap 00854D30 f end=00854D92 type="int32_t __stdcall func(lua_State* L)"
+luaB_cocreate 00854DA0 f end=00854DFC type="int32_t __stdcall func(lua_State* L)"
+luaB_cowrap 00854E00 f end=00854E25 type="int32_t __stdcall func(lua_State* L)"
+luaB_yield 00854E30 f end=00854E4A type="int32_t __stdcall func(lua_State* L)"
+luaB_costatus 00854E50 f end=00854F1F type="int32_t __stdcall func(lua_State* L)"
+luaB_corunning 00854F20 f end=00854F38 type="int32_t __stdcall func(lua_State* L)"
 base_open 00854F40 f end=0085505E type="void __usercall func(lua_State* L@<esi>)"
 luaopen_base 00855060 f end=00855087 type="int32_t __stdcall func(lua_State* L)"
 stack_init 00855090 f end=00855118 type="void __usercall func(lua_State* L1@<esi>, lua_State* L@<edi>)"
 f_luaopen 00855120 f end=008551AB type="void __stdcall func(lua_State* L, void* ud)"
-luaE_newthread 00855240 f end=00855304
-luaE_freethread 00855310 f end=00855366
+close_state 008551B0 f end=00855239 type="void __usercall func(lua_State* L@<esi>)"
+luaE_newthread 00855240 f end=00855304 type="lua_State* __stdcall func(lua_State* L)"
+luaE_freethread 00855310 f end=00855366 type="void __stdcall func(lua_State* L, lua_State* L1)"
 lua_newstate 00855370 f end=008554E3 type="lua_State* __stdcall func(lua_Alloc f, void* ud, int32_t profile)"
-lua_close 00855510 f end=00855570
-luaM_initPool 00855740 f end=008557CA type="int32_t __stdcall func()"
-luaM_freePool 008557D0 f end=0085581C
+callallgcTM 008554F0 f end=00855501 type="void __stdcall func(lua_State* L, void* ud)"
+lua_close 00855510 f end=00855570 type="void __stdcall func(lua_State* L)"
+MemChunk__constructor 00855570 f end=008555D1 type="MemChunk* __thiscall func(MemChunk* this, uint32_t blockSize, uint32_t a2)"
+TSFixedArray_pointer_to_MemChunk__SetCount 008555E0 f end=00855670 type="void __thiscall func(TSFixedArray_pointer_to_MemChunk* this, uint32_t count)"
+MemPool__MemFree 00855670 f end=008556D6 type="int32_t __thiscall func(MemPool* this, void* ptr)"
+MemPool__destructor 008556E0 f end=0085573C type="void __thiscall func(MemPool* this)"
+luaM_initPool 00855740 f end=008557CA type="void* __stdcall func()"
+luaM_freePool 008557D0 f end=0085581C type="void __stdcall func(void* pools)"
+MemPool__MemAlloc 00855820 f end=008558DB type="void* __thiscall func(MemPool* this)"
 luaM_reallocPool 008558E0 f end=00855A11 type="void* __stdcall func(void* ud, void* ptr, size_t osize, size_t nsize)"
-luaD_pcall 00855A20 f end=00855AD6
-luaD_rawrunprotected 00855AF0 f end=00855B55
-luaD_growstack 00855CD0 f end=00855CFC
-lua_yield 00856150 f end=00856184
-luaD_throw 008562E0 f
-luaD_precall 00856370 f
-luaD_precall_profile 00856550 f end=00856756
-luaD_call 00856760 f
-luaS_newlstr 00856C80 f end=00856DC6
-luaS_newudata 00856DD0 f end=00856E4C
-luaV_tonumber 00856E50 f end=00856E9E
+luaD_seterrorobj 00855A20 f end=00855AD6 type="void __stdcall func(lua_State* L, int32_t errcode, StkId oldtop)"
+luaD_rawrunprotected 00855AF0 f end=00855B55 type="int32_t __stdcall func(lua_State* L, Pfunc f, void* ud)"
+luaD_reallocstack 00855BF0 f end=00855C4E type="void __stdcall func(lua_State* L, int32_t newsize)"
+luaD_reallocCI 00855C50 f end=00855CCF type="void __stdcall func(lua_State* L, int32_t newsize)"
+luaD_growstack 00855CD0 f end=00855CFC type="void __stdcall func(lua_State* L, int32_t n)"
+luaD_callhook 00855D00 f end=00855DD4 type="void __stdcall func(lua_State* L, int32_t event, int32_t line)"
+adjust_varargs 00855DE0 f end=00855E92 type="StkId __usercall func@<eax>(lua_State* L@<esi>, Proto* p@<eax>, int32_t actual@<ecx>)"
+tryfuncTM 00855EA0 f end=00855FA1 type="StkId __usercall func@<eax>(lua_State* L@<esi>, StkId func@<ebx>)"
+callrethooks 00855FB0 f end=00856002 type="StkId __usercall func@<eax>(lua_State* L@<esi>, StkId firstResult@<eax>)"
+luaD_poscall 00856010 f end=008560D8 type="int32_t __stdcall func(lua_State* L, StkId firstResult)"
+resume_error 008560E0 f end=0085614A type="int32_t __usercall func@<eax>(lua_State* L@<esi>, char* msg@<edx>)"
+lua_yield 00856150 f end=00856184 type="int32_t __stdcall func(lua_State* L, int32_t nresults)"
+f_parser 00856190 f end=0085625F type="void __stdcall func(lua_State* L, void* ud)"
+resetstack 00856260 f end=008562D2 type="void __stdcall func(lua_State* L, int32_t status)"
+luaD_throw 008562E0 f end=0085632A type="void __stdcall func(lua_State* L, int32_t errcode)"
+growCI 00856330 f end=0085636D type="CallInfo* __usercall func@<eax>(lua_State* L@<esi>)"
+luaD_precall 00856370 f end=00856549 type="int32_t __stdcall func(lua_State* L, StkId func, int32_t nresults)"
+luaD_precall_profile 00856550 f end=00856756 type="int32_t __stdcall func(lua_State* L, StkId func, int32_t nresults, int64_t start, int64_t* stop)"
+luaD_call 00856760 f end=00856809 type="void __stdcall func(lua_State* L, StkId func, int32_t nResults)"
+resume 00856810 f end=008568E8 type="void __stdcall func(lua_State* L, void* ud)"
+lua_resume 008568F0 f end=0085696F type="int32_t __stdcall func(lua_State* L, int32_t nargs)"
+luaD_pcall 00856970 f end=00856A88 type="int32_t __stdcall func(lua_State* L, Pfunc func, void* u, ptrdiff_t oldtop, ptrdiff_t ef)"
+luaD_protectedparser 00856A90 f end=00856AEC type="int32_t __stdcall func(lua_State* L, ZIO* z, char* name)"
+luaS_resize 00856AF0 f end=00856BB2 type="void __stdcall func(lua_State* L, int32_t newsize)"
+newlstr 00856BC0 f end=00856C7E type="TString* __usercall func@<eax>(lua_State* L, char* str, size_t l@<ebx>, uint32_t h@<eax>)"
+luaS_newlstr 00856C80 f end=00856DC6 type="TString* __stdcall func(lua_State* L, char* str, size_t l)"
+luaS_newudata 00856DD0 f end=00856E4C type="Udata* __stdcall func(lua_State* L, size_t s, Table* e)"
+luaV_tonumber 00856E50 f end=00856E9E type="TValue* __stdcall func(TValue* obj, TValue* n)"
 luaV_tostring 00856EA0 f end=00856F0F type="int32_t __stdcall func(lua_State* L, StkId obj)"
-luaV_gettable 00857250 f end=008573B5
-luaV_settable 008573C0 f end=00857552
-luaV_lessthan 008576F0 f end=00857775
-luaV_concat 00857900 f end=00857AC7
-luaV_execute 00857CA0 f
-luaC_separateudata 0085A8B0 f end=0085A952
-luaC_sizeall 0085B4E0 f end=0085B52D
-luaC_getsize 0085B530 f end=0085B557
-luaC_timeall 0085B560 f end=0085B598
-luaC_gettime 0085B5A0 f end=0085B602
-luaC_timereset 0085B610 f end=0085B65F
-luaC_step 0085B950 f end=0085B9D2
-luaC_fullgc 0085B9E0 f end=0085BA4B
-luaC_barrierf 0085BA50 f end=0085BA83
+traceexec 00856F10 f end=00856F99 type="void __usercall func(lua_State* L@<esi>, Instruction* pc)"
+callTMres 00856FA0 f end=00857100 type="void __usercall func(lua_State* L, StkId res@<eax>, TValue* f@<ecx>, TValue* p1@<edx>, TValue* p2)"
+callTM 00857100 f end=0085724F type="void __usercall func(lua_State* L@<esi>, TValue* f@<ecx>, TValue* p1@<edx>, TValue* p2@<eax>, TValue* p3)"
+luaV_gettable 00857250 f end=008573B5 type="void __stdcall func(lua_State* L, TValue* t, TValue* key, StkId val)"
+luaV_settable 008573C0 f end=00857552 type="void __stdcall func(lua_State* L, TValue* t, TValue* key, StkId val)"
+get_compTM 00857560 f end=008575EA type="TValue* __usercall func@<eax>(lua_State* L, TValue* mt1@<edi>, TValue* mt2, TMS event@<esi>)"
+call_orderTM 008575F0 f end=00857665 type="int32_t __usercall func@<eax>(lua_State* L@<eax>, TValue* p1, TValue* p2@<ebx>, TMS event)"
+l_strcmp 00857670 f end=008576F0 type="int32_t __usercall func@<eax>(TString* ls@<ecx>, TString* rs@<eax>)"
+luaV_lessthan 008576F0 f end=00857775 type="int32_t __stdcall func(lua_State* L, TValue* l, TValue* r)"
+lessequal 00857780 f end=00857817 type="int32_t __usercall func@<eax>(lua_State* L, TValue* l@<edi>, TValue* r@<esi>)"
+luaV_equalval 00857820 f end=008578D4 type="int32_t __stdcall func(lua_State* L, TValue* t1, TValue* t2)"
+luaV_concat 00857900 f end=00857AC7 type="void __stdcall func(lua_State* L, int32_t total, int32_t last)"
+Arith 00857AD0 f end=00857C78 type="void __usercall func(lua_State* L@<ebx>, StkId ra@<esi>, TValue* rb@<edi>, TValue* rc, TMS op)"
+luaV_execute 00857CA0 f end=008590BF type="void __stdcall func(lua_State* L, int32_t nexeccalls)"
+luaV_execute_profile 00859160 f end=0085A72F type="void __stdcall func(lua_State* L, int32_t nexeccalls)"
+reallymarkobject 0085A7D0 f end=0085A88E type="void __stdcall func(global_State* g, GCObject* o)"
+luaC_separateudata 0085A8B0 f end=0085A952 type="size_t __stdcall func(lua_State* L, int32_t all)"
+traversetable 0085A960 f end=0085AB10 type="int32_t __usercall func@<eax>(global_State* g, Table* h@<ebx>)"
+traverseproto 0085AB10 f end=0085ABDF type="void __stdcall func(global_State* g, Proto* f)"
+traverseclosure 0085ABE0 f end=0085AC87 type="void __stdcall func(global_State* g, Closure* cl)"
+traversestack 0085AC90 f end=0085AD7F type="void __usercall func(global_State* g, lua_State* l@<edi>)"
+propagatemark 0085AD80 f end=0085AE63 type="l_mem __stdcall func(global_State* g)"
+cleartable 0085AE80 f end=0085AF86 type="void __usercall func(GCObject* l@<eax>)"
+freeobj 0085AF90 f end=0085B009 type="void __usercall func(lua_State* L@<ecx>, GCObject* o@<eax>)"
+sizeobj 0085B030 f end=0085B0C7 type="lu_mem __usercall func@<eax>(GCObject* obj@<edx>)" ; invented name
+updatesizes 0085B0F0 f end=0085B15E type="void __stdcall func(lua_State* L, GCObject* obj)" ; invented name
+addtimetotag 0085B160 f end=0085B1B3 type="void __usercall func(lua_State* L@<ecx>, char* tag@<edi>, int64_t time)" ; added by Blizzard - invented name
+updatetimes 0085B1C0 f end=0085B1F3 type="void __usercall func(lua_State* L@<ebx>, GCObject* obj@<eax>)"
+sweeplist 0085B200 f end=0085B28F type="GCObject** __stdcall func(lua_State* L, GCObject** p, lu_mem count)"
+checkSizes 0085B290 f end=0085B2FF
+GCTM 0085B300 f end=0085B408 type="void __usercall func(lua_State* L@<esi>)"
+luaC_callGCTM 0085B410 f end=0085B431 type="void __stdcall func(lua_State* L)"
+luaC_freeall 0085B440 f end=0085B4D2 type="void __stdcall func(lua_State* L)"
+luaC_sizeall 0085B4E0 f end=0085B52D type="void __stdcall func(lua_State* L)"
+luaC_getsize 0085B530 f end=0085B557 type="lu_mem __stdcall func(lua_State* L, char* tag)"
+luaC_timeall 0085B560 f end=0085B598 type="void __stdcall func(lua_State* L)"
+luaC_gettime 0085B5A0 f end=0085B602 type="double __stdcall func(lua_State* L, char* tag)"
+luaC_timereset 0085B610 f end=0085B65F type="void __stdcall func(lua_State* L)"
+markmt 0085B660 f end=0085B691 type="void __usercall func(global_State* g@<ebx>)"
+markroot 0085B6A0 f end=0085B70C type="void __usercall func(lua_State* L@<edi>)"
+remarkupvals 0085B710 f end=0085B74D type="void __usercall func(global_State* g@<edi>)"
+atomic 0085B750 f end=0085B84A type="void __usercall func(lua_State* L@<eax>)"
+singlestep 0085B850 f end=0085B935 type="l_mem __usercall func@<eax>(lua_State* L@<eax>)"
+luaC_step 0085B950 f end=0085B9D2 type="void __stdcall func(lua_State* L)"
+luaC_fullgc 0085B9E0 f end=0085BA4B type="void __stdcall func(lua_State* L)"
+luaC_barrierf 0085BA50 f end=0085BA83 type="void __stdcall func(lua_State* L, GCObject* o, GCObject* v)"
 luaC_barrierback 0085BA90 f end=0085BAAB type="void __stdcall func(lua_State* L, Table* t)"
-luaC_link 0085BAB0 f end=0085BAF1
-luaT_init 0085BB70 f end=0085BBD8
-luaT_gettm 0085BBE0 f end=0085BC09
-luaT_gettmbyobj 0085BC10 f end=0085BC67
+luaC_link 0085BAB0 f end=0085BAF1 type="void __stdcall func(lua_State* L, GCObject* o, lu_byte tt)"
+luaC_linkupval 0085BB00 f end=0085BB61 type="void __stdcall func(lua_State* L, UpVal* uv)"
+luaT_init 0085BB70 f end=0085BBD8 type="void __stdcall func(lua_State* L)"
+luaT_gettm 0085BBE0 f end=0085BC09 type="TValue* __stdcall func(Table* events, TMS event, TString* ename)"
+luaT_gettmbyobj 0085BC10 f end=0085BC67 type="TValue* __stdcall func(lua_State* L, TValue* o, TMS event)"
 hashnum 0085BC70 f end=0085BCA6 type="Node* __usercall func@<eax>(Table* t@<esi>, lua_Number n)"
 mainposition 0085BCB0 f end=0085BD56 type="Node* __usercall func@<eax>(Table* t@<eax>, TValue* key@<edx>)"
-luaH_next 0085BD70 f end=0085BE28
+findindex 0085BD70 f end=0085BE28 type="int32_t __usercall func@<eax>(lua_State* L, Table* t, StkId key@<edi>)"
+luaH_next 0085BE30 f end=0085BFC4 type="int32_t __stdcall func(lua_State* L, Table* t, StkId key)"
 computesizes 0085BFD0 f end=0085C04D type="int32_t __stdcall func(int32_t* nums, int32_t* narray)"
 numusearray 0085C050 f end=0085C0CD type="int32_t __stdcall func(Table* t, int32_t* nums)"
 numusehash 0085C0D0 f end=0085C189 type="int32_t __usercall func@<eax>(Table* t@<ebx>, int32_t* nums, int32_t* pnasize)"
 setarrayvector 0085C190 f end=0085C1F6 type="void __stdcall func(lua_State* L@<eax>, Table* t@<esi>, int32_t size@<edi>)"
 setnodevector 0085C200 f end=0085C2DC type="void __usercall func(lua_State* L, Table* t@<edi>, int32_t size@<eax>)"
 luaH_new 0085C2E0 f end=0085C337 type="Table* __stdcall func(lua_State* L, int32_t narray, int32_t nhash)"
-luaH_free 0085C340 f end=0085C39B
+luaH_free 0085C340 f end=0085C39B type="void __stdcall func(lua_State* L, Table* t)"
 luaH_getnum 0085C3A0 f end=0085C427 type="TValue* __stdcall func(Table* t, int32_t key)"
-luaH_getstr 0085C430 f end=0085C46F
-luaH_get 0085C470 f end=0085C515
-luaH_set 0085C520 f end=0085C582 type="void __stdcall func(lua_State* L, Table* t, TValue* key)"
+luaH_getstr 0085C430 f end=0085C46F type="TValue* __stdcall func(Table* t, TString* key)"
+luaH_get 0085C470 f end=0085C515 type="TValue* __stdcall func(Table* t, TValue* key)"
+luaH_set 0085C520 f end=0085C582 type="TValue* __stdcall func(lua_State* L, Table* t, TValue* key)"
 luaH_setnum 0085C590 f end=0085C5DA type="TValue* __stdcall func(lua_State* L, Table* t, int32_t key)"
-luaH_getn 0085C690 f end=0085C6F0
+unbound_search 0085C5E0 f end=0085C683 type="int32_t __usercall func@<eax>(Table* t, uint32_t j@<eax>)"
+luaH_getn 0085C690 f end=0085C6F0 type="int32_t __stdcall func(Table* t)"
 resize 0085C6F0 f end=0085C95A type="void __usercall func(lua_State* L, Table* t@<ecx>, int32_t nasize@<eax>, int32_t nhsize)"
-luaH_resizearray 0085C960 f end=0085C9A3
+luaH_resizearray 0085C960 f end=0085C9A3 type="void __stdcall func(lua_State* L, Table* t, int32_t nasize)"
 rehash 0085C9B0 f end=0085CAA3 type="void __usercall func(lua_State* L, Table* t@<eax>, TValue* ek@<edi>)"
 newkey 0085CAB0 f end=0085CBB4 type="TValue* __stdcall func(lua_State* L, Table* t, TValue* key)"
 luaH_setstr 0085CBC0 f end=0085CC08 type="void __stdcall func(lua_State* L, Table* t, TString* key)"
-luaF_newCclosure 0085CC10 f end=0085CC86
-luaF_newLclosure 0085CC90 f end=0085CD33
-luaF_findupval 0085CD80 f end=0085CE2D
-luaF_freeupval 0085CE30 f end=0085CE63
-luaF_close 0085CE70 f end=0085CF3F
-luaF_newproto 0085CF40 f end=0085CFA3
-luaF_freeproto 0085CFB0 f end=0085D04A
-luaF_freeclosure 0085D050 f end=0085D09C
-luaF_getlocalname 0085D0A0 f end=0085D0ED
+luaF_newCclosure 0085CC10 f end=0085CC86 type="Closure* __stdcall func(lua_State* L, int32_t nelems, Table* e)"
+luaF_newLclosure 0085CC90 f end=0085CD33 type="Closure* __stdcall func(lua_State* L, int32_t nelems, Table* e)"
+luaF_newupval 0085CD40 f end=0085CD7E type="UpVal* __stdcall func(lua_State* L)"
+luaF_findupval 0085CD80 f end=0085CE2D type="UpVal* __stdcall func(lua_State* L, StkId level)"
+luaF_freeupval 0085CE30 f end=0085CE63 type="void __stdcall func(lua_State* L, UpVal* uv)" ; double check UpVal structure
+luaF_close 0085CE70 f end=0085CF3F type="void __stdcall func(lua_State* L, StkId level)"
+luaF_newproto 0085CF40 f end=0085CFA3 type="Proto* __stdcall func(lua_State* L)"
+luaF_freeproto 0085CFB0 f end=0085D04A type="void __stdcall func(lua_State* L, Proto* f)"
+luaF_freeclosure 0085D050 f end=0085D09C type="void __stdcall func(lua_State* L, Closure* c)"
+luaF_getlocalname 0085D0A0 f end=0085D0ED type="char* __stdcall func(Proto* f, int32_t local_number, int32_t pc)"
 luaZ_fill 0085D0F0 f end=0085D132 type="int32_t __stdcall func(ZIO* z)"
-luaZ_openspace 0085D170 f end=0085D1CC
-luaU_dump 0085D660 f end=0085D6C7
+luaZ_init 0085D140 f end=0085D167 type="void __stdcall func(lua_State* L, ZIO* z, lua_Reader reader, void* data)"
+luaZ_openspace 0085D170 f end=0085D1CC type="char* __stdcall func(lua_State* L, Mbuffer* buff, size_t n)"
+DumpString 0085D1D0 f end=0085D253 type="void __usercall func(TString* s@<eax>, DumpState* D@<esi>)"
+DumpConstants 0085D260 f end=0085D389 type="void __usercall func(Proto* f, DumpState* D@<eax>)"
+DumpDebug 0085D390 f end=0085D4FC type="void __usercall func(Proto* f, DumpState* D@<eax>)"
+DumpFunction 0085D500 f end=0085D65D type="void __stdcall func(Proto* f, TString* p, DumpState* D)"
+luaU_dump 0085D660 f end=0085D6C7 type="int32_t __stdcall func(lua_State* L, Proto* f, lua_Writer w, void* data, int32_t strip)"
 luaM_toobig 0085D6D0 f end=0085D6E8 type="void* __stdcall func(lua_State* L)"
 luaM_realloc_ 0085D6F0 f end=0085D739 type="void* __stdcall func(lua_State* L, void* block, size_t osize, size_t nsize)"
 luaM_growaux_ 0085D740 f end=0085D805 type="int32_t __stdcall func(lua_State* L, void* block, int32_t* size, size_t size_elems, int32_t limit, char* errormsg)"
 save 0085D810 f end=0085D884 type="void __usercall func(LexState* ls@<ebx>, char c)"
-luaX_init 0085D890 f end=0085D8DF
+luaX_init 0085D890 f end=0085D8DF type="void __stdcall func(lua_State* L)"
 luaX_token2str 0085D8E0 f end=0085D935 type="char* __stdcall func(LexState* ls, int32_t token)"
 luaX_lexerror 0085D940 f end=0085D9D3 type="void __stdcall func(LexState* ls, char* msg, int32_t token)"
-luaX_syntaxerror 0085D9E0 f end=0085D9F9
+luaX_syntaxerror 0085D9E0 f end=0085D9F9 type="void __stdcall func(LexState* ls, char* msg)"
 luaX_newstring 0085DA00 f end=0085DA50 type="TString* __stdcall func(LexState* ls, char* str, size_t l)"
 inclinenumber 0085DA50 f end=0085DADC type="void __usercall func(LexState* ls@<esi>)"
+luaX_setinput 0085DAE0 f end=0085DB6A type="void __stdcall func(lua_State* L, LexState* ls, ZIO* z, TString* source)"
 check_next 0085DB70 f end=0085DBCB type="int32_t __usercall func@<eax>(LexState* ls@<eax>, char* set@<ecx>)"
 trydecpoint 0085DBD0 f end=0085DCAF type="void __usercall func(LexState* ls@<eax>, SemInfo* seminfo)"
 read_numeral 0085DCB0 f end=0085DDC1 type="void __usercall func(LexState* ls@<eax>, SemInfo* seminfo@<edi>)"
@@ -12279,14 +12656,105 @@ read_string 0085E160 f end=0085E4E8 type="void __stdcall func(LexState* ls, int3
 llex 0085E600 f end=0085EBF6 type="int32_t __usercall func@<eax>(LexState* ls@<eax>, SemInfo* seminfo)"
 luaX_next 0085ECB0 f end=0085ECF9 type="void __stdcall func(LexState* ls)" ; TODO: understand changes to structures
 luaX_lookahead 0085ED00 f end=0085ED1B type="void __stdcall func(LexState* ls)"
+errorlimit 0085ED20 f end=0085ED6E type="void __usercall func(FuncState* fs@<esi>, int32_t limit@<edx>, char* what@<ecx>)"
 testnext 0085ED70 f end=0085ED8F type="int32_t __usercall func@<eax>(LexState* ls@<eax>, int32_t c)"
 check_match 0085ED90 f end=0085EDFE type="void __usercall func(LexState* ls@<esi>, int32_t what@<edi>, int32_t who, int32_t where@<eax>)"
+codestring 0085EE00 f end=0085EE20 type="void __usercall func(LexState* ls@<ecx>, expdesc* e@<esi>, TString* s@<eax>)"
+checkname 0085EE20 f end=0085EE78 type="void __usercall func(LexState* ls@<esi>, expdesc* e@<edi>)"
+registerlocalvar 0085EE80 f end=0085EF2D type="int32_t __stdcall func(LexState* ls, TString* varname)"
+adjustlocalvars 0085EF30 f end=0085EF65 type="void __usercall func(LexState* ls@<eax>, int32_t nvars@<edx>)"
+removevars 0085EF70 f end=0085EFAA type="void __usercall func(LexState* ls@<eax>, int32_t tolevel@<edx>)"
 indexupvalue 0085EFB0 f end=0085F0FB type="int32_t __stdcall func(FuncState* fs, TString* name, expdesc* v)"
 singlevaraux 0085F100 f end=0085F1E2 type="int32_t __stdcall func(FuncState* fs, TString* n, expdesc* var, int base)"
 singlevar 0085F1F0 f end=0085F24F type="void __usercall func(LexState* ls@<eax>, expdesc* var@<ebx>)"
-luaY_parser 00861A20 f end=00861A9E
-luaU_header 00861B90 f end=00861BD0
-luaK_reserveregs 00861F10 f end=00861F51
+adjust_assign 0085F250 f end=0085F2BE type="void __usercall func(LexState* ls@<eax>, int32_t nvars@<edx>, int32_t nexps, expdesc* e@<ecx>)"
+leaveblock 0085F2C0 f end=0085F305 type="void __usercall func(FuncState* fs@<esi>)"
+pushclosure 0085F310 f end=0085F407 type="void __stdcall func(LexState* ls, FuncState* func, expdesc* v)"
+open_func 0085F410 f end=0085F4D9 type="void __usercall func(LexState* ls@<ebx>, FuncState* fs@<eax>)"
+close_func 0085F4E0 f end=0085F6B7 type="void __stdcall func(LexState* ls)"
+yindex 0085F6C0 f end=0085F70B type="void __usercall func(LexState* ls@<esi>, expdesc* v@<edi>)"
+recfield 0085F710 f end=0085F7D6 type="void __usercall func(LexState* ls@<ebx>, ConsControl* cc)"
+lastlistfield 0085F7E0 f end=0085F83D type="void __usercall func(FuncState* fs@<edi>, ConsControl* cc@<esi>)"
+constructor 0085F840 f end=0085FA93 type="void __usercall func(LexState* ls@<ecx>, expdesc* t@<eax>)"
+parlist 0085FAA0 f end=0085FBC9 type="void __usercall func(LexState* ls@<edi>)"
+body 0085FBD0 f end=0085FD10 type="void __usercall func(LexState* ls@<eax>, expdesc* e, int32_t needself, int32_t line)"
+explist1 0085FD10 f end=0085FD4D type="int32_t __usercall func@<eax>(LexState* ls@<esi>, expdesc* v@<edi>)"
+funcargs 0085FD50 f end=0085FE82 type="void __usercall func(LexState* ls@<eax>, expdesc* f)"
+prefixexp 0085FE90 f end=0085FEF2 type="void __usercall func(LexState* ls@<ecx>, expdesc* v@<eax>)"
+primaryexp 0085FF00 f end=008600CB type="void __usercall func(LexState* ls@<esi>, expdesc* v@<edi>)"
+simpleexp 008601E0 f end=008602ED type="void __usercall func(LexState* ls@<ebx>, expdesc* v@<eax>)"
+getbinopr 008603C0 f end=00860435 type="BinOpr __usercall func@<eax>(int32_t op@<eax>)"
+subexpr 00860570 f end=00860672 type="BinOpr __stdcall func(LexState* ls, expdesc* v, uint32_t limit)"
+block 00860680 f end=008606FD type="void __usercall func(LexState* ls@<eax>)"
+check_conflict 00860700 f end=0086075F type="void __usercall func(LexState* ls@<ecx>, LHS_assign* lh@<eax>, expdesc* v@<edi>)"
+assignment 00860760 f end=00860888 type="void __stdcall func(LexState* ls, LHS_assign* lh, int32_t nvars)"
+breakstat 00860890 f end=008608F0 type="void __usercall func(LexState* ls@<eax>)"
+whilestate 008608F0 f end=00860A0F type="void __usercall func(LexState* ls@<eax>, int32_t line)"
+repeatstat 00860A10 f end=00860B4D type="void __stdcall func(LexState* ls, int32_t line)"
+forbody 00860B50 f end=00860CD7 type="void __usercall func(LexState* ls@<eax>, int32_t base, int32_t line, int32_t nvars, int32_t isnum)"
+fornum 00860CE0 f end=00860F05 type="void __usercall func(LexState* ls@<edi>, TString* varname, int32_t line)"
+forlist 00860F10 f end=0086118D type="void __usercall func(LexState* ls@<ebx>, int32_t line)"
+forstat 00861190 f end=008612A3 type="void __usercall func(LexState* ls@<ecx>, int32_t line@<eax>)"
+test_then_block 008612B0 f end=0086132C type="int32_t __usercall func@<eax>(LexState* ls@<esi>)"
+ifstat 00861330 f end=008613E5 type="void __stdcall func(LexState* ls, int32_t line)"
+localfunc 008613F0 f end=008614F1 type="void __usercall func(LexState* ls@<ebx>)"
+localstat 00861500 f end=00861615 type="void __usercall func(LexState* ls@<eax>)"
+funcstat 00861710 f end=00861755 type="void __usercall func(LexState* ls@<esi>, int32_t line@<edi>)"
+exprstat 00861760 f end=008617BB type="void __usercall func(LexState* ls@<eax>)"
+retstat 008617C0 f end=008618B6 type="void __usercall func(LexState* ls@<eax>)"
+statement 008618E0 f end=008619D9 type="int32_t __usercall func@<eax>(LexState* ls@<eax>)"
+chunk 00861A20 f end=00861A9E type="void __stdcall func(LexState* ls)"
+luaY_parser 00861AD0 f end=00861B8B type="Proto* __stdcall func(lua_State* L, ZIO* z, Mbuffer* buff, char* name)"
+luaU_header 00861B90 f end=00861BD0 type="void __stdcall func(char* h)"
+fixjump 00861BD0 f end=00861C16 type="void __usercall func(FuncState* fs@<ebx>, int32_t pc@<ecx>, int32_t dest@<eax>)"
+luaK_getlabel 00861C20 f end=00861C2E type="int32_t __stdcall func(FuncState* fs)"
+need_value 00861C30 f end=00861C8D type="int32_t __usercall func@<eax>(FuncState* fs@<eax>, int32_t list@<edx>)"
+patchtestreg 00861C90 f end=00861D0A type="int32_t __usercall func@<eax>(FuncState* fs@<edx>, int32_t node@<eax>, int32_t reg@<ecx>)"
+removevalues 00861D10 f end=00861D8F type="void __usercall func(FuncState* fs@<edx>, int32_t list@<eax>)"
+patchlistaux 00861D90 f end=00861E7B type="void __usercall func(FuncState* fs@<eax>, int32_t list, int32_t vtarget, int32_t reg, int32_t dtarget)"
+luaK_concat 00861E80 f end=00861ECA type="void __stdcall func(FuncState* fs, int32_t* l1, int32_t l2)"
+luaK_checkstack 00861ED0 f end=00861F0A type="void __stdcall func(FuncState* fs, int32_t n)"
+luaK_reserveregs 00861F10 f end=00861F51 type="void __stdcall func(FuncState* fs, int32_t n)"
+freeexp 00861F60 f end=00861F7C type="void __usercall func(FuncState* fs@<ecx>, expdesc* e@<eax>)"
+addk 00861F80 f end=008620AC type="int32_t __usercall func@<eax>(FuncState* fs@<ecx>, TValue* k, TValue* v)"
+luaK_stringK 008620B0 f end=008620E1 type="int32_t __stdcall func(FuncState* fs, TString* s)"
+luaK_numberK 008620F0 f end=0086211F type="int32_t __stdcall func(FuncState* fs, lua_Number r)"
+nilK 00862120 f end=0086215A type="int32_t __usercall func@<eax>(FuncState* fs@<eax>)"
+luaK_setreturns 00862160 f end=008621E5 type="void __stdcall func(FuncState* fs, expdesc* e, int32_t nresults)"
+luaK_setoneret 008621F0 f end=0086224A type="void __stdcall func(FuncState* fs, expdesc* e)"
+invertjump 00862250 f end=00862295 type="void __usercall func(FuncState* fs@<ecx>, expdesc* e@<eax>)"
+constfolding 008622A0 f end=00862361 type="int32_t __usercall func@<eax>(OpCode op, expdesc* e1@<esi>, expdesc* e2@<eax>)"
+luaK_fixline 00862390 f end=008623A7 type="void __stdcall func(FuncState* fs, int32_t line)"
+luaK_code 008623B0 f end=00862451 type="int32_t __usercall func@<eax>(FuncState* fs@<esi>, Instruction i, int32_t line)"
+luaK_codeABC 00862460 f end=0086248F type="int32_t __stdcall func(FuncState* fs, OpCode o, int32_t a, int32_t b, int32_t c)"
+luaK_codeABx 00862490 f end=008624B9 type="int32_t __stdcall func(FuncState* fs, OpCode o, int32_t a, uint32_t bc)"
+luaK_setlist 008624C0 f end=00862555 type="void __stdcall func(FuncState* fs, int32_t base, int32_t nelems, int32_t tostore)"
+luaK_nil 00862560 f end=008625EF type="void __stdcall func(FuncState* fs, int32_t from, int32_t n)"
+luaK_jump 008625F0 f end=0086262B type="int32_t __stdcall func(FuncState* fs)"
+luaK_ret 00862630 f end=0086265E type="void __stdcall func(FuncState* fs, int32_t first, int32_t nret)"
+condjump 00862660 f end=008626B9 type="int32_t __usercall func@<eax>(FuncState* fs@<ecx>, OpCode op, int32_t A, int32_t B@<eax>, int32_t C)"
+luaK_patchtohere 008626C0 f end=008626DF type="void __stdcall func(FuncState* fs, int32_t list)"
+luaK_dischargevars 008626E0 f end=008627BE type="void __stdcall func(FuncState* fs, expdesc* e)"
+discharge2reg 008627F0 f end=008628CB type="void __usercall func(FuncState* fs@<esi>, expdesc* e@<ebx>, int32_t reg@<edi>)"
+discharge2anyreg 00862900 f end=00862955 type="void __usercall func(FuncState* fs@<eax>, expdesc* e)"
+exp2reg 00862960 f end=00862A74 type="void __usercall func(FuncState* fs@<ecx>, expdesc* e@<eax>, int32_t reg)"
+luaK_exp2nextreg 00862A80 f end=00862AFB type="void __stdcall func(FuncState* fs, expdesc* e)"
+luaK_exp2anyreg 00862B00 f end=00862B52 type="int32_t __stdcall func(FuncState* fs, expdesc* e)"
+luaK_exp2val 00862B60 f end=00862B8B type="void __stdcall func(FuncState* fs, expdesc* e)"
+luaK_exp2RK 00862B90 f end=00862C7C type="int32_t __stdcall func(FuncState* fs, expdesc* e)"
+luaK_storevar 00862C90 f end=00862D6F type="void __stdcall func(FuncState* fs, expdesc* var, expdesc* ex)"
+luaK_self 00862D80 f end=00862E3E type="void __stdcall func(FuncState* fs, expdesc* e, expdesc* key)"
+jumponcond 00862E40 f end=00862EB5 type="int32_t __usercall func(FuncState* fs@<esi>, expdesc* e@<edi>, int32_t cond@<ebx>)"
+luaK_goiftrue 00862EC0 f end=00862F41 type="void __stdcall func(FuncState* fs, expdesc* e)"
+luaK_exp2nextreg 00862F60 f end=00862FD5 type="void __usercall func(FuncState* fs@<ecx>, expdesc* e@<eax>)"
+codenot 00863000 f end=0086309C type="void __usercall func(FuncState* fs@<edi>, expdesc* e@<esi>)"
+luaK_indexed 008630C0 f end=008630E1 type="void __stdcall func(FuncState* fs, expdesc* t, expdesc* k)"
+codearith 008630F0 f end=008631A9 type="void __usercall func(FuncState* fs@<edi>, OpCode op, expdesc* e1@<ebx>, expdesc* e2)"
+codecomp 008631B0 f end=00863243 type="void __stdcall func(FuncState* fs@<esi>, OpCode op, int32_t cond, expdesc* e1@<ebx>, expdesc* e2@<eax>)"
+luaK_prefix 00863250 f end=008632DC type="void __stdcall func(FuncState* fs, UnOpr op, expdesc* e)"
+luaK_infix 008632E0 f end=00863346 type="void __stdcall func(FuncState* fs, BinOpr op, expdesc* v)"
+luaK_posfix 00863350 f end=00863541 type="void __stdcall func(FuncState* fs, BinOpr op, expdesc* e1, expdesc* e2)"
+luaK_patchlist 00863580 f end=008635BB type="void __stdcall func(FuncState* fs, int32_t list, int32_t target)"
 RestoreMouse 008695B0 f end=008695FB
 OsInputSetWindowResizeLock 00869620 f end=0086962D
 OsInputGetMouseSpeed 00869630 f end=0086963D
@@ -12323,6 +12791,8 @@ OsGetBackgroundSleepMs 0086B2B0 f end=0086B2B6
 OsSetBackgroundSleepMs 0086B2C0 f end=0086B2CD
 OsGetVersion 0086B2D0 f end=0086B429
 OsGetVersionString 0086B430 f end=0086B458
+OsGetProcessorId 0086B460 f end=0086B466
+OsGetOsId 0086B470 f end=0086B476
 OsGetComputerName 0086B480 f end=0086B493
 OsGetUserName 0086B4A0 f end=0086B4B3
 OsGetPhysicalMemory 0086B4C0 f end=0086B4E1
@@ -12353,6 +12823,7 @@ TSGrowableArray_OsIMECandidate__New 0086D180 f end=0086D1CB
 OsIMEGetCandidates 0086D1D0 f end=0086D3F8
 OsTimeStartup 0086D430 f end=0086D439 type="void __stdcall func(TimingMethod timingMethod)"
 OsTimeShutdown 0086D440 f end=0086D445
+OsGetTimeZone 0086D450 f end=0086D482
 OsGetTimeStamp 0086D490 f end=0086D4C0
 OsSecureRandom 0086D640 f end=0086D6A1
 OsTlsGetValue 0086D6D0 f end=0086D6DF
@@ -12361,6 +12832,9 @@ OsNetAddrToStr 0086DC50 f end=0086DC8B
 TSList__LinkToTail 0086E200 f end=0086E25F ; 00005410
 TSGrowableArray_TSExplicitList_OsNet__NETSELSOCKPTR__ReallocData 0086E8E0 f end=0086EA37
 TSGrowableArray_TSExplicitList_OsNet__NETSELSOCKPTR__SetCount 0086EED0 f end=0086EFD4
+TSHashTable__OsNet__NETSELSOCKPTR__Initialize 0086F220 f end=0086F27A
+TSHashTable__OsNet__NETSELSOCKPTR__GrowListArray 0086F280 f end=0086F44B
+TSHashTable__OsNet__NETSELSOCKPTR__MonitorFullness 0086F450 f end=0086F4E6
 OsCallSetContext 0086F5A0 f end=0086F5EA
 OsCallResetContext 0086F5F0 f end=0086F64E ; 00005410
 OsCallInitialize 0086F760 f end=0086F875
@@ -12466,8 +12940,11 @@ TSHashTable__SOUND_INTERNAL_LOOKUP__InternalNew 0087C040 f end=0087C09A
 TSHashTable__SOUND_INTERNAL_LOOKUP__destructor 0087C0A0 f end=0087C137
 TSHashTable__SOUND_INTERNAL_LOOKUP__Destroy 0087C140 f end=0087C194
 TSHashTable__SOUND_INTERNAL_LOOKUP__destructor 0087C1A0 f end=0087C1CB
+TSHashTable__SOUND_INTERNAL_LOOKUP__Initialize 0087C1D0 f end=0087C22A
+TSHashTable__SOUND_INTERNAL_LOOKUP__GrowListArray 0087C230 f end=0087C3FB
 SE2__HeartBeat 0087C4B0 f end=0087C53B
 SE2__ShutDownCapture 0087C540 f end=0087C580
+TSHashTable__SOUND_INTERNAL_LOOKUP__MonitorFullness 0087C670 f end=0087C706
 SI2__InitCapture 0087E020 f end=0087EBBD
 TSGrowableArray_ComSat__Sound__OutputChannel__ReallocData 00887490 f end=00887520
 SI2__VoiceChat_ShutDownCapture 00887780 f end=008877D8
@@ -12495,6 +12972,8 @@ _fputs 0088B6DF f end=0088B816 type="int __cdecl func(char* _Str, FILE* _File)" 
 FID_conflict:__time32 0088B821 f end=0088B85A type="__time32_t __cdecl func(__time32_t* _Time)" auto
 _rand 0088B867 f end=0088B889 type="int __cdecl func()" auto
 _strncpy 0088B890 f end=0088B9B4 type="char* __cdecl func(char* _Dest, char* _Source, size_t _Count)" auto
+_ftol2_sse 0088B9C0 f end=0088B9DC type="int32_t __usercall func@<eax>(double n@<st0>)" ; static cast of floating-point to int32
+_ftol2 0088B9F6 f end=0088BA6B type="int32_t __usercall _ftol2@<eax>(double n@<st0>)"
 __alldiv 0088BA70 f end=0088BB1A type="undefined8 __stdcall func(uint param_1, uint param_2, uint param_3, uint param_4)" auto
 __allrem 0088BB20 f end=0088BBD2 type="undefined8 __stdcall func(uint param_1, uint param_2, uint param_3, uint param_4)" auto
 __vsnprintf_l 0088BBD2 f end=0088BC83 type="int __cdecl func(char* _DstBuf, size_t _MaxCount, char* _Format, _locale_t _Locale, va_list _ArgList)" auto
@@ -12525,6 +13004,8 @@ _fseek 0088C8EA f end=0088C965 type="int __cdecl func(FILE* _File, long _Offset,
 __ftell_nolock 0088C96F f end=0088CB07 type="long __cdecl func(FILE* _File)" auto
 _ftell 0088CB07 f end=0088CB6B type="long __cdecl func(FILE* _File)" auto
 _fread_s 0088CD7B f end=0088CE07 type="size_t __cdecl func(void* _DstBuf, size_t _DstSize, size_t _ElementSize, size_t _Count, FILE* _File)" auto
+floor 0088CE30 f end=00891985 type="double __stdcall func(double X)"
+_CIpow 0088D0C0 f end=0088D114 type="double __usercall func@<st0>(double x@<st0>, uint64_t y@<st1>)" ; Calculates x raised to the y power based on the top values in the stack.
 _frexp 0088D30A f end=0088D3E4 type="double __cdecl func(double _X, int* _Y)" auto
 __allshr 0088D3F0 f end=0088D411 type="undefined8 __fastcall func(byte param_1, int param_2)" auto
 _memchr 0088D420 f end=0088D4CD type="void* __cdecl func(void* _Buf, int _Val, size_t _MaxCount)" auto
@@ -12630,6 +13111,7 @@ Liquid__CreateProceduralTextures 008A2E20 f end=008A2EF5
 Liquid__GetInstanceDesc 008A3090 f end=008A30A8
 SpellRec__GetFilename 008A65D0 f end=008A65D6
 ItemDisplayInfoRec__GetFilename 008A7FC0 f end=008A7FC6
+ItemDisplayInfoRec__Read 008A7FD0 f end=008A834F
 VehicleUIIndicatorRec__GetFilename 008A8350 f end=008A8356
 AchievementRec__GetFilename 008A8360 f end=008A8366
 AchievementRec___Read 008A8370 f end=008A8CA1
@@ -14637,7 +15119,15 @@ TSHashTable__LCDHANDLE__vtable 00A46AA0 l
 TSHashTable__BITMAPBYICON__vtable 00A46BD8 l
 luaO_nilobject_ 00A46F78 l type="TValue"
 log_2 00A46F88 l type="lu_byte[256]"
+bitlib 00A475A0 l type="luaL_Reg[9]"
+mathlib 00A47600 l type="luaL_Reg[28]"
+tab_funcs 00A47798 l type="luaL_Reg[12]"
+strlib 00A478E0 l type="luaL_Reg[16]"
+base_funcs 00A47C80 l type="luaL_Reg[21]"
+co_funcs 00A47D28 l type="luaL_Reg[7]"
+s_blocksizes 00A47FBC l type="int32_t[9]"
 luaT_typenames 00A48208 l type="char*[11]"
+luaT_eventname 00A48238 l type="char*[17]"
 dummynode_ 00A48280 l type="Node"
 luaP_opmodes 00A484B4 l type="lu_byte[38]"
 luaX_tokens 00A48588 l type="char*[32]"
@@ -15122,6 +15612,7 @@ CGGameUI__m_simpleTop 00BD078C l
 CGGameUI__m_currentlyReloadingUI 00BD0790 l
 CGGameUI__m_reloadUIRequested 00BD0791 l
 CGGameUI__m_inWorld 00BD0792 l
+s_taintLog 00BD0794 l type="HSLOG"
 CGGameUI__m_interactMaxDistSq 00BD0798 l
 CGGameUI__m_cursorMoney 00BD079C l
 CGGameUI__m_currentObjectTrack 00BD07A0 l
@@ -15152,89 +15643,89 @@ CGGameUI__m_iMapID 00BD0888 l
 CGGameUI__m_iCurrentMapID 00BD088C l
 CGGameUI__m_bOwnsInstance 00BD0890 l
 CGGameUI__m_lastRegenTime 00BD08A0 l
-s_cvTaintLog 00BD08E4 l type="CVar*"
-s_cvScriptErrors 00BD08E8 l type="CVar*"
-s_cvScriptProfile 00BD08EC l type="CVar*"
-s_cvDeselectOnClick 00BD08F0 l type="CVar*"
-s_cvAutoStand 00BD08F8 l type="CVar*"
-s_cvAutoDismount 00BD08FC l type="CVar*"
-s_cvAutoDismountFlying 00BD0900 l type="CVar*"
-s_cvAutoUnshift 00BD0904 l type="CVar*"
-s_cvAutoClearAFK 00BD0908 l type="CVar*"
-s_cvBlockTrades 00BD090C l type="CVar*"
-s_cvLootUnderMouse 00BD0910 l type="CVar*"
-s_cvAutoLootDefault 00BD0914 l type="CVar*"
-s_cvAssistAttack 00BD0918 l type="CVar*"
+g_taintLogCVar 00BD08E4 l type="CVar*"
+g_scriptErrorsCVar 00BD08E8 l type="CVar*"
+g_scriptProfileCVar 00BD08EC l type="CVar*"
+g_deselectOnClickCVar 00BD08F0 l type="CVar*"
+g_autoStandCVar 00BD08F8 l type="CVar*"
+g_autoDismountCVar 00BD08FC l type="CVar*"
+g_autoDismountFlyingCVar 00BD0900 l type="CVar*"
+g_autoUnshiftCVar 00BD0904 l type="CVar*"
+g_autoClearAFKCVar 00BD0908 l type="CVar*"
+g_blockTradesCVar 00BD090C l type="CVar*"
+g_lootUnderMouseCVar 00BD0910 l type="CVar*"
+g_autoLootDefaultCVar 00BD0914 l type="CVar*"
+g_assistAttackCVar 00BD0918 l type="CVar*"
 s_cvAutoRangedCombat 00BD091C l type="CVar*"
-s_cvAutoSelfCast 00BD0920 l type="CVar*"
-s_cvStopAutoAttackOnTargetChange 00BD0924 l type="CVar*"
-s_cvShowTargetOfTarget 00BD0928 l type="CVar*"
-s_cvTargetOfTargetMode 00BD092C l type="CVar*"
-s_cvShowTargetCastbar 00BD0930 l type="CVar*"
-s_cvShowVKeyCastbar 00BD0934 l type="CVar*"
-s_cvBuffDurations 00BD0938 l type="CVar*"
-s_cvRotateMinimap 00BD093C l type="CVar*"
-s_cvMinimapZoom 00BD0940 l type="CVar*"
-s_cvMinimapInsideZoom 00BD0944 l type="CVar*"
-s_cvScreenEdgeFlash 00BD094C l type="CVar*"
-s_cvShowLootSpam 00BD0950 l type="CVar*"
-s_cvDisplayFreeBagSlots 00BD0954 l type="CVar*"
-s_cvDisplayWorldPVPObjectives 00BD0958 l type="CVar*"
-s_cvProfanityFilter 00BD095C l type="CVar*"
-s_cvSpamFilter 00BD0960 l type="CVar*"
-s_cvChatBubbles 00BD0964 l type="CVar*"
-s_cvChatBubblesParty 00BD0968 l type="CVar*"
-s_cvRemoveChatDelay 00BD096C l type="CVar*"
-s_cvGuildShowOffline 00BD0970 l type="CVar*"
-s_cvGuildMemberNotify 00BD0974 l type="CVar*"
-s_cvGuildRecruitmentChannel 00BD0978 l type="CVar*"
-s_cvSecureAbilityToggle 00BD097C l type="CVar*"
-s_cvCombatDamage 00BD0980 l type="CVar*"
+g_autoSelfCastCVar 00BD0920 l type="CVar*"
+g_stopAutoAttackOnTargetChangeCVar 00BD0924 l type="CVar*"
+g_showTargetOfTargetCVar 00BD0928 l type="CVar*"
+g_targetOfTargetModeCVar 00BD092C l type="CVar*"
+g_showTargetCastbarCVar 00BD0930 l type="CVar*"
+g_showVKeyCastbarCVar 00BD0934 l type="CVar*"
+g_buffDurationsCVar 00BD0938 l type="CVar*"
+g_rotateMinimapCVar 00BD093C l type="CVar*"
+g_minimapZoomCVar 00BD0940 l type="CVar*"
+g_minimapInsideZoomCVar 00BD0944 l type="CVar*"
+g_screenEdgeFlashCVar 00BD094C l type="CVar*"
+g_showLootSpamCVar 00BD0950 l type="CVar*"
+g_displayFreeBagSlotsCVar 00BD0954 l type="CVar*"
+g_displayWorldPVPObjectivesCVar 00BD0958 l type="CVar*"
+g_profanityFilterCVar 00BD095C l type="CVar*"
+g_spamFilterCvar 00BD0960 l type="CVar*"
+g_chatBubblesCVar 00BD0964 l type="CVar*"
+g_chatBubblesPartyCVar 00BD0968 l type="CVar*"
+g_removeChatDelayCVar 00BD096C l type="CVar*"
+g_guildShowOfflineCVar 00BD0970 l type="CVar*"
+g_guildMemberNotifyCVar 00BD0974 l type="CVar*"
+g_guildRecruitmentChannelCVar 00BD0978 l type="CVar*"
+g_secureAbilityToggleCVar 00BD097C l type="CVar*"
+g_combatDamageCVar 00BD0980 l type="CVar*"
 s_cvCombatLogPeriodicSpells 00BD0984 l type="CVar*"
-s_cvPetMeleeDamage 00BD0988 l type="CVar*"
-s_cvPetSpellDamage 00BD098C l type="CVar*"
-s_cvCombatHealing 00BD0990 l type="CVar*"
+g_petMeleeDamageCVar 00BD0988 l type="CVar*"
+g_petSpellDamageCVar 00BD098C l type="CVar*"
+g_combatHealingCVar 00BD0990 l type="CVar*"
 s_cvCalendarShowWeeklyHolidays 00BD0998 l type="CVar*"
 s_cvCalendarShowDarkmoon 00BD099C l type="CVar*"
 s_cvCalendarShowBattlegrounds 00BD09A0 l type="CVar*"
 s_cvCalendarShowLockouts 00BD09A4 l type="CVar*"
 s_cvCalendarShowResets 00BD09A8 l type="CVar*"
-s_cvUseUiScale 00BD09B0 l type="CVar*"
-s_cvNameplateShowEnemies 00BD09B8 l type="CVar*"
-s_cvNameplateShowEnemyPets 00BD09BC l type="CVar*"
-s_cvNameplateShowEnemyGuardians 00BD09C0 l type="CVar*"
-s_cvNameplateShowEnemyTotems 00BD09C4 l type="CVar*"
-s_cvNameplateShowFriends 00BD09C8 l type="CVar*"
-s_cvNameplateShowFriendlyPets 00BD09CC l type="CVar*"
-s_cvNameplateShowFriendlyGuardians 00BD09D0 l type="CVar*"
-s_cvNameplateShowFriendlyTotems 00BD09D4 l type="CVar*"
+g_useUiScaleCVar 00BD09B0 l type="CVar*"
+g_nameplateShowEnemiesCVar 00BD09B8 l type="CVar*"
+g_nameplateShowEnemyPetsCVar 00BD09BC l type="CVar*"
+g_nameplateShowEnemyGuardiansCVar 00BD09C0 l type="CVar*"
+g_nameplateShowEnemyTotemsCVar 00BD09C4 l type="CVar*"
+g_nameplateShowFriendsCVar 00BD09C8 l type="CVar*"
+g_nameplateShowFriendlyPetsCVar 00BD09CC l type="CVar*"
+g_nameplateShowFriendlyGuardiansCVar 00BD09D0 l type="CVar*"
+g_nameplateShowFriendlyTotemsCVar 00BD09D4 l type="CVar*"
 s_cvNameplateAllowOverlap 00BD09D8 l type="CVar*"
-s_cvUnitHighlights 00BD09DC l type="CVar*"
-s_cvEnablePVPNotifyAFK 00BD09E0 l type="CVar*"
-s_cvServiceTypeFilter 00BD09E4 l type="CVar*"
-s_cvAutojoinPartyVoice 00BD09E8 l type="CVar*"
-s_cvAutojoinBGVoice 00BD09EC l type="CVar*"
-s_cvCombatLogRetentionTime 00BD09F0 l type="CVar*"
-s_cvCurrencyTokensUnused1 00BD09F4 l type="CVar*"
-s_cvCurrencyTokensUnused2 00BD09F8 l type="CVar*"
-s_cvCurrencyTokensBackpack1 00BD09FC l type="CVar*"
-s_cvCurrencyTokensBackpack2 00BD0A00 l type="CVar*"
+g_unitHighlightsCVar 00BD09DC l type="CVar*"
+g_enablePVPNotifyAFKCVar 00BD09E0 l type="CVar*"
+g_serviceTypeFilterCVar 00BD09E4 l type="CVar*"
+g_autojoinPartyVoiceCVar 00BD09E8 l type="CVar*"
+g_autojoinBGVoiceCVar 00BD09EC l type="CVar*"
+g_combatLogRetentionTimeCVar 00BD09F0 l type="CVar*"
+g_currencyTokensUnused1CVar 00BD09F4 l type="CVar*"
+g_currencyTokensUnused2CVar 00BD09F8 l type="CVar*"
+g_currencyTokensBackpack1CVar 00BD09FC l type="CVar*"
+g_currencyTokensBackpack2CVar 00BD0A00 l type="CVar*"
 g_predictedHealthCVar 00BD0A04 l type="CVar*"
 g_predictedPowerCVar 00BD0A08 l type="CVar*"
-s_cvThreatWarning 00BD0A0C l type="CVar*"
-s_cvThreatWorldText 00BD0A10 l type="CVar*"
+g_threatWarningCVar 00BD0A0C l type="CVar*"
+g_threatWorldTextCVar 00BD0A10 l type="CVar*"
 s_cvThreatShowNumeric 00BD0A14 l type="CVar*"
 s_cvThreatPlaySounds 00BD0A18 l type="CVar*"
 s_cvShowAllSpellRanks 00BD0A1C l type="CVar*"
-s_cvShowClassColorInNameplate 00BD0A20 l type="CVar*"
-s_cvPreviewTalents 00BD0A24 l type="CVar*"
+g_ShowClassColorInNameplateCVar 00BD0A20 l type="CVar*"
+g_previewTalentsCVar 00BD0A24 l type="CVar*"
 s_cvLfgSelectedRoles 00BD0A28 l type="CVar*"
 s_cvLfdCollapsedHeaders 00BD0A2C l type="CVar*"
 s_cvLfdSelectedDungeons 00BD0A30 l type="CVar*"
 s_cvQuestLogCollapseFilter 00BD0A34 l type="CVar*"
 s_cvAutoFilledMultiCastSlots 00BD0A38 l type="CVar*"
-s_cvQuestPOI 00BD0A3C l type="CVar*"
-s_cvTrackerSorting 00BD0A40 l type="CVar*"
+g_questPOICVar 00BD0A3C l type="CVar*"
+g_trackerSortingCVar 00BD0A40 l type="CVar*"
 s_cvShowToastFriendRequest 00BD0A44 l type="CVar*"
 s_cvShowToastOnline 00BD0A48 l type="CVar*"
 s_cvShowToastOffline 00BD0A4C l type="CVar*"
@@ -15303,6 +15794,7 @@ s_cvPOIShiftComplete 00C23AFC l type="CVar*"
 CGRuneInfo__m_runes 00C24304 l
 CGRuneInfo__m_numRunes 00C24384 l
 CGRuneInfo__m_predictedRunes 00C24388 l
+s_addons 00C2491C l type="TSHashTable_UIADDON_HASHKEY_STRI"
 s_cvCinematicJoystick 00C2495C l type="CVar*"
 s_cvCameraSmoothTimeMax 00C24970 l type="CVar*"
 s_cvCameraSmoothTimeMin 00C24974 l type="CVar*"
@@ -15718,7 +16210,11 @@ s_scriptProfileEnabled 00D3F798 l type="int32_t"
 lua_tainted 00D4139C l
 lua_taintexpected 00D413A0 l type="int32_t"
 lua_taintedclosure 00D413A4 l type="int32_t"
+lua_closuretaint 00D413A8 l
 lua_gctag 00D413AC l type="int32_t"
+lua_tainteventcallback 00D413B0 l type="lua_TaintEventCallback"
+lua_decimalconvert 00D413B8 l type="int32_t"
+divisor 00D413C8 l type="double"
 s_WindowResizeLock 00D41580 l type="int32_t"
 s_OsTimeMgr 00D4159C l type="OsTimeManager*"
 s_haveProcessorFeatures 00D415A0 l type="int32_t"

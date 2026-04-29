@@ -513,6 +513,10 @@
       "name": "PIXEL_FORMAT"
     },
     {
+      "type": "void**",
+      "name": "Pfunc_interface"
+    },
+    {
       "type": "long long",
       "name": "SCHEDSTATE"
     },
@@ -541,16 +545,36 @@
       "name": "TEXTURERECREATIONCALLBACK_interface"
     },
     {
+      "type": "int",
+      "name": "TMS"
+    },
+    {
       "type": "long long",
       "name": "TimingMethod"
+    },
+    {
+      "type": "int",
+      "name": "UIADDON_LOADABLE_REASON"
+    },
+    {
+      "type": "int",
+      "name": "UIADDON_SECURITY_STATUS"
     },
     {
       "type": "uint64_t",
       "name": "WOWGUID"
     },
     {
+      "type": "int",
+      "name": "expkind"
+    },
+    {
       "type": "int32_t",
       "name": "intptr_t"
+    },
+    {
+      "type": "int32_t",
+      "name": "l_mem"
     },
     {
       "type": "uint8_t",
@@ -577,12 +601,24 @@
       "name": "lua_Hook_interface"
     },
     {
+      "type": "int32_t",
+      "name": "lua_Integer"
+    },
+    {
       "type": "double",
       "name": "lua_Number"
     },
     {
       "type": "void**",
       "name": "lua_Reader_interface"
+    },
+    {
+      "type": "void**",
+      "name": "lua_TaintEventCallback_interface"
+    },
+    {
+      "type": "void**",
+      "name": "lua_Writer_interface"
     },
     {
       "type": "CBaseManaged*",
@@ -599,6 +635,14 @@
     {
       "type": "FRAMEPRIORITY*",
       "name": "pointer_to_FRAMEPRIORITY"
+    },
+    {
+      "type": "MemChunk*",
+      "name": "pointer_to_MemChunk"
+    },
+    {
+      "type": "char*",
+      "name": "pointer_to_char"
     },
     {
       "type": "void*",
@@ -669,6 +713,10 @@
       "name": "HTEXTURE"
     },
     {
+      "type": "Pfunc_interface",
+      "name": "Pfunc"
+    },
+    {
       "type": "STEREOCHANGEDCALLBACK_interface",
       "name": "STEREOCHANGEDCALLBACK"
     },
@@ -695,6 +743,14 @@
     {
       "type": "lua_Reader_interface",
       "name": "lua_Reader"
+    },
+    {
+      "type": "lua_TaintEventCallback_interface",
+      "name": "lua_TaintEventCallback"
+    },
+    {
+      "type": "lua_Writer_interface",
+      "name": "lua_Writer"
     },
     {
       "type": "uintptr_t",
@@ -903,6 +959,10 @@
     {
       "type": "TSList_RGN",
       "name": "TSExplicitList_RGN"
+    },
+    {
+      "type": "TSList_UIADDON",
+      "name": "TSExplicitList_UIADDON"
     },
     {
       "type": "lua_TValue",
@@ -11859,6 +11919,27 @@
       ]
     },
     {
+      "name": "GCTime",
+      "size": 24,
+      "members": [
+        {
+          "type": "char*",
+          "name": "tag",
+          "offset": 0
+        },
+        {
+          "type": "int64_t",
+          "name": "time",
+          "offset": 8
+        },
+        {
+          "type": "GCTime*",
+          "name": "next",
+          "offset": 16
+        }
+      ]
+    },
+    {
       "name": "GMSurveyAnswersRec",
       "size": 16,
       "members": [
@@ -22765,6 +22846,37 @@
       ]
     },
     {
+      "name": "MemChunk",
+      "size": 20,
+      "members": [
+        {
+          "type": "void*",
+          "name": "m_memblocks",
+          "offset": 0
+        },
+        {
+          "type": "void*",
+          "name": "m_free",
+          "offset": 4
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_unk2",
+          "offset": 8
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_blockSize",
+          "offset": 12
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_numBlocks",
+          "offset": 16
+        }
+      ]
+    },
+    {
       "name": "MipBits",
       "size": 4,
       "members": [
@@ -23809,6 +23921,37 @@
           "type": "uint32_t",
           "name": "ext_4d",
           "offset": 88
+        }
+      ]
+    },
+    {
+      "name": "Profile",
+      "size": 32,
+      "members": [
+        {
+          "type": "int32_t",
+          "name": "calls",
+          "offset": 0
+        },
+        {
+          "type": "int32_t",
+          "name": "depth",
+          "offset": 4
+        },
+        {
+          "type": "int64_t",
+          "name": "marker",
+          "offset": 8
+        },
+        {
+          "type": "int64_t",
+          "name": "flat",
+          "offset": 16
+        },
+        {
+          "type": "int64_t",
+          "name": "total",
+          "offset": 24
         }
       ]
     },
@@ -28362,6 +28505,27 @@
       ]
     },
     {
+      "name": "TSFixedArray_pointer_to_MemChunk",
+      "size": 12,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "m_alloc",
+          "offset": 0
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_count",
+          "offset": 4
+        },
+        {
+          "type": "pointer_to_MemChunk*",
+          "name": "m_data",
+          "offset": 8
+        }
+      ]
+    },
+    {
       "name": "TSFixedArray_uint32_t",
       "size": 12,
       "members": [
@@ -29163,6 +29327,32 @@
       ]
     },
     {
+      "name": "TSGrowableArray_TSList_UIADDON",
+      "size": 16,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "m_alloc",
+          "offset": 0
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_count",
+          "offset": 4
+        },
+        {
+          "type": "TSList_UIADDON*",
+          "name": "m_data",
+          "offset": 8
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_chunk",
+          "offset": 12
+        }
+      ]
+    },
+    {
       "name": "TSGrowableArray_XMLAttribute",
       "size": 16,
       "members": [
@@ -29256,6 +29446,32 @@
         },
         {
           "type": "pointer_to_FRAMEPRIORITY*",
+          "name": "m_data",
+          "offset": 8
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_chunk",
+          "offset": 12
+        }
+      ]
+    },
+    {
+      "name": "TSGrowableArray_pointer_to_char",
+      "size": 16,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "m_alloc",
+          "offset": 0
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_count",
+          "offset": 4
+        },
+        {
+          "type": "pointer_to_char*",
           "name": "m_data",
           "offset": 8
         },
@@ -30165,6 +30381,22 @@
         },
         {
           "type": "SIMPLEFRAMENODE*",
+          "name": "m_next",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TSLink_UIADDON",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_UIADDON*",
+          "name": "m_prevlink",
+          "offset": 0
+        },
+        {
+          "type": "UIADDON*",
           "name": "m_next",
           "offset": 4
         }
@@ -32149,6 +32381,22 @@
       ]
     },
     {
+      "name": "expdesc__s",
+      "size": 8,
+      "members": [
+        {
+          "type": "int32_t",
+          "name": "info",
+          "offset": 0
+        },
+        {
+          "type": "int32_t",
+          "name": "aux",
+          "offset": 4
+        }
+      ]
+    },
+    {
       "name": "fixed16",
       "size": 2,
       "members": [
@@ -32368,6 +32616,33 @@
       ]
     },
     {
+      "name": "luaL_Buffer",
+      "size": 524,
+      "members": [
+        {
+          "type": "char*",
+          "name": "p",
+          "offset": 0
+        },
+        {
+          "type": "int32_t",
+          "name": "lvl",
+          "offset": 4
+        },
+        {
+          "type": "lua_State*",
+          "name": "L",
+          "offset": 8
+        },
+        {
+          "type": "char",
+          "name": "buffer",
+          "arrsize": 512,
+          "offset": 12
+        }
+      ]
+    },
+    {
       "name": "lua_Debug",
       "size": 100,
       "members": [
@@ -32430,23 +32705,14 @@
       ]
     },
     {
-      "name": "lua_longjmp",
-      "size": 12,
+      "name": "luai_jmpbuf",
+      "size": 64,
       "members": [
         {
-          "type": "lua_longjmp*",
-          "name": "previous",
+          "type": "int32_t",
+          "name": "opaque",
+          "arrsize": 16,
           "offset": 0
-        },
-        {
-          "type": "int",
-          "name": "b",
-          "offset": 4
-        },
-        {
-          "type": "int",
-          "name": "status",
-          "offset": 8
         }
       ]
     },
@@ -37473,6 +37739,32 @@
       ]
     },
     {
+      "name": "MemPool",
+      "size": 24,
+      "members": [
+        {
+          "type": "TSFixedArray_pointer_to_MemChunk",
+          "name": "m_memchunks",
+          "offset": 0
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_unk3",
+          "offset": 12
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_blockSize",
+          "offset": 16
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_unk5",
+          "offset": 20
+        }
+      ]
+    },
+    {
       "name": "CDetailDoodadGeom",
       "size": 36,
       "members": [
@@ -39859,6 +40151,43 @@
       "members": [
         {
           "type": "TSLink_SIMPLEFRAMENODE",
+          "name": "m_link",
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "TSHashObject_UIADDON_HASHKEY_STRI",
+      "size": 24,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "m_hashval",
+          "offset": 0
+        },
+        {
+          "type": "TSLink_UIADDON",
+          "name": "m_linktoslot",
+          "offset": 4
+        },
+        {
+          "type": "TSLink_UIADDON",
+          "name": "m_linktofull",
+          "offset": 12
+        },
+        {
+          "type": "HASHKEY_STRI",
+          "name": "m_key",
+          "offset": 20
+        }
+      ]
+    },
+    {
+      "name": "TSLinkedNode_UIADDON",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_UIADDON",
           "name": "m_link",
           "offset": 0
         }
@@ -43205,22 +43534,6 @@
       ]
     },
     {
-      "name": "upvaldesc",
-      "size": 2,
-      "members": [
-        {
-          "type": "lu_byte",
-          "name": "k",
-          "offset": 0
-        },
-        {
-          "type": "lu_byte",
-          "name": "info",
-          "offset": 1
-        }
-      ]
-    },
-    {
       "name": "BlockCnt",
       "size": 12,
       "members": [
@@ -43252,6 +43565,110 @@
       ]
     },
     {
+      "name": "GCheader",
+      "size": 12,
+      "members": [
+        {
+          "type": "GCObject*",
+          "name": "next",
+          "offset": 0
+        },
+        {
+          "type": "char*",
+          "name": "taint",
+          "offset": 4
+        },
+        {
+          "type": "lu_byte",
+          "name": "tt",
+          "offset": 8
+        },
+        {
+          "type": "lu_byte",
+          "name": "marked",
+          "offset": 9
+        }
+      ]
+    },
+    {
+      "name": "LClosure",
+      "size": 32,
+      "members": [
+        {
+          "type": "GCObject*",
+          "name": "next",
+          "offset": 0
+        },
+        {
+          "type": "char*",
+          "name": "taint",
+          "offset": 4
+        },
+        {
+          "type": "lu_byte",
+          "name": "tt",
+          "offset": 8
+        },
+        {
+          "type": "lu_byte",
+          "name": "marked",
+          "offset": 9
+        },
+        {
+          "type": "lu_byte",
+          "name": "isC",
+          "offset": 10
+        },
+        {
+          "type": "lu_byte",
+          "name": "nupvalues",
+          "offset": 11
+        },
+        {
+          "type": "GCObject*",
+          "name": "gclist",
+          "offset": 12
+        },
+        {
+          "type": "Table*",
+          "name": "env",
+          "offset": 16
+        },
+        {
+          "type": "Profile*",
+          "name": "profile",
+          "offset": 20
+        },
+        {
+          "type": "Proto*",
+          "name": "p",
+          "offset": 24
+        },
+        {
+          "type": "UpVal*",
+          "name": "upvals",
+          "arrsize": 1,
+          "offset": 28
+        }
+      ]
+    },
+    {
+      "name": "lua_priority",
+      "size": 2,
+      "members": [
+        {
+          "type": "lu_byte",
+          "name": "left",
+          "offset": 0
+        },
+        {
+          "type": "lu_byte",
+          "name": "right",
+          "offset": 1
+        }
+      ]
+    },
+    {
       "name": "Proto",
       "size": 80,
       "members": [
@@ -43261,8 +43678,8 @@
           "offset": 0
         },
         {
-          "type": "uint32_t",
-          "name": "unk04",
+          "type": "char*",
+          "name": "taint",
           "offset": 4
         },
         {
@@ -43387,8 +43804,8 @@
           "offset": 0
         },
         {
-          "type": "uint32_t",
-          "name": "unk04",
+          "type": "char*",
+          "name": "taint",
           "offset": 4
         },
         {
@@ -43444,75 +43861,18 @@
       ]
     },
     {
-      "name": "GCheader",
-      "size": 8,
+      "name": "upvaldesc",
+      "size": 2,
       "members": [
         {
-          "type": "GCObject*",
-          "name": "next",
+          "type": "lu_byte",
+          "name": "k",
           "offset": 0
         },
         {
           "type": "lu_byte",
-          "name": "tt",
-          "offset": 4
-        },
-        {
-          "type": "lu_byte",
-          "name": "marked",
-          "offset": 5
-        }
-      ]
-    },
-    {
-      "name": "LClosure",
-      "size": 24,
-      "members": [
-        {
-          "type": "GCObject*",
-          "name": "next",
-          "offset": 0
-        },
-        {
-          "type": "lu_byte",
-          "name": "tt",
-          "offset": 4
-        },
-        {
-          "type": "lu_byte",
-          "name": "marked",
-          "offset": 5
-        },
-        {
-          "type": "lu_byte",
-          "name": "isC",
-          "offset": 6
-        },
-        {
-          "type": "lu_byte",
-          "name": "nupvalues",
-          "offset": 7
-        },
-        {
-          "type": "GCObject*",
-          "name": "gclist",
-          "offset": 8
-        },
-        {
-          "type": "Table*",
-          "name": "env",
-          "offset": 12
-        },
-        {
-          "type": "Proto*",
-          "name": "p",
-          "offset": 16
-        },
-        {
-          "type": "UpVal*",
-          "name": "upvals",
-          "arrsize": 1,
-          "offset": 20
+          "name": "info",
+          "offset": 1
         }
       ]
     },
@@ -43533,6 +43893,27 @@
         {
           "type": "int32_t",
           "name": "size",
+          "offset": 8
+        }
+      ]
+    },
+    {
+      "name": "GCUsage",
+      "size": 12,
+      "members": [
+        {
+          "type": "char*",
+          "name": "tag",
+          "offset": 0
+        },
+        {
+          "type": "lu_mem",
+          "name": "usage",
+          "offset": 4
+        },
+        {
+          "type": "GCUsage*",
+          "name": "next",
           "offset": 8
         }
       ]
@@ -43580,6 +43961,27 @@
       ]
     },
     {
+      "name": "lua_longjmp",
+      "size": 72,
+      "members": [
+        {
+          "type": "lua_longjmp*",
+          "name": "previous",
+          "offset": 0
+        },
+        {
+          "type": "luai_jmpbuf",
+          "name": "b",
+          "offset": 4
+        },
+        {
+          "type": "int32_t",
+          "name": "status",
+          "offset": 68
+        }
+      ]
+    },
+    {
       "name": "TSList_CAsyncObject",
       "size": 12,
       "members": [
@@ -43607,6 +44009,22 @@
         {
           "type": "TSLink_CAsyncQueue",
           "name": "m_terminator",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "MatchState_capture",
+      "size": 8,
+      "members": [
+        {
+          "type": "char*",
+          "name": "init",
+          "offset": 0
+        },
+        {
+          "type": "ptrdiff_t",
+          "name": "len",
           "offset": 4
         }
       ]
@@ -44380,6 +44798,38 @@
       ]
     },
     {
+      "name": "TSList_UIADDON",
+      "size": 12,
+      "members": [
+        {
+          "type": "ptrdiff_t",
+          "name": "m_linkoffset",
+          "offset": 0
+        },
+        {
+          "type": "TSLink_UIADDON",
+          "name": "m_terminator",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "LoadS",
+      "size": 8,
+      "members": [
+        {
+          "type": "char*",
+          "name": "s",
+          "offset": 0
+        },
+        {
+          "type": "size_t",
+          "name": "size",
+          "offset": 4
+        }
+      ]
+    },
+    {
       "name": "Mbuffer",
       "size": 12,
       "members": [
@@ -44402,42 +44852,6 @@
     },
     {
       "name": "TString_tsv",
-      "size": 16,
-      "members": [
-        {
-          "type": "GCObject*",
-          "name": "next",
-          "offset": 0
-        },
-        {
-          "type": "lu_byte",
-          "name": "tt",
-          "offset": 4
-        },
-        {
-          "type": "lu_byte",
-          "name": "marked",
-          "offset": 5
-        },
-        {
-          "type": "lu_byte",
-          "name": "reserved",
-          "offset": 6
-        },
-        {
-          "type": "uint32_t",
-          "name": "hash",
-          "offset": 8
-        },
-        {
-          "type": "size_t",
-          "name": "len",
-          "offset": 12
-        }
-      ]
-    },
-    {
-      "name": "Udata_uv",
       "size": 20,
       "members": [
         {
@@ -44446,29 +44860,75 @@
           "offset": 0
         },
         {
-          "type": "lu_byte",
-          "name": "tt",
+          "type": "char*",
+          "name": "taint",
           "offset": 4
         },
         {
           "type": "lu_byte",
-          "name": "marked",
-          "offset": 5
-        },
-        {
-          "type": "Table*",
-          "name": "metatable",
+          "name": "tt",
           "offset": 8
         },
         {
-          "type": "Table*",
-          "name": "env",
+          "type": "lu_byte",
+          "name": "marked",
+          "offset": 9
+        },
+        {
+          "type": "lu_byte",
+          "name": "reserved",
+          "offset": 10
+        },
+        {
+          "type": "uint32_t",
+          "name": "hash",
           "offset": 12
         },
         {
           "type": "size_t",
           "name": "len",
           "offset": 16
+        }
+      ]
+    },
+    {
+      "name": "Udata_uv",
+      "size": 24,
+      "members": [
+        {
+          "type": "GCObject*",
+          "name": "next",
+          "offset": 0
+        },
+        {
+          "type": "char*",
+          "name": "taint",
+          "offset": 4
+        },
+        {
+          "type": "lu_byte",
+          "name": "tt",
+          "offset": 8
+        },
+        {
+          "type": "lu_byte",
+          "name": "marked",
+          "offset": 9
+        },
+        {
+          "type": "Table*",
+          "name": "metatable",
+          "offset": 12
+        },
+        {
+          "type": "Table*",
+          "name": "env",
+          "offset": 16
+        },
+        {
+          "type": "size_t",
+          "name": "len",
+          "offset": 20
         }
       ]
     },
@@ -47637,6 +48097,97 @@
           "type": "CSimpleFrame*",
           "name": "frame",
           "offset": 8
+        }
+      ]
+    },
+    {
+      "name": "UIADDON",
+      "size": 88,
+      "members": [
+        {
+          "type": "TSHashObject_UIADDON_HASHKEY_STRI",
+          "name": "_",
+          "offset": 0
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_unk18",
+          "offset": 24
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_interface",
+          "offset": 28
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_unk20",
+          "offset": 32
+        },
+        {
+          "type": "UIADDON_SECURITY_STATUS",
+          "name": "m_security",
+          "offset": 36
+        },
+        {
+          "type": "int8_t",
+          "name": "m_unk28_0",
+          "offset": 40
+        },
+        {
+          "type": "int8_t",
+          "name": "m_unk28_1",
+          "offset": 41
+        },
+        {
+          "type": "int8_t",
+          "name": "m_unk28_2",
+          "offset": 42
+        },
+        {
+          "type": "int8_t",
+          "name": "m_unk28_3",
+          "offset": 43
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_unk2C",
+          "offset": 44
+        },
+        {
+          "type": "char*",
+          "name": "m_url",
+          "offset": 48
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_unk34",
+          "offset": 52
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_unk38",
+          "offset": 56
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_unk3C",
+          "offset": 60
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_unk40",
+          "offset": 64
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_unk44",
+          "offset": 68
+        },
+        {
+          "type": "TSGrowableArray_pointer_to_char",
+          "name": "m_dependencies",
+          "offset": 72
         }
       ]
     },
@@ -52513,18 +53064,33 @@
       ]
     },
     {
-      "name": "Token",
-      "size": 16,
+      "name": "expdesc",
+      "size": 24,
       "members": [
         {
-          "type": "int32_t",
-          "name": "token",
+          "type": "expkind",
+          "name": "k",
           "offset": 0
         },
         {
-          "type": "Token__seminfo",
-          "name": "seminfo",
+          "type": "int32_t",
+          "name": "unk04",
+          "offset": 4
+        },
+        {
+          "type": "expdesc__u",
+          "name": "u",
           "offset": 8
+        },
+        {
+          "type": "int32_t",
+          "name": "t",
+          "offset": 16
+        },
+        {
+          "type": "int32_t",
+          "name": "f",
+          "offset": 20
         }
       ]
     },
@@ -52571,6 +53137,22 @@
       ]
     },
     {
+      "name": "Token",
+      "size": 16,
+      "members": [
+        {
+          "type": "int32_t",
+          "name": "token",
+          "offset": 0
+        },
+        {
+          "type": "Token__seminfo",
+          "name": "seminfo",
+          "offset": 8
+        }
+      ]
+    },
+    {
       "name": "Zio",
       "size": 20,
       "members": [
@@ -52597,6 +53179,69 @@
         {
           "type": "lua_State*",
           "name": "L",
+          "offset": 16
+        }
+      ]
+    },
+    {
+      "name": "DumpState",
+      "size": 20,
+      "members": [
+        {
+          "type": "lua_State*",
+          "name": "L",
+          "offset": 0
+        },
+        {
+          "type": "lua_Writer",
+          "name": "writer",
+          "offset": 4
+        },
+        {
+          "type": "void*",
+          "name": "data",
+          "offset": 8
+        },
+        {
+          "type": "int32_t",
+          "name": "strip",
+          "offset": 12
+        },
+        {
+          "type": "int32_t",
+          "name": "status",
+          "offset": 16
+        }
+      ]
+    },
+    {
+      "name": "MatchState",
+      "size": 272,
+      "members": [
+        {
+          "type": "char*",
+          "name": "src_init",
+          "offset": 0
+        },
+        {
+          "type": "char*",
+          "name": "src_end",
+          "offset": 4
+        },
+        {
+          "type": "lua_State*",
+          "name": "L",
+          "offset": 8
+        },
+        {
+          "type": "int32_t",
+          "name": "level",
+          "offset": 12
+        },
+        {
+          "type": "MatchState_capture",
+          "name": "capture",
+          "arrsize": 32,
           "offset": 16
         }
       ]
@@ -53084,8 +53729,39 @@
       ]
     },
     {
+      "name": "TSHashTable_UIADDON_HASHKEY_STRI",
+      "size": 40,
+      "members": [
+        {
+          "type": "void**",
+          "name": "v_table",
+          "offset": 0
+        },
+        {
+          "type": "TSList_UIADDON",
+          "name": "m_fulllist",
+          "offset": 4
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_fullnessIndicator",
+          "offset": 16
+        },
+        {
+          "type": "TSGrowableArray_TSList_UIADDON",
+          "name": "m_slotlistarray",
+          "offset": 20
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_slotmask",
+          "offset": 36
+        }
+      ]
+    },
+    {
       "name": "TString",
-      "size": 16,
+      "size": 24,
       "members": [
         {
           "type": "TString__dummy",
@@ -54694,6 +55370,53 @@
           "type": "TInstanceId_EvtContext",
           "name": "b_base",
           "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "ConsControl",
+      "size": 40,
+      "members": [
+        {
+          "type": "expdesc",
+          "name": "v",
+          "offset": 0
+        },
+        {
+          "type": "expdesc*",
+          "name": "t",
+          "offset": 24
+        },
+        {
+          "type": "int32_t",
+          "name": "nh",
+          "offset": 28
+        },
+        {
+          "type": "int32_t",
+          "name": "na",
+          "offset": 32
+        },
+        {
+          "type": "int32_t",
+          "name": "tostore",
+          "offset": 36
+        }
+      ]
+    },
+    {
+      "name": "LHS_assign",
+      "size": 32,
+      "members": [
+        {
+          "type": "LHS_assign*",
+          "name": "prev",
+          "offset": 0
+        },
+        {
+          "type": "expdesc",
+          "name": "v",
+          "offset": 8
         }
       ]
     },
@@ -58071,6 +58794,68 @@
       ]
     },
     {
+      "name": "CClosure",
+      "size": 48,
+      "members": [
+        {
+          "type": "GCObject*",
+          "name": "next",
+          "offset": 0
+        },
+        {
+          "type": "char*",
+          "name": "taint",
+          "offset": 4
+        },
+        {
+          "type": "lu_byte",
+          "name": "tt",
+          "offset": 8
+        },
+        {
+          "type": "lu_byte",
+          "name": "marked",
+          "offset": 9
+        },
+        {
+          "type": "lu_byte",
+          "name": "isC",
+          "offset": 10
+        },
+        {
+          "type": "lu_byte",
+          "name": "nupvalues",
+          "offset": 11
+        },
+        {
+          "type": "GCObject*",
+          "name": "gclist",
+          "offset": 12
+        },
+        {
+          "type": "Table*",
+          "name": "env",
+          "offset": 16
+        },
+        {
+          "type": "Profile*",
+          "name": "profile",
+          "offset": 20
+        },
+        {
+          "type": "lua_CFunction",
+          "name": "f",
+          "offset": 24
+        },
+        {
+          "type": "TValue",
+          "name": "upvalue",
+          "arrsize": 1,
+          "offset": 32
+        }
+      ]
+    },
+    {
       "name": "lua_State",
       "size": 128,
       "members": [
@@ -58080,8 +58865,8 @@
           "offset": 0
         },
         {
-          "type": "int32_t",
-          "name": "unk04",
+          "type": "char*",
+          "name": "taint",
           "offset": 4
         },
         {
@@ -58227,79 +59012,6 @@
       ]
     },
     {
-      "name": "UpVal_u",
-      "size": 16,
-      "members": [
-        {
-          "type": "TValue",
-          "name": "value",
-          "offset": 0
-        },
-        {
-          "type": "UpVal_u_l",
-          "name": "l",
-          "offset": 0
-        }
-      ]
-    },
-    {
-      "name": "CClosure",
-      "size": 40,
-      "members": [
-        {
-          "type": "GCObject*",
-          "name": "next",
-          "offset": 0
-        },
-        {
-          "type": "uint32_t",
-          "name": "unk04",
-          "offset": 4
-        },
-        {
-          "type": "lu_byte",
-          "name": "tt",
-          "offset": 8
-        },
-        {
-          "type": "lu_byte",
-          "name": "marked",
-          "offset": 9
-        },
-        {
-          "type": "lu_byte",
-          "name": "isC",
-          "offset": 10
-        },
-        {
-          "type": "lu_byte",
-          "name": "nupvalues",
-          "offset": 11
-        },
-        {
-          "type": "GCObject*",
-          "name": "gclist",
-          "offset": 12
-        },
-        {
-          "type": "Table*",
-          "name": "env",
-          "offset": 16
-        },
-        {
-          "type": "lua_CFunction",
-          "name": "f",
-          "offset": 20
-        },
-        {
-          "type": "TValue",
-          "name": "upvalue",
-          "arrsize": 1,
-          "offset": 24
-        }
-      ]
-    },
-    {
       "name": "TKey",
       "size": 16,
       "members": [
@@ -58311,6 +59023,22 @@
         {
           "type": "TValue",
           "name": "tvk",
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "UpVal_u",
+      "size": 16,
+      "members": [
+        {
+          "type": "TValue",
+          "name": "value",
+          "offset": 0
+        },
+        {
+          "type": "UpVal_u_l",
+          "name": "l",
           "offset": 0
         }
       ]
@@ -59021,7 +59749,7 @@
     },
     {
       "name": "Closure",
-      "size": 40,
+      "size": 48,
       "members": [
         {
           "type": "CClosure",
@@ -59032,6 +59760,22 @@
           "type": "LClosure",
           "name": "l",
           "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "Node",
+      "size": 32,
+      "members": [
+        {
+          "type": "TValue",
+          "name": "i_val",
+          "offset": 0
+        },
+        {
+          "type": "Node__i_key",
+          "name": "i_key",
+          "offset": 16
         }
       ]
     },
@@ -59062,22 +59806,6 @@
         {
           "type": "UpVal__u",
           "name": "u",
-          "offset": 16
-        }
-      ]
-    },
-    {
-      "name": "Node",
-      "size": 32,
-      "members": [
-        {
-          "type": "TValue",
-          "name": "i_val",
-          "offset": 0
-        },
-        {
-          "type": "Node__i_key",
-          "name": "i_key",
           "offset": 16
         }
       ]
@@ -59228,52 +59956,6 @@
       ]
     },
     {
-      "name": "GCObject",
-      "size": 128,
-      "members": [
-        {
-          "type": "GCheader",
-          "name": "gch",
-          "offset": 0
-        },
-        {
-          "type": "GCObject__ts",
-          "name": "ts",
-          "offset": 0
-        },
-        {
-          "type": "GCObject__u",
-          "name": "u",
-          "offset": 0
-        },
-        {
-          "type": "GCObject__cl",
-          "name": "cl",
-          "offset": 0
-        },
-        {
-          "type": "Table",
-          "name": "h",
-          "offset": 0
-        },
-        {
-          "type": "Proto",
-          "name": "p",
-          "offset": 0
-        },
-        {
-          "type": "UpVal",
-          "name": "uv",
-          "offset": 0
-        },
-        {
-          "type": "lua_State",
-          "name": "th",
-          "offset": 0
-        }
-      ]
-    },
-    {
       "name": "global_State",
       "size": 264,
       "members": [
@@ -59378,46 +60060,92 @@
           "offset": 84
         },
         {
+          "type": "GCUsage*",
+          "name": "gcusage",
+          "offset": 88
+        },
+        {
+          "type": "GCTime*",
+          "name": "gctime",
+          "offset": 92
+        },
+        {
           "type": "lua_CFunction",
           "name": "panic",
-          "offset": 88
+          "offset": 96
         },
         {
           "type": "TValue",
           "name": "l_registry",
-          "offset": 96
+          "offset": 104
         },
         {
           "type": "lua_State*",
           "name": "mainthread",
-          "offset": 112
+          "offset": 120
         },
         {
           "type": "UpVal",
           "name": "uvhead",
-          "offset": 120
+          "offset": 128
         },
         {
           "type": "Table*",
           "name": "mt",
           "arrsize": 9,
-          "offset": 152
-        },
-        {
-          "type": "uint32_t",
-          "name": "unkBC",
-          "offset": 188
-        },
-        {
-          "type": "uint32_t",
-          "name": "unkC0",
-          "offset": 192
+          "offset": 160
         },
         {
           "type": "TString*",
           "name": "tmname",
           "arrsize": 17,
           "offset": 196
+        }
+      ]
+    },
+    {
+      "name": "GCObject",
+      "size": 128,
+      "members": [
+        {
+          "type": "GCheader",
+          "name": "gch",
+          "offset": 0
+        },
+        {
+          "type": "GCObject__ts",
+          "name": "ts",
+          "offset": 0
+        },
+        {
+          "type": "GCObject__u",
+          "name": "u",
+          "offset": 0
+        },
+        {
+          "type": "GCObject__cl",
+          "name": "cl",
+          "offset": 0
+        },
+        {
+          "type": "Table",
+          "name": "h",
+          "offset": 0
+        },
+        {
+          "type": "Proto",
+          "name": "p",
+          "offset": 0
+        },
+        {
+          "type": "UpVal",
+          "name": "uv",
+          "offset": 0
+        },
+        {
+          "type": "lua_State",
+          "name": "th",
+          "offset": 0
         }
       ]
     },
@@ -60137,15 +60865,15 @@
       ]
     },
     {
-      "name": "Token__seminfo",
+      "name": "expdesc__u",
       "members": [
         {
-          "type": "lua_Number",
-          "name": "r"
+          "type": "expdesc__s",
+          "name": "s"
         },
         {
-          "type": "TString*",
-          "name": "ts"
+          "type": "lua_Number",
+          "name": "nval"
         }
       ]
     },
@@ -60192,6 +60920,19 @@
       ]
     },
     {
+      "name": "Token__seminfo",
+      "members": [
+        {
+          "type": "lua_Number",
+          "name": "r"
+        },
+        {
+          "type": "TString*",
+          "name": "ts"
+        }
+      ]
+    },
+    {
       "name": "GCObject__ts",
       "members": [
         {
@@ -60218,19 +60959,6 @@
       ]
     },
     {
-      "name": "UpVal__u",
-      "members": [
-        {
-          "type": "TValue",
-          "name": "value"
-        },
-        {
-          "type": "UpVal_u_l",
-          "name": "l"
-        }
-      ]
-    },
-    {
       "name": "Node__i_key",
       "members": [
         {
@@ -60240,6 +60968,19 @@
         {
           "type": "TValue",
           "name": "tvk"
+        }
+      ]
+    },
+    {
+      "name": "UpVal__u",
+      "members": [
+        {
+          "type": "TValue",
+          "name": "value"
+        },
+        {
+          "type": "UpVal_u_l",
+          "name": "l"
         }
       ]
     },

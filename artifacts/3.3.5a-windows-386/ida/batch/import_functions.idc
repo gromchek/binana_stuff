@@ -498,6 +498,10 @@ static import_functions() {
 	set_func_cmt(0x0083D9F0, "CM2Shared::LowPrioritySequenceFailedCallback(void*)", 0);
 	set_func_cmt(0x0083DA10, "CM2Shared::LoadLowPrioritySequence(unsigned short)", 0);
 	set_func_cmt(0x0083DC90, "CM2Shared::Release()", 0);
+	set_func_cmt(0x0085B030, "invented name", 0);
+	set_func_cmt(0x0085B0F0, "invented name", 0);
+	set_func_cmt(0x0085B160, "added by Blizzard - invented name", 0);
+	set_func_cmt(0x0085CE30, "double check UpVal structure", 0);
 	set_func_cmt(0x0085ECB0, "TODO: understand changes to structures", 0);
 	set_func_cmt(0x0086B5A0, "Prevents code outside the .text section from running", 0);
 	set_func_cmt(0x0086B9A0, "OsGetProcessorFeaturesEx(int&)", 0);
@@ -529,6 +533,8 @@ static import_functions() {
 	set_func_cmt(0x00876BE0, "CShaderEffectManager::CreateEffect(char const*)", 0);
 	set_func_cmt(0x00876CA0, "CShaderEffectManager::ParseEffectCallback(CShaderEffectParser::ParsedEffect const&, void*)", 0);
 	set_func_cmt(0x00876D90, "CShaderEffectManager::AddEffectFile(char const*)", 0);
+	set_func_cmt(0x0088B9C0, "static cast of floating-point to int32", 0);
+	set_func_cmt(0x0088D0C0, "Calculates x raised to the y power based on the top values in the stack.", 0);
 	set_func_cmt(0x008A1420, "known names: System_File::Shutdown, CVGxVideoOptionsVersionCallback", 0);
 	set_func_cmt(0x008C8DE0, "Known names: GxDefaultApi, CCommand_Perf", 0);
 	set_func_cmt(0x008CA0B0, "GruntLogin::Connected(NETADDR const&)", 0);
