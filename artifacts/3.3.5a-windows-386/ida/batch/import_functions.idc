@@ -149,6 +149,7 @@ static import_functions() {
 	set_func_cmt(0x004C1B90, "void C44Matrix::Scale(const C3Vector& scale)", 0);
 	set_func_cmt(0x004C1BF0, "void C44Matrix::Scale(float scale)", 0);
 	set_func_cmt(0x004C2440, "C44Matrix C44Matrix::Adjoint()", 0);
+	set_func_cmt(0x004D5EE0, "known names: CGObject_C__GetFacing, CGCamera__GetDefaultZoomMinDistance", 0);
 	set_func_cmt(0x004DBFD0, "thanks namreeb :^)", 0);
 	set_func_cmt(0x004DE960, "CRealmList::SetPreferredInfo(unsigned int, int, int)", 0);
 	set_func_cmt(0x004DF580, "CRealmList::Initialize()", 0);

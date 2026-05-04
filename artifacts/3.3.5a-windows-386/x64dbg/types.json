@@ -2890,58 +2890,58 @@
       "size": 44,
       "members": [
         {
-          "type": "void*",
-          "name": "fn_InternalInitialize",
+          "type": "void**",
+          "name": "_00_InternalInitialize",
           "offset": 0
         },
         {
-          "type": "void*",
-          "name": "fn_InternalDestroy",
+          "type": "void**",
+          "name": "_01_InternalDestroy",
           "offset": 4
         },
         {
-          "type": "void*",
-          "name": "fn_InternalFetchRead",
+          "type": "void**",
+          "name": "_02_InternalFetchRead",
           "offset": 8
         },
         {
-          "type": "void*",
-          "name": "fn_InternalFetchWrite",
+          "type": "void**",
+          "name": "_03_InternalFetchWrite",
           "offset": 12
         },
         {
-          "type": "void*",
-          "name": "fn_destructor",
+          "type": "void**",
+          "name": "_04_destructor",
           "offset": 16
         },
         {
-          "type": "void*",
-          "name": "fn_IsRead",
+          "type": "void**",
+          "name": "_05_IsRead",
           "offset": 20
         },
         {
-          "type": "void*",
-          "name": "fn_Reset",
+          "type": "void**",
+          "name": "_06_Reset",
           "offset": 24
         },
         {
-          "type": "void*",
-          "name": "fn_Finalize",
+          "type": "void**",
+          "name": "_07_Finalize",
           "offset": 28
         },
         {
-          "type": "void*",
-          "name": "fn_GetBufferParams",
+          "type": "void**",
+          "name": "_08_GetBufferParams",
           "offset": 32
         },
         {
-          "type": "void*",
-          "name": "fn_DetachBuffer",
+          "type": "void**",
+          "name": "_09_DetachBuffer",
           "offset": 36
         },
         {
-          "type": "void*",
-          "name": "fn_GetHeaderSpace",
+          "type": "void**",
+          "name": "_10_GetHeaderSpace",
           "offset": 40
         }
       ]
@@ -2999,423 +2999,423 @@
       "size": 336,
       "members": [
         {
-          "type": "void*",
-          "name": "v_fn_0_ITexMarkAsUpdated",
+          "type": "void**",
+          "name": "_00_ITexMarkAsUpdated",
           "offset": 0
         },
         {
-          "type": "void*",
-          "name": "v_fn_1_IRsSendToHw",
+          "type": "void**",
+          "name": "_01_IRsSendToHw",
           "offset": 4
         },
         {
-          "type": "void*",
-          "name": "v_fn_2_ICursorCreate",
+          "type": "void**",
+          "name": "_02_ICursorCreate",
           "offset": 8
         },
         {
-          "type": "void*",
-          "name": "v_fn_3_ICursorDestroy",
+          "type": "void**",
+          "name": "_03_ICursorDestroy",
           "offset": 12
         },
         {
-          "type": "void*",
-          "name": "v_fn_4_ICursorDraw",
+          "type": "void**",
+          "name": "_04_ICursorDraw",
           "offset": 16
         },
         {
-          "type": "void*",
-          "name": "v_fn_5_NotifyOnDeviceRestored",
+          "type": "void**",
+          "name": "_05_NotifyOnDeviceRestored",
           "offset": 20
         },
         {
-          "type": "void*",
-          "name": "v_fn_6_NotifyOnTextureRecreation",
+          "type": "void**",
+          "name": "_06_NotifyOnTextureRecreation",
           "offset": 24
         },
         {
-          "type": "void*",
-          "name": "v_fn_7_NotifyOnStereoChanged",
+          "type": "void**",
+          "name": "_07_NotifyOnStereoChanged",
           "offset": 28
         },
         {
-          "type": "void*",
-          "name": "v_fn_8_scalar_deleting_destructor",
+          "type": "void**",
+          "name": "_08_scalar_deleting_destructor",
           "offset": 32
         },
         {
-          "type": "void*",
-          "name": "v_fn_9_DeviceCreate",
+          "type": "void**",
+          "name": "_09_DeviceCreate",
           "offset": 36
         },
         {
-          "type": "void*",
-          "name": "v_fn_10_DeviceCreate",
+          "type": "void**",
+          "name": "_10_DeviceCreate",
           "offset": 40
         },
         {
-          "type": "void*",
-          "name": "v_fn_11_DeviceDestroy",
+          "type": "void**",
+          "name": "_11_DeviceDestroy",
           "offset": 44
         },
         {
-          "type": "void*",
-          "name": "v_fn_12_DeviceEvictResources",
+          "type": "void**",
+          "name": "_12_DeviceEvictResources",
           "offset": 48
         },
         {
-          "type": "void*",
-          "name": "v_fn_13_DeviceSetFormat",
+          "type": "void**",
+          "name": "_13_DeviceSetFormat",
           "offset": 52
         },
         {
-          "type": "void*",
-          "name": "v_fn_14_DeviceSetBaseMipLevel",
+          "type": "void**",
+          "name": "_14_DeviceSetBaseMipLevel",
           "offset": 56
         },
         {
-          "type": "void*",
-          "name": "v_fn_15_DeviceSetGamma",
+          "type": "void**",
+          "name": "_15_DeviceSetGamma",
           "offset": 60
         },
         {
-          "type": "void*",
-          "name": "v_fn_16_DeviceSetGamma",
+          "type": "void**",
+          "name": "_16_DeviceSetGamma",
           "offset": 64
         },
         {
-          "type": "void*",
-          "name": "v_fn_17_DeviceWindow",
+          "type": "void**",
+          "name": "_17_DeviceWindow",
           "offset": 68
         },
         {
-          "type": "void*",
-          "name": "v_fn_18_DeviceTakeScreenShot",
+          "type": "void**",
+          "name": "_18_DeviceTakeScreenShot",
           "offset": 72
         },
         {
-          "type": "void*",
-          "name": "v_fn_19_DeviceReadScreenShot",
+          "type": "void**",
+          "name": "_19_DeviceReadScreenShot",
           "offset": 76
         },
         {
-          "type": "void*",
-          "name": "v_fn_20_DeviceReadPixels",
+          "type": "void**",
+          "name": "_20_DeviceReadPixels",
           "offset": 80
         },
         {
-          "type": "void*",
-          "name": "v_fn_21_DeviceReadDepths",
+          "type": "void**",
+          "name": "_21_DeviceReadDepths",
           "offset": 84
         },
         {
-          "type": "void*",
-          "name": "v_fn_22_DeviceWM",
+          "type": "void**",
+          "name": "_22_DeviceWM",
           "offset": 88
         },
         {
-          "type": "void*",
-          "name": "v_fn_23_DeviceSetRenderTarget",
+          "type": "void**",
+          "name": "_23_DeviceSetRenderTarget",
           "offset": 92
         },
         {
-          "type": "void*",
-          "name": "v_fn_24",
+          "type": "void**",
+          "name": "_24",
           "offset": 96
         },
         {
-          "type": "void*",
-          "name": "v_fn_25",
+          "type": "void**",
+          "name": "_25",
           "offset": 100
         },
         {
-          "type": "void*",
-          "name": "v_fn_26_DeviceResolveDepthBuffer",
+          "type": "void**",
+          "name": "_26_DeviceResolveDepthBuffer",
           "offset": 104
         },
         {
-          "type": "void*",
-          "name": "v_fn_27_DeviceCopyTex",
+          "type": "void**",
+          "name": "_27_DeviceCopyTex",
           "offset": 108
         },
         {
-          "type": "void*",
-          "name": "v_fn_28_DeviceOverride",
+          "type": "void**",
+          "name": "_28_DeviceOverride",
           "offset": 112
         },
         {
-          "type": "void*",
-          "name": "v_fn_29_AddDeviceRestoredCallback",
+          "type": "void**",
+          "name": "_29_AddDeviceRestoredCallback",
           "offset": 116
         },
         {
-          "type": "void*",
-          "name": "v_fn_30_RemoveDeviceRestoredCallback",
+          "type": "void**",
+          "name": "_30_RemoveDeviceRestoredCallback",
           "offset": 120
         },
         {
-          "type": "void*",
-          "name": "v_fn_31_AddTextureRecreationCallback",
+          "type": "void**",
+          "name": "_31_AddTextureRecreationCallback",
           "offset": 124
         },
         {
-          "type": "void*",
-          "name": "v_fn_32_RemoveTextureRecreationCallback",
+          "type": "void**",
+          "name": "_32_RemoveTextureRecreationCallback",
           "offset": 128
         },
         {
-          "type": "void*",
-          "name": "v_fn_33_AddStereoChangedCallback",
+          "type": "void**",
+          "name": "_33_AddStereoChangedCallback",
           "offset": 132
         },
         {
-          "type": "void*",
-          "name": "v_fn_34_RemoveStereoChangedCallback",
+          "type": "void**",
+          "name": "_34_RemoveStereoChangedCallback",
           "offset": 136
         },
         {
-          "type": "void*",
-          "name": "v_fn_35_CapsWindowSize",
+          "type": "void**",
+          "name": "_35_CapsWindowSize",
           "offset": 140
         },
         {
-          "type": "void*",
-          "name": "v_fn_36_CapsWindowSizeInScreenCoords",
+          "type": "void**",
+          "name": "_36_CapsWindowSizeInScreenCoords",
           "offset": 144
         },
         {
-          "type": "void*",
-          "name": "v_fn_37_LogCrashInfo",
+          "type": "void**",
+          "name": "_37_LogCrashInfo",
           "offset": 148
         },
         {
-          "type": "void*",
-          "name": "v_fn_38_ScenePresent",
+          "type": "void**",
+          "name": "_38_ScenePresent",
           "offset": 152
         },
         {
-          "type": "void*",
-          "name": "v_fn_39_SceneClear",
+          "type": "void**",
+          "name": "_39_SceneClear",
           "offset": 156
         },
         {
-          "type": "void*",
-          "name": "v_fn_40_XformSetProjection",
+          "type": "void**",
+          "name": "_40_XformSetProjection",
           "offset": 160
         },
         {
-          "type": "void*",
-          "name": "v_fn_41_XformSetView",
+          "type": "void**",
+          "name": "_41_XformSetView",
           "offset": 164
         },
         {
-          "type": "void*",
-          "name": "v_fn_42_Draw",
+          "type": "void**",
+          "name": "_42_Draw",
           "offset": 168
         },
         {
-          "type": "void*",
-          "name": "v_fn_43_PrimBegin",
+          "type": "void**",
+          "name": "_43_PrimBegin",
           "offset": 172
         },
         {
-          "type": "void*",
-          "name": "v_fn_44_PrimDrawElements",
+          "type": "void**",
+          "name": "_44_PrimDrawElements",
           "offset": 176
         },
         {
-          "type": "void*",
-          "name": "v_fn_45_PrimVertex",
+          "type": "void**",
+          "name": "_45_PrimVertex",
           "offset": 180
         },
         {
-          "type": "void*",
-          "name": "v_fn_46_PrimTexCoord",
+          "type": "void**",
+          "name": "_46_PrimTexCoord",
           "offset": 184
         },
         {
-          "type": "void*",
-          "name": "v_fn_47_PrimNormal",
+          "type": "void**",
+          "name": "_47_PrimNormal",
           "offset": 188
         },
         {
-          "type": "void*",
-          "name": "v_fn_48_PrimColor",
+          "type": "void**",
+          "name": "_48_PrimColor",
           "offset": 192
         },
         {
-          "type": "void*",
-          "name": "v_fn_49_PrimPointSize",
+          "type": "void**",
+          "name": "_49_PrimPointSize",
           "offset": 196
         },
         {
-          "type": "void*",
-          "name": "v_fn_50_PrimLineWidth",
+          "type": "void**",
+          "name": "_50_PrimLineWidth",
           "offset": 200
         },
         {
-          "type": "void*",
-          "name": "v_fn_51_MasterEnableSet",
+          "type": "void**",
+          "name": "_51_MasterEnableSet",
           "offset": 204
         },
         {
-          "type": "void*",
-          "name": "v_fn_52_PoolSizeSet",
+          "type": "void**",
+          "name": "_52_PoolSizeSet",
           "offset": 208
         },
         {
-          "type": "void*",
-          "name": "v_fn_53_PoolDestroy",
+          "type": "void**",
+          "name": "_53_PoolDestroy",
           "offset": 212
         },
         {
-          "type": "void*",
-          "name": "v_fn_54_BufLock",
+          "type": "void**",
+          "name": "_54_BufLock",
           "offset": 216
         },
         {
-          "type": "void*",
-          "name": "v_fn_55_BufUnlock",
+          "type": "void**",
+          "name": "_55_BufUnlock",
           "offset": 220
         },
         {
-          "type": "void*",
-          "name": "v_fn_56_BufData",
+          "type": "void**",
+          "name": "_56_BufData",
           "offset": 224
         },
         {
-          "type": "void*",
-          "name": "v_fn_57_TexCreate",
+          "type": "void**",
+          "name": "_57_TexCreate",
           "offset": 228
         },
         {
-          "type": "void*",
-          "name": "v_fn_58_TexDestroy",
+          "type": "void**",
+          "name": "_58_TexDestroy",
           "offset": 232
         },
         {
-          "type": "void*",
-          "name": "v_fn_59_TexCopy",
+          "type": "void**",
+          "name": "_59_TexCopy",
           "offset": 236
         },
         {
-          "type": "void*",
-          "name": "v_fn_60_TexStretch",
+          "type": "void**",
+          "name": "_60_TexStretch",
           "offset": 240
         },
         {
-          "type": "void*",
-          "name": "v_fn_61_TexSetCacheSize",
+          "type": "void**",
+          "name": "_61_TexSetCacheSize",
           "offset": 244
         },
         {
-          "type": "void*",
-          "name": "v_fn_62_QueryCreate",
+          "type": "void**",
+          "name": "_62_QueryCreate",
           "offset": 248
         },
         {
-          "type": "void*",
-          "name": "v_fn_63_QueryDestroy",
+          "type": "void**",
+          "name": "_63_QueryDestroy",
           "offset": 252
         },
         {
-          "type": "void*",
-          "name": "v_fn_64_QueryBegin",
+          "type": "void**",
+          "name": "_64_QueryBegin",
           "offset": 256
         },
         {
-          "type": "void*",
-          "name": "v_fn_65_QueryEnd",
+          "type": "void**",
+          "name": "_65_QueryEnd",
           "offset": 260
         },
         {
-          "type": "void*",
-          "name": "v_fn_66_QueryGetParam",
+          "type": "void**",
+          "name": "_66_QueryGetParam",
           "offset": 264
         },
         {
-          "type": "void*",
-          "name": "v_fn_67_QueryGetData",
+          "type": "void**",
+          "name": "_67_QueryGetData",
           "offset": 268
         },
         {
-          "type": "void*",
-          "name": "v_fn_68_ShaderCreate",
+          "type": "void**",
+          "name": "_68_ShaderCreate",
           "offset": 272
         },
         {
-          "type": "void*",
-          "name": "v_fn_69_ShaderDestroy",
+          "type": "void**",
+          "name": "_69_ShaderDestroy",
           "offset": 276
         },
         {
-          "type": "void*",
-          "name": "v_fn_70_ShaderConstantsSet",
+          "type": "void**",
+          "name": "_70_ShaderConstantsSet",
           "offset": 280
         },
         {
-          "type": "void*",
-          "name": "v_fn_71_IShaderReload",
+          "type": "void**",
+          "name": "_71_IShaderReload",
           "offset": 284
         },
         {
-          "type": "void*",
-          "name": "v_fn_72_IShaderCreate",
+          "type": "void**",
+          "name": "_72_IShaderCreate",
           "offset": 288
         },
         {
-          "type": "void*",
-          "name": "v_fn_73_CursorSetVisible",
+          "type": "void**",
+          "name": "_73_CursorSetVisible",
           "offset": 292
         },
         {
-          "type": "void*",
-          "name": "v_fn_74_CursorLock",
+          "type": "void**",
+          "name": "_74_CursorLock",
           "offset": 296
         },
         {
-          "type": "void*",
-          "name": "v_fn_75_CursorUnlock",
+          "type": "void**",
+          "name": "_75_CursorUnlock",
           "offset": 300
         },
         {
-          "type": "void*",
-          "name": "v_fn_76_StereoSetConvergence",
+          "type": "void**",
+          "name": "_76_StereoSetConvergence",
           "offset": 304
         },
         {
-          "type": "void*",
-          "name": "v_fn_77_StereoGetConvergence",
+          "type": "void**",
+          "name": "_77_StereoGetConvergence",
           "offset": 308
         },
         {
-          "type": "void*",
-          "name": "v_fn_78_StereoSetSeparation",
+          "type": "void**",
+          "name": "_78_StereoSetSeparation",
           "offset": 312
         },
         {
-          "type": "void*",
-          "name": "v_fn_79_StereoGetSeparation",
+          "type": "void**",
+          "name": "_79_StereoGetSeparation",
           "offset": 316
         },
         {
-          "type": "void*",
-          "name": "v_fn_80_StereoEnabled",
+          "type": "void**",
+          "name": "_80_StereoEnabled",
           "offset": 320
         },
         {
-          "type": "void*",
-          "name": "v_fn_81_DebugGroupBegin",
+          "type": "void**",
+          "name": "_81_DebugGroupBegin",
           "offset": 324
         },
         {
-          "type": "void*",
-          "name": "v_fn_82_DebugGroupEnd",
+          "type": "void**",
+          "name": "_82_DebugGroupEnd",
           "offset": 328
         },
         {
-          "type": "void*",
-          "name": "v_fn_83_DebugEvent",
+          "type": "void**",
+          "name": "_83_DebugEvent",
           "offset": 332
         }
       ]
@@ -12059,6 +12059,33 @@
           "name": "Data4",
           "arrsize": 8,
           "offset": 8
+        }
+      ]
+    },
+    {
+      "name": "GameClientCommands",
+      "size": 4,
+      "members": [
+        {
+          "type": "GameClientCommands__v_table*",
+          "name": "v_table",
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "GameClientCommands__v_table",
+      "size": 8,
+      "members": [
+        {
+          "type": "void**",
+          "name": "Install",
+          "offset": 0
+        },
+        {
+          "type": "void**",
+          "name": "Uninstall",
+          "offset": 4
         }
       ]
     },
