@@ -1,6 +1,10 @@
 {
   "types": [
     {
+      "type": "uint32_t",
+      "name": "ATOMIC32"
+    },
+    {
       "type": "void**",
       "name": "BLIT_FUNCTION_interface"
     },
@@ -461,6 +465,10 @@
       "name": "M2PASS"
     },
     {
+      "type": "void**",
+      "name": "MESSAGE_HANDLER_interface"
+    },
+    {
       "type": "long long",
       "name": "MOUSEBUTTON"
     },
@@ -475,6 +483,10 @@
     {
       "type": "int",
       "name": "NETMESSAGE"
+    },
+    {
+      "type": "int",
+      "name": "NETSTATE"
     },
     {
       "type": "int",
@@ -511,6 +523,10 @@
     {
       "type": "int",
       "name": "PIXEL_FORMAT"
+    },
+    {
+      "type": "int",
+      "name": "PLAYER_TYPE"
     },
     {
       "type": "void**",
@@ -561,8 +577,28 @@
       "name": "UIADDON_SECURITY_STATUS"
     },
     {
+      "type": "int",
+      "name": "WC_SEND_RESULT"
+    },
+    {
+      "type": "void**",
+      "name": "WOWCONNECTIONINIT"
+    },
+    {
+      "type": "int",
+      "name": "WOWCS_OPS"
+    },
+    {
+      "type": "int",
+      "name": "WOWC_TYPE"
+    },
+    {
       "type": "uint64_t",
       "name": "WOWGUID"
+    },
+    {
+      "type": "int",
+      "name": "WOW_CONN_STATE"
     },
     {
       "type": "int",
@@ -713,6 +749,10 @@
       "name": "HTEXTURE"
     },
     {
+      "type": "MESSAGE_HANDLER_interface",
+      "name": "MESSAGE_HANDLER"
+    },
+    {
       "type": "Pfunc_interface",
       "name": "Pfunc"
     },
@@ -771,6 +811,30 @@
     {
       "type": "TSList_CBaseManaged",
       "name": "TSExplicitList_CBaseManaged"
+    },
+    {
+      "type": "TSList_NetClient__HELDMESSAGE",
+      "name": "TSExplicitList_NetClient__HELDMESSAGE"
+    },
+    {
+      "type": "TSList_NETEVENTQUEUENODE",
+      "name": "TSExplicitList_NETEVENTQUEUENODE"
+    },
+    {
+      "type": "TSList_WowConnection__SENDNODE",
+      "name": "TSExplicitList_WowConnection__SENDNODE"
+    },
+    {
+      "type": "TSList_WowConnection",
+      "name": "TSExplicitList_WowConnection"
+    },
+    {
+      "type": "TSList_CGObject_C",
+      "name": "TSExplicitList_CGObject_C"
+    },
+    {
+      "type": "TSList_NETCLIENTNODE",
+      "name": "TSExplicitList_NETCLIENTNODE"
     },
     {
       "type": "TSList_CStatus__STATUSENTRY",
@@ -3489,6 +3553,47 @@
           "type": "uint8_t",
           "name": "a",
           "offset": 3
+        }
+      ]
+    },
+    {
+      "name": "CLIENT_NETSTATS",
+      "size": 28,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "bytesSent",
+          "offset": 0
+        },
+        {
+          "type": "uint32_t",
+          "name": "messagesSent",
+          "offset": 4
+        },
+        {
+          "type": "uint32_t",
+          "name": "sendTimestamp",
+          "offset": 8
+        },
+        {
+          "type": "uint32_t",
+          "name": "bytesReceived",
+          "offset": 12
+        },
+        {
+          "type": "uint32_t",
+          "name": "messagesReceived",
+          "offset": 16
+        },
+        {
+          "type": "uint32_t",
+          "name": "receivTimestamp",
+          "offset": 20
+        },
+        {
+          "type": "uint32_t",
+          "name": "logTimestamp",
+          "offset": 24
         }
       ]
     },
@@ -9967,6 +10072,62 @@
           "name": "m_camera",
           "arrsize": 8,
           "offset": 8
+        }
+      ]
+    },
+    {
+      "name": "CommandManager",
+      "size": 40,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "unk00",
+          "offset": 0
+        },
+        {
+          "type": "uint32_t",
+          "name": "unk04",
+          "offset": 4
+        },
+        {
+          "type": "uint32_t",
+          "name": "unk08",
+          "offset": 8
+        },
+        {
+          "type": "uint32_t",
+          "name": "unk0C",
+          "offset": 12
+        },
+        {
+          "type": "uint32_t",
+          "name": "unk10",
+          "offset": 16
+        },
+        {
+          "type": "uint32_t",
+          "name": "unk14",
+          "offset": 20
+        },
+        {
+          "type": "uint32_t",
+          "name": "unk18",
+          "offset": 24
+        },
+        {
+          "type": "uint32_t",
+          "name": "unk1C",
+          "offset": 28
+        },
+        {
+          "type": "uint32_t",
+          "name": "unk20",
+          "offset": 32
+        },
+        {
+          "type": "NetClient*",
+          "name": "unk24",
+          "offset": 36
         }
       ]
     },
@@ -22118,6 +22279,34 @@
       ]
     },
     {
+      "name": "LoginData",
+      "size": 1328,
+      "members": [
+        {
+          "type": "char",
+          "name": "m_account",
+          "arrsize": 1280,
+          "offset": 0
+        },
+        {
+          "type": "int32_t",
+          "name": "m_loginServerID",
+          "offset": 1280
+        },
+        {
+          "type": "uint8_t",
+          "name": "m_sessionKey",
+          "arrsize": 40,
+          "offset": 1284
+        },
+        {
+          "type": "int32_t",
+          "name": "m_loginServerType",
+          "offset": 1324
+        }
+      ]
+    },
+    {
       "name": "M2Batch",
       "size": 24,
       "members": [
@@ -22996,6 +23185,23 @@
       ]
     },
     {
+      "name": "NETADDR",
+      "size": 16,
+      "members": [
+        {
+          "type": "uint16_t",
+          "name": "family",
+          "offset": 0
+        },
+        {
+          "type": "char",
+          "name": "data",
+          "arrsize": 14,
+          "offset": 2
+        }
+      ]
+    },
+    {
       "name": "NPCSoundsRec",
       "size": 20,
       "members": [
@@ -23077,6 +23283,112 @@
           "type": "int32_t",
           "name": "m_language",
           "offset": 8
+        }
+      ]
+    },
+    {
+      "name": "NetClient__v_table",
+      "size": 80,
+      "members": [
+        {
+          "type": "void**",
+          "name": "_00_scalar_deleting_destructor",
+          "offset": 0
+        },
+        {
+          "type": "void**",
+          "name": "_01_WCMessageReady",
+          "offset": 4
+        },
+        {
+          "type": "void**",
+          "name": "_02_WCConnected",
+          "offset": 8
+        },
+        {
+          "type": "void**",
+          "name": "_03_WCCantConnect",
+          "offset": 12
+        },
+        {
+          "type": "void**",
+          "name": "_04_WCCDisconnected",
+          "offset": 16
+        },
+        {
+          "type": "void**",
+          "name": "_05_WCGlobalLock",
+          "offset": 20
+        },
+        {
+          "type": "void**",
+          "name": "_06_WCGlobalUnlock",
+          "offset": 24
+        },
+        {
+          "type": "void**",
+          "name": "_07_WCDataReady",
+          "offset": 28
+        },
+        {
+          "type": "void**",
+          "name": "_08_WCWriteReady",
+          "offset": 32
+        },
+        {
+          "type": "void**",
+          "name": "_09_NotifyAboutToDoReads",
+          "offset": 36
+        },
+        {
+          "type": "void**",
+          "name": "_10_NotifySendDepthExceeded",
+          "offset": 40
+        },
+        {
+          "type": "void**",
+          "name": "_11_Initialize",
+          "offset": 44
+        },
+        {
+          "type": "void**",
+          "name": "_12_Destroy",
+          "offset": 48
+        },
+        {
+          "type": "void**",
+          "name": "_13_DelayedDelete",
+          "offset": 52
+        },
+        {
+          "type": "void**",
+          "name": "_14_HandleData",
+          "offset": 56
+        },
+        {
+          "type": "void**",
+          "name": "_15",
+          "offset": 60
+        },
+        {
+          "type": "void**",
+          "name": "_16_HandleConnect",
+          "offset": 64
+        },
+        {
+          "type": "void**",
+          "name": "_17_HandleDisconnect",
+          "offset": 68
+        },
+        {
+          "type": "void**",
+          "name": "_18_HandleCantConnect",
+          "offset": 72
+        },
+        {
+          "type": "void**",
+          "name": "_19_ValidateMessageId",
+          "offset": 76
         }
       ]
     },
@@ -24156,6 +24468,38 @@
       ]
     },
     {
+      "name": "RealmResponse",
+      "size": 4,
+      "members": [
+        {
+          "type": "RealmResponse__v_table*",
+          "name": "v_table",
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "RealmResponse__v_table",
+      "size": 12,
+      "members": [
+        {
+          "type": "void**",
+          "name": "HandleAuthResponse",
+          "offset": 0
+        },
+        {
+          "type": "void**",
+          "name": "CharacterListReceived",
+          "offset": 4
+        },
+        {
+          "type": "void**",
+          "name": "GameServerResult",
+          "offset": 8
+        }
+      ]
+    },
+    {
       "name": "ResearchBranchRec",
       "size": 24,
       "members": [
@@ -24218,6 +24562,28 @@
       ]
     },
     {
+      "name": "SARC4Key",
+      "size": 258,
+      "members": [
+        {
+          "type": "uint8_t",
+          "name": "state",
+          "arrsize": 256,
+          "offset": 0
+        },
+        {
+          "type": "uint8_t",
+          "name": "x",
+          "offset": 256
+        },
+        {
+          "type": "uint8_t",
+          "name": "y",
+          "offset": 257
+        }
+      ]
+    },
+    {
       "name": "SCritSect",
       "size": 40,
       "members": [
@@ -24232,6 +24598,41 @@
     {
       "name": "SFile",
       "size": 0
+    },
+    {
+      "name": "SHA1",
+      "size": 96,
+      "members": [
+        {
+          "type": "uint64_t",
+          "name": "m_size",
+          "offset": 0
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_hash",
+          "arrsize": 5,
+          "offset": 8
+        },
+        {
+          "type": "uint8_t",
+          "name": "m_data",
+          "arrsize": 64,
+          "offset": 28
+        }
+      ]
+    },
+    {
+      "name": "SHA1__Digest",
+      "size": 20,
+      "members": [
+        {
+          "type": "uint8_t",
+          "name": "d",
+          "arrsize": 20,
+          "offset": 0
+        }
+      ]
     },
     {
       "name": "SLTiles",
@@ -28469,6 +28870,27 @@
       ]
     },
     {
+      "name": "TSFixedArray_CHARACTER_INFO",
+      "size": 12,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "m_alloc",
+          "offset": 0
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_count",
+          "offset": 4
+        },
+        {
+          "type": "CHARACTER_INFO*",
+          "name": "m_data",
+          "offset": 8
+        }
+      ]
+    },
+    {
       "name": "TSFixedArray_TEXTURECACHEROW",
       "size": 12,
       "members": [
@@ -29146,6 +29568,32 @@
       ]
     },
     {
+      "name": "TSGrowableArray_TSList_CGObject_C",
+      "size": 16,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "m_alloc",
+          "offset": 0
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_count",
+          "offset": 4
+        },
+        {
+          "type": "TSList_CGObject_C*",
+          "name": "m_data",
+          "offset": 8
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_chunk",
+          "offset": 12
+        }
+      ]
+    },
+    {
       "name": "TSGrowableArray_TSList_CGxShader",
       "size": 16,
       "members": [
@@ -29688,6 +30136,22 @@
         },
         {
           "type": "CChunkLiquid*",
+          "name": "m_next",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TSLink_CGObject_C",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_CGObject_C*",
+          "name": "m_prevlink",
+          "offset": 0
+        },
+        {
+          "type": "CGObject_C*",
           "name": "m_next",
           "offset": 4
         }
@@ -30366,6 +30830,54 @@
       ]
     },
     {
+      "name": "TSLink_NETCLIENTNODE",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_NETCLIENTNODE*",
+          "name": "m_prevlink",
+          "offset": 0
+        },
+        {
+          "type": "NETCLIENTNODE*",
+          "name": "m_next",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TSLink_NETEVENTQUEUENODE",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_NETEVENTQUEUENODE*",
+          "name": "m_prevlink",
+          "offset": 0
+        },
+        {
+          "type": "NETEVENTQUEUENODE*",
+          "name": "m_next",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TSLink_NetClient__HELDMESSAGE",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_NetClient__HELDMESSAGE*",
+          "name": "m_prevlink",
+          "offset": 0
+        },
+        {
+          "type": "NetClient__HELDMESSAGE*",
+          "name": "m_next",
+          "offset": 4
+        }
+      ]
+    },
+    {
       "name": "TSLink_RENDERCALLBACKNODE",
       "size": 8,
       "members": [
@@ -30424,6 +30936,38 @@
         },
         {
           "type": "UIADDON*",
+          "name": "m_next",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TSLink_WowConnection",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_WowConnection*",
+          "name": "m_prevlink",
+          "offset": 0
+        },
+        {
+          "type": "WowConnection*",
+          "name": "m_next",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TSLink_WowConnection__SENDNODE",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_WowConnection__SENDNODE*",
+          "name": "m_prevlink",
+          "offset": 0
+        },
+        {
+          "type": "WowConnection__SENDNODE*",
           "name": "m_next",
           "offset": 4
         }
@@ -32265,6 +32809,78 @@
           "type": "void*",
           "name": "v_fn_00",
           "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "WowConnectionResponse",
+      "size": 4,
+      "members": [
+        {
+          "type": "WowConnectionResponse__v_table*",
+          "name": "v_table",
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "WowConnectionResponse__v_table",
+      "size": 44,
+      "members": [
+        {
+          "type": "void**",
+          "name": "_00_scalar_deleting_destructor",
+          "offset": 0
+        },
+        {
+          "type": "void**",
+          "name": "_01_WCMessageReady",
+          "offset": 4
+        },
+        {
+          "type": "void**",
+          "name": "_02_WCConnected",
+          "offset": 8
+        },
+        {
+          "type": "void**",
+          "name": "_03_WCCantConnect",
+          "offset": 12
+        },
+        {
+          "type": "void**",
+          "name": "_04_WCCDisconnected",
+          "offset": 16
+        },
+        {
+          "type": "void**",
+          "name": "_05_WCGlobalLock",
+          "offset": 20
+        },
+        {
+          "type": "void**",
+          "name": "_06_WCGlobalUnlock",
+          "offset": 24
+        },
+        {
+          "type": "void**",
+          "name": "_07_WCDataReady",
+          "offset": 28
+        },
+        {
+          "type": "void**",
+          "name": "_08_WCWriteReady",
+          "offset": 32
+        },
+        {
+          "type": "void**",
+          "name": "_09_NotifyAboutToDoReads",
+          "offset": 36
+        },
+        {
+          "type": "void**",
+          "name": "_10_NotifySendDepthExceeded",
+          "offset": 40
         }
       ]
     },
@@ -34297,93 +34913,6 @@
           "name": "m_nodes",
           "arrsize": 1,
           "offset": 4
-        }
-      ]
-    },
-    {
-      "name": "CGObject_C",
-      "size": 220,
-      "members": [
-        {
-          "type": "CGObject_C__v_table*",
-          "name": "v_table",
-          "offset": 0
-        },
-        {
-          "type": "CGObject",
-          "name": "b_base",
-          "offset": 4
-        },
-        {
-          "type": "uint32_t",
-          "name": "unk",
-          "arrsize": 42,
-          "offset": 12
-        },
-        {
-          "type": "float",
-          "name": "m_renderScale",
-          "offset": 180
-        },
-        {
-          "type": "uint32_t",
-          "name": "unki",
-          "offset": 184
-        },
-        {
-          "type": "void*",
-          "name": "m_model",
-          "offset": 188
-        },
-        {
-          "type": "uint32_t",
-          "name": "m_highlightTypes",
-          "offset": 192
-        },
-        {
-          "type": "float",
-          "name": "m_objectHeight",
-          "offset": 196
-        },
-        {
-          "type": "uint32_t",
-          "name": "m_worldObject",
-          "offset": 200
-        },
-        {
-          "type": "uint32_t",
-          "name": "m_flags",
-          "offset": 204
-        },
-        {
-          "type": "uint32_t",
-          "name": "m_fadeStartTime",
-          "offset": 208
-        },
-        {
-          "type": "uint32_t",
-          "name": "m_fadeDuration",
-          "offset": 212
-        },
-        {
-          "type": "uint8_t",
-          "name": "m_alpha",
-          "offset": 216
-        },
-        {
-          "type": "uint8_t",
-          "name": "m_startAlpha",
-          "offset": 217
-        },
-        {
-          "type": "uint8_t",
-          "name": "m_endAlpha",
-          "offset": 218
-        },
-        {
-          "type": "uint8_t",
-          "name": "m_maxAlpha",
-          "offset": 219
         }
       ]
     },
@@ -36455,6 +36984,32 @@
       ]
     },
     {
+      "name": "NETEVENTQUEUENODE",
+      "size": 16,
+      "members": [
+        {
+          "type": "EVENTID",
+          "name": "m_eventId",
+          "offset": 0
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_timeReceived",
+          "offset": 4
+        },
+        {
+          "type": "void*",
+          "name": "m_data",
+          "offset": 8
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_dataSize",
+          "offset": 12
+        }
+      ]
+    },
+    {
       "name": "CSimpleTop__frame_layout",
       "size": 24,
       "members": [
@@ -37414,6 +37969,22 @@
       ]
     },
     {
+      "name": "NETCONNADDR",
+      "size": 32,
+      "members": [
+        {
+          "type": "NETADDR",
+          "name": "peerAddr",
+          "offset": 0
+        },
+        {
+          "type": "NETADDR",
+          "name": "selfAddr",
+          "offset": 16
+        }
+      ]
+    },
+    {
       "name": "OSEVENT",
       "size": 20,
       "members": [
@@ -37457,6 +38028,29 @@
       ]
     },
     {
+      "name": "HMAC_SHA1",
+      "size": 224,
+      "members": [
+        {
+          "type": "SHA1",
+          "name": "m_hash",
+          "offset": 0
+        },
+        {
+          "type": "uint8_t",
+          "name": "m_innerPad",
+          "arrsize": 64,
+          "offset": 96
+        },
+        {
+          "type": "uint8_t",
+          "name": "m_outerPad",
+          "arrsize": 64,
+          "offset": 160
+        }
+      ]
+    },
+    {
       "name": "SMChunkInfo",
       "size": 16,
       "members": [
@@ -37488,7 +38082,7 @@
       "members": [
         {
           "type": "SSyncObject",
-          "name": "b_base",
+          "name": "_",
           "offset": 0
         }
       ]
@@ -37499,7 +38093,18 @@
       "members": [
         {
           "type": "SSyncObject",
-          "name": "b_base",
+          "name": "_",
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "SSemaphore",
+      "size": 4,
+      "members": [
+        {
+          "type": "SSyncObject",
+          "name": "_",
           "offset": 0
         }
       ]
@@ -38743,6 +39348,17 @@
       "members": [
         {
           "type": "TSLink_CChunkLiquid",
+          "name": "m_link",
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "TSLinkedNode_CGObject_C",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_CGObject_C",
           "name": "m_link",
           "offset": 0
         }
@@ -40125,6 +40741,39 @@
       ]
     },
     {
+      "name": "TSLinkedNode_NETCLIENTNODE",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_NETCLIENTNODE",
+          "name": "m_link",
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "TSLinkedNode_NETEVENTQUEUENODE",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_NETEVENTQUEUENODE",
+          "name": "m_link",
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "TSLinkedNode_NetClient__HELDMESSAGE",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_NetClient__HELDMESSAGE",
+          "name": "m_link",
+          "offset": 0
+        }
+      ]
+    },
+    {
       "name": "TSLinkedNode_RENDERCALLBACKNODE",
       "size": 8,
       "members": [
@@ -40221,6 +40870,28 @@
       ]
     },
     {
+      "name": "TSLinkedNode_WowConnection",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_WowConnection",
+          "name": "m_link",
+          "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "TSLinkedNode_WowConnection__SENDNODE",
+      "size": 8,
+      "members": [
+        {
+          "type": "TSLink_WowConnection__SENDNODE",
+          "name": "m_link",
+          "offset": 0
+        }
+      ]
+    },
+    {
       "name": "OsTimeManager",
       "size": 40,
       "members": [
@@ -40248,6 +40919,147 @@
           "type": "double",
           "name": "timeBegin",
           "offset": 32
+        }
+      ]
+    },
+    {
+      "name": "CHARACTER_INFO",
+      "size": 392,
+      "members": [
+        {
+          "type": "WOWGUID",
+          "name": "guid",
+          "offset": 0
+        },
+        {
+          "type": "char",
+          "name": "name",
+          "arrsize": 48,
+          "offset": 8
+        },
+        {
+          "type": "uint32_t",
+          "name": "mapID",
+          "offset": 56
+        },
+        {
+          "type": "uint32_t",
+          "name": "zoneID",
+          "offset": 60
+        },
+        {
+          "type": "uint32_t",
+          "name": "guildID",
+          "offset": 64
+        },
+        {
+          "type": "C3Vector",
+          "name": "position",
+          "offset": 68
+        },
+        {
+          "type": "uint32_t",
+          "name": "inventoryItemDisplayID",
+          "arrsize": 23,
+          "offset": 80
+        },
+        {
+          "type": "uint32_t",
+          "name": "inventoryItemType",
+          "arrsize": 23,
+          "offset": 172
+        },
+        {
+          "type": "uint32_t",
+          "name": "inventoryItemVisualID",
+          "arrsize": 23,
+          "offset": 264
+        },
+        {
+          "type": "uint32_t",
+          "name": "petDisplayInfoID",
+          "offset": 356
+        },
+        {
+          "type": "uint32_t",
+          "name": "petExperienceLevel",
+          "offset": 360
+        },
+        {
+          "type": "uint32_t",
+          "name": "petCreatureFamilyID",
+          "offset": 364
+        },
+        {
+          "type": "uint32_t",
+          "name": "flags",
+          "offset": 368
+        },
+        {
+          "type": "uint32_t",
+          "name": "customizeFlags",
+          "offset": 372
+        },
+        {
+          "type": "uint8_t",
+          "name": "raceID",
+          "offset": 376
+        },
+        {
+          "type": "uint8_t",
+          "name": "classID",
+          "offset": 377
+        },
+        {
+          "type": "uint8_t",
+          "name": "sexID",
+          "offset": 378
+        },
+        {
+          "type": "uint8_t",
+          "name": "skinColorID",
+          "offset": 379
+        },
+        {
+          "type": "uint8_t",
+          "name": "faceID",
+          "offset": 380
+        },
+        {
+          "type": "uint8_t",
+          "name": "hairStyleID",
+          "offset": 381
+        },
+        {
+          "type": "uint8_t",
+          "name": "hairColorID",
+          "offset": 382
+        },
+        {
+          "type": "uint8_t",
+          "name": "facialHairStyleID",
+          "offset": 383
+        },
+        {
+          "type": "uint8_t",
+          "name": "experienceLevel",
+          "offset": 384
+        },
+        {
+          "type": "uint8_t",
+          "name": "firstLogin",
+          "offset": 385
+        }
+      ]
+    },
+    {
+      "name": "CHashKeyGUID",
+      "size": 8,
+      "members": [
+        {
+          "type": "WOWGUID",
+          "name": "m_guid",
+          "offset": 0
         }
       ]
     },
@@ -44073,6 +44885,102 @@
       ]
     },
     {
+      "name": "TSList_NetClient__HELDMESSAGE",
+      "size": 12,
+      "members": [
+        {
+          "type": "ptrdiff_t",
+          "name": "m_linkoffset",
+          "offset": 0
+        },
+        {
+          "type": "TSLink_NetClient__HELDMESSAGE",
+          "name": "m_terminator",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TSList_NETEVENTQUEUENODE",
+      "size": 12,
+      "members": [
+        {
+          "type": "ptrdiff_t",
+          "name": "m_linkoffset",
+          "offset": 0
+        },
+        {
+          "type": "TSLink_NETEVENTQUEUENODE",
+          "name": "m_terminator",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TSList_WowConnection__SENDNODE",
+      "size": 12,
+      "members": [
+        {
+          "type": "ptrdiff_t",
+          "name": "m_linkoffset",
+          "offset": 0
+        },
+        {
+          "type": "TSLink_WowConnection__SENDNODE",
+          "name": "m_terminator",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TSList_WowConnection",
+      "size": 12,
+      "members": [
+        {
+          "type": "ptrdiff_t",
+          "name": "m_linkoffset",
+          "offset": 0
+        },
+        {
+          "type": "TSLink_WowConnection",
+          "name": "m_terminator",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TSList_CGObject_C",
+      "size": 12,
+      "members": [
+        {
+          "type": "ptrdiff_t",
+          "name": "m_linkoffset",
+          "offset": 0
+        },
+        {
+          "type": "TSLink_CGObject_C",
+          "name": "m_terminator",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TSList_NETCLIENTNODE",
+      "size": 12,
+      "members": [
+        {
+          "type": "ptrdiff_t",
+          "name": "m_linkoffset",
+          "offset": 0
+        },
+        {
+          "type": "TSLink_NETCLIENTNODE",
+          "name": "m_terminator",
+          "offset": 4
+        }
+      ]
+    },
+    {
       "name": "TSList_CStatus__STATUSENTRY",
       "size": 12,
       "members": [
@@ -47106,6 +48014,47 @@
       ]
     },
     {
+      "name": "WowConnectionNet__Worker",
+      "size": 64,
+      "members": [
+        {
+          "type": "WowConnectionNet*",
+          "name": "owner",
+          "offset": 0
+        },
+        {
+          "type": "SThread",
+          "name": "thread",
+          "offset": 4
+        },
+        {
+          "type": "int32_t",
+          "name": "id",
+          "offset": 8
+        },
+        {
+          "type": "WowConnection*",
+          "name": "serviceConn",
+          "offset": 12
+        },
+        {
+          "type": "SEvent",
+          "name": "event",
+          "offset": 16
+        },
+        {
+          "type": "int8_t",
+          "name": "quit",
+          "offset": 20
+        },
+        {
+          "type": "SCritSect",
+          "name": "lock",
+          "offset": 21
+        }
+      ]
+    },
+    {
       "name": "SLVert",
       "size": 8,
       "members": [
@@ -48071,6 +49020,38 @@
       ]
     },
     {
+      "name": "NETCLIENTNODE",
+      "size": 12,
+      "members": [
+        {
+          "type": "TSLinkedNode_NETCLIENTNODE",
+          "name": "_",
+          "offset": 0
+        },
+        {
+          "type": "NetClient*",
+          "name": "client",
+          "offset": 8
+        }
+      ]
+    },
+    {
+      "name": "NetClient__HELDMESSAGE",
+      "size": 32,
+      "members": [
+        {
+          "type": "TSLinkedNode_NetClient__HELDMESSAGE",
+          "name": "_",
+          "offset": 0
+        },
+        {
+          "type": "CDataStore",
+          "name": "msg",
+          "offset": 8
+        }
+      ]
+    },
+    {
       "name": "RGN",
       "size": 96,
       "members": [
@@ -48215,6 +49196,79 @@
           "type": "TSGrowableArray_pointer_to_char",
           "name": "m_dependencies",
           "offset": 72
+        }
+      ]
+    },
+    {
+      "name": "WowConnection__SENDNODE",
+      "size": 40,
+      "members": [
+        {
+          "type": "TSLinkedNode_WowConnection__SENDNODE",
+          "name": "_",
+          "offset": 0
+        },
+        {
+          "type": "uint8_t*",
+          "name": "data",
+          "offset": 8
+        },
+        {
+          "type": "uint32_t",
+          "name": "size",
+          "offset": 12
+        },
+        {
+          "type": "uint32_t",
+          "name": "offset",
+          "offset": 16
+        },
+        {
+          "type": "uint32_t",
+          "name": "datasize",
+          "offset": 20
+        },
+        {
+          "type": "uint8_t",
+          "name": "header",
+          "arrsize": 8,
+          "offset": 24
+        },
+        {
+          "type": "uint32_t",
+          "name": "uint20",
+          "offset": 32
+        },
+        {
+          "type": "uint32_t",
+          "name": "allocsize",
+          "offset": 36
+        }
+      ]
+    },
+    {
+      "name": "TSHashObject_CGObject_C_CHashKeyGUID",
+      "size": 32,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "m_hashval",
+          "offset": 0
+        },
+        {
+          "type": "TSLink_CGObject_C",
+          "name": "m_linktoslot",
+          "offset": 4
+        },
+        {
+          "type": "TSLink_CGObject_C",
+          "name": "m_linktofull",
+          "offset": 12
+        },
+        {
+          "type": "CHashKeyGUID",
+          "name": "m_key",
+          "offset": 24
         }
       ]
     },
@@ -53274,6 +54328,455 @@
       ]
     },
     {
+      "name": "NetClient",
+      "size": 12000,
+      "members": [
+        {
+          "type": "NetClient__v_table*",
+          "name": "v_table",
+          "offset": 0
+        },
+        {
+          "type": "LoginData",
+          "name": "m_loginData",
+          "offset": 4
+        },
+        {
+          "type": "NETSTATE",
+          "name": "m_netState",
+          "offset": 1332
+        },
+        {
+          "type": "bool",
+          "name": "m_suspended",
+          "offset": 1336
+        },
+        {
+          "type": "MESSAGE_HANDLER",
+          "name": "m_handlers",
+          "arrsize": 1311,
+          "offset": 1340
+        },
+        {
+          "type": "void*",
+          "name": "m_handlerParams",
+          "arrsize": 1311,
+          "offset": 6584
+        },
+        {
+          "type": "NETEVENTQUEUE*",
+          "name": "m_netEventQueue",
+          "offset": 11828
+        },
+        {
+          "type": "WowConnection*",
+          "name": "m_serverConnection",
+          "offset": 11832
+        },
+        {
+          "type": "WowConnection*",
+          "name": "m_redirectConnection",
+          "offset": 11836
+        },
+        {
+          "type": "ATOMIC32",
+          "name": "m_refCount",
+          "offset": 11840
+        },
+        {
+          "type": "bool",
+          "name": "m_deleteMe",
+          "offset": 11844
+        },
+        {
+          "type": "uint32_t",
+          "name": "unk2E48",
+          "offset": 11848
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_pingSent",
+          "offset": 11852
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_pingSequence",
+          "offset": 11856
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_latency",
+          "arrsize": 16,
+          "offset": 11860
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_latencyStart",
+          "offset": 11924
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_latencyEnd",
+          "offset": 11928
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_bytesSent",
+          "offset": 11932
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_bytesReceived",
+          "offset": 11936
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_connectedTimestamp",
+          "offset": 11940
+        },
+        {
+          "type": "SCritSect",
+          "name": "m_pingLock",
+          "offset": 11944
+        },
+        {
+          "type": "ClntObjMgr*",
+          "name": "m_objMgr",
+          "offset": 11984
+        },
+        {
+          "type": "TSList_NetClient__HELDMESSAGE",
+          "name": "m_heldMessages",
+          "offset": 11988
+        }
+      ]
+    },
+    {
+      "name": "NETEVENTQUEUE",
+      "size": 56,
+      "members": [
+        {
+          "type": "NetClient*",
+          "name": "m_client",
+          "offset": 0
+        },
+        {
+          "type": "SCritSect",
+          "name": "m_critSect",
+          "offset": 4
+        },
+        {
+          "type": "TSList_NETEVENTQUEUENODE",
+          "name": "m_eventQueue",
+          "offset": 44
+        }
+      ]
+    },
+    {
+      "name": "WowConnection",
+      "size": 888,
+      "members": [
+        {
+          "type": "ATOMIC32",
+          "name": "m_refCount",
+          "offset": 0
+        },
+        {
+          "type": "int32_t",
+          "name": "m_sock",
+          "offset": 4
+        },
+        {
+          "type": "int32_t",
+          "name": "m_oldsock",
+          "offset": 8
+        },
+        {
+          "type": "int32_t",
+          "name": "unk0C",
+          "offset": 12
+        },
+        {
+          "type": "WOW_CONN_STATE",
+          "name": "m_connState",
+          "offset": 16
+        },
+        {
+          "type": "WowConnectionResponse*",
+          "name": "m_response",
+          "offset": 20
+        },
+        {
+          "type": "int32_t",
+          "name": "unk18",
+          "offset": 24
+        },
+        {
+          "type": "uint8_t*",
+          "name": "m_readBuffer",
+          "offset": 28
+        },
+        {
+          "type": "int32_t",
+          "name": "m_readBytes",
+          "offset": 32
+        },
+        {
+          "type": "int32_t",
+          "name": "m_readBufferSize",
+          "offset": 36
+        },
+        {
+          "type": "SCritSect",
+          "name": "m_outLock",
+          "offset": 40
+        },
+        {
+          "type": "int32_t",
+          "name": "unk50",
+          "offset": 80
+        },
+        {
+          "type": "int32_t",
+          "name": "unk54",
+          "offset": 84
+        },
+        {
+          "type": "int32_t",
+          "name": "unk58",
+          "offset": 88
+        },
+        {
+          "type": "int32_t",
+          "name": "unk5C",
+          "offset": 92
+        },
+        {
+          "type": "int32_t",
+          "name": "unk60",
+          "offset": 96
+        },
+        {
+          "type": "int32_t",
+          "name": "unk64",
+          "offset": 100
+        },
+        {
+          "type": "int32_t",
+          "name": "unk68",
+          "offset": 104
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_connectAddress",
+          "offset": 108
+        },
+        {
+          "type": "uint16_t",
+          "name": "m_connectPort",
+          "offset": 112
+        },
+        {
+          "type": "int32_t",
+          "name": "m_connectRetryInterval",
+          "offset": 116
+        },
+        {
+          "type": "int32_t",
+          "name": "unk78",
+          "offset": 120
+        },
+        {
+          "type": "int32_t",
+          "name": "unk7C",
+          "offset": 124
+        },
+        {
+          "type": "NETCONNADDR",
+          "name": "m_peer",
+          "offset": 128
+        },
+        {
+          "type": "int32_t",
+          "name": "unkA0",
+          "offset": 160
+        },
+        {
+          "type": "SCritSect",
+          "name": "m_responseLock",
+          "offset": 164
+        },
+        {
+          "type": "int32_t",
+          "name": "m_responseRef",
+          "offset": 204
+        },
+        {
+          "type": "uintptr_t",
+          "name": "m_responseRefThread",
+          "offset": 208
+        },
+        {
+          "type": "WowConnectionResponse*",
+          "name": "responseD4",
+          "offset": 212
+        },
+        {
+          "type": "int32_t",
+          "name": "unkD8",
+          "offset": 216
+        },
+        {
+          "type": "int32_t",
+          "name": "unkDC",
+          "offset": 220
+        },
+        {
+          "type": "TSList_WowConnection__SENDNODE",
+          "name": "m_sendList",
+          "offset": 224
+        },
+        {
+          "type": "int32_t",
+          "name": "m_sendDepth",
+          "offset": 236
+        },
+        {
+          "type": "int32_t",
+          "name": "unkF0",
+          "offset": 240
+        },
+        {
+          "type": "int32_t",
+          "name": "m_maxSendDepth",
+          "offset": 244
+        },
+        {
+          "type": "int32_t",
+          "name": "m_serviceFlags",
+          "offset": 248
+        },
+        {
+          "type": "int32_t",
+          "name": "unkFC",
+          "offset": 252
+        },
+        {
+          "type": "int32_t",
+          "name": "unk100",
+          "offset": 256
+        },
+        {
+          "type": "int32_t",
+          "name": "unk104",
+          "offset": 260
+        },
+        {
+          "type": "SCritSect",
+          "name": "m_lock",
+          "offset": 264
+        },
+        {
+          "type": "int32_t",
+          "name": "unk130",
+          "offset": 304
+        },
+        {
+          "type": "int32_t",
+          "name": "unk134",
+          "offset": 308
+        },
+        {
+          "type": "void*",
+          "name": "m_event",
+          "offset": 312
+        },
+        {
+          "type": "int32_t",
+          "name": "unk13C",
+          "offset": 316
+        },
+        {
+          "type": "int32_t",
+          "name": "unk140",
+          "offset": 320
+        },
+        {
+          "type": "int32_t",
+          "name": "unk144",
+          "offset": 324
+        },
+        {
+          "type": "SARC4Key",
+          "name": "m_sendKey",
+          "offset": 328
+        },
+        {
+          "type": "SARC4Key",
+          "name": "m_receiveKey",
+          "offset": 586
+        },
+        {
+          "type": "uint8_t",
+          "name": "m_sendKeyInit",
+          "arrsize": 20,
+          "offset": 844
+        },
+        {
+          "type": "uint8_t",
+          "name": "m_receiveKeyInit",
+          "arrsize": 20,
+          "offset": 864
+        },
+        {
+          "type": "bool",
+          "name": "m_encrypt",
+          "offset": 884
+        },
+        {
+          "type": "uint8_t",
+          "name": "uint375",
+          "offset": 885
+        },
+        {
+          "type": "uint8_t",
+          "name": "uint376",
+          "offset": 886
+        }
+      ]
+    },
+    {
+      "name": "TSHashTable_CGObject_C_CHashKeyGUID",
+      "size": 40,
+      "members": [
+        {
+          "type": "void**",
+          "name": "v_table",
+          "offset": 0
+        },
+        {
+          "type": "TSList_CGObject_C",
+          "name": "m_fulllist",
+          "offset": 4
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_fullnessIndicator",
+          "offset": 16
+        },
+        {
+          "type": "TSGrowableArray_TSList_CGObject_C",
+          "name": "m_slotlistarray",
+          "offset": 20
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_slotmask",
+          "offset": 36
+        }
+      ]
+    },
+    {
       "name": "TSHashTable_CONSOLECOMMAND_HASHKEY_STRI",
       "size": 40,
       "members": [
@@ -55401,6 +56904,103 @@
       ]
     },
     {
+      "name": "CGObject_C",
+      "size": 256,
+      "members": [
+        {
+          "type": "CGObject_C__v_table*",
+          "name": "v_table",
+          "offset": 0
+        },
+        {
+          "type": "CGObject",
+          "name": "_01",
+          "offset": 4
+        },
+        {
+          "type": "TSHashObject_CGObject_C_CHashKeyGUID",
+          "name": "_02",
+          "offset": 16
+        },
+        {
+          "type": "TSLink_CGObject_C",
+          "name": "m_link",
+          "offset": 48
+        },
+        {
+          "type": "uint32_t",
+          "name": "unk",
+          "arrsize": 40,
+          "offset": 56
+        },
+        {
+          "type": "float",
+          "name": "m_renderScale",
+          "offset": 216
+        },
+        {
+          "type": "uint32_t",
+          "name": "unki",
+          "offset": 220
+        },
+        {
+          "type": "void*",
+          "name": "m_model",
+          "offset": 224
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_highlightTypes",
+          "offset": 228
+        },
+        {
+          "type": "float",
+          "name": "m_objectHeight",
+          "offset": 232
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_worldObject",
+          "offset": 236
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_flags",
+          "offset": 240
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_fadeStartTime",
+          "offset": 244
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_fadeDuration",
+          "offset": 248
+        },
+        {
+          "type": "uint8_t",
+          "name": "m_alpha",
+          "offset": 252
+        },
+        {
+          "type": "uint8_t",
+          "name": "m_startAlpha",
+          "offset": 253
+        },
+        {
+          "type": "uint8_t",
+          "name": "m_endAlpha",
+          "offset": 254
+        },
+        {
+          "type": "uint8_t",
+          "name": "m_maxAlpha",
+          "offset": 255
+        }
+      ]
+    },
+    {
       "name": "ConsControl",
       "size": 40,
       "members": [
@@ -55552,6 +57152,221 @@
           "type": "TSExplicitList_CBaseManaged",
           "name": "m_updateList",
           "offset": 16
+        }
+      ]
+    },
+    {
+      "name": "RealmConnection",
+      "size": 12080,
+      "members": [
+        {
+          "type": "NetClient",
+          "name": "_",
+          "offset": 0
+        },
+        {
+          "type": "RealmResponse*",
+          "name": "m_realmResponse",
+          "offset": 12000
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_restrictHuman",
+          "offset": 12004
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_restrictDwarf",
+          "offset": 12008
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_restrictGnome",
+          "offset": 12012
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_restrictNightElf",
+          "offset": 12016
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_restrictDraenei",
+          "offset": 12020
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_restrictOrc",
+          "offset": 12024
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_restrictTroll",
+          "offset": 12028
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_restrictTauren",
+          "offset": 12032
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_restrictUndead",
+          "offset": 12036
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_restrictBloodElf",
+          "offset": 12040
+        },
+        {
+          "type": "TSFixedArray_CHARACTER_INFO",
+          "name": "m_characterList",
+          "offset": 12044
+        },
+        {
+          "type": "uint8_t",
+          "name": "m_authenticated",
+          "offset": 12056
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_queuePosition",
+          "offset": 12060
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_freeCharacterMigration",
+          "offset": 12064
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_billingTimeRemaining",
+          "offset": 12068
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_billingTimeRested",
+          "offset": 12072
+        },
+        {
+          "type": "uint8_t",
+          "name": "m_billingFlags",
+          "offset": 12076
+        },
+        {
+          "type": "uint8_t",
+          "name": "m_accountExpansion",
+          "offset": 12077
+        }
+      ]
+    },
+    {
+      "name": "WowConnectionNet",
+      "size": 2128,
+      "members": [
+        {
+          "type": "SThread",
+          "name": "m_thread",
+          "offset": 0
+        },
+        {
+          "type": "SEvent",
+          "name": "m_stopEvent",
+          "offset": 4
+        },
+        {
+          "type": "uint8_t",
+          "name": "m_stop",
+          "offset": 8
+        },
+        {
+          "type": "int32_t",
+          "name": "m_numWorkers",
+          "offset": 12
+        },
+        {
+          "type": "WowConnectionNet__Worker",
+          "name": "m_workers",
+          "arrsize": 32,
+          "offset": 16
+        },
+        {
+          "type": "SCritSect",
+          "name": "m_connectionsLock",
+          "offset": 2064
+        },
+        {
+          "type": "TSExplicitList_WowConnection",
+          "name": "m_connections",
+          "offset": 2104
+        },
+        {
+          "type": "SSemaphore",
+          "name": "m_workerSem",
+          "offset": 2116
+        },
+        {
+          "type": "void**",
+          "name": "m_threadinit",
+          "offset": 2120
+        },
+        {
+          "type": "void*",
+          "name": "event8E8",
+          "offset": 2124
+        }
+      ]
+    },
+    {
+      "name": "ClntObjMgr",
+      "size": 216,
+      "members": [
+        {
+          "type": "TSHashTable_CGObject_C_CHashKeyGUID",
+          "name": "m_objects",
+          "offset": 0
+        },
+        {
+          "type": "TSHashTable_CGObject_C_CHashKeyGUID",
+          "name": "m_lazyCleanupObjects",
+          "offset": 40
+        },
+        {
+          "type": "TSList_CGObject_C",
+          "name": "m_lazyCleanupFifo",
+          "arrsize": 7,
+          "offset": 80
+        },
+        {
+          "type": "TSList_CGObject_C",
+          "name": "m_visibleObjects",
+          "offset": 164
+        },
+        {
+          "type": "TSList_CGObject_C",
+          "name": "m_reenabledObjects",
+          "offset": 176
+        },
+        {
+          "type": "WOWGUID",
+          "name": "m_activePlayer",
+          "offset": 192
+        },
+        {
+          "type": "PLAYER_TYPE",
+          "name": "m_type",
+          "offset": 200
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_mapID",
+          "offset": 204
+        },
+        {
+          "type": "ClientConnection*",
+          "name": "m_net",
+          "offset": 208
         }
       ]
     },
@@ -59067,6 +60882,52 @@
           "type": "UpVal_u_l",
           "name": "l",
           "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "ClientConnection",
+      "size": 28,
+      "members": [
+        {
+          "type": "RealmConnection",
+          "name": "_",
+          "offset": 0
+        },
+        {
+          "type": "int32_t",
+          "name": "m_connected",
+          "offset": 0
+        },
+        {
+          "type": "int32_t",
+          "name": "m_statusComplete",
+          "offset": 4
+        },
+        {
+          "type": "int32_t",
+          "name": "m_statusResult",
+          "offset": 8
+        },
+        {
+          "type": "WOWCS_OPS",
+          "name": "m_statusCop",
+          "offset": 12
+        },
+        {
+          "type": "int32_t",
+          "name": "m_errorCode",
+          "offset": 16
+        },
+        {
+          "type": "uint8_t",
+          "name": "byte2F5A",
+          "offset": 20
+        },
+        {
+          "type": "void**",
+          "name": "m_cleanup",
+          "offset": 24
         }
       ]
     },
