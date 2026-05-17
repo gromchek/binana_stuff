@@ -93,6 +93,18 @@
       "name": "CGxMatrixStack__EMatrixFlags"
     },
     {
+      "type": "CID_FaceRec*",
+      "name": "CID_Face"
+    },
+    {
+      "type": "CID_GlyphSlotRec*",
+      "name": "CID_GlyphSlot"
+    },
+    {
+      "type": "CID_SizeRec*",
+      "name": "CID_Size"
+    },
+    {
       "type": "void**",
       "name": "CMDERRORCALLBACK_interface"
     },
@@ -342,6 +354,438 @@
     },
     {
       "type": "void**",
+      "name": "FTDriver_attachFile"
+    },
+    {
+      "type": "void**",
+      "name": "FTDriver_doneFace"
+    },
+    {
+      "type": "void**",
+      "name": "FTDriver_doneGlyphSlot"
+    },
+    {
+      "type": "void**",
+      "name": "FTDriver_doneSize"
+    },
+    {
+      "type": "void**",
+      "name": "FTDriver_getAdvances"
+    },
+    {
+      "type": "void**",
+      "name": "FTDriver_getCharIndex"
+    },
+    {
+      "type": "void**",
+      "name": "FTDriver_getKerning"
+    },
+    {
+      "type": "void**",
+      "name": "FTDriver_getNextChar"
+    },
+    {
+      "type": "void**",
+      "name": "FTDriver_initFace"
+    },
+    {
+      "type": "void**",
+      "name": "FTDriver_initGlyphSlot"
+    },
+    {
+      "type": "void**",
+      "name": "FTDriver_initSize"
+    },
+    {
+      "type": "void**",
+      "name": "FTDriver_loadGlyph"
+    },
+    {
+      "type": "void**",
+      "name": "FTDriver_setCharSizes"
+    },
+    {
+      "type": "void**",
+      "name": "FTDriver_setPixelSizes"
+    },
+    {
+      "type": "void**",
+      "name": "FTRenderer_getCBox"
+    },
+    {
+      "type": "void**",
+      "name": "FTRenderer_render"
+    },
+    {
+      "type": "void**",
+      "name": "FTRenderer_setMode"
+    },
+    {
+      "type": "void**",
+      "name": "FTRenderer_transform"
+    },
+    {
+      "type": "void**",
+      "name": "FT_Alloc_Func"
+    },
+    {
+      "type": "FT_AutoHinterRec*",
+      "name": "FT_AutoHinter"
+    },
+    {
+      "type": "void**",
+      "name": "FT_AutoHinter_Done_Global_Func"
+    },
+    {
+      "type": "void**",
+      "name": "FT_AutoHinter_Get_Global_Func"
+    },
+    {
+      "type": "void**",
+      "name": "FT_AutoHinter_Load_Func"
+    },
+    {
+      "type": "void**",
+      "name": "FT_AutoHinter_Reset_Func"
+    },
+    {
+      "type": "uint8_t",
+      "name": "FT_Bool"
+    },
+    {
+      "type": "uint8_t",
+      "name": "FT_Byte"
+    },
+    {
+      "type": "int8_t",
+      "name": "FT_Char"
+    },
+    {
+      "type": "FT_CharMapRec*",
+      "name": "FT_CharMap"
+    },
+    {
+      "type": "void**",
+      "name": "FT_DebugHook_Func"
+    },
+    {
+      "type": "FT_DriverRec*",
+      "name": "FT_Driver"
+    },
+    {
+      "type": "int",
+      "name": "FT_Encoding"
+    },
+    {
+      "type": "int32_t",
+      "name": "FT_Error"
+    },
+    {
+      "type": "int32_t",
+      "name": "FT_F26Dot6"
+    },
+    {
+      "type": "int16_t",
+      "name": "FT_F2Dot14"
+    },
+    {
+      "type": "int16_t",
+      "name": "FT_FWord"
+    },
+    {
+      "type": "FT_FaceRec*",
+      "name": "FT_Face"
+    },
+    {
+      "type": "FT_Face_InternalRec*",
+      "name": "FT_Face_Internal"
+    },
+    {
+      "type": "int32_t",
+      "name": "FT_Fixed"
+    },
+    {
+      "type": "int",
+      "name": "FT_Frame_Op"
+    },
+    {
+      "type": "void**",
+      "name": "FT_Free_Func"
+    },
+    {
+      "type": "void**",
+      "name": "FT_Generic_Finalizer"
+    },
+    {
+      "type": "FT_GlyphRec*",
+      "name": "FT_Glyph"
+    },
+    {
+      "type": "FT_GlyphSlotRec*",
+      "name": "FT_GlyphSlot"
+    },
+    {
+      "type": "void**",
+      "name": "FT_Glyph_BBox_Func"
+    },
+    {
+      "type": "void**",
+      "name": "FT_Glyph_Copy_Func"
+    },
+    {
+      "type": "void**",
+      "name": "FT_Glyph_Done_Func"
+    },
+    {
+      "type": "int",
+      "name": "FT_Glyph_Format"
+    },
+    {
+      "type": "void**",
+      "name": "FT_Glyph_Init_Func"
+    },
+    {
+      "type": "void**",
+      "name": "FT_Glyph_Prepare_Func"
+    },
+    {
+      "type": "void**",
+      "name": "FT_Glyph_Transform_Func"
+    },
+    {
+      "type": "int32_t",
+      "name": "FT_Int"
+    },
+    {
+      "type": "int16_t",
+      "name": "FT_Int16"
+    },
+    {
+      "type": "int32_t",
+      "name": "FT_Int32"
+    },
+    {
+      "type": "int64_t",
+      "name": "FT_Int64"
+    },
+    {
+      "type": "FT_LibraryRec*",
+      "name": "FT_Library"
+    },
+    {
+      "type": "FT_ListRec*",
+      "name": "FT_List"
+    },
+    {
+      "type": "FT_ListNodeRec*",
+      "name": "FT_ListNode"
+    },
+    {
+      "type": "void**",
+      "name": "FT_List_Destructor"
+    },
+    {
+      "type": "void**",
+      "name": "FT_List_Finalize"
+    },
+    {
+      "type": "void**",
+      "name": "FT_List_Iterate"
+    },
+    {
+      "type": "void**",
+      "name": "FT_List_Iterator"
+    },
+    {
+      "type": "int32_t",
+      "name": "FT_Long"
+    },
+    {
+      "type": "FT_MemoryRec*",
+      "name": "FT_Memory"
+    },
+    {
+      "type": "FT_ModuleRec*",
+      "name": "FT_Module"
+    },
+    {
+      "type": "void**",
+      "name": "FT_Module_Constructor"
+    },
+    {
+      "type": "void**",
+      "name": "FT_Module_Destructor"
+    },
+    {
+      "type": "int",
+      "name": "FT_Module_Flags"
+    },
+    {
+      "type": "void**",
+      "name": "FT_Module_Interface"
+    },
+    {
+      "type": "void**",
+      "name": "FT_Module_Requester"
+    },
+    {
+      "type": "void**",
+      "name": "FT_Outline_ConicTo_Func"
+    },
+    {
+      "type": "void**",
+      "name": "FT_Outline_CubicTo_Func"
+    },
+    {
+      "type": "int",
+      "name": "FT_Outline_Flags"
+    },
+    {
+      "type": "void**",
+      "name": "FT_Outline_LineTo_Func"
+    },
+    {
+      "type": "void**",
+      "name": "FT_Outline_MoveTo_Func"
+    },
+    {
+      "type": "int",
+      "name": "FT_Palette_Mode"
+    },
+    {
+      "type": "int",
+      "name": "FT_Pixel_Mode"
+    },
+    {
+      "type": "void*",
+      "name": "FT_Pointer"
+    },
+    {
+      "type": "int32_t",
+      "name": "FT_Pos"
+    },
+    {
+      "type": "void*",
+      "name": "FT_Raster"
+    },
+    {
+      "type": "void**",
+      "name": "FT_Raster_BitSet_Func"
+    },
+    {
+      "type": "void**",
+      "name": "FT_Raster_BitTest_Func"
+    },
+    {
+      "type": "void**",
+      "name": "FT_Raster_Done_Func"
+    },
+    {
+      "type": "int",
+      "name": "FT_Raster_Flag"
+    },
+    {
+      "type": "void**",
+      "name": "FT_Raster_New_Func"
+    },
+    {
+      "type": "void**",
+      "name": "FT_Raster_Render_Func"
+    },
+    {
+      "type": "void**",
+      "name": "FT_Raster_Reset_Func"
+    },
+    {
+      "type": "void**",
+      "name": "FT_Raster_Set_Mode_Func"
+    },
+    {
+      "type": "void**",
+      "name": "FT_Raster_Span_Func"
+    },
+    {
+      "type": "void**",
+      "name": "FT_Realloc_Func"
+    },
+    {
+      "type": "FT_RendererRec*",
+      "name": "FT_Renderer"
+    },
+    {
+      "type": "int16_t",
+      "name": "FT_Short"
+    },
+    {
+      "type": "FT_SizeRec*",
+      "name": "FT_Size"
+    },
+    {
+      "type": "FT_Size_InternalRec*",
+      "name": "FT_Size_Internal"
+    },
+    {
+      "type": "FT_Slot_InternalRec*",
+      "name": "FT_Slot_Internal"
+    },
+    {
+      "type": "FT_StreamRec*",
+      "name": "FT_Stream"
+    },
+    {
+      "type": "void**",
+      "name": "FT_Stream_Close"
+    },
+    {
+      "type": "void**",
+      "name": "FT_Stream_IO"
+    },
+    {
+      "type": "uint8_t",
+      "name": "FT_String"
+    },
+    {
+      "type": "uint16_t",
+      "name": "FT_UFWord"
+    },
+    {
+      "type": "uint32_t",
+      "name": "FT_UInt"
+    },
+    {
+      "type": "uint32_t",
+      "name": "FT_ULong"
+    },
+    {
+      "type": "uint16_t",
+      "name": "FT_UShort"
+    },
+    {
+      "type": "uint16_t",
+      "name": "FT_Uint16"
+    },
+    {
+      "type": "uint32_t",
+      "name": "FT_Uint32"
+    },
+    {
+      "type": "uint64_t",
+      "name": "FT_Uint64"
+    },
+    {
+      "type": "void**",
+      "name": "Function_Sweep_Init"
+    },
+    {
+      "type": "void**",
+      "name": "Function_Sweep_Span"
+    },
+    {
+      "type": "void**",
+      "name": "Function_Sweep_Step"
+    },
+    {
+      "type": "void**",
       "name": "GxTexCallback_interface"
     },
     {
@@ -530,11 +974,39 @@
     },
     {
       "type": "void**",
+      "name": "PS_Adobe_Std_Strings_Func"
+    },
+    {
+      "type": "void**",
+      "name": "PS_Build_Unicodes_Func"
+    },
+    {
+      "type": "void**",
+      "name": "PS_Lookup_Unicode_Func"
+    },
+    {
+      "type": "void**",
+      "name": "PS_Macintosh_Name_Func"
+    },
+    {
+      "type": "void**",
+      "name": "PS_Unicode_Index_Func"
+    },
+    {
+      "type": "void**",
+      "name": "PS_Unicode_Value_Func"
+    },
+    {
+      "type": "void**",
       "name": "Pfunc_interface"
     },
     {
       "type": "long long",
       "name": "SCHEDSTATE"
+    },
+    {
+      "type": "void**",
+      "name": "SFNT_Get_Interface_Func"
     },
     {
       "type": "int",
@@ -558,11 +1030,183 @@
     },
     {
       "type": "void**",
+      "name": "T1_Builder_Add_Contour_Func"
+    },
+    {
+      "type": "void**",
+      "name": "T1_Builder_Add_Point1_Func"
+    },
+    {
+      "type": "void**",
+      "name": "T1_Builder_Add_Point_Func"
+    },
+    {
+      "type": "void**",
+      "name": "T1_Builder_Check_Points_Func"
+    },
+    {
+      "type": "void**",
+      "name": "T1_Builder_Close_Contour_Func"
+    },
+    {
+      "type": "void**",
+      "name": "T1_Builder_Start_Point_Func"
+    },
+    {
+      "type": "void**",
+      "name": "T1_Decoder_Callback"
+    },
+    {
+      "type": "int",
+      "name": "T1_EncodingType"
+    },
+    {
+      "type": "T1_FaceRec*",
+      "name": "T1_Face"
+    },
+    {
+      "type": "int",
+      "name": "T1_Field_Location"
+    },
+    {
+      "type": "void**",
+      "name": "T1_Field_Parser"
+    },
+    {
+      "type": "int",
+      "name": "T1_Field_Type"
+    },
+    {
+      "type": "int",
+      "name": "T1_Token_Type"
+    },
+    {
+      "type": "T2_DriverRec*",
+      "name": "T2_Driver"
+    },
+    {
+      "type": "T2_GlyphSlotRec*",
+      "name": "T2_GlyphSlot"
+    },
+    {
+      "type": "int",
+      "name": "T2_Operator"
+    },
+    {
+      "type": "void**",
       "name": "TEXTURERECREATIONCALLBACK_interface"
     },
     {
       "type": "int",
       "name": "TMS"
+    },
+    {
+      "type": "void**",
+      "name": "TSplitter"
+    },
+    {
+      "type": "int",
+      "name": "TStates"
+    },
+    {
+      "type": "void**",
+      "name": "TT_Access_Glyph_Frame_Func"
+    },
+    {
+      "type": "TT_CharMapRec*",
+      "name": "TT_CharMap"
+    },
+    {
+      "type": "void**",
+      "name": "TT_CharMap_Free_Func"
+    },
+    {
+      "type": "void**",
+      "name": "TT_CharMap_Func"
+    },
+    {
+      "type": "void**",
+      "name": "TT_CharMap_Load_Func"
+    },
+    {
+      "type": "void**",
+      "name": "TT_Done_Face_Func"
+    },
+    {
+      "type": "TT_ExecContextRec*",
+      "name": "TT_ExecContext"
+    },
+    {
+      "type": "void*",
+      "name": "TT_ExecContextRec"
+    },
+    {
+      "type": "TT_FaceRec*",
+      "name": "TT_Face"
+    },
+    {
+      "type": "void**",
+      "name": "TT_Forget_Glyph_Frame_Func"
+    },
+    {
+      "type": "void**",
+      "name": "TT_Free_Table_Func"
+    },
+    {
+      "type": "void**",
+      "name": "TT_Get_PS_Name_Func"
+    },
+    {
+      "type": "void**",
+      "name": "TT_Goto_Table_Func"
+    },
+    {
+      "type": "void**",
+      "name": "TT_Init_Face_Func"
+    },
+    {
+      "type": "void**",
+      "name": "TT_Interpreter"
+    },
+    {
+      "type": "void**",
+      "name": "TT_Load_Any_Func"
+    },
+    {
+      "type": "void**",
+      "name": "TT_Load_Directory_Func"
+    },
+    {
+      "type": "void**",
+      "name": "TT_Load_Face_Func"
+    },
+    {
+      "type": "void**",
+      "name": "TT_Load_Glyph_Element_Func"
+    },
+    {
+      "type": "void**",
+      "name": "TT_Load_Metrics_Func"
+    },
+    {
+      "type": "void**",
+      "name": "TT_Load_SBit_Image_Func"
+    },
+    {
+      "type": "void**",
+      "name": "TT_Load_SFNT_Header_Func"
+    },
+    {
+      "type": "void**",
+      "name": "TT_Load_Table_Func"
+    },
+    {
+      "type": "void**",
+      "name": "TT_Set_SBit_Strike_Func"
+    },
+    {
+      "type": "TT_SizeRec*",
+      "name": "TT_Size"
     },
     {
       "type": "long long",
@@ -693,6 +1337,10 @@
       "name": "size_t"
     },
     {
+      "type": "int",
+      "name": "t2_kind"
+    },
+    {
       "type": "uint32_t",
       "name": "uintptr_t"
     },
@@ -733,6 +1381,38 @@
       "name": "DEVICERESTOREDCALLBACK"
     },
     {
+      "type": "FT_GlyphSlot",
+      "name": "TT_GlyphSlot"
+    },
+    {
+      "type": "FT_Int",
+      "name": "AH_Angle"
+    },
+    {
+      "type": "FT_Int",
+      "name": "AH_Blue"
+    },
+    {
+      "type": "FT_Int",
+      "name": "AH_Direction"
+    },
+    {
+      "type": "FT_Int",
+      "name": "AH_Edge_Flags"
+    },
+    {
+      "type": "FT_Int",
+      "name": "AH_Flags"
+    },
+    {
+      "type": "FT_Int",
+      "name": "AH_Hinter_Flags"
+    },
+    {
+      "type": "FT_Size",
+      "name": "T2_Size"
+    },
+    {
       "type": "GxTexCallback_interface",
       "name": "GxTexCallback"
     },
@@ -765,6 +1445,10 @@
       "name": "TEXTURERECREATIONCALLBACK"
     },
     {
+      "type": "TT_Face",
+      "name": "T2_Face"
+    },
+    {
       "type": "lu_int32",
       "name": "Instruction"
     },
@@ -791,6 +1475,14 @@
     {
       "type": "lua_Writer_interface",
       "name": "lua_Writer"
+    },
+    {
+      "type": "size_t",
+      "name": "FT_Offset"
+    },
+    {
+      "type": "size_t",
+      "name": "FT_PtrDist"
     },
     {
       "type": "uintptr_t",
@@ -1027,6 +1719,10 @@
     {
       "type": "TSList_UIADDON",
       "name": "TSExplicitList_UIADDON"
+    },
+    {
+      "type": "FT_Slot_InternalRec",
+      "name": "FT_GlyphSlot_InternalRec"
     },
     {
       "type": "lua_TValue",
@@ -11803,6 +12499,125 @@
           "type": "uint32_t",
           "name": "priority",
           "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "FT_Bitmap",
+      "size": 24,
+      "members": [
+        {
+          "type": "int32_t",
+          "name": "rows",
+          "offset": 0
+        },
+        {
+          "type": "int32_t",
+          "name": "width",
+          "offset": 4
+        },
+        {
+          "type": "int32_t",
+          "name": "pitch",
+          "offset": 8
+        },
+        {
+          "type": "uint8_t*",
+          "name": "buffer",
+          "offset": 12
+        },
+        {
+          "type": "int16_t",
+          "name": "num_grays",
+          "offset": 16
+        },
+        {
+          "type": "uint8_t",
+          "name": "pixel_mode",
+          "offset": 18
+        },
+        {
+          "type": "uint8_t",
+          "name": "palette_mode",
+          "offset": 19
+        },
+        {
+          "type": "void*",
+          "name": "palette",
+          "offset": 20
+        }
+      ]
+    },
+    {
+      "name": "FT_Outline",
+      "size": 20,
+      "members": [
+        {
+          "type": "int16_t",
+          "name": "n_contours",
+          "offset": 0
+        },
+        {
+          "type": "int16_t",
+          "name": "n_points",
+          "offset": 2
+        },
+        {
+          "type": "FT_Vector*",
+          "name": "points",
+          "offset": 4
+        },
+        {
+          "type": "uint8_t*",
+          "name": "tags",
+          "offset": 8
+        },
+        {
+          "type": "uint16_t*",
+          "name": "contours",
+          "offset": 12
+        },
+        {
+          "type": "int32_t",
+          "name": "flags",
+          "offset": 16
+        }
+      ]
+    },
+    {
+      "name": "FT_Span",
+      "size": 6,
+      "members": [
+        {
+          "type": "int16_t",
+          "name": "x",
+          "offset": 0
+        },
+        {
+          "type": "uint16_t",
+          "name": "len",
+          "offset": 2
+        },
+        {
+          "type": "uint8_t",
+          "name": "coverage",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "FT_StreamDesc",
+      "size": 4,
+      "members": [
+        {
+          "type": "int32_t",
+          "name": "value",
+          "offset": 0
+        },
+        {
+          "type": "void*",
+          "name": "pointer",
+          "offset": 0
         }
       ]
     },
@@ -23648,6 +24463,63 @@
       ]
     },
     {
+      "name": "PSAux_Interface",
+      "size": 20,
+      "members": [
+        {
+          "type": "PS_Table_Funcs*",
+          "name": "ps_table_funcs",
+          "offset": 0
+        },
+        {
+          "type": "T1_Parser_Funcs*",
+          "name": "t1_parser_funcs",
+          "offset": 4
+        },
+        {
+          "type": "T1_Builder_Funcs*",
+          "name": "t1_builder_funcs",
+          "offset": 8
+        },
+        {
+          "type": "T1_Decoder_Funcs*",
+          "name": "t1_decoder_funcs",
+          "offset": 12
+        },
+        {
+          "type": "void**",
+          "name": "t1_decrypt",
+          "offset": 16
+        }
+      ]
+    },
+    {
+      "name": "PS_Table_Funcs",
+      "size": 16,
+      "members": [
+        {
+          "type": "void**",
+          "name": "init",
+          "offset": 0
+        },
+        {
+          "type": "void**",
+          "name": "done",
+          "offset": 4
+        },
+        {
+          "type": "void**",
+          "name": "add",
+          "offset": 8
+        },
+        {
+          "type": "void**",
+          "name": "release",
+          "offset": 12
+        }
+      ]
+    },
+    {
       "name": "PackageRec",
       "size": 16,
       "members": [
@@ -28716,6 +29588,151 @@
       ]
     },
     {
+      "name": "T1_Decoder_Funcs",
+      "size": 12,
+      "members": [
+        {
+          "type": "void**",
+          "name": "init",
+          "offset": 0
+        },
+        {
+          "type": "void**",
+          "name": "done",
+          "offset": 4
+        },
+        {
+          "type": "void**",
+          "name": "parse_charstrings",
+          "offset": 8
+        }
+      ]
+    },
+    {
+      "name": "T1_Decoder_Zone",
+      "size": 12,
+      "members": [
+        {
+          "type": "FT_Byte*",
+          "name": "cursor",
+          "offset": 0
+        },
+        {
+          "type": "FT_Byte*",
+          "name": "base",
+          "offset": 4
+        },
+        {
+          "type": "FT_Byte*",
+          "name": "limit",
+          "offset": 8
+        }
+      ]
+    },
+    {
+      "name": "T1_Parser_Funcs",
+      "size": 48,
+      "members": [
+        {
+          "type": "void**",
+          "name": "init",
+          "offset": 0
+        },
+        {
+          "type": "void**",
+          "name": "done",
+          "offset": 4
+        },
+        {
+          "type": "void**",
+          "name": "skip_spaces",
+          "offset": 8
+        },
+        {
+          "type": "void**",
+          "name": "skip_alpha",
+          "offset": 12
+        },
+        {
+          "type": "void**",
+          "name": "to_int",
+          "offset": 16
+        },
+        {
+          "type": "void**",
+          "name": "to_fixed",
+          "offset": 20
+        },
+        {
+          "type": "void**",
+          "name": "to_coord_array",
+          "offset": 24
+        },
+        {
+          "type": "void**",
+          "name": "to_fixed_array",
+          "offset": 28
+        },
+        {
+          "type": "void**",
+          "name": "to_token",
+          "offset": 32
+        },
+        {
+          "type": "void**",
+          "name": "to_token_array",
+          "offset": 36
+        },
+        {
+          "type": "void**",
+          "name": "load_field",
+          "offset": 40
+        },
+        {
+          "type": "void**",
+          "name": "load_field_table",
+          "offset": 44
+        }
+      ]
+    },
+    {
+      "name": "T2_Decoder_Zone",
+      "size": 12,
+      "members": [
+        {
+          "type": "FT_Byte*",
+          "name": "base",
+          "offset": 0
+        },
+        {
+          "type": "FT_Byte*",
+          "name": "limit",
+          "offset": 4
+        },
+        {
+          "type": "FT_Byte*",
+          "name": "cursor",
+          "offset": 8
+        }
+      ]
+    },
+    {
+      "name": "TBand",
+      "size": 4,
+      "members": [
+        {
+          "type": "int16_t",
+          "name": "y_min",
+          "offset": 0
+        },
+        {
+          "type": "int16_t",
+          "name": "y_max",
+          "offset": 2
+        }
+      ]
+    },
+    {
       "name": "TExtraInstanceRecyclable",
       "size": 4,
       "members": [
@@ -28808,6 +29825,22 @@
           "type": "void*",
           "name": "v_fn_00_scalar_deleting_destructor",
           "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "TPoint",
+      "size": 8,
+      "members": [
+        {
+          "type": "int32_t",
+          "name": "x",
+          "offset": 0
+        },
+        {
+          "type": "int32_t",
+          "name": "y",
+          "offset": 4
         }
       ]
     },
@@ -30970,6 +32003,17 @@
           "type": "WowConnection__SENDNODE*",
           "name": "m_next",
           "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TT_CMap0",
+      "size": 4,
+      "members": [
+        {
+          "type": "FT_Byte*",
+          "name": "glyphIdArray",
+          "offset": 0
         }
       ]
     },
@@ -37041,6 +38085,2579 @@
       ]
     },
     {
+      "name": "FT_AutoHinter_Interface",
+      "size": 16,
+      "members": [
+        {
+          "type": "FT_AutoHinter_Reset_Func",
+          "name": "reset_face",
+          "offset": 0
+        },
+        {
+          "type": "FT_AutoHinter_Load_Func",
+          "name": "load_glyph",
+          "offset": 4
+        },
+        {
+          "type": "FT_AutoHinter_Get_Global_Func",
+          "name": "get_global_hints",
+          "offset": 8
+        },
+        {
+          "type": "FT_AutoHinter_Done_Global_Func",
+          "name": "done_global_hints",
+          "offset": 12
+        }
+      ]
+    },
+    {
+      "name": "T1_DesignMap",
+      "size": 12,
+      "members": [
+        {
+          "type": "FT_Byte",
+          "name": "num_points",
+          "offset": 0
+        },
+        {
+          "type": "FT_Fixed*",
+          "name": "design_points",
+          "offset": 4
+        },
+        {
+          "type": "FT_Fixed*",
+          "name": "blend_points",
+          "offset": 8
+        }
+      ]
+    },
+    {
+      "name": "TT_HdmxRec",
+      "size": 8,
+      "members": [
+        {
+          "type": "FT_Byte",
+          "name": "ppem",
+          "offset": 0
+        },
+        {
+          "type": "FT_Byte",
+          "name": "max_width",
+          "offset": 1
+        },
+        {
+          "type": "FT_Byte*",
+          "name": "widths",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TT_SBit_Line_Metrics",
+      "size": 12,
+      "members": [
+        {
+          "type": "FT_Char",
+          "name": "ascender",
+          "offset": 0
+        },
+        {
+          "type": "FT_Char",
+          "name": "descender",
+          "offset": 1
+        },
+        {
+          "type": "FT_Byte",
+          "name": "max_width",
+          "offset": 2
+        },
+        {
+          "type": "FT_Char",
+          "name": "caret_slope_numerator",
+          "offset": 3
+        },
+        {
+          "type": "FT_Char",
+          "name": "caret_slope_denominator",
+          "offset": 4
+        },
+        {
+          "type": "FT_Char",
+          "name": "caret_offset",
+          "offset": 5
+        },
+        {
+          "type": "FT_Char",
+          "name": "min_origin_SB",
+          "offset": 6
+        },
+        {
+          "type": "FT_Char",
+          "name": "min_advance_SB",
+          "offset": 7
+        },
+        {
+          "type": "FT_Char",
+          "name": "max_before_BL",
+          "offset": 8
+        },
+        {
+          "type": "FT_Char",
+          "name": "min_after_BL",
+          "offset": 9
+        },
+        {
+          "type": "FT_Char",
+          "name": "pads",
+          "arrsize": 2,
+          "offset": 10
+        }
+      ]
+    },
+    {
+      "name": "TT_SBit_Metrics",
+      "size": 8,
+      "members": [
+        {
+          "type": "FT_Byte",
+          "name": "height",
+          "offset": 0
+        },
+        {
+          "type": "FT_Byte",
+          "name": "width",
+          "offset": 1
+        },
+        {
+          "type": "FT_Char",
+          "name": "horiBearingX",
+          "offset": 2
+        },
+        {
+          "type": "FT_Char",
+          "name": "horiBearingY",
+          "offset": 3
+        },
+        {
+          "type": "FT_Byte",
+          "name": "horiAdvance",
+          "offset": 4
+        },
+        {
+          "type": "FT_Char",
+          "name": "vertBearingX",
+          "offset": 5
+        },
+        {
+          "type": "FT_Char",
+          "name": "vertBearingY",
+          "offset": 6
+        },
+        {
+          "type": "FT_Byte",
+          "name": "vertAdvance",
+          "offset": 7
+        }
+      ]
+    },
+    {
+      "name": "TProfile",
+      "size": 32,
+      "members": [
+        {
+          "type": "FT_F26Dot6",
+          "name": "X",
+          "offset": 0
+        },
+        {
+          "type": "TProfile*",
+          "name": "link",
+          "offset": 4
+        },
+        {
+          "type": "int32_t*",
+          "name": "offset",
+          "offset": 8
+        },
+        {
+          "type": "int32_t",
+          "name": "flow",
+          "offset": 12
+        },
+        {
+          "type": "int32_t",
+          "name": "height",
+          "offset": 16
+        },
+        {
+          "type": "int32_t",
+          "name": "start",
+          "offset": 20
+        },
+        {
+          "type": "uint16_t",
+          "name": "countL",
+          "offset": 24
+        },
+        {
+          "type": "TProfile*",
+          "name": "next",
+          "offset": 28
+        }
+      ]
+    },
+    {
+      "name": "FT_UnitVector",
+      "size": 4,
+      "members": [
+        {
+          "type": "FT_F2Dot14",
+          "name": "x",
+          "offset": 0
+        },
+        {
+          "type": "FT_F2Dot14",
+          "name": "y",
+          "offset": 2
+        }
+      ]
+    },
+    {
+      "name": "FT_Matrix",
+      "size": 16,
+      "members": [
+        {
+          "type": "FT_Fixed",
+          "name": "xx",
+          "offset": 0
+        },
+        {
+          "type": "FT_Fixed",
+          "name": "xy",
+          "offset": 4
+        },
+        {
+          "type": "FT_Fixed",
+          "name": "yx",
+          "offset": 8
+        },
+        {
+          "type": "FT_Fixed",
+          "name": "yy",
+          "offset": 12
+        }
+      ]
+    },
+    {
+      "name": "FT_Generic",
+      "size": 8,
+      "members": [
+        {
+          "type": "void*",
+          "name": "data",
+          "offset": 0
+        },
+        {
+          "type": "FT_Generic_Finalizer",
+          "name": "finalizer",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "T1_Encoding",
+      "size": 20,
+      "members": [
+        {
+          "type": "FT_Int",
+          "name": "num_chars",
+          "offset": 0
+        },
+        {
+          "type": "FT_Int",
+          "name": "code_first",
+          "offset": 4
+        },
+        {
+          "type": "FT_Int",
+          "name": "code_last",
+          "offset": 8
+        },
+        {
+          "type": "FT_UShort*",
+          "name": "char_index",
+          "offset": 12
+        },
+        {
+          "type": "FT_String**",
+          "name": "char_name",
+          "offset": 16
+        }
+      ]
+    },
+    {
+      "name": "FT_ListNodeRec",
+      "size": 12,
+      "members": [
+        {
+          "type": "FT_ListNode",
+          "name": "prev",
+          "offset": 0
+        },
+        {
+          "type": "FT_ListNode",
+          "name": "next",
+          "offset": 4
+        },
+        {
+          "type": "void*",
+          "name": "data",
+          "offset": 8
+        }
+      ]
+    },
+    {
+      "name": "FT_ListRec",
+      "size": 8,
+      "members": [
+        {
+          "type": "FT_ListNode",
+          "name": "head",
+          "offset": 0
+        },
+        {
+          "type": "FT_ListNode",
+          "name": "tail",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "AH_Globals",
+      "size": 144,
+      "members": [
+        {
+          "type": "FT_Int",
+          "name": "num_widths",
+          "offset": 0
+        },
+        {
+          "type": "FT_Int",
+          "name": "num_heights",
+          "offset": 4
+        },
+        {
+          "type": "FT_Pos",
+          "name": "widths",
+          "arrsize": 12,
+          "offset": 8
+        },
+        {
+          "type": "FT_Pos",
+          "name": "heights",
+          "arrsize": 12,
+          "offset": 56
+        },
+        {
+          "type": "FT_Pos",
+          "name": "blue_refs",
+          "arrsize": 5,
+          "offset": 104
+        },
+        {
+          "type": "FT_Pos",
+          "name": "blue_shoots",
+          "arrsize": 5,
+          "offset": 124
+        }
+      ]
+    },
+    {
+      "name": "FT_BBox",
+      "size": 16,
+      "members": [
+        {
+          "type": "FT_Pos",
+          "name": "xMin",
+          "offset": 0
+        },
+        {
+          "type": "FT_Pos",
+          "name": "yMin",
+          "offset": 4
+        },
+        {
+          "type": "FT_Pos",
+          "name": "xMax",
+          "offset": 8
+        },
+        {
+          "type": "FT_Pos",
+          "name": "yMax",
+          "offset": 12
+        }
+      ]
+    },
+    {
+      "name": "FT_Glyph_Metrics",
+      "size": 32,
+      "members": [
+        {
+          "type": "FT_Pos",
+          "name": "width",
+          "offset": 0
+        },
+        {
+          "type": "FT_Pos",
+          "name": "height",
+          "offset": 4
+        },
+        {
+          "type": "FT_Pos",
+          "name": "horiBearingX",
+          "offset": 8
+        },
+        {
+          "type": "FT_Pos",
+          "name": "horiBearingY",
+          "offset": 12
+        },
+        {
+          "type": "FT_Pos",
+          "name": "horiAdvance",
+          "offset": 16
+        },
+        {
+          "type": "FT_Pos",
+          "name": "vertBearingX",
+          "offset": 20
+        },
+        {
+          "type": "FT_Pos",
+          "name": "vertBearingY",
+          "offset": 24
+        },
+        {
+          "type": "FT_Pos",
+          "name": "vertAdvance",
+          "offset": 28
+        }
+      ]
+    },
+    {
+      "name": "FT_Outline_Funcs",
+      "size": 24,
+      "members": [
+        {
+          "type": "FT_Outline_MoveTo_Func",
+          "name": "move_to",
+          "offset": 0
+        },
+        {
+          "type": "FT_Outline_LineTo_Func",
+          "name": "line_to",
+          "offset": 4
+        },
+        {
+          "type": "FT_Outline_ConicTo_Func",
+          "name": "conic_to",
+          "offset": 8
+        },
+        {
+          "type": "FT_Outline_CubicTo_Func",
+          "name": "cubic_to",
+          "offset": 12
+        },
+        {
+          "type": "int32_t",
+          "name": "shift",
+          "offset": 16
+        },
+        {
+          "type": "FT_Pos",
+          "name": "delta",
+          "offset": 20
+        }
+      ]
+    },
+    {
+      "name": "FT_Vector",
+      "size": 8,
+      "members": [
+        {
+          "type": "FT_Pos",
+          "name": "x",
+          "offset": 0
+        },
+        {
+          "type": "FT_Pos",
+          "name": "y",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "FT_Raster_Funcs",
+      "size": 24,
+      "members": [
+        {
+          "type": "FT_Glyph_Format",
+          "name": "glyph_format",
+          "offset": 0
+        },
+        {
+          "type": "FT_Raster_New_Func",
+          "name": "raster_new",
+          "offset": 4
+        },
+        {
+          "type": "FT_Raster_Reset_Func",
+          "name": "raster_reset",
+          "offset": 8
+        },
+        {
+          "type": "FT_Raster_Set_Mode_Func",
+          "name": "raster_set_mode",
+          "offset": 12
+        },
+        {
+          "type": "FT_Raster_Render_Func",
+          "name": "raster_render",
+          "offset": 16
+        },
+        {
+          "type": "FT_Raster_Done_Func",
+          "name": "raster_done",
+          "offset": 20
+        }
+      ]
+    },
+    {
+      "name": "FT_MemoryRec",
+      "size": 16,
+      "members": [
+        {
+          "type": "void*",
+          "name": "user",
+          "offset": 0
+        },
+        {
+          "type": "FT_Alloc_Func",
+          "name": "alloc",
+          "offset": 4
+        },
+        {
+          "type": "FT_Free_Func",
+          "name": "free",
+          "offset": 8
+        },
+        {
+          "type": "FT_Realloc_Func",
+          "name": "realloc",
+          "offset": 12
+        }
+      ]
+    },
+    {
+      "name": "FT_Bitmap_Size",
+      "size": 4,
+      "members": [
+        {
+          "type": "FT_Short",
+          "name": "height",
+          "offset": 0
+        },
+        {
+          "type": "FT_Short",
+          "name": "width",
+          "offset": 2
+        }
+      ]
+    },
+    {
+      "name": "FT_StreamRec",
+      "size": 40,
+      "members": [
+        {
+          "type": "uint8_t*",
+          "name": "base",
+          "offset": 0
+        },
+        {
+          "type": "uint32_t",
+          "name": "size",
+          "offset": 4
+        },
+        {
+          "type": "uint32_t",
+          "name": "pos",
+          "offset": 8
+        },
+        {
+          "type": "FT_StreamRec__descriptor",
+          "name": "descriptor",
+          "offset": 12
+        },
+        {
+          "type": "FT_StreamRec__pathname",
+          "name": "pathname",
+          "offset": 16
+        },
+        {
+          "type": "FT_Stream_IO",
+          "name": "read",
+          "offset": 20
+        },
+        {
+          "type": "FT_Stream_Close",
+          "name": "close",
+          "offset": 24
+        },
+        {
+          "type": "FT_Memory",
+          "name": "memory",
+          "offset": 28
+        },
+        {
+          "type": "uint8_t*",
+          "name": "cursor",
+          "offset": 32
+        },
+        {
+          "type": "uint8_t*",
+          "name": "limit",
+          "offset": 36
+        }
+      ]
+    },
+    {
+      "name": "CFF_FD_Select",
+      "size": 28,
+      "members": [
+        {
+          "type": "FT_Byte",
+          "name": "format",
+          "offset": 0
+        },
+        {
+          "type": "FT_UInt",
+          "name": "range_count",
+          "offset": 4
+        },
+        {
+          "type": "FT_Byte*",
+          "name": "data",
+          "offset": 8
+        },
+        {
+          "type": "FT_UInt",
+          "name": "data_size",
+          "offset": 12
+        },
+        {
+          "type": "FT_UInt",
+          "name": "cache_first",
+          "offset": 16
+        },
+        {
+          "type": "FT_UInt",
+          "name": "cache_count",
+          "offset": 20
+        },
+        {
+          "type": "FT_Byte",
+          "name": "cache_fd",
+          "offset": 24
+        }
+      ]
+    },
+    {
+      "name": "CID_Subrs",
+      "size": 8,
+      "members": [
+        {
+          "type": "FT_UInt",
+          "name": "num_subrs",
+          "offset": 0
+        },
+        {
+          "type": "FT_Byte**",
+          "name": "code",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "FT_GlyphLoad",
+      "size": 32,
+      "members": [
+        {
+          "type": "FT_Outline",
+          "name": "outline",
+          "offset": 0
+        },
+        {
+          "type": "FT_UInt",
+          "name": "num_subglyphs",
+          "offset": 20
+        },
+        {
+          "type": "FT_SubGlyph*",
+          "name": "subglyphs",
+          "offset": 24
+        },
+        {
+          "type": "FT_Vector*",
+          "name": "extra_points",
+          "offset": 28
+        }
+      ]
+    },
+    {
+      "name": "FT_Glyph_Class",
+      "size": 32,
+      "members": [
+        {
+          "type": "FT_UInt",
+          "name": "glyph_size",
+          "offset": 0
+        },
+        {
+          "type": "FT_Glyph_Format",
+          "name": "glyph_format",
+          "offset": 4
+        },
+        {
+          "type": "FT_Glyph_Init_Func",
+          "name": "glyph_init",
+          "offset": 8
+        },
+        {
+          "type": "FT_Glyph_Done_Func",
+          "name": "glyph_done",
+          "offset": 12
+        },
+        {
+          "type": "FT_Glyph_Copy_Func",
+          "name": "glyph_copy",
+          "offset": 16
+        },
+        {
+          "type": "FT_Glyph_Transform_Func",
+          "name": "glyph_transform",
+          "offset": 20
+        },
+        {
+          "type": "FT_Glyph_BBox_Func",
+          "name": "glyph_bbox",
+          "offset": 24
+        },
+        {
+          "type": "FT_Glyph_Prepare_Func",
+          "name": "glyph_prepare",
+          "offset": 28
+        }
+      ]
+    },
+    {
+      "name": "PS_UniMap",
+      "size": 8,
+      "members": [
+        {
+          "type": "FT_UInt",
+          "name": "unicode",
+          "offset": 0
+        },
+        {
+          "type": "FT_UInt",
+          "name": "glyph_index",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "PS_Unicodes",
+      "size": 8,
+      "members": [
+        {
+          "type": "FT_UInt",
+          "name": "num_maps",
+          "offset": 0
+        },
+        {
+          "type": "PS_UniMap*",
+          "name": "maps",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "T2_Parser",
+      "size": 412,
+      "members": [
+        {
+          "type": "FT_Byte*",
+          "name": "start",
+          "offset": 0
+        },
+        {
+          "type": "FT_Byte*",
+          "name": "limit",
+          "offset": 4
+        },
+        {
+          "type": "FT_Byte*",
+          "name": "cursor",
+          "offset": 8
+        },
+        {
+          "type": "FT_Byte*",
+          "name": "stack",
+          "arrsize": 97,
+          "offset": 12
+        },
+        {
+          "type": "FT_Byte**",
+          "name": "top",
+          "offset": 400
+        },
+        {
+          "type": "FT_UInt",
+          "name": "object_code",
+          "offset": 404
+        },
+        {
+          "type": "void*",
+          "name": "object",
+          "offset": 408
+        }
+      ]
+    },
+    {
+      "name": "CFF_Index",
+      "size": 24,
+      "members": [
+        {
+          "type": "FT_Stream",
+          "name": "stream",
+          "offset": 0
+        },
+        {
+          "type": "FT_UInt",
+          "name": "count",
+          "offset": 4
+        },
+        {
+          "type": "FT_Byte",
+          "name": "off_size",
+          "offset": 8
+        },
+        {
+          "type": "FT_ULong",
+          "name": "data_offset",
+          "offset": 12
+        },
+        {
+          "type": "FT_ULong*",
+          "name": "offsets",
+          "offset": 16
+        },
+        {
+          "type": "FT_Byte*",
+          "name": "bytes",
+          "offset": 20
+        }
+      ]
+    },
+    {
+      "name": "CFF_Private",
+      "size": 360,
+      "members": [
+        {
+          "type": "FT_Byte",
+          "name": "num_blue_values",
+          "offset": 0
+        },
+        {
+          "type": "FT_Byte",
+          "name": "num_other_blues",
+          "offset": 1
+        },
+        {
+          "type": "FT_Byte",
+          "name": "num_family_blues",
+          "offset": 2
+        },
+        {
+          "type": "FT_Byte",
+          "name": "num_family_other_blues",
+          "offset": 3
+        },
+        {
+          "type": "FT_Pos",
+          "name": "blue_values",
+          "arrsize": 14,
+          "offset": 4
+        },
+        {
+          "type": "FT_Pos",
+          "name": "other_blues",
+          "arrsize": 10,
+          "offset": 60
+        },
+        {
+          "type": "FT_Pos",
+          "name": "family_blues",
+          "arrsize": 14,
+          "offset": 100
+        },
+        {
+          "type": "FT_Pos",
+          "name": "family_other_blues",
+          "arrsize": 10,
+          "offset": 156
+        },
+        {
+          "type": "FT_Fixed",
+          "name": "blue_scale",
+          "offset": 196
+        },
+        {
+          "type": "FT_Pos",
+          "name": "blue_shift",
+          "offset": 200
+        },
+        {
+          "type": "FT_Pos",
+          "name": "blue_fuzz",
+          "offset": 204
+        },
+        {
+          "type": "FT_Pos",
+          "name": "standard_width",
+          "offset": 208
+        },
+        {
+          "type": "FT_Pos",
+          "name": "standard_height",
+          "offset": 212
+        },
+        {
+          "type": "FT_Byte",
+          "name": "num_snap_widths",
+          "offset": 216
+        },
+        {
+          "type": "FT_Byte",
+          "name": "num_snap_heights",
+          "offset": 217
+        },
+        {
+          "type": "FT_Pos",
+          "name": "snap_widths",
+          "arrsize": 13,
+          "offset": 220
+        },
+        {
+          "type": "FT_Pos",
+          "name": "snap_heights",
+          "arrsize": 13,
+          "offset": 272
+        },
+        {
+          "type": "FT_Bool",
+          "name": "force_bold",
+          "offset": 324
+        },
+        {
+          "type": "FT_Fixed",
+          "name": "force_bold_threshold",
+          "offset": 328
+        },
+        {
+          "type": "FT_Int",
+          "name": "lenIV",
+          "offset": 332
+        },
+        {
+          "type": "FT_Int",
+          "name": "language_group",
+          "offset": 336
+        },
+        {
+          "type": "FT_Fixed",
+          "name": "expansion_factor",
+          "offset": 340
+        },
+        {
+          "type": "FT_Long",
+          "name": "initial_random_seed",
+          "offset": 344
+        },
+        {
+          "type": "FT_ULong",
+          "name": "local_subrs_offset",
+          "offset": 348
+        },
+        {
+          "type": "FT_Pos",
+          "name": "default_width",
+          "offset": 352
+        },
+        {
+          "type": "FT_Pos",
+          "name": "nominal_width",
+          "offset": 356
+        }
+      ]
+    },
+    {
+      "name": "FT_Module_Class",
+      "size": 36,
+      "members": [
+        {
+          "type": "FT_ULong",
+          "name": "module_flags",
+          "offset": 0
+        },
+        {
+          "type": "FT_Int",
+          "name": "module_size",
+          "offset": 4
+        },
+        {
+          "type": "FT_String*",
+          "name": "module_name",
+          "offset": 8
+        },
+        {
+          "type": "FT_Fixed",
+          "name": "module_version",
+          "offset": 12
+        },
+        {
+          "type": "FT_Fixed",
+          "name": "module_requires",
+          "offset": 16
+        },
+        {
+          "type": "void*",
+          "name": "module_interface",
+          "offset": 20
+        },
+        {
+          "type": "FT_Module_Constructor",
+          "name": "module_init",
+          "offset": 24
+        },
+        {
+          "type": "FT_Module_Destructor",
+          "name": "module_done",
+          "offset": 28
+        },
+        {
+          "type": "FT_Module_Requester",
+          "name": "get_interface",
+          "offset": 32
+        }
+      ]
+    },
+    {
+      "name": "FT_Parameter",
+      "size": 8,
+      "members": [
+        {
+          "type": "FT_ULong",
+          "name": "tag",
+          "offset": 0
+        },
+        {
+          "type": "FT_Pointer",
+          "name": "data",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TTC_Header",
+      "size": 16,
+      "members": [
+        {
+          "type": "FT_ULong",
+          "name": "tag",
+          "offset": 0
+        },
+        {
+          "type": "FT_Fixed",
+          "name": "version",
+          "offset": 4
+        },
+        {
+          "type": "FT_Long",
+          "name": "count",
+          "offset": 8
+        },
+        {
+          "type": "FT_ULong*",
+          "name": "offsets",
+          "offset": 12
+        }
+      ]
+    },
+    {
+      "name": "TT_Postscript",
+      "size": 32,
+      "members": [
+        {
+          "type": "FT_Fixed",
+          "name": "FormatType",
+          "offset": 0
+        },
+        {
+          "type": "FT_Fixed",
+          "name": "italicAngle",
+          "offset": 4
+        },
+        {
+          "type": "FT_Short",
+          "name": "underlinePosition",
+          "offset": 8
+        },
+        {
+          "type": "FT_Short",
+          "name": "underlineThickness",
+          "offset": 10
+        },
+        {
+          "type": "FT_ULong",
+          "name": "isFixedPitch",
+          "offset": 12
+        },
+        {
+          "type": "FT_ULong",
+          "name": "minMemType42",
+          "offset": 16
+        },
+        {
+          "type": "FT_ULong",
+          "name": "maxMemType42",
+          "offset": 20
+        },
+        {
+          "type": "FT_ULong",
+          "name": "minMemType1",
+          "offset": 24
+        },
+        {
+          "type": "FT_ULong",
+          "name": "maxMemType1",
+          "offset": 28
+        }
+      ]
+    },
+    {
+      "name": "TT_Table",
+      "size": 16,
+      "members": [
+        {
+          "type": "FT_ULong",
+          "name": "Tag",
+          "offset": 0
+        },
+        {
+          "type": "FT_ULong",
+          "name": "CheckSum",
+          "offset": 4
+        },
+        {
+          "type": "FT_ULong",
+          "name": "Offset",
+          "offset": 8
+        },
+        {
+          "type": "FT_ULong",
+          "name": "Length",
+          "offset": 12
+        }
+      ]
+    },
+    {
+      "name": "FT_CharMapRec",
+      "size": 12,
+      "members": [
+        {
+          "type": "FT_Face",
+          "name": "face",
+          "offset": 0
+        },
+        {
+          "type": "FT_Encoding",
+          "name": "encoding",
+          "offset": 4
+        },
+        {
+          "type": "FT_UShort",
+          "name": "platform_id",
+          "offset": 8
+        },
+        {
+          "type": "FT_UShort",
+          "name": "encoding_id",
+          "offset": 10
+        }
+      ]
+    },
+    {
+      "name": "FT_Size_Metrics",
+      "size": 28,
+      "members": [
+        {
+          "type": "FT_UShort",
+          "name": "x_ppem",
+          "offset": 0
+        },
+        {
+          "type": "FT_UShort",
+          "name": "y_ppem",
+          "offset": 2
+        },
+        {
+          "type": "FT_Fixed",
+          "name": "x_scale",
+          "offset": 4
+        },
+        {
+          "type": "FT_Fixed",
+          "name": "y_scale",
+          "offset": 8
+        },
+        {
+          "type": "FT_Pos",
+          "name": "ascender",
+          "offset": 12
+        },
+        {
+          "type": "FT_Pos",
+          "name": "descender",
+          "offset": 16
+        },
+        {
+          "type": "FT_Pos",
+          "name": "height",
+          "offset": 20
+        },
+        {
+          "type": "FT_Pos",
+          "name": "max_advance",
+          "offset": 24
+        }
+      ]
+    },
+    {
+      "name": "SFNT_Header",
+      "size": 12,
+      "members": [
+        {
+          "type": "FT_ULong",
+          "name": "format_tag",
+          "offset": 0
+        },
+        {
+          "type": "FT_UShort",
+          "name": "num_tables",
+          "offset": 4
+        },
+        {
+          "type": "FT_UShort",
+          "name": "search_range",
+          "offset": 6
+        },
+        {
+          "type": "FT_UShort",
+          "name": "entry_selector",
+          "offset": 8
+        },
+        {
+          "type": "FT_UShort",
+          "name": "range_shift",
+          "offset": 10
+        }
+      ]
+    },
+    {
+      "name": "T1_FontInfo",
+      "size": 32,
+      "members": [
+        {
+          "type": "FT_String*",
+          "name": "version",
+          "offset": 0
+        },
+        {
+          "type": "FT_String*",
+          "name": "notice",
+          "offset": 4
+        },
+        {
+          "type": "FT_String*",
+          "name": "full_name",
+          "offset": 8
+        },
+        {
+          "type": "FT_String*",
+          "name": "family_name",
+          "offset": 12
+        },
+        {
+          "type": "FT_String*",
+          "name": "weight",
+          "offset": 16
+        },
+        {
+          "type": "FT_Long",
+          "name": "italic_angle",
+          "offset": 20
+        },
+        {
+          "type": "FT_Bool",
+          "name": "is_fixed_pitch",
+          "offset": 24
+        },
+        {
+          "type": "FT_Short",
+          "name": "underline_position",
+          "offset": 26
+        },
+        {
+          "type": "FT_UShort",
+          "name": "underline_thickness",
+          "offset": 28
+        }
+      ]
+    },
+    {
+      "name": "T1_Private",
+      "size": 192,
+      "members": [
+        {
+          "type": "FT_Int",
+          "name": "unique_id",
+          "offset": 0
+        },
+        {
+          "type": "FT_Int",
+          "name": "lenIV",
+          "offset": 4
+        },
+        {
+          "type": "FT_Byte",
+          "name": "num_blue_values",
+          "offset": 8
+        },
+        {
+          "type": "FT_Byte",
+          "name": "num_other_blues",
+          "offset": 9
+        },
+        {
+          "type": "FT_Byte",
+          "name": "num_family_blues",
+          "offset": 10
+        },
+        {
+          "type": "FT_Byte",
+          "name": "num_family_other_blues",
+          "offset": 11
+        },
+        {
+          "type": "FT_Short",
+          "name": "blue_values",
+          "arrsize": 14,
+          "offset": 12
+        },
+        {
+          "type": "FT_Short",
+          "name": "other_blues",
+          "arrsize": 10,
+          "offset": 40
+        },
+        {
+          "type": "FT_Short",
+          "name": "family_blues",
+          "arrsize": 14,
+          "offset": 60
+        },
+        {
+          "type": "FT_Short",
+          "name": "family_other_blues",
+          "arrsize": 10,
+          "offset": 88
+        },
+        {
+          "type": "FT_Fixed",
+          "name": "blue_scale",
+          "offset": 108
+        },
+        {
+          "type": "FT_Int",
+          "name": "blue_shift",
+          "offset": 112
+        },
+        {
+          "type": "FT_Int",
+          "name": "blue_fuzz",
+          "offset": 116
+        },
+        {
+          "type": "FT_UShort",
+          "name": "standard_width",
+          "arrsize": 1,
+          "offset": 120
+        },
+        {
+          "type": "FT_UShort",
+          "name": "standard_height",
+          "arrsize": 1,
+          "offset": 122
+        },
+        {
+          "type": "FT_Byte",
+          "name": "num_snap_widths",
+          "offset": 124
+        },
+        {
+          "type": "FT_Byte",
+          "name": "num_snap_heights",
+          "offset": 125
+        },
+        {
+          "type": "FT_Bool",
+          "name": "force_bold",
+          "offset": 126
+        },
+        {
+          "type": "FT_Bool",
+          "name": "round_stem_up",
+          "offset": 127
+        },
+        {
+          "type": "FT_Short",
+          "name": "snap_widths",
+          "arrsize": 13,
+          "offset": 128
+        },
+        {
+          "type": "FT_Short",
+          "name": "snap_heights",
+          "arrsize": 13,
+          "offset": 154
+        },
+        {
+          "type": "FT_Long",
+          "name": "language_group",
+          "offset": 180
+        },
+        {
+          "type": "FT_Long",
+          "name": "password",
+          "offset": 184
+        },
+        {
+          "type": "FT_Short",
+          "name": "min_feature",
+          "arrsize": 2,
+          "offset": 188
+        }
+      ]
+    },
+    {
+      "name": "TT_CMap2",
+      "size": 16,
+      "members": [
+        {
+          "type": "FT_UShort*",
+          "name": "subHeaderKeys",
+          "offset": 0
+        },
+        {
+          "type": "TT_CMap2SubHeader*",
+          "name": "subHeaders",
+          "offset": 4
+        },
+        {
+          "type": "FT_UShort*",
+          "name": "glyphIdArray",
+          "offset": 8
+        },
+        {
+          "type": "FT_UShort",
+          "name": "numGlyphId",
+          "offset": 12
+        }
+      ]
+    },
+    {
+      "name": "TT_CMap2SubHeader",
+      "size": 8,
+      "members": [
+        {
+          "type": "FT_UShort",
+          "name": "firstCode",
+          "offset": 0
+        },
+        {
+          "type": "FT_UShort",
+          "name": "entryCount",
+          "offset": 2
+        },
+        {
+          "type": "FT_Short",
+          "name": "idDelta",
+          "offset": 4
+        },
+        {
+          "type": "FT_UShort",
+          "name": "idRangeOffset",
+          "offset": 6
+        }
+      ]
+    },
+    {
+      "name": "TT_CMap4",
+      "size": 24,
+      "members": [
+        {
+          "type": "FT_UShort",
+          "name": "segCountX2",
+          "offset": 0
+        },
+        {
+          "type": "FT_UShort",
+          "name": "searchRange",
+          "offset": 2
+        },
+        {
+          "type": "FT_UShort",
+          "name": "entrySelector",
+          "offset": 4
+        },
+        {
+          "type": "FT_UShort",
+          "name": "rangeShift",
+          "offset": 6
+        },
+        {
+          "type": "TT_CMap4Segment*",
+          "name": "segments",
+          "offset": 8
+        },
+        {
+          "type": "FT_UShort*",
+          "name": "glyphIdArray",
+          "offset": 12
+        },
+        {
+          "type": "FT_UShort",
+          "name": "numGlyphId",
+          "offset": 16
+        },
+        {
+          "type": "TT_CMap4Segment*",
+          "name": "last_segment",
+          "offset": 20
+        }
+      ]
+    },
+    {
+      "name": "TT_CMap4Segment",
+      "size": 8,
+      "members": [
+        {
+          "type": "FT_UShort",
+          "name": "endCount",
+          "offset": 0
+        },
+        {
+          "type": "FT_UShort",
+          "name": "startCount",
+          "offset": 2
+        },
+        {
+          "type": "FT_Short",
+          "name": "idDelta",
+          "offset": 4
+        },
+        {
+          "type": "FT_UShort",
+          "name": "idRangeOffset",
+          "offset": 6
+        }
+      ]
+    },
+    {
+      "name": "TT_CMap6",
+      "size": 8,
+      "members": [
+        {
+          "type": "FT_UShort",
+          "name": "firstCode",
+          "offset": 0
+        },
+        {
+          "type": "FT_UShort",
+          "name": "entryCount",
+          "offset": 2
+        },
+        {
+          "type": "FT_UShort*",
+          "name": "glyphIdArray",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TT_Gasp",
+      "size": 8,
+      "members": [
+        {
+          "type": "FT_UShort",
+          "name": "version",
+          "offset": 0
+        },
+        {
+          "type": "FT_UShort",
+          "name": "numRanges",
+          "offset": 2
+        },
+        {
+          "type": "TT_GaspRange*",
+          "name": "gaspRanges",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TT_GaspRange",
+      "size": 4,
+      "members": [
+        {
+          "type": "FT_UShort",
+          "name": "maxPPEM",
+          "offset": 0
+        },
+        {
+          "type": "FT_UShort",
+          "name": "gaspFlag",
+          "offset": 2
+        }
+      ]
+    },
+    {
+      "name": "TT_GlyphZone",
+      "size": 28,
+      "members": [
+        {
+          "type": "FT_Memory",
+          "name": "memory",
+          "offset": 0
+        },
+        {
+          "type": "FT_UShort",
+          "name": "max_points",
+          "offset": 4
+        },
+        {
+          "type": "FT_UShort",
+          "name": "max_contours",
+          "offset": 6
+        },
+        {
+          "type": "FT_UShort",
+          "name": "n_points",
+          "offset": 8
+        },
+        {
+          "type": "FT_Short",
+          "name": "n_contours",
+          "offset": 10
+        },
+        {
+          "type": "FT_Vector*",
+          "name": "org",
+          "offset": 12
+        },
+        {
+          "type": "FT_Vector*",
+          "name": "cur",
+          "offset": 16
+        },
+        {
+          "type": "FT_Byte*",
+          "name": "tags",
+          "offset": 20
+        },
+        {
+          "type": "FT_UShort*",
+          "name": "contours",
+          "offset": 24
+        }
+      ]
+    },
+    {
+      "name": "TT_Hdmx",
+      "size": 8,
+      "members": [
+        {
+          "type": "FT_UShort",
+          "name": "version",
+          "offset": 0
+        },
+        {
+          "type": "FT_Short",
+          "name": "num_records",
+          "offset": 2
+        },
+        {
+          "type": "TT_HdmxRec*",
+          "name": "records",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TT_Header",
+      "size": 56,
+      "members": [
+        {
+          "type": "FT_Fixed",
+          "name": "Table_Version",
+          "offset": 0
+        },
+        {
+          "type": "FT_Fixed",
+          "name": "Font_Revision",
+          "offset": 4
+        },
+        {
+          "type": "FT_Long",
+          "name": "CheckSum_Adjust",
+          "offset": 8
+        },
+        {
+          "type": "FT_Long",
+          "name": "Magic_Number",
+          "offset": 12
+        },
+        {
+          "type": "FT_UShort",
+          "name": "Flags",
+          "offset": 16
+        },
+        {
+          "type": "FT_UShort",
+          "name": "Units_Per_EM",
+          "offset": 18
+        },
+        {
+          "type": "FT_Long",
+          "name": "Created",
+          "arrsize": 2,
+          "offset": 20
+        },
+        {
+          "type": "FT_Long",
+          "name": "Modified",
+          "arrsize": 2,
+          "offset": 28
+        },
+        {
+          "type": "FT_Short",
+          "name": "xMin",
+          "offset": 36
+        },
+        {
+          "type": "FT_Short",
+          "name": "yMin",
+          "offset": 38
+        },
+        {
+          "type": "FT_Short",
+          "name": "xMax",
+          "offset": 40
+        },
+        {
+          "type": "FT_Short",
+          "name": "yMax",
+          "offset": 42
+        },
+        {
+          "type": "FT_UShort",
+          "name": "Mac_Style",
+          "offset": 44
+        },
+        {
+          "type": "FT_UShort",
+          "name": "Lowest_Rec_PPEM",
+          "offset": 46
+        },
+        {
+          "type": "FT_Short",
+          "name": "Font_Direction",
+          "offset": 48
+        },
+        {
+          "type": "FT_Short",
+          "name": "Index_To_Loc_Format",
+          "offset": 50
+        },
+        {
+          "type": "FT_Short",
+          "name": "Glyph_Data_Format",
+          "offset": 52
+        }
+      ]
+    },
+    {
+      "name": "TT_HoriHeader",
+      "size": 44,
+      "members": [
+        {
+          "type": "FT_Fixed",
+          "name": "Version",
+          "offset": 0
+        },
+        {
+          "type": "FT_Short",
+          "name": "Ascender",
+          "offset": 4
+        },
+        {
+          "type": "FT_Short",
+          "name": "Descender",
+          "offset": 6
+        },
+        {
+          "type": "FT_Short",
+          "name": "Line_Gap",
+          "offset": 8
+        },
+        {
+          "type": "FT_UShort",
+          "name": "advance_Width_Max",
+          "offset": 10
+        },
+        {
+          "type": "FT_Short",
+          "name": "min_Left_Side_Bearing",
+          "offset": 12
+        },
+        {
+          "type": "FT_Short",
+          "name": "min_Right_Side_Bearing",
+          "offset": 14
+        },
+        {
+          "type": "FT_Short",
+          "name": "xMax_Extent",
+          "offset": 16
+        },
+        {
+          "type": "FT_Short",
+          "name": "caret_Slope_Rise",
+          "offset": 18
+        },
+        {
+          "type": "FT_Short",
+          "name": "caret_Slope_Run",
+          "offset": 20
+        },
+        {
+          "type": "FT_Short",
+          "name": "caret_Offset",
+          "offset": 22
+        },
+        {
+          "type": "FT_Short",
+          "name": "Reserved",
+          "arrsize": 4,
+          "offset": 24
+        },
+        {
+          "type": "FT_Short",
+          "name": "metric_Data_Format",
+          "offset": 32
+        },
+        {
+          "type": "FT_UShort",
+          "name": "number_Of_HMetrics",
+          "offset": 34
+        },
+        {
+          "type": "void*",
+          "name": "long_metrics",
+          "offset": 36
+        },
+        {
+          "type": "void*",
+          "name": "short_metrics",
+          "offset": 40
+        }
+      ]
+    },
+    {
+      "name": "TT_Kern_0_Pair",
+      "size": 6,
+      "members": [
+        {
+          "type": "FT_UShort",
+          "name": "left",
+          "offset": 0
+        },
+        {
+          "type": "FT_UShort",
+          "name": "right",
+          "offset": 2
+        },
+        {
+          "type": "FT_FWord",
+          "name": "value",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TT_MaxProfile",
+      "size": 32,
+      "members": [
+        {
+          "type": "FT_Fixed",
+          "name": "version",
+          "offset": 0
+        },
+        {
+          "type": "FT_UShort",
+          "name": "numGlyphs",
+          "offset": 4
+        },
+        {
+          "type": "FT_UShort",
+          "name": "maxPoints",
+          "offset": 6
+        },
+        {
+          "type": "FT_UShort",
+          "name": "maxContours",
+          "offset": 8
+        },
+        {
+          "type": "FT_UShort",
+          "name": "maxCompositePoints",
+          "offset": 10
+        },
+        {
+          "type": "FT_UShort",
+          "name": "maxCompositeContours",
+          "offset": 12
+        },
+        {
+          "type": "FT_UShort",
+          "name": "maxZones",
+          "offset": 14
+        },
+        {
+          "type": "FT_UShort",
+          "name": "maxTwilightPoints",
+          "offset": 16
+        },
+        {
+          "type": "FT_UShort",
+          "name": "maxStorage",
+          "offset": 18
+        },
+        {
+          "type": "FT_UShort",
+          "name": "maxFunctionDefs",
+          "offset": 20
+        },
+        {
+          "type": "FT_UShort",
+          "name": "maxInstructionDefs",
+          "offset": 22
+        },
+        {
+          "type": "FT_UShort",
+          "name": "maxStackElements",
+          "offset": 24
+        },
+        {
+          "type": "FT_UShort",
+          "name": "maxSizeOfInstructions",
+          "offset": 26
+        },
+        {
+          "type": "FT_UShort",
+          "name": "maxComponentElements",
+          "offset": 28
+        },
+        {
+          "type": "FT_UShort",
+          "name": "maxComponentDepth",
+          "offset": 30
+        }
+      ]
+    },
+    {
+      "name": "TT_NameRec",
+      "size": 16,
+      "members": [
+        {
+          "type": "FT_UShort",
+          "name": "platformID",
+          "offset": 0
+        },
+        {
+          "type": "FT_UShort",
+          "name": "encodingID",
+          "offset": 2
+        },
+        {
+          "type": "FT_UShort",
+          "name": "languageID",
+          "offset": 4
+        },
+        {
+          "type": "FT_UShort",
+          "name": "nameID",
+          "offset": 6
+        },
+        {
+          "type": "FT_UShort",
+          "name": "stringLength",
+          "offset": 8
+        },
+        {
+          "type": "FT_UShort",
+          "name": "stringOffset",
+          "offset": 10
+        },
+        {
+          "type": "FT_Byte*",
+          "name": "string",
+          "offset": 12
+        }
+      ]
+    },
+    {
+      "name": "TT_NameTable",
+      "size": 16,
+      "members": [
+        {
+          "type": "FT_UShort",
+          "name": "format",
+          "offset": 0
+        },
+        {
+          "type": "FT_UShort",
+          "name": "numNameRecords",
+          "offset": 2
+        },
+        {
+          "type": "FT_UShort",
+          "name": "storageOffset",
+          "offset": 4
+        },
+        {
+          "type": "TT_NameRec*",
+          "name": "names",
+          "offset": 8
+        },
+        {
+          "type": "FT_Byte*",
+          "name": "storage",
+          "offset": 12
+        }
+      ]
+    },
+    {
+      "name": "TT_OS2",
+      "size": 100,
+      "members": [
+        {
+          "type": "FT_UShort",
+          "name": "version",
+          "offset": 0
+        },
+        {
+          "type": "FT_Short",
+          "name": "xAvgCharWidth",
+          "offset": 2
+        },
+        {
+          "type": "FT_UShort",
+          "name": "usWeightClass",
+          "offset": 4
+        },
+        {
+          "type": "FT_UShort",
+          "name": "usWidthClass",
+          "offset": 6
+        },
+        {
+          "type": "FT_Short",
+          "name": "fsType",
+          "offset": 8
+        },
+        {
+          "type": "FT_Short",
+          "name": "ySubscriptXSize",
+          "offset": 10
+        },
+        {
+          "type": "FT_Short",
+          "name": "ySubscriptYSize",
+          "offset": 12
+        },
+        {
+          "type": "FT_Short",
+          "name": "ySubscriptXOffset",
+          "offset": 14
+        },
+        {
+          "type": "FT_Short",
+          "name": "ySubscriptYOffset",
+          "offset": 16
+        },
+        {
+          "type": "FT_Short",
+          "name": "ySuperscriptXSize",
+          "offset": 18
+        },
+        {
+          "type": "FT_Short",
+          "name": "ySuperscriptYSize",
+          "offset": 20
+        },
+        {
+          "type": "FT_Short",
+          "name": "ySuperscriptXOffset",
+          "offset": 22
+        },
+        {
+          "type": "FT_Short",
+          "name": "ySuperscriptYOffset",
+          "offset": 24
+        },
+        {
+          "type": "FT_Short",
+          "name": "yStrikeoutSize",
+          "offset": 26
+        },
+        {
+          "type": "FT_Short",
+          "name": "yStrikeoutPosition",
+          "offset": 28
+        },
+        {
+          "type": "FT_Short",
+          "name": "sFamilyClass",
+          "offset": 30
+        },
+        {
+          "type": "FT_Byte",
+          "name": "panose",
+          "arrsize": 10,
+          "offset": 32
+        },
+        {
+          "type": "FT_ULong",
+          "name": "ulUnicodeRange1",
+          "offset": 44
+        },
+        {
+          "type": "FT_ULong",
+          "name": "ulUnicodeRange2",
+          "offset": 48
+        },
+        {
+          "type": "FT_ULong",
+          "name": "ulUnicodeRange3",
+          "offset": 52
+        },
+        {
+          "type": "FT_ULong",
+          "name": "ulUnicodeRange4",
+          "offset": 56
+        },
+        {
+          "type": "FT_Char",
+          "name": "achVendID",
+          "arrsize": 4,
+          "offset": 60
+        },
+        {
+          "type": "FT_UShort",
+          "name": "fsSelection",
+          "offset": 64
+        },
+        {
+          "type": "FT_UShort",
+          "name": "usFirstCharIndex",
+          "offset": 66
+        },
+        {
+          "type": "FT_UShort",
+          "name": "usLastCharIndex",
+          "offset": 68
+        },
+        {
+          "type": "FT_Short",
+          "name": "sTypoAscender",
+          "offset": 70
+        },
+        {
+          "type": "FT_Short",
+          "name": "sTypoDescender",
+          "offset": 72
+        },
+        {
+          "type": "FT_Short",
+          "name": "sTypoLineGap",
+          "offset": 74
+        },
+        {
+          "type": "FT_UShort",
+          "name": "usWinAscent",
+          "offset": 76
+        },
+        {
+          "type": "FT_UShort",
+          "name": "usWinDescent",
+          "offset": 78
+        },
+        {
+          "type": "FT_ULong",
+          "name": "ulCodePageRange1",
+          "offset": 80
+        },
+        {
+          "type": "FT_ULong",
+          "name": "ulCodePageRange2",
+          "offset": 84
+        },
+        {
+          "type": "FT_Short",
+          "name": "sxHeight",
+          "offset": 88
+        },
+        {
+          "type": "FT_Short",
+          "name": "sCapHeight",
+          "offset": 90
+        },
+        {
+          "type": "FT_UShort",
+          "name": "usDefaultChar",
+          "offset": 92
+        },
+        {
+          "type": "FT_UShort",
+          "name": "usBreakChar",
+          "offset": 94
+        },
+        {
+          "type": "FT_UShort",
+          "name": "usMaxContext",
+          "offset": 96
+        }
+      ]
+    },
+    {
+      "name": "TT_PCLT",
+      "size": 56,
+      "members": [
+        {
+          "type": "FT_Fixed",
+          "name": "Version",
+          "offset": 0
+        },
+        {
+          "type": "FT_ULong",
+          "name": "FontNumber",
+          "offset": 4
+        },
+        {
+          "type": "FT_UShort",
+          "name": "Pitch",
+          "offset": 8
+        },
+        {
+          "type": "FT_UShort",
+          "name": "xHeight",
+          "offset": 10
+        },
+        {
+          "type": "FT_UShort",
+          "name": "Style",
+          "offset": 12
+        },
+        {
+          "type": "FT_UShort",
+          "name": "TypeFamily",
+          "offset": 14
+        },
+        {
+          "type": "FT_UShort",
+          "name": "CapHeight",
+          "offset": 16
+        },
+        {
+          "type": "FT_UShort",
+          "name": "SymbolSet",
+          "offset": 18
+        },
+        {
+          "type": "FT_Char",
+          "name": "TypeFace",
+          "arrsize": 16,
+          "offset": 20
+        },
+        {
+          "type": "FT_Char",
+          "name": "CharacterComplement",
+          "arrsize": 8,
+          "offset": 36
+        },
+        {
+          "type": "FT_Char",
+          "name": "FileName",
+          "arrsize": 6,
+          "offset": 44
+        },
+        {
+          "type": "FT_Char",
+          "name": "StrokeWeight",
+          "offset": 50
+        },
+        {
+          "type": "FT_Char",
+          "name": "WidthType",
+          "offset": 51
+        },
+        {
+          "type": "FT_Byte",
+          "name": "SerifStyle",
+          "offset": 52
+        },
+        {
+          "type": "FT_Byte",
+          "name": "Reserved",
+          "offset": 53
+        }
+      ]
+    },
+    {
+      "name": "TT_Post_20",
+      "size": 12,
+      "members": [
+        {
+          "type": "FT_UShort",
+          "name": "num_glyphs",
+          "offset": 0
+        },
+        {
+          "type": "FT_UShort",
+          "name": "num_names",
+          "offset": 2
+        },
+        {
+          "type": "FT_UShort*",
+          "name": "glyph_indices",
+          "offset": 4
+        },
+        {
+          "type": "FT_Char**",
+          "name": "glyph_names",
+          "offset": 8
+        }
+      ]
+    },
+    {
+      "name": "TT_Post_25",
+      "size": 8,
+      "members": [
+        {
+          "type": "FT_UShort",
+          "name": "num_glyphs",
+          "offset": 0
+        },
+        {
+          "type": "FT_Char*",
+          "name": "offsets",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "TT_Size_Metrics",
+      "size": 40,
+      "members": [
+        {
+          "type": "FT_Long",
+          "name": "x_ratio",
+          "offset": 0
+        },
+        {
+          "type": "FT_Long",
+          "name": "y_ratio",
+          "offset": 4
+        },
+        {
+          "type": "FT_UShort",
+          "name": "ppem",
+          "offset": 8
+        },
+        {
+          "type": "FT_Long",
+          "name": "ratio",
+          "offset": 12
+        },
+        {
+          "type": "FT_Fixed",
+          "name": "scale",
+          "offset": 16
+        },
+        {
+          "type": "FT_F26Dot6",
+          "name": "compensations",
+          "arrsize": 4,
+          "offset": 20
+        },
+        {
+          "type": "FT_Bool",
+          "name": "valid",
+          "offset": 36
+        },
+        {
+          "type": "FT_Bool",
+          "name": "rotated",
+          "offset": 37
+        },
+        {
+          "type": "FT_Bool",
+          "name": "stretched",
+          "offset": 38
+        }
+      ]
+    },
+    {
+      "name": "TT_VertHeader",
+      "size": 44,
+      "members": [
+        {
+          "type": "FT_Fixed",
+          "name": "Version",
+          "offset": 0
+        },
+        {
+          "type": "FT_Short",
+          "name": "Ascender",
+          "offset": 4
+        },
+        {
+          "type": "FT_Short",
+          "name": "Descender",
+          "offset": 6
+        },
+        {
+          "type": "FT_Short",
+          "name": "Line_Gap",
+          "offset": 8
+        },
+        {
+          "type": "FT_UShort",
+          "name": "advance_Height_Max",
+          "offset": 10
+        },
+        {
+          "type": "FT_Short",
+          "name": "min_Top_Side_Bearing",
+          "offset": 12
+        },
+        {
+          "type": "FT_Short",
+          "name": "min_Bottom_Side_Bearing",
+          "offset": 14
+        },
+        {
+          "type": "FT_Short",
+          "name": "yMax_Extent",
+          "offset": 16
+        },
+        {
+          "type": "FT_Short",
+          "name": "caret_Slope_Rise",
+          "offset": 18
+        },
+        {
+          "type": "FT_Short",
+          "name": "caret_Slope_Run",
+          "offset": 20
+        },
+        {
+          "type": "FT_Short",
+          "name": "caret_Offset",
+          "offset": 22
+        },
+        {
+          "type": "FT_Short",
+          "name": "Reserved",
+          "arrsize": 4,
+          "offset": 24
+        },
+        {
+          "type": "FT_Short",
+          "name": "metric_Data_Format",
+          "offset": 32
+        },
+        {
+          "type": "FT_UShort",
+          "name": "number_Of_VMetrics",
+          "offset": 34
+        },
+        {
+          "type": "void*",
+          "name": "long_metrics",
+          "offset": 36
+        },
+        {
+          "type": "void*",
+          "name": "short_metrics",
+          "offset": 40
+        }
+      ]
+    },
+    {
+      "name": "FT_Frame_Field",
+      "size": 8,
+      "members": [
+        {
+          "type": "FT_Frame_Op",
+          "name": "value",
+          "offset": 0
+        },
+        {
+          "type": "FT_Byte",
+          "name": "size",
+          "offset": 4
+        },
+        {
+          "type": "FT_UShort",
+          "name": "offset",
+          "offset": 6
+        }
+      ]
+    },
+    {
       "name": "CSRgn",
       "size": 4,
       "members": [
@@ -38002,6 +41619,103 @@
       ]
     },
     {
+      "name": "PS_Table",
+      "size": 52,
+      "members": [
+        {
+          "type": "FT_Byte*",
+          "name": "block",
+          "offset": 0
+        },
+        {
+          "type": "FT_Int",
+          "name": "cursor",
+          "offset": 4
+        },
+        {
+          "type": "FT_Int",
+          "name": "capacity",
+          "offset": 8
+        },
+        {
+          "type": "FT_Long",
+          "name": "init",
+          "offset": 12
+        },
+        {
+          "type": "FT_Int",
+          "name": "max_elems",
+          "offset": 16
+        },
+        {
+          "type": "FT_Int",
+          "name": "num_elems",
+          "offset": 20
+        },
+        {
+          "type": "FT_Byte**",
+          "name": "elements",
+          "offset": 24
+        },
+        {
+          "type": "FT_Int*",
+          "name": "lengths",
+          "offset": 28
+        },
+        {
+          "type": "FT_Memory",
+          "name": "memory",
+          "offset": 32
+        },
+        {
+          "type": "PS_Table_Funcs",
+          "name": "funcs",
+          "offset": 36
+        }
+      ]
+    },
+    {
+      "name": "PSNames_Interface",
+      "size": 28,
+      "members": [
+        {
+          "type": "PS_Unicode_Value_Func",
+          "name": "unicode_value",
+          "offset": 0
+        },
+        {
+          "type": "PS_Build_Unicodes_Func",
+          "name": "build_unicodes",
+          "offset": 4
+        },
+        {
+          "type": "PS_Lookup_Unicode_Func",
+          "name": "lookup_unicode",
+          "offset": 8
+        },
+        {
+          "type": "PS_Macintosh_Name_Func",
+          "name": "macintosh_name",
+          "offset": 12
+        },
+        {
+          "type": "PS_Adobe_Std_Strings_Func",
+          "name": "adobe_std_strings",
+          "offset": 16
+        },
+        {
+          "type": "uint16_t*",
+          "name": "adobe_std_encoding",
+          "offset": 20
+        },
+        {
+          "type": "uint16_t*",
+          "name": "adobe_expert_encoding",
+          "offset": 24
+        }
+      ]
+    },
+    {
       "name": "SOURCE",
       "size": 28,
       "members": [
@@ -38293,6 +42007,155 @@
           "type": "System_File__Stacked__FileFunc",
           "name": "shutdown",
           "offset": 112
+        }
+      ]
+    },
+    {
+      "name": "T1_Builder_Funcs",
+      "size": 32,
+      "members": [
+        {
+          "type": "void**",
+          "name": "init",
+          "offset": 0
+        },
+        {
+          "type": "void**",
+          "name": "done",
+          "offset": 4
+        },
+        {
+          "type": "T1_Builder_Check_Points_Func",
+          "name": "check_points",
+          "offset": 8
+        },
+        {
+          "type": "T1_Builder_Add_Point_Func",
+          "name": "add_point",
+          "offset": 12
+        },
+        {
+          "type": "T1_Builder_Add_Point1_Func",
+          "name": "add_point1",
+          "offset": 16
+        },
+        {
+          "type": "T1_Builder_Add_Contour_Func",
+          "name": "add_contour",
+          "offset": 20
+        },
+        {
+          "type": "T1_Builder_Start_Point_Func",
+          "name": "start_point",
+          "offset": 24
+        },
+        {
+          "type": "T1_Builder_Close_Contour_Func",
+          "name": "close_contour",
+          "offset": 28
+        }
+      ]
+    },
+    {
+      "name": "T1_Field",
+      "size": 32,
+      "members": [
+        {
+          "type": "char*",
+          "name": "ident",
+          "offset": 0
+        },
+        {
+          "type": "T1_Field_Location",
+          "name": "location",
+          "offset": 4
+        },
+        {
+          "type": "T1_Field_Type",
+          "name": "type",
+          "offset": 8
+        },
+        {
+          "type": "T1_Field_Parser",
+          "name": "reader",
+          "offset": 12
+        },
+        {
+          "type": "FT_UInt",
+          "name": "offset",
+          "offset": 16
+        },
+        {
+          "type": "FT_Byte",
+          "name": "size",
+          "offset": 20
+        },
+        {
+          "type": "FT_UInt",
+          "name": "array_max",
+          "offset": 24
+        },
+        {
+          "type": "FT_UInt",
+          "name": "count_offset",
+          "offset": 28
+        }
+      ]
+    },
+    {
+      "name": "T1_Parser",
+      "size": 68,
+      "members": [
+        {
+          "type": "FT_Byte*",
+          "name": "cursor",
+          "offset": 0
+        },
+        {
+          "type": "FT_Byte*",
+          "name": "base",
+          "offset": 4
+        },
+        {
+          "type": "FT_Byte*",
+          "name": "limit",
+          "offset": 8
+        },
+        {
+          "type": "FT_Error",
+          "name": "error",
+          "offset": 12
+        },
+        {
+          "type": "FT_Memory",
+          "name": "memory",
+          "offset": 16
+        },
+        {
+          "type": "T1_Parser_Funcs",
+          "name": "funcs",
+          "offset": 20
+        }
+      ]
+    },
+    {
+      "name": "T1_Token",
+      "size": 12,
+      "members": [
+        {
+          "type": "FT_Byte*",
+          "name": "start",
+          "offset": 0
+        },
+        {
+          "type": "FT_Byte*",
+          "name": "limit",
+          "offset": 4
+        },
+        {
+          "type": "T1_Token_Type",
+          "name": "type",
+          "offset": 8
         }
       ]
     },
@@ -40888,6 +44751,406 @@
           "type": "TSLink_WowConnection__SENDNODE",
           "name": "m_link",
           "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "TRaster_Instance",
+      "size": 1804,
+      "members": [
+        {
+          "type": "int32_t",
+          "name": "precision_bits",
+          "offset": 0
+        },
+        {
+          "type": "int32_t",
+          "name": "precision",
+          "offset": 4
+        },
+        {
+          "type": "int32_t",
+          "name": "precision_half",
+          "offset": 8
+        },
+        {
+          "type": "int32_t",
+          "name": "precision_mask",
+          "offset": 12
+        },
+        {
+          "type": "int32_t",
+          "name": "precision_shift",
+          "offset": 16
+        },
+        {
+          "type": "int32_t",
+          "name": "precision_step",
+          "offset": 20
+        },
+        {
+          "type": "int32_t",
+          "name": "precision_jitter",
+          "offset": 24
+        },
+        {
+          "type": "int32_t",
+          "name": "scale_shift",
+          "offset": 28
+        },
+        {
+          "type": "int32_t*",
+          "name": "buff",
+          "offset": 32
+        },
+        {
+          "type": "int32_t*",
+          "name": "sizeBuff",
+          "offset": 36
+        },
+        {
+          "type": "int32_t*",
+          "name": "maxBuff",
+          "offset": 40
+        },
+        {
+          "type": "int32_t*",
+          "name": "top",
+          "offset": 44
+        },
+        {
+          "type": "FT_Error",
+          "name": "error",
+          "offset": 48
+        },
+        {
+          "type": "int32_t*",
+          "name": "numTurns",
+          "offset": 52
+        },
+        {
+          "type": "TPoint*",
+          "name": "arc",
+          "offset": 56
+        },
+        {
+          "type": "uint16_t",
+          "name": "bWidth",
+          "offset": 60
+        },
+        {
+          "type": "uint8_t*",
+          "name": "bTarget",
+          "offset": 64
+        },
+        {
+          "type": "uint8_t*",
+          "name": "gTarget",
+          "offset": 68
+        },
+        {
+          "type": "int32_t",
+          "name": "lastX",
+          "offset": 72
+        },
+        {
+          "type": "int32_t",
+          "name": "lastY",
+          "offset": 76
+        },
+        {
+          "type": "int32_t",
+          "name": "minY",
+          "offset": 80
+        },
+        {
+          "type": "int32_t",
+          "name": "maxY",
+          "offset": 84
+        },
+        {
+          "type": "uint16_t",
+          "name": "num_Profs",
+          "offset": 88
+        },
+        {
+          "type": "bool",
+          "name": "fresh",
+          "offset": 90
+        },
+        {
+          "type": "bool",
+          "name": "joint",
+          "offset": 91
+        },
+        {
+          "type": "TProfile*",
+          "name": "cProfile",
+          "offset": 92
+        },
+        {
+          "type": "TProfile*",
+          "name": "fProfile",
+          "offset": 96
+        },
+        {
+          "type": "TProfile*",
+          "name": "gProfile",
+          "offset": 100
+        },
+        {
+          "type": "TStates",
+          "name": "state",
+          "offset": 104
+        },
+        {
+          "type": "FT_Bitmap",
+          "name": "target",
+          "offset": 108
+        },
+        {
+          "type": "FT_Outline",
+          "name": "outline",
+          "offset": 132
+        },
+        {
+          "type": "int32_t",
+          "name": "traceOfs",
+          "offset": 152
+        },
+        {
+          "type": "int32_t",
+          "name": "traceG",
+          "offset": 156
+        },
+        {
+          "type": "int16_t",
+          "name": "traceIncr",
+          "offset": 160
+        },
+        {
+          "type": "int16_t",
+          "name": "gray_min_x",
+          "offset": 162
+        },
+        {
+          "type": "int16_t",
+          "name": "gray_max_x",
+          "offset": 164
+        },
+        {
+          "type": "Function_Sweep_Init",
+          "name": "Proc_Sweep_Init",
+          "offset": 168
+        },
+        {
+          "type": "Function_Sweep_Span",
+          "name": "Proc_Sweep_Span",
+          "offset": 172
+        },
+        {
+          "type": "Function_Sweep_Span",
+          "name": "Proc_Sweep_Drop",
+          "offset": 176
+        },
+        {
+          "type": "Function_Sweep_Step",
+          "name": "Proc_Sweep_Step",
+          "offset": 180
+        },
+        {
+          "type": "uint8_t",
+          "name": "dropOutControl",
+          "offset": 184
+        },
+        {
+          "type": "uint8_t",
+          "name": "second_pass",
+          "offset": 185
+        },
+        {
+          "type": "TPoint",
+          "name": "arcs",
+          "arrsize": 65,
+          "offset": 188
+        },
+        {
+          "type": "TBand",
+          "name": "band_stack",
+          "arrsize": 16,
+          "offset": 708
+        },
+        {
+          "type": "int32_t",
+          "name": "band_top",
+          "offset": 772
+        },
+        {
+          "type": "int32_t",
+          "name": "count_table",
+          "arrsize": 256,
+          "offset": 776
+        },
+        {
+          "type": "void*",
+          "name": "memory",
+          "offset": 1800
+        }
+      ]
+    },
+    {
+      "name": "SFNT_Interface",
+      "size": 120,
+      "members": [
+        {
+          "type": "TT_Goto_Table_Func",
+          "name": "goto_table",
+          "offset": 0
+        },
+        {
+          "type": "TT_Init_Face_Func",
+          "name": "init_face",
+          "offset": 4
+        },
+        {
+          "type": "TT_Load_Face_Func",
+          "name": "load_face",
+          "offset": 8
+        },
+        {
+          "type": "TT_Done_Face_Func",
+          "name": "done_face",
+          "offset": 12
+        },
+        {
+          "type": "SFNT_Get_Interface_Func",
+          "name": "get_interface",
+          "offset": 16
+        },
+        {
+          "type": "TT_Load_Any_Func",
+          "name": "load_any",
+          "offset": 20
+        },
+        {
+          "type": "TT_Load_SFNT_Header_Func",
+          "name": "load_sfnt_header",
+          "offset": 24
+        },
+        {
+          "type": "TT_Load_Directory_Func",
+          "name": "load_directory",
+          "offset": 28
+        },
+        {
+          "type": "TT_Load_Table_Func",
+          "name": "load_header",
+          "offset": 32
+        },
+        {
+          "type": "TT_Load_Metrics_Func",
+          "name": "load_metrics",
+          "offset": 36
+        },
+        {
+          "type": "TT_Load_Table_Func",
+          "name": "load_charmaps",
+          "offset": 40
+        },
+        {
+          "type": "TT_Load_Table_Func",
+          "name": "load_max_profile",
+          "offset": 44
+        },
+        {
+          "type": "TT_Load_Table_Func",
+          "name": "load_os2",
+          "offset": 48
+        },
+        {
+          "type": "TT_Load_Table_Func",
+          "name": "load_psnames",
+          "offset": 52
+        },
+        {
+          "type": "TT_Load_Table_Func",
+          "name": "load_names",
+          "offset": 56
+        },
+        {
+          "type": "TT_Free_Table_Func",
+          "name": "free_names",
+          "offset": 60
+        },
+        {
+          "type": "TT_Load_Table_Func",
+          "name": "load_hdmx",
+          "offset": 64
+        },
+        {
+          "type": "TT_Free_Table_Func",
+          "name": "free_hdmx",
+          "offset": 68
+        },
+        {
+          "type": "TT_Load_Table_Func",
+          "name": "load_kerning",
+          "offset": 72
+        },
+        {
+          "type": "TT_Load_Table_Func",
+          "name": "load_gasp",
+          "offset": 76
+        },
+        {
+          "type": "TT_Load_Table_Func",
+          "name": "load_pclt",
+          "offset": 80
+        },
+        {
+          "type": "TT_Load_Table_Func",
+          "name": "load_bitmap_header",
+          "offset": 84
+        },
+        {
+          "type": "TT_Set_SBit_Strike_Func",
+          "name": "set_sbit_strike",
+          "offset": 88
+        },
+        {
+          "type": "TT_Load_Table_Func",
+          "name": "load_sbits",
+          "offset": 92
+        },
+        {
+          "type": "TT_Load_SBit_Image_Func",
+          "name": "load_sbit_image",
+          "offset": 96
+        },
+        {
+          "type": "TT_Free_Table_Func",
+          "name": "free_sbits",
+          "offset": 100
+        },
+        {
+          "type": "TT_Get_PS_Name_Func",
+          "name": "get_psname",
+          "offset": 104
+        },
+        {
+          "type": "TT_Free_Table_Func",
+          "name": "free_psnames",
+          "offset": 108
+        },
+        {
+          "type": "TT_CharMap_Load_Func",
+          "name": "load_charmap",
+          "offset": 112
+        },
+        {
+          "type": "TT_CharMap_Free_Func",
+          "name": "free_charmap",
+          "offset": 116
         }
       ]
     },
@@ -47746,6 +52009,2058 @@
       ]
     },
     {
+      "name": "T1_Blend",
+      "size": 284,
+      "members": [
+        {
+          "type": "FT_UInt",
+          "name": "num_designs",
+          "offset": 0
+        },
+        {
+          "type": "FT_UInt",
+          "name": "num_axis",
+          "offset": 4
+        },
+        {
+          "type": "FT_String*",
+          "name": "axis_names",
+          "arrsize": 4,
+          "offset": 8
+        },
+        {
+          "type": "FT_Fixed*",
+          "name": "design_pos",
+          "arrsize": 16,
+          "offset": 24
+        },
+        {
+          "type": "T1_DesignMap",
+          "name": "design_map",
+          "arrsize": 4,
+          "offset": 88
+        },
+        {
+          "type": "FT_Fixed*",
+          "name": "weight_vector",
+          "offset": 136
+        },
+        {
+          "type": "FT_Fixed*",
+          "name": "default_weight_vector",
+          "offset": 140
+        },
+        {
+          "type": "T1_FontInfo*",
+          "name": "font_infos",
+          "arrsize": 17,
+          "offset": 144
+        },
+        {
+          "type": "T1_Private*",
+          "name": "privates",
+          "arrsize": 17,
+          "offset": 212
+        },
+        {
+          "type": "FT_ULong",
+          "name": "blend_bitflags",
+          "offset": 280
+        }
+      ]
+    },
+    {
+      "name": "TT_SBit_Scale",
+      "size": 28,
+      "members": [
+        {
+          "type": "TT_SBit_Line_Metrics",
+          "name": "hori",
+          "offset": 0
+        },
+        {
+          "type": "TT_SBit_Line_Metrics",
+          "name": "vert",
+          "offset": 12
+        },
+        {
+          "type": "FT_Byte",
+          "name": "x_ppem",
+          "offset": 24
+        },
+        {
+          "type": "FT_Byte",
+          "name": "y_ppem",
+          "offset": 25
+        },
+        {
+          "type": "FT_Byte",
+          "name": "x_ppem_substitute",
+          "offset": 26
+        },
+        {
+          "type": "FT_Byte",
+          "name": "y_ppem_substitute",
+          "offset": 27
+        }
+      ]
+    },
+    {
+      "name": "TT_SBit_Strike",
+      "size": 48,
+      "members": [
+        {
+          "type": "FT_Int",
+          "name": "num_ranges",
+          "offset": 0
+        },
+        {
+          "type": "TT_SBit_Range*",
+          "name": "sbit_ranges",
+          "offset": 4
+        },
+        {
+          "type": "FT_ULong",
+          "name": "ranges_offset",
+          "offset": 8
+        },
+        {
+          "type": "FT_ULong",
+          "name": "color_ref",
+          "offset": 12
+        },
+        {
+          "type": "TT_SBit_Line_Metrics",
+          "name": "hori",
+          "offset": 16
+        },
+        {
+          "type": "TT_SBit_Line_Metrics",
+          "name": "vert",
+          "offset": 28
+        },
+        {
+          "type": "FT_UShort",
+          "name": "start_glyph",
+          "offset": 40
+        },
+        {
+          "type": "FT_UShort",
+          "name": "end_glyph",
+          "offset": 42
+        },
+        {
+          "type": "FT_Byte",
+          "name": "x_ppem",
+          "offset": 44
+        },
+        {
+          "type": "FT_Byte",
+          "name": "y_ppem",
+          "offset": 45
+        },
+        {
+          "type": "FT_Byte",
+          "name": "bit_depth",
+          "offset": 46
+        },
+        {
+          "type": "FT_Char",
+          "name": "flags",
+          "offset": 47
+        }
+      ]
+    },
+    {
+      "name": "TT_SBit_Range",
+      "size": 40,
+      "members": [
+        {
+          "type": "FT_UShort",
+          "name": "first_glyph",
+          "offset": 0
+        },
+        {
+          "type": "FT_UShort",
+          "name": "last_glyph",
+          "offset": 2
+        },
+        {
+          "type": "FT_UShort",
+          "name": "index_format",
+          "offset": 4
+        },
+        {
+          "type": "FT_UShort",
+          "name": "image_format",
+          "offset": 6
+        },
+        {
+          "type": "FT_ULong",
+          "name": "image_offset",
+          "offset": 8
+        },
+        {
+          "type": "FT_ULong",
+          "name": "image_size",
+          "offset": 12
+        },
+        {
+          "type": "TT_SBit_Metrics",
+          "name": "metrics",
+          "offset": 16
+        },
+        {
+          "type": "FT_ULong",
+          "name": "num_glyphs",
+          "offset": 24
+        },
+        {
+          "type": "FT_ULong*",
+          "name": "glyph_offsets",
+          "offset": 28
+        },
+        {
+          "type": "FT_UShort*",
+          "name": "glyph_codes",
+          "offset": 32
+        },
+        {
+          "type": "FT_ULong",
+          "name": "table_offset",
+          "offset": 36
+        }
+      ]
+    },
+    {
+      "name": "FT_SubGlyph",
+      "size": 32,
+      "members": [
+        {
+          "type": "FT_Int",
+          "name": "index",
+          "offset": 0
+        },
+        {
+          "type": "FT_UShort",
+          "name": "flags",
+          "offset": 4
+        },
+        {
+          "type": "FT_Int",
+          "name": "arg1",
+          "offset": 8
+        },
+        {
+          "type": "FT_Int",
+          "name": "arg2",
+          "offset": 12
+        },
+        {
+          "type": "FT_Matrix",
+          "name": "transform",
+          "offset": 16
+        }
+      ]
+    },
+    {
+      "name": "FT_ModuleRec",
+      "size": 20,
+      "members": [
+        {
+          "type": "FT_Module_Class*",
+          "name": "clazz",
+          "offset": 0
+        },
+        {
+          "type": "FT_Library",
+          "name": "library",
+          "offset": 4
+        },
+        {
+          "type": "FT_Memory",
+          "name": "memory",
+          "offset": 8
+        },
+        {
+          "type": "FT_Generic",
+          "name": "generic",
+          "offset": 12
+        }
+      ]
+    },
+    {
+      "name": "AH_Outline",
+      "size": 80,
+      "members": [
+        {
+          "type": "FT_Memory",
+          "name": "memory",
+          "offset": 0
+        },
+        {
+          "type": "AH_Direction",
+          "name": "vert_major_dir",
+          "offset": 4
+        },
+        {
+          "type": "AH_Direction",
+          "name": "horz_major_dir",
+          "offset": 8
+        },
+        {
+          "type": "FT_Fixed",
+          "name": "x_scale",
+          "offset": 12
+        },
+        {
+          "type": "FT_Fixed",
+          "name": "y_scale",
+          "offset": 16
+        },
+        {
+          "type": "FT_Pos",
+          "name": "edge_distance_threshold",
+          "offset": 20
+        },
+        {
+          "type": "FT_Int",
+          "name": "max_points",
+          "offset": 24
+        },
+        {
+          "type": "FT_Int",
+          "name": "num_points",
+          "offset": 28
+        },
+        {
+          "type": "AH_Point*",
+          "name": "points",
+          "offset": 32
+        },
+        {
+          "type": "FT_Int",
+          "name": "max_contours",
+          "offset": 36
+        },
+        {
+          "type": "FT_Int",
+          "name": "num_contours",
+          "offset": 40
+        },
+        {
+          "type": "AH_Point**",
+          "name": "contours",
+          "offset": 44
+        },
+        {
+          "type": "FT_Int",
+          "name": "num_hedges",
+          "offset": 48
+        },
+        {
+          "type": "AH_Edge*",
+          "name": "horz_edges",
+          "offset": 52
+        },
+        {
+          "type": "FT_Int",
+          "name": "num_vedges",
+          "offset": 56
+        },
+        {
+          "type": "AH_Edge*",
+          "name": "vert_edges",
+          "offset": 60
+        },
+        {
+          "type": "FT_Int",
+          "name": "num_hsegments",
+          "offset": 64
+        },
+        {
+          "type": "AH_Segment*",
+          "name": "horz_segments",
+          "offset": 68
+        },
+        {
+          "type": "FT_Int",
+          "name": "num_vsegments",
+          "offset": 72
+        },
+        {
+          "type": "AH_Segment*",
+          "name": "vert_segments",
+          "offset": 76
+        }
+      ]
+    },
+    {
+      "name": "AH_Edge",
+      "size": 48,
+      "members": [
+        {
+          "type": "AH_Edge_Flags",
+          "name": "flags",
+          "offset": 0
+        },
+        {
+          "type": "AH_Direction",
+          "name": "dir",
+          "offset": 4
+        },
+        {
+          "type": "AH_Segment*",
+          "name": "first",
+          "offset": 8
+        },
+        {
+          "type": "AH_Segment*",
+          "name": "last",
+          "offset": 12
+        },
+        {
+          "type": "FT_Pos",
+          "name": "fpos",
+          "offset": 16
+        },
+        {
+          "type": "FT_Pos",
+          "name": "opos",
+          "offset": 20
+        },
+        {
+          "type": "FT_Pos",
+          "name": "pos",
+          "offset": 24
+        },
+        {
+          "type": "AH_Edge*",
+          "name": "link",
+          "offset": 28
+        },
+        {
+          "type": "AH_Edge*",
+          "name": "serif",
+          "offset": 32
+        },
+        {
+          "type": "FT_Int",
+          "name": "num_linked",
+          "offset": 36
+        },
+        {
+          "type": "FT_Int",
+          "name": "score",
+          "offset": 40
+        },
+        {
+          "type": "FT_Pos*",
+          "name": "blue_edge",
+          "offset": 44
+        }
+      ]
+    },
+    {
+      "name": "AH_Segment",
+      "size": 56,
+      "members": [
+        {
+          "type": "AH_Edge_Flags",
+          "name": "flags",
+          "offset": 0
+        },
+        {
+          "type": "AH_Direction",
+          "name": "dir",
+          "offset": 4
+        },
+        {
+          "type": "AH_Point*",
+          "name": "first",
+          "offset": 8
+        },
+        {
+          "type": "AH_Point*",
+          "name": "last",
+          "offset": 12
+        },
+        {
+          "type": "AH_Point**",
+          "name": "contour",
+          "offset": 16
+        },
+        {
+          "type": "FT_Pos",
+          "name": "pos",
+          "offset": 20
+        },
+        {
+          "type": "FT_Pos",
+          "name": "min_coord",
+          "offset": 24
+        },
+        {
+          "type": "FT_Pos",
+          "name": "max_coord",
+          "offset": 28
+        },
+        {
+          "type": "AH_Edge*",
+          "name": "edge",
+          "offset": 32
+        },
+        {
+          "type": "AH_Segment*",
+          "name": "edge_next",
+          "offset": 36
+        },
+        {
+          "type": "AH_Segment*",
+          "name": "link",
+          "offset": 40
+        },
+        {
+          "type": "AH_Segment*",
+          "name": "serif",
+          "offset": 44
+        },
+        {
+          "type": "FT_Pos",
+          "name": "num_linked",
+          "offset": 48
+        },
+        {
+          "type": "FT_Int",
+          "name": "score",
+          "offset": 52
+        }
+      ]
+    },
+    {
+      "name": "AH_Point",
+      "size": 60,
+      "members": [
+        {
+          "type": "AH_Flags",
+          "name": "flags",
+          "offset": 0
+        },
+        {
+          "type": "FT_Pos",
+          "name": "ox",
+          "offset": 4
+        },
+        {
+          "type": "FT_Pos",
+          "name": "oy",
+          "offset": 8
+        },
+        {
+          "type": "FT_Pos",
+          "name": "fx",
+          "offset": 12
+        },
+        {
+          "type": "FT_Pos",
+          "name": "fy",
+          "offset": 16
+        },
+        {
+          "type": "FT_Pos",
+          "name": "x",
+          "offset": 20
+        },
+        {
+          "type": "FT_Pos",
+          "name": "y",
+          "offset": 24
+        },
+        {
+          "type": "FT_Pos",
+          "name": "u",
+          "offset": 28
+        },
+        {
+          "type": "FT_Pos",
+          "name": "v",
+          "offset": 32
+        },
+        {
+          "type": "AH_Direction",
+          "name": "in_dir",
+          "offset": 36
+        },
+        {
+          "type": "AH_Direction",
+          "name": "out_dir",
+          "offset": 40
+        },
+        {
+          "type": "AH_Angle",
+          "name": "in_angle",
+          "offset": 44
+        },
+        {
+          "type": "AH_Angle",
+          "name": "out_angle",
+          "offset": 48
+        },
+        {
+          "type": "AH_Point*",
+          "name": "next",
+          "offset": 52
+        },
+        {
+          "type": "AH_Point*",
+          "name": "prev",
+          "offset": 56
+        }
+      ]
+    },
+    {
+      "name": "FT_LibraryRec",
+      "size": 120,
+      "members": [
+        {
+          "type": "FT_Memory",
+          "name": "memory",
+          "offset": 0
+        },
+        {
+          "type": "FT_Generic",
+          "name": "generic",
+          "offset": 4
+        },
+        {
+          "type": "FT_UInt",
+          "name": "num_modules",
+          "offset": 12
+        },
+        {
+          "type": "FT_Module",
+          "name": "modules",
+          "arrsize": 16,
+          "offset": 16
+        },
+        {
+          "type": "FT_ListRec",
+          "name": "renderers",
+          "offset": 80
+        },
+        {
+          "type": "FT_Renderer",
+          "name": "cur_renderer",
+          "offset": 88
+        },
+        {
+          "type": "FT_Module",
+          "name": "auto_hinter",
+          "offset": 92
+        },
+        {
+          "type": "FT_Byte*",
+          "name": "raster_pool",
+          "offset": 96
+        },
+        {
+          "type": "FT_ULong",
+          "name": "raster_pool_size",
+          "offset": 100
+        },
+        {
+          "type": "FT_DebugHook_Func",
+          "name": "debug_hooks",
+          "arrsize": 4,
+          "offset": 104
+        }
+      ]
+    },
+    {
+      "name": "AH_Face_Globals",
+      "size": 304,
+      "members": [
+        {
+          "type": "FT_Face",
+          "name": "face",
+          "offset": 0
+        },
+        {
+          "type": "AH_Globals",
+          "name": "design",
+          "offset": 4
+        },
+        {
+          "type": "AH_Globals",
+          "name": "scaled",
+          "offset": 148
+        },
+        {
+          "type": "FT_Fixed",
+          "name": "x_scale",
+          "offset": 292
+        },
+        {
+          "type": "FT_Fixed",
+          "name": "y_scale",
+          "offset": 296
+        },
+        {
+          "type": "FT_Bool",
+          "name": "control_overshoot",
+          "offset": 300
+        }
+      ]
+    },
+    {
+      "name": "CFF_Font_Dict",
+      "size": 168,
+      "members": [
+        {
+          "type": "FT_UInt",
+          "name": "version",
+          "offset": 0
+        },
+        {
+          "type": "FT_UInt",
+          "name": "notice",
+          "offset": 4
+        },
+        {
+          "type": "FT_UInt",
+          "name": "copyright",
+          "offset": 8
+        },
+        {
+          "type": "FT_UInt",
+          "name": "full_name",
+          "offset": 12
+        },
+        {
+          "type": "FT_UInt",
+          "name": "family_name",
+          "offset": 16
+        },
+        {
+          "type": "FT_UInt",
+          "name": "weight",
+          "offset": 20
+        },
+        {
+          "type": "FT_Bool",
+          "name": "is_fixed_pitch",
+          "offset": 24
+        },
+        {
+          "type": "FT_Fixed",
+          "name": "italic_angle",
+          "offset": 28
+        },
+        {
+          "type": "FT_Pos",
+          "name": "underline_position",
+          "offset": 32
+        },
+        {
+          "type": "FT_Pos",
+          "name": "underline_thickness",
+          "offset": 36
+        },
+        {
+          "type": "FT_Int",
+          "name": "paint_type",
+          "offset": 40
+        },
+        {
+          "type": "FT_Int",
+          "name": "charstring_type",
+          "offset": 44
+        },
+        {
+          "type": "FT_Matrix",
+          "name": "font_matrix",
+          "offset": 48
+        },
+        {
+          "type": "FT_ULong",
+          "name": "unique_id",
+          "offset": 64
+        },
+        {
+          "type": "FT_BBox",
+          "name": "font_bbox",
+          "offset": 68
+        },
+        {
+          "type": "FT_Pos",
+          "name": "stroke_width",
+          "offset": 84
+        },
+        {
+          "type": "FT_ULong",
+          "name": "charset_offset",
+          "offset": 88
+        },
+        {
+          "type": "FT_ULong",
+          "name": "encoding_offset",
+          "offset": 92
+        },
+        {
+          "type": "FT_ULong",
+          "name": "charstrings_offset",
+          "offset": 96
+        },
+        {
+          "type": "FT_ULong",
+          "name": "private_offset",
+          "offset": 100
+        },
+        {
+          "type": "FT_ULong",
+          "name": "private_size",
+          "offset": 104
+        },
+        {
+          "type": "FT_Long",
+          "name": "synthetic_base",
+          "offset": 108
+        },
+        {
+          "type": "FT_UInt",
+          "name": "embedded_postscript",
+          "offset": 112
+        },
+        {
+          "type": "FT_UInt",
+          "name": "base_font_name",
+          "offset": 116
+        },
+        {
+          "type": "FT_UInt",
+          "name": "postscript",
+          "offset": 120
+        },
+        {
+          "type": "FT_UInt",
+          "name": "cid_registry",
+          "offset": 124
+        },
+        {
+          "type": "FT_UInt",
+          "name": "cid_ordering",
+          "offset": 128
+        },
+        {
+          "type": "FT_ULong",
+          "name": "cid_supplement",
+          "offset": 132
+        },
+        {
+          "type": "FT_Long",
+          "name": "cid_font_version",
+          "offset": 136
+        },
+        {
+          "type": "FT_Long",
+          "name": "cid_font_revision",
+          "offset": 140
+        },
+        {
+          "type": "FT_Long",
+          "name": "cid_font_type",
+          "offset": 144
+        },
+        {
+          "type": "FT_Long",
+          "name": "cid_count",
+          "offset": 148
+        },
+        {
+          "type": "FT_ULong",
+          "name": "cid_uid_base",
+          "offset": 152
+        },
+        {
+          "type": "FT_ULong",
+          "name": "cid_fd_array_offset",
+          "offset": 156
+        },
+        {
+          "type": "FT_ULong",
+          "name": "cid_fd_select_offset",
+          "offset": 160
+        },
+        {
+          "type": "FT_UInt",
+          "name": "cid_font_name",
+          "offset": 164
+        }
+      ]
+    },
+    {
+      "name": "FT_FaceRec",
+      "size": 132,
+      "members": [
+        {
+          "type": "FT_Long",
+          "name": "num_faces",
+          "offset": 0
+        },
+        {
+          "type": "FT_Long",
+          "name": "face_index",
+          "offset": 4
+        },
+        {
+          "type": "FT_Long",
+          "name": "face_flags",
+          "offset": 8
+        },
+        {
+          "type": "FT_Long",
+          "name": "style_flags",
+          "offset": 12
+        },
+        {
+          "type": "FT_Long",
+          "name": "num_glyphs",
+          "offset": 16
+        },
+        {
+          "type": "FT_String*",
+          "name": "family_name",
+          "offset": 20
+        },
+        {
+          "type": "FT_String*",
+          "name": "style_name",
+          "offset": 24
+        },
+        {
+          "type": "FT_Int",
+          "name": "num_fixed_sizes",
+          "offset": 28
+        },
+        {
+          "type": "FT_Bitmap_Size*",
+          "name": "available_sizes",
+          "offset": 32
+        },
+        {
+          "type": "FT_Int",
+          "name": "num_charmaps",
+          "offset": 36
+        },
+        {
+          "type": "FT_CharMap*",
+          "name": "charmaps",
+          "offset": 40
+        },
+        {
+          "type": "FT_Generic",
+          "name": "generic",
+          "offset": 44
+        },
+        {
+          "type": "FT_BBox",
+          "name": "bbox",
+          "offset": 52
+        },
+        {
+          "type": "FT_UShort",
+          "name": "units_per_EM",
+          "offset": 68
+        },
+        {
+          "type": "FT_Short",
+          "name": "ascender",
+          "offset": 70
+        },
+        {
+          "type": "FT_Short",
+          "name": "descender",
+          "offset": 72
+        },
+        {
+          "type": "FT_Short",
+          "name": "height",
+          "offset": 74
+        },
+        {
+          "type": "FT_Short",
+          "name": "max_advance_width",
+          "offset": 76
+        },
+        {
+          "type": "FT_Short",
+          "name": "max_advance_height",
+          "offset": 78
+        },
+        {
+          "type": "FT_Short",
+          "name": "underline_position",
+          "offset": 80
+        },
+        {
+          "type": "FT_Short",
+          "name": "underline_thickness",
+          "offset": 82
+        },
+        {
+          "type": "FT_GlyphSlot",
+          "name": "glyph",
+          "offset": 84
+        },
+        {
+          "type": "FT_Size",
+          "name": "size",
+          "offset": 88
+        },
+        {
+          "type": "FT_CharMap",
+          "name": "charmap",
+          "offset": 92
+        },
+        {
+          "type": "FT_Driver",
+          "name": "driver",
+          "offset": 96
+        },
+        {
+          "type": "FT_Memory",
+          "name": "memory",
+          "offset": 100
+        },
+        {
+          "type": "FT_Stream",
+          "name": "stream",
+          "offset": 104
+        },
+        {
+          "type": "FT_ListRec",
+          "name": "sizes_list",
+          "offset": 108
+        },
+        {
+          "type": "FT_Generic",
+          "name": "autohint",
+          "offset": 116
+        },
+        {
+          "type": "void*",
+          "name": "extensions",
+          "offset": 124
+        },
+        {
+          "type": "FT_Face_Internal",
+          "name": "internal",
+          "offset": 128
+        }
+      ]
+    },
+    {
+      "name": "FT_Raster_Params",
+      "size": 48,
+      "members": [
+        {
+          "type": "FT_Bitmap*",
+          "name": "target",
+          "offset": 0
+        },
+        {
+          "type": "void*",
+          "name": "source",
+          "offset": 4
+        },
+        {
+          "type": "int32_t",
+          "name": "flags",
+          "offset": 8
+        },
+        {
+          "type": "FT_Raster_Span_Func",
+          "name": "gray_spans",
+          "offset": 12
+        },
+        {
+          "type": "FT_Raster_Span_Func",
+          "name": "black_spans",
+          "offset": 16
+        },
+        {
+          "type": "FT_Raster_BitTest_Func",
+          "name": "bit_test",
+          "offset": 20
+        },
+        {
+          "type": "FT_Raster_BitSet_Func",
+          "name": "bit_set",
+          "offset": 24
+        },
+        {
+          "type": "void*",
+          "name": "user",
+          "offset": 28
+        },
+        {
+          "type": "FT_BBox",
+          "name": "clip_box",
+          "offset": 32
+        }
+      ]
+    },
+    {
+      "name": "AH_Hinter",
+      "size": 44,
+      "members": [
+        {
+          "type": "FT_Memory",
+          "name": "memory",
+          "offset": 0
+        },
+        {
+          "type": "AH_Hinter_Flags",
+          "name": "flags",
+          "offset": 4
+        },
+        {
+          "type": "FT_Int",
+          "name": "algorithm",
+          "offset": 8
+        },
+        {
+          "type": "FT_Face",
+          "name": "face",
+          "offset": 12
+        },
+        {
+          "type": "AH_Face_Globals*",
+          "name": "globals",
+          "offset": 16
+        },
+        {
+          "type": "AH_Outline*",
+          "name": "glyph",
+          "offset": 20
+        },
+        {
+          "type": "FT_GlyphLoader*",
+          "name": "loader",
+          "offset": 24
+        },
+        {
+          "type": "FT_Vector",
+          "name": "pp1",
+          "offset": 28
+        },
+        {
+          "type": "FT_Vector",
+          "name": "pp2",
+          "offset": 36
+        }
+      ]
+    },
+    {
+      "name": "FT_Face_InternalRec",
+      "size": 36,
+      "members": [
+        {
+          "type": "FT_UShort",
+          "name": "max_points",
+          "offset": 0
+        },
+        {
+          "type": "FT_Short",
+          "name": "max_contours",
+          "offset": 2
+        },
+        {
+          "type": "FT_Matrix",
+          "name": "transform_matrix",
+          "offset": 4
+        },
+        {
+          "type": "FT_Vector",
+          "name": "transform_delta",
+          "offset": 20
+        },
+        {
+          "type": "FT_Int",
+          "name": "transform_flags",
+          "offset": 28
+        },
+        {
+          "type": "char*",
+          "name": "postscript_name",
+          "offset": 32
+        }
+      ]
+    },
+    {
+      "name": "FT_GlyphRec",
+      "size": 20,
+      "members": [
+        {
+          "type": "FT_Library",
+          "name": "library",
+          "offset": 0
+        },
+        {
+          "type": "FT_Glyph_Class*",
+          "name": "clazz",
+          "offset": 4
+        },
+        {
+          "type": "FT_Glyph_Format",
+          "name": "format",
+          "offset": 8
+        },
+        {
+          "type": "FT_Vector",
+          "name": "advance",
+          "offset": 12
+        }
+      ]
+    },
+    {
+      "name": "FT_GlyphSlotRec",
+      "size": 152,
+      "members": [
+        {
+          "type": "FT_Library",
+          "name": "library",
+          "offset": 0
+        },
+        {
+          "type": "FT_Face",
+          "name": "face",
+          "offset": 4
+        },
+        {
+          "type": "FT_GlyphSlot",
+          "name": "next",
+          "offset": 8
+        },
+        {
+          "type": "FT_UInt",
+          "name": "flags",
+          "offset": 12
+        },
+        {
+          "type": "FT_Generic",
+          "name": "generic",
+          "offset": 16
+        },
+        {
+          "type": "FT_Glyph_Metrics",
+          "name": "metrics",
+          "offset": 24
+        },
+        {
+          "type": "FT_Fixed",
+          "name": "linearHoriAdvance",
+          "offset": 56
+        },
+        {
+          "type": "FT_Fixed",
+          "name": "linearVertAdvance",
+          "offset": 60
+        },
+        {
+          "type": "FT_Vector",
+          "name": "advance",
+          "offset": 64
+        },
+        {
+          "type": "FT_Glyph_Format",
+          "name": "format",
+          "offset": 72
+        },
+        {
+          "type": "FT_Bitmap",
+          "name": "bitmap",
+          "offset": 76
+        },
+        {
+          "type": "FT_Int",
+          "name": "bitmap_left",
+          "offset": 100
+        },
+        {
+          "type": "FT_Int",
+          "name": "bitmap_top",
+          "offset": 104
+        },
+        {
+          "type": "FT_Outline",
+          "name": "outline",
+          "offset": 108
+        },
+        {
+          "type": "FT_UInt",
+          "name": "num_subglyphs",
+          "offset": 128
+        },
+        {
+          "type": "FT_SubGlyph*",
+          "name": "subglyphs",
+          "offset": 132
+        },
+        {
+          "type": "void*",
+          "name": "control_data",
+          "offset": 136
+        },
+        {
+          "type": "int32_t",
+          "name": "control_len",
+          "offset": 140
+        },
+        {
+          "type": "void*",
+          "name": "other",
+          "offset": 144
+        },
+        {
+          "type": "FT_Slot_Internal",
+          "name": "internal",
+          "offset": 148
+        }
+      ]
+    },
+    {
+      "name": "FT_Slot_InternalRec",
+      "size": 36,
+      "members": [
+        {
+          "type": "FT_GlyphLoader*",
+          "name": "loader",
+          "offset": 0
+        },
+        {
+          "type": "FT_Bool",
+          "name": "glyph_transformed",
+          "offset": 4
+        },
+        {
+          "type": "FT_Matrix",
+          "name": "glyph_matrix",
+          "offset": 8
+        },
+        {
+          "type": "FT_Vector",
+          "name": "glyph_delta",
+          "offset": 24
+        },
+        {
+          "type": "void*",
+          "name": "glyph_hints",
+          "offset": 32
+        }
+      ]
+    },
+    {
+      "name": "T2_Builder",
+      "size": 92,
+      "members": [
+        {
+          "type": "FT_Memory",
+          "name": "memory",
+          "offset": 0
+        },
+        {
+          "type": "TT_Face",
+          "name": "face",
+          "offset": 4
+        },
+        {
+          "type": "T2_GlyphSlot",
+          "name": "glyph",
+          "offset": 8
+        },
+        {
+          "type": "FT_GlyphLoader*",
+          "name": "loader",
+          "offset": 12
+        },
+        {
+          "type": "FT_Outline*",
+          "name": "base",
+          "offset": 16
+        },
+        {
+          "type": "FT_Outline*",
+          "name": "current",
+          "offset": 20
+        },
+        {
+          "type": "FT_Vector",
+          "name": "last",
+          "offset": 24
+        },
+        {
+          "type": "FT_Fixed",
+          "name": "scale_x",
+          "offset": 32
+        },
+        {
+          "type": "FT_Fixed",
+          "name": "scale_y",
+          "offset": 36
+        },
+        {
+          "type": "FT_Pos",
+          "name": "pos_x",
+          "offset": 40
+        },
+        {
+          "type": "FT_Pos",
+          "name": "pos_y",
+          "offset": 44
+        },
+        {
+          "type": "FT_Vector",
+          "name": "left_bearing",
+          "offset": 48
+        },
+        {
+          "type": "FT_Vector",
+          "name": "advance",
+          "offset": 56
+        },
+        {
+          "type": "FT_BBox",
+          "name": "bbox",
+          "offset": 64
+        },
+        {
+          "type": "FT_Bool",
+          "name": "path_begun",
+          "offset": 80
+        },
+        {
+          "type": "FT_Bool",
+          "name": "load_points",
+          "offset": 81
+        },
+        {
+          "type": "FT_Bool",
+          "name": "no_recurse",
+          "offset": 82
+        },
+        {
+          "type": "FT_Error",
+          "name": "error",
+          "offset": 84
+        },
+        {
+          "type": "FT_Bool",
+          "name": "metrics_only",
+          "offset": 88
+        }
+      ]
+    },
+    {
+      "name": "FT_GlyphLoader",
+      "size": 88,
+      "members": [
+        {
+          "type": "FT_Memory",
+          "name": "memory",
+          "offset": 0
+        },
+        {
+          "type": "FT_UInt",
+          "name": "max_points",
+          "offset": 4
+        },
+        {
+          "type": "FT_UInt",
+          "name": "max_contours",
+          "offset": 8
+        },
+        {
+          "type": "FT_UInt",
+          "name": "max_subglyphs",
+          "offset": 12
+        },
+        {
+          "type": "FT_Bool",
+          "name": "use_extra",
+          "offset": 16
+        },
+        {
+          "type": "FT_GlyphLoad",
+          "name": "base",
+          "offset": 20
+        },
+        {
+          "type": "FT_GlyphLoad",
+          "name": "current",
+          "offset": 52
+        },
+        {
+          "type": "void*",
+          "name": "other",
+          "offset": 84
+        }
+      ]
+    },
+    {
+      "name": "FT_Driver_Class",
+      "size": 100,
+      "members": [
+        {
+          "type": "FT_Module_Class",
+          "name": "root",
+          "offset": 0
+        },
+        {
+          "type": "FT_Int",
+          "name": "face_object_size",
+          "offset": 36
+        },
+        {
+          "type": "FT_Int",
+          "name": "size_object_size",
+          "offset": 40
+        },
+        {
+          "type": "FT_Int",
+          "name": "slot_object_size",
+          "offset": 44
+        },
+        {
+          "type": "FTDriver_initFace",
+          "name": "init_face",
+          "offset": 48
+        },
+        {
+          "type": "FTDriver_doneFace",
+          "name": "done_face",
+          "offset": 52
+        },
+        {
+          "type": "FTDriver_initSize",
+          "name": "init_size",
+          "offset": 56
+        },
+        {
+          "type": "FTDriver_doneSize",
+          "name": "done_size",
+          "offset": 60
+        },
+        {
+          "type": "FTDriver_initGlyphSlot",
+          "name": "init_slot",
+          "offset": 64
+        },
+        {
+          "type": "FTDriver_doneGlyphSlot",
+          "name": "done_slot",
+          "offset": 68
+        },
+        {
+          "type": "FTDriver_setCharSizes",
+          "name": "set_char_sizes",
+          "offset": 72
+        },
+        {
+          "type": "FTDriver_setPixelSizes",
+          "name": "set_pixel_sizes",
+          "offset": 76
+        },
+        {
+          "type": "FTDriver_loadGlyph",
+          "name": "load_glyph",
+          "offset": 80
+        },
+        {
+          "type": "FTDriver_getCharIndex",
+          "name": "get_char_index",
+          "offset": 84
+        },
+        {
+          "type": "FTDriver_getKerning",
+          "name": "get_kerning",
+          "offset": 88
+        },
+        {
+          "type": "FTDriver_attachFile",
+          "name": "attach_file",
+          "offset": 92
+        },
+        {
+          "type": "FTDriver_getAdvances",
+          "name": "get_advances",
+          "offset": 96
+        }
+      ]
+    },
+    {
+      "name": "FT_Renderer_Class",
+      "size": 60,
+      "members": [
+        {
+          "type": "FT_Module_Class",
+          "name": "root",
+          "offset": 0
+        },
+        {
+          "type": "FT_Glyph_Format",
+          "name": "glyph_format",
+          "offset": 36
+        },
+        {
+          "type": "FTRenderer_render",
+          "name": "render_glyph",
+          "offset": 40
+        },
+        {
+          "type": "FTRenderer_transform",
+          "name": "transform_glyph",
+          "offset": 44
+        },
+        {
+          "type": "FTRenderer_getCBox",
+          "name": "get_glyph_cbox",
+          "offset": 48
+        },
+        {
+          "type": "FTRenderer_setMode",
+          "name": "set_mode",
+          "offset": 52
+        },
+        {
+          "type": "FT_Raster_Funcs*",
+          "name": "raster_class",
+          "offset": 56
+        }
+      ]
+    },
+    {
+      "name": "FT_SizeRec",
+      "size": 44,
+      "members": [
+        {
+          "type": "FT_Face",
+          "name": "face",
+          "offset": 0
+        },
+        {
+          "type": "FT_Generic",
+          "name": "generic",
+          "offset": 4
+        },
+        {
+          "type": "FT_Size_Metrics",
+          "name": "metrics",
+          "offset": 12
+        },
+        {
+          "type": "FT_Size_Internal",
+          "name": "internal",
+          "offset": 40
+        }
+      ]
+    },
+    {
+      "name": "CID_Info",
+      "size": 172,
+      "members": [
+        {
+          "type": "FT_String*",
+          "name": "cid_font_name",
+          "offset": 0
+        },
+        {
+          "type": "FT_Fixed",
+          "name": "cid_version",
+          "offset": 4
+        },
+        {
+          "type": "FT_Int",
+          "name": "cid_font_type",
+          "offset": 8
+        },
+        {
+          "type": "FT_String*",
+          "name": "registry",
+          "offset": 12
+        },
+        {
+          "type": "FT_String*",
+          "name": "ordering",
+          "offset": 16
+        },
+        {
+          "type": "FT_Int",
+          "name": "supplement",
+          "offset": 20
+        },
+        {
+          "type": "T1_FontInfo",
+          "name": "font_info",
+          "offset": 24
+        },
+        {
+          "type": "FT_BBox",
+          "name": "font_bbox",
+          "offset": 56
+        },
+        {
+          "type": "FT_ULong",
+          "name": "uid_base",
+          "offset": 72
+        },
+        {
+          "type": "FT_Int",
+          "name": "num_xuid",
+          "offset": 76
+        },
+        {
+          "type": "FT_ULong",
+          "name": "xuid",
+          "arrsize": 16,
+          "offset": 80
+        },
+        {
+          "type": "FT_ULong",
+          "name": "cidmap_offset",
+          "offset": 144
+        },
+        {
+          "type": "FT_Int",
+          "name": "fd_bytes",
+          "offset": 148
+        },
+        {
+          "type": "FT_Int",
+          "name": "gd_bytes",
+          "offset": 152
+        },
+        {
+          "type": "FT_ULong",
+          "name": "cid_count",
+          "offset": 156
+        },
+        {
+          "type": "FT_Int",
+          "name": "num_dicts",
+          "offset": 160
+        },
+        {
+          "type": "CID_FontDict*",
+          "name": "font_dicts",
+          "offset": 164
+        },
+        {
+          "type": "FT_ULong",
+          "name": "data_offset",
+          "offset": 168
+        }
+      ]
+    },
+    {
+      "name": "CID_FontDict",
+      "size": 248,
+      "members": [
+        {
+          "type": "T1_Private",
+          "name": "private_dict",
+          "offset": 0
+        },
+        {
+          "type": "FT_UInt",
+          "name": "len_buildchar",
+          "offset": 192
+        },
+        {
+          "type": "FT_Fixed",
+          "name": "forcebold_threshold",
+          "offset": 196
+        },
+        {
+          "type": "FT_Pos",
+          "name": "stroke_width",
+          "offset": 200
+        },
+        {
+          "type": "FT_Fixed",
+          "name": "expansion_factor",
+          "offset": 204
+        },
+        {
+          "type": "FT_Byte",
+          "name": "paint_type",
+          "offset": 208
+        },
+        {
+          "type": "FT_Byte",
+          "name": "font_type",
+          "offset": 209
+        },
+        {
+          "type": "FT_Matrix",
+          "name": "font_matrix",
+          "offset": 212
+        },
+        {
+          "type": "FT_Vector",
+          "name": "font_offset",
+          "offset": 228
+        },
+        {
+          "type": "FT_UInt",
+          "name": "num_subrs",
+          "offset": 236
+        },
+        {
+          "type": "FT_ULong",
+          "name": "subrmap_offset",
+          "offset": 240
+        },
+        {
+          "type": "FT_Int",
+          "name": "sd_bytes",
+          "offset": 244
+        }
+      ]
+    },
+    {
+      "name": "T1_Font",
+      "size": 344,
+      "members": [
+        {
+          "type": "T1_FontInfo",
+          "name": "font_info",
+          "offset": 0
+        },
+        {
+          "type": "T1_Private",
+          "name": "private_dict",
+          "offset": 32
+        },
+        {
+          "type": "FT_String*",
+          "name": "font_name",
+          "offset": 224
+        },
+        {
+          "type": "T1_EncodingType",
+          "name": "encoding_type",
+          "offset": 228
+        },
+        {
+          "type": "T1_Encoding",
+          "name": "encoding",
+          "offset": 232
+        },
+        {
+          "type": "FT_Byte*",
+          "name": "subrs_block",
+          "offset": 252
+        },
+        {
+          "type": "FT_Byte*",
+          "name": "charstrings_block",
+          "offset": 256
+        },
+        {
+          "type": "FT_Byte*",
+          "name": "glyph_names_block",
+          "offset": 260
+        },
+        {
+          "type": "FT_Int",
+          "name": "num_subrs",
+          "offset": 264
+        },
+        {
+          "type": "FT_Byte**",
+          "name": "subrs",
+          "offset": 268
+        },
+        {
+          "type": "FT_Int*",
+          "name": "subrs_len",
+          "offset": 272
+        },
+        {
+          "type": "FT_Int",
+          "name": "num_glyphs",
+          "offset": 276
+        },
+        {
+          "type": "FT_String**",
+          "name": "glyph_names",
+          "offset": 280
+        },
+        {
+          "type": "FT_Byte**",
+          "name": "charstrings",
+          "offset": 284
+        },
+        {
+          "type": "FT_Int*",
+          "name": "charstrings_len",
+          "offset": 288
+        },
+        {
+          "type": "FT_Byte",
+          "name": "paint_type",
+          "offset": 292
+        },
+        {
+          "type": "FT_Byte",
+          "name": "font_type",
+          "offset": 293
+        },
+        {
+          "type": "FT_Matrix",
+          "name": "font_matrix",
+          "offset": 296
+        },
+        {
+          "type": "FT_Vector",
+          "name": "font_offset",
+          "offset": 312
+        },
+        {
+          "type": "FT_BBox",
+          "name": "font_bbox",
+          "offset": 320
+        },
+        {
+          "type": "FT_Long",
+          "name": "font_id",
+          "offset": 336
+        },
+        {
+          "type": "FT_Int",
+          "name": "stroke_width",
+          "offset": 340
+        }
+      ]
+    },
+    {
+      "name": "TT_Loader",
+      "size": 156,
+      "members": [
+        {
+          "type": "FT_Face",
+          "name": "face",
+          "offset": 0
+        },
+        {
+          "type": "FT_Size",
+          "name": "size",
+          "offset": 4
+        },
+        {
+          "type": "FT_GlyphSlot",
+          "name": "glyph",
+          "offset": 8
+        },
+        {
+          "type": "FT_GlyphLoader*",
+          "name": "gloader",
+          "offset": 12
+        },
+        {
+          "type": "FT_ULong",
+          "name": "load_flags",
+          "offset": 16
+        },
+        {
+          "type": "FT_UInt",
+          "name": "glyph_index",
+          "offset": 20
+        },
+        {
+          "type": "FT_Stream",
+          "name": "stream",
+          "offset": 24
+        },
+        {
+          "type": "FT_Int",
+          "name": "byte_len",
+          "offset": 28
+        },
+        {
+          "type": "FT_Short",
+          "name": "n_contours",
+          "offset": 32
+        },
+        {
+          "type": "FT_BBox",
+          "name": "bbox",
+          "offset": 36
+        },
+        {
+          "type": "FT_Int",
+          "name": "left_bearing",
+          "offset": 52
+        },
+        {
+          "type": "FT_Int",
+          "name": "advance",
+          "offset": 56
+        },
+        {
+          "type": "FT_Bool",
+          "name": "preserve_pps",
+          "offset": 60
+        },
+        {
+          "type": "FT_Vector",
+          "name": "pp1",
+          "offset": 64
+        },
+        {
+          "type": "FT_Vector",
+          "name": "pp2",
+          "offset": 72
+        },
+        {
+          "type": "FT_ULong",
+          "name": "glyf_offset",
+          "offset": 80
+        },
+        {
+          "type": "TT_GlyphZone",
+          "name": "base",
+          "offset": 84
+        },
+        {
+          "type": "TT_GlyphZone",
+          "name": "zone",
+          "offset": 112
+        },
+        {
+          "type": "TT_ExecContext",
+          "name": "exec",
+          "offset": 140
+        },
+        {
+          "type": "FT_Byte*",
+          "name": "instructions",
+          "offset": 144
+        },
+        {
+          "type": "FT_ULong",
+          "name": "ins_pos",
+          "offset": 148
+        },
+        {
+          "type": "void*",
+          "name": "other",
+          "offset": 152
+        }
+      ]
+    },
+    {
       "name": "M2SequenceKeys_C3Vector",
       "size": 8,
       "members": [
@@ -48083,6 +54398,158 @@
           "type": "Blizzard__File__Functions",
           "name": "verbs",
           "offset": 8
+        }
+      ]
+    },
+    {
+      "name": "T1_Builder",
+      "size": 124,
+      "members": [
+        {
+          "type": "FT_Memory",
+          "name": "memory",
+          "offset": 0
+        },
+        {
+          "type": "FT_Face",
+          "name": "face",
+          "offset": 4
+        },
+        {
+          "type": "FT_GlyphSlot",
+          "name": "glyph",
+          "offset": 8
+        },
+        {
+          "type": "FT_GlyphLoader*",
+          "name": "loader",
+          "offset": 12
+        },
+        {
+          "type": "FT_Outline*",
+          "name": "base",
+          "offset": 16
+        },
+        {
+          "type": "FT_Outline*",
+          "name": "current",
+          "offset": 20
+        },
+        {
+          "type": "FT_Vector",
+          "name": "last",
+          "offset": 24
+        },
+        {
+          "type": "FT_Fixed",
+          "name": "scale_x",
+          "offset": 32
+        },
+        {
+          "type": "FT_Fixed",
+          "name": "scale_y",
+          "offset": 36
+        },
+        {
+          "type": "FT_Pos",
+          "name": "pos_x",
+          "offset": 40
+        },
+        {
+          "type": "FT_Pos",
+          "name": "pos_y",
+          "offset": 44
+        },
+        {
+          "type": "FT_Vector",
+          "name": "left_bearing",
+          "offset": 48
+        },
+        {
+          "type": "FT_Vector",
+          "name": "advance",
+          "offset": 56
+        },
+        {
+          "type": "FT_BBox",
+          "name": "bbox",
+          "offset": 64
+        },
+        {
+          "type": "FT_Bool",
+          "name": "path_begun",
+          "offset": 80
+        },
+        {
+          "type": "FT_Bool",
+          "name": "load_points",
+          "offset": 81
+        },
+        {
+          "type": "FT_Bool",
+          "name": "no_recurse",
+          "offset": 82
+        },
+        {
+          "type": "FT_Bool",
+          "name": "shift",
+          "offset": 83
+        },
+        {
+          "type": "FT_Error",
+          "name": "error",
+          "offset": 84
+        },
+        {
+          "type": "FT_Bool",
+          "name": "metrics_only",
+          "offset": 88
+        },
+        {
+          "type": "T1_Builder_Funcs",
+          "name": "funcs",
+          "offset": 92
+        }
+      ]
+    },
+    {
+      "name": "CID_Parser",
+      "size": 92,
+      "members": [
+        {
+          "type": "T1_Parser",
+          "name": "root",
+          "offset": 0
+        },
+        {
+          "type": "FT_Stream",
+          "name": "stream",
+          "offset": 68
+        },
+        {
+          "type": "FT_Byte*",
+          "name": "postscript",
+          "offset": 72
+        },
+        {
+          "type": "FT_Int",
+          "name": "postscript_len",
+          "offset": 76
+        },
+        {
+          "type": "FT_ULong",
+          "name": "data_offset",
+          "offset": 80
+        },
+        {
+          "type": "CID_Info*",
+          "name": "cid",
+          "offset": 84
+        },
+        {
+          "type": "FT_Int",
+          "name": "num_dict",
+          "offset": 88
         }
       ]
     },
@@ -56571,6 +63038,504 @@
       ]
     },
     {
+      "name": "FT_AutoHinterRec",
+      "size": 24,
+      "members": [
+        {
+          "type": "FT_ModuleRec",
+          "name": "root",
+          "offset": 0
+        },
+        {
+          "type": "AH_Hinter*",
+          "name": "hinter",
+          "offset": 20
+        }
+      ]
+    },
+    {
+      "name": "FT_DriverRec",
+      "size": 40,
+      "members": [
+        {
+          "type": "FT_ModuleRec",
+          "name": "root",
+          "offset": 0
+        },
+        {
+          "type": "FT_Driver_Class*",
+          "name": "clazz",
+          "offset": 20
+        },
+        {
+          "type": "FT_ListRec",
+          "name": "faces_list",
+          "offset": 24
+        },
+        {
+          "type": "void*",
+          "name": "extensions",
+          "offset": 32
+        },
+        {
+          "type": "FT_GlyphLoader*",
+          "name": "glyph_loader",
+          "offset": 36
+        }
+      ]
+    },
+    {
+      "name": "FT_RendererRec",
+      "size": 72,
+      "members": [
+        {
+          "type": "FT_ModuleRec",
+          "name": "root",
+          "offset": 0
+        },
+        {
+          "type": "FT_Renderer_Class*",
+          "name": "clazz",
+          "offset": 20
+        },
+        {
+          "type": "FT_Glyph_Format",
+          "name": "glyph_format",
+          "offset": 24
+        },
+        {
+          "type": "FT_Glyph_Class",
+          "name": "glyph_class",
+          "offset": 28
+        },
+        {
+          "type": "FT_Raster",
+          "name": "raster",
+          "offset": 60
+        },
+        {
+          "type": "FT_Raster_Render_Func",
+          "name": "raster_render",
+          "offset": 64
+        },
+        {
+          "type": "FTRenderer_render",
+          "name": "render",
+          "offset": 68
+        }
+      ]
+    },
+    {
+      "name": "CFF_SubFont",
+      "size": 560,
+      "members": [
+        {
+          "type": "CFF_Font_Dict",
+          "name": "font_dict",
+          "offset": 0
+        },
+        {
+          "type": "CFF_Private",
+          "name": "private_dict",
+          "offset": 168
+        },
+        {
+          "type": "CFF_Index",
+          "name": "local_subrs_index",
+          "offset": 528
+        },
+        {
+          "type": "FT_UInt",
+          "name": "num_local_subrs",
+          "offset": 552
+        },
+        {
+          "type": "FT_Byte**",
+          "name": "local_subrs",
+          "offset": 556
+        }
+      ]
+    },
+    {
+      "name": "CID_GlyphSlotRec",
+      "size": 164,
+      "members": [
+        {
+          "type": "FT_GlyphSlotRec",
+          "name": "root",
+          "offset": 0
+        },
+        {
+          "type": "FT_Bool",
+          "name": "hint",
+          "offset": 152
+        },
+        {
+          "type": "FT_Bool",
+          "name": "scaled",
+          "offset": 153
+        },
+        {
+          "type": "FT_Fixed",
+          "name": "x_scale",
+          "offset": 156
+        },
+        {
+          "type": "FT_Fixed",
+          "name": "y_scale",
+          "offset": 160
+        }
+      ]
+    },
+    {
+      "name": "T2_GlyphSlotRec",
+      "size": 164,
+      "members": [
+        {
+          "type": "FT_GlyphSlotRec",
+          "name": "root",
+          "offset": 0
+        },
+        {
+          "type": "FT_Bool",
+          "name": "hint",
+          "offset": 152
+        },
+        {
+          "type": "FT_Bool",
+          "name": "scaled",
+          "offset": 153
+        },
+        {
+          "type": "FT_Fixed",
+          "name": "x_scale",
+          "offset": 156
+        },
+        {
+          "type": "FT_Fixed",
+          "name": "y_scale",
+          "offset": 160
+        }
+      ]
+    },
+    {
+      "name": "T2_Decoder",
+      "size": 808,
+      "members": [
+        {
+          "type": "T2_Builder",
+          "name": "builder",
+          "offset": 0
+        },
+        {
+          "type": "CFF_Font*",
+          "name": "cff",
+          "offset": 92
+        },
+        {
+          "type": "FT_Fixed",
+          "name": "stack",
+          "arrsize": 49,
+          "offset": 96
+        },
+        {
+          "type": "FT_Fixed*",
+          "name": "top",
+          "offset": 292
+        },
+        {
+          "type": "T2_Decoder_Zone",
+          "name": "zones",
+          "arrsize": 33,
+          "offset": 296
+        },
+        {
+          "type": "T2_Decoder_Zone*",
+          "name": "zone",
+          "offset": 692
+        },
+        {
+          "type": "FT_Int",
+          "name": "flex_state",
+          "offset": 696
+        },
+        {
+          "type": "FT_Int",
+          "name": "num_flex_vectors",
+          "offset": 700
+        },
+        {
+          "type": "FT_Vector",
+          "name": "flex_vectors",
+          "arrsize": 7,
+          "offset": 704
+        },
+        {
+          "type": "FT_Pos",
+          "name": "glyph_width",
+          "offset": 760
+        },
+        {
+          "type": "FT_Pos",
+          "name": "nominal_width",
+          "offset": 764
+        },
+        {
+          "type": "FT_Bool",
+          "name": "read_width",
+          "offset": 768
+        },
+        {
+          "type": "FT_Int",
+          "name": "num_hints",
+          "offset": 772
+        },
+        {
+          "type": "FT_Fixed*",
+          "name": "buildchar",
+          "offset": 776
+        },
+        {
+          "type": "FT_Int",
+          "name": "len_buildchar",
+          "offset": 780
+        },
+        {
+          "type": "FT_UInt",
+          "name": "num_locals",
+          "offset": 784
+        },
+        {
+          "type": "FT_UInt",
+          "name": "num_globals",
+          "offset": 788
+        },
+        {
+          "type": "FT_Int",
+          "name": "locals_bias",
+          "offset": 792
+        },
+        {
+          "type": "FT_Int",
+          "name": "globals_bias",
+          "offset": 796
+        },
+        {
+          "type": "FT_Byte**",
+          "name": "locals",
+          "offset": 800
+        },
+        {
+          "type": "FT_Byte**",
+          "name": "globals",
+          "offset": 804
+        }
+      ]
+    },
+    {
+      "name": "CID_SizeRec",
+      "size": 48,
+      "members": [
+        {
+          "type": "FT_SizeRec",
+          "name": "root",
+          "offset": 0
+        },
+        {
+          "type": "FT_Bool",
+          "name": "valid",
+          "offset": 44
+        }
+      ]
+    },
+    {
+      "name": "TT_SizeRec",
+      "size": 120,
+      "members": [
+        {
+          "type": "FT_SizeRec",
+          "name": "root",
+          "offset": 0
+        },
+        {
+          "type": "TT_Size_Metrics",
+          "name": "ttmetrics",
+          "offset": 44
+        },
+        {
+          "type": "FT_UInt",
+          "name": "strike_index",
+          "offset": 84
+        },
+        {
+          "type": "FT_Size_Metrics",
+          "name": "strike_metrics",
+          "offset": 88
+        },
+        {
+          "type": "FT_Bool",
+          "name": "debug",
+          "offset": 116
+        }
+      ]
+    },
+    {
+      "name": "CID_FaceRec",
+      "size": 320,
+      "members": [
+        {
+          "type": "FT_FaceRec",
+          "name": "root",
+          "offset": 0
+        },
+        {
+          "type": "void*",
+          "name": "psnames",
+          "offset": 132
+        },
+        {
+          "type": "void*",
+          "name": "psaux",
+          "offset": 136
+        },
+        {
+          "type": "CID_Info",
+          "name": "cid",
+          "offset": 140
+        },
+        {
+          "type": "void*",
+          "name": "afm_data",
+          "offset": 312
+        },
+        {
+          "type": "CID_Subrs*",
+          "name": "subrs",
+          "offset": 316
+        }
+      ]
+    },
+    {
+      "name": "T1_FaceRec",
+      "size": 532,
+      "members": [
+        {
+          "type": "FT_FaceRec",
+          "name": "root",
+          "offset": 0
+        },
+        {
+          "type": "T1_Font",
+          "name": "type1",
+          "offset": 132
+        },
+        {
+          "type": "void*",
+          "name": "psnames",
+          "offset": 476
+        },
+        {
+          "type": "void*",
+          "name": "psaux",
+          "offset": 480
+        },
+        {
+          "type": "void*",
+          "name": "afm_data",
+          "offset": 484
+        },
+        {
+          "type": "FT_CharMapRec",
+          "name": "charmaprecs",
+          "arrsize": 2,
+          "offset": 488
+        },
+        {
+          "type": "FT_CharMap",
+          "name": "charmaps",
+          "arrsize": 2,
+          "offset": 512
+        },
+        {
+          "type": "PS_Unicodes",
+          "name": "unicode_map",
+          "offset": 520
+        },
+        {
+          "type": "T1_Blend*",
+          "name": "blend",
+          "offset": 528
+        }
+      ]
+    },
+    {
+      "name": "TT_CMapTable",
+      "size": 44,
+      "members": [
+        {
+          "type": "FT_UShort",
+          "name": "platformID",
+          "offset": 0
+        },
+        {
+          "type": "FT_UShort",
+          "name": "platformEncodingID",
+          "offset": 2
+        },
+        {
+          "type": "FT_UShort",
+          "name": "format",
+          "offset": 4
+        },
+        {
+          "type": "FT_UShort",
+          "name": "length",
+          "offset": 6
+        },
+        {
+          "type": "FT_UShort",
+          "name": "version",
+          "offset": 8
+        },
+        {
+          "type": "FT_Bool",
+          "name": "loaded",
+          "offset": 10
+        },
+        {
+          "type": "FT_ULong",
+          "name": "offset",
+          "offset": 12
+        },
+        {
+          "type": "TT_CMapTable__c",
+          "name": "c",
+          "offset": 16
+        },
+        {
+          "type": "TT_CharMap_Func",
+          "name": "get_index",
+          "offset": 40
+        }
+      ]
+    },
+    {
+      "name": "TT_Post_Names",
+      "size": 16,
+      "members": [
+        {
+          "type": "FT_Bool",
+          "name": "loaded",
+          "offset": 0
+        },
+        {
+          "type": "TT_Post_Names__names",
+          "name": "names",
+          "offset": 4
+        }
+      ]
+    },
+    {
       "name": "M2ModelCamera",
       "size": 56,
       "members": [
@@ -56806,6 +63771,131 @@
           "name": "flowvs",
           "arrsize": 2,
           "offset": 724
+        }
+      ]
+    },
+    {
+      "name": "T1_Decoder",
+      "size": 1496,
+      "members": [
+        {
+          "type": "T1_Builder",
+          "name": "builder",
+          "offset": 0
+        },
+        {
+          "type": "FT_Long",
+          "name": "stack",
+          "arrsize": 256,
+          "offset": 124
+        },
+        {
+          "type": "FT_Long*",
+          "name": "top",
+          "offset": 1148
+        },
+        {
+          "type": "T1_Decoder_Zone",
+          "name": "zones",
+          "arrsize": 17,
+          "offset": 1152
+        },
+        {
+          "type": "T1_Decoder_Zone*",
+          "name": "zone",
+          "offset": 1356
+        },
+        {
+          "type": "PSNames_Interface*",
+          "name": "psnames",
+          "offset": 1360
+        },
+        {
+          "type": "FT_UInt",
+          "name": "num_glyphs",
+          "offset": 1364
+        },
+        {
+          "type": "FT_Byte**",
+          "name": "glyph_names",
+          "offset": 1368
+        },
+        {
+          "type": "FT_UInt",
+          "name": "lenIV",
+          "offset": 1372
+        },
+        {
+          "type": "FT_UInt",
+          "name": "num_subrs",
+          "offset": 1376
+        },
+        {
+          "type": "FT_Byte**",
+          "name": "subrs",
+          "offset": 1380
+        },
+        {
+          "type": "FT_Int*",
+          "name": "subrs_len",
+          "offset": 1384
+        },
+        {
+          "type": "FT_Matrix",
+          "name": "font_matrix",
+          "offset": 1388
+        },
+        {
+          "type": "FT_Vector",
+          "name": "font_offset",
+          "offset": 1404
+        },
+        {
+          "type": "FT_Int",
+          "name": "flex_state",
+          "offset": 1412
+        },
+        {
+          "type": "FT_Int",
+          "name": "num_flex_vectors",
+          "offset": 1416
+        },
+        {
+          "type": "FT_Vector",
+          "name": "flex_vectors",
+          "arrsize": 7,
+          "offset": 1420
+        },
+        {
+          "type": "T1_Blend*",
+          "name": "blend",
+          "offset": 1476
+        },
+        {
+          "type": "T1_Decoder_Callback",
+          "name": "parse_callback",
+          "offset": 1480
+        },
+        {
+          "type": "T1_Decoder_Funcs",
+          "name": "funcs",
+          "offset": 1484
+        }
+      ]
+    },
+    {
+      "name": "CID_Loader",
+      "size": 96,
+      "members": [
+        {
+          "type": "CID_Parser",
+          "name": "parser",
+          "offset": 0
+        },
+        {
+          "type": "FT_Int",
+          "name": "num_chars",
+          "offset": 92
         }
       ]
     },
@@ -59869,6 +66959,396 @@
       ]
     },
     {
+      "name": "T2_DriverRec",
+      "size": 44,
+      "members": [
+        {
+          "type": "FT_DriverRec",
+          "name": "root",
+          "offset": 0
+        },
+        {
+          "type": "void*",
+          "name": "extension_component",
+          "offset": 40
+        }
+      ]
+    },
+    {
+      "name": "CFF_Font",
+      "size": 880,
+      "members": [
+        {
+          "type": "FT_Stream",
+          "name": "stream",
+          "offset": 0
+        },
+        {
+          "type": "FT_Memory",
+          "name": "memory",
+          "offset": 4
+        },
+        {
+          "type": "FT_UInt",
+          "name": "num_faces",
+          "offset": 8
+        },
+        {
+          "type": "FT_UInt",
+          "name": "num_glyphs",
+          "offset": 12
+        },
+        {
+          "type": "FT_Byte",
+          "name": "version_major",
+          "offset": 16
+        },
+        {
+          "type": "FT_Byte",
+          "name": "version_minor",
+          "offset": 17
+        },
+        {
+          "type": "FT_Byte",
+          "name": "header_size",
+          "offset": 18
+        },
+        {
+          "type": "FT_Byte",
+          "name": "absolute_offsize",
+          "offset": 19
+        },
+        {
+          "type": "CFF_Index",
+          "name": "name_index",
+          "offset": 20
+        },
+        {
+          "type": "CFF_Index",
+          "name": "top_dict_index",
+          "offset": 44
+        },
+        {
+          "type": "CFF_Index",
+          "name": "string_index",
+          "offset": 68
+        },
+        {
+          "type": "CFF_Index",
+          "name": "global_subrs_index",
+          "offset": 92
+        },
+        {
+          "type": "CFF_Index",
+          "name": "charstrings_index",
+          "offset": 116
+        },
+        {
+          "type": "CFF_Index",
+          "name": "font_dict_index",
+          "offset": 140
+        },
+        {
+          "type": "CFF_Index",
+          "name": "private_index",
+          "offset": 164
+        },
+        {
+          "type": "CFF_Index",
+          "name": "local_subrs_index",
+          "offset": 188
+        },
+        {
+          "type": "FT_String*",
+          "name": "font_name",
+          "offset": 212
+        },
+        {
+          "type": "FT_UInt",
+          "name": "num_global_subrs",
+          "offset": 216
+        },
+        {
+          "type": "FT_Byte**",
+          "name": "global_subrs",
+          "offset": 220
+        },
+        {
+          "type": "CFF_SubFont",
+          "name": "top_font",
+          "offset": 224
+        },
+        {
+          "type": "FT_UInt",
+          "name": "num_subfonts",
+          "offset": 784
+        },
+        {
+          "type": "CFF_SubFont*",
+          "name": "subfonts",
+          "arrsize": 16,
+          "offset": 788
+        },
+        {
+          "type": "CFF_FD_Select",
+          "name": "fd_select",
+          "offset": 852
+        }
+      ]
+    },
+    {
+      "name": "TT_CharMapRec",
+      "size": 56,
+      "members": [
+        {
+          "type": "FT_CharMapRec",
+          "name": "root",
+          "offset": 0
+        },
+        {
+          "type": "TT_CMapTable",
+          "name": "cmap",
+          "offset": 12
+        }
+      ]
+    },
+    {
+      "name": "TT_FaceRec",
+      "size": 696,
+      "members": [
+        {
+          "type": "FT_FaceRec",
+          "name": "root",
+          "offset": 0
+        },
+        {
+          "type": "TTC_Header",
+          "name": "ttc_header",
+          "offset": 132
+        },
+        {
+          "type": "FT_ULong",
+          "name": "format_tag",
+          "offset": 148
+        },
+        {
+          "type": "FT_UShort",
+          "name": "num_tables",
+          "offset": 152
+        },
+        {
+          "type": "TT_Table*",
+          "name": "dir_tables",
+          "offset": 156
+        },
+        {
+          "type": "TT_Header",
+          "name": "header",
+          "offset": 160
+        },
+        {
+          "type": "TT_HoriHeader",
+          "name": "horizontal",
+          "offset": 216
+        },
+        {
+          "type": "TT_MaxProfile",
+          "name": "max_profile",
+          "offset": 260
+        },
+        {
+          "type": "FT_ULong",
+          "name": "max_components",
+          "offset": 292
+        },
+        {
+          "type": "FT_Bool",
+          "name": "vertical_info",
+          "offset": 296
+        },
+        {
+          "type": "TT_VertHeader",
+          "name": "vertical",
+          "offset": 300
+        },
+        {
+          "type": "FT_UShort",
+          "name": "num_names",
+          "offset": 344
+        },
+        {
+          "type": "TT_NameTable",
+          "name": "name_table",
+          "offset": 348
+        },
+        {
+          "type": "TT_OS2",
+          "name": "os2",
+          "offset": 364
+        },
+        {
+          "type": "TT_Postscript",
+          "name": "postscript",
+          "offset": 464
+        },
+        {
+          "type": "FT_Int",
+          "name": "num_charmaps",
+          "offset": 496
+        },
+        {
+          "type": "TT_CharMap",
+          "name": "charmaps",
+          "offset": 500
+        },
+        {
+          "type": "TT_Goto_Table_Func",
+          "name": "goto_table",
+          "offset": 504
+        },
+        {
+          "type": "TT_Access_Glyph_Frame_Func",
+          "name": "access_glyph_frame",
+          "offset": 508
+        },
+        {
+          "type": "TT_Load_Glyph_Element_Func",
+          "name": "read_glyph_header",
+          "offset": 512
+        },
+        {
+          "type": "TT_Load_Glyph_Element_Func",
+          "name": "read_simple_glyph",
+          "offset": 516
+        },
+        {
+          "type": "TT_Load_Glyph_Element_Func",
+          "name": "read_composite_glyph",
+          "offset": 520
+        },
+        {
+          "type": "TT_Forget_Glyph_Frame_Func",
+          "name": "forget_glyph_frame",
+          "offset": 524
+        },
+        {
+          "type": "void*",
+          "name": "sfnt",
+          "offset": 528
+        },
+        {
+          "type": "void*",
+          "name": "psnames",
+          "offset": 532
+        },
+        {
+          "type": "TT_Hdmx",
+          "name": "hdmx",
+          "offset": 536
+        },
+        {
+          "type": "TT_Gasp",
+          "name": "gasp",
+          "offset": 544
+        },
+        {
+          "type": "TT_PCLT",
+          "name": "pclt",
+          "offset": 552
+        },
+        {
+          "type": "FT_Int",
+          "name": "num_sbit_strikes",
+          "offset": 608
+        },
+        {
+          "type": "TT_SBit_Strike*",
+          "name": "sbit_strikes",
+          "offset": 612
+        },
+        {
+          "type": "FT_Int",
+          "name": "num_sbit_scales",
+          "offset": 616
+        },
+        {
+          "type": "TT_SBit_Scale*",
+          "name": "sbit_scales",
+          "offset": 620
+        },
+        {
+          "type": "TT_Post_Names",
+          "name": "postscript_names",
+          "offset": 624
+        },
+        {
+          "type": "FT_UShort",
+          "name": "num_locations",
+          "offset": 640
+        },
+        {
+          "type": "FT_Long*",
+          "name": "glyph_locations",
+          "offset": 644
+        },
+        {
+          "type": "FT_ULong",
+          "name": "font_program_size",
+          "offset": 648
+        },
+        {
+          "type": "FT_Byte*",
+          "name": "font_program",
+          "offset": 652
+        },
+        {
+          "type": "FT_ULong",
+          "name": "cvt_program_size",
+          "offset": 656
+        },
+        {
+          "type": "FT_Byte*",
+          "name": "cvt_program",
+          "offset": 660
+        },
+        {
+          "type": "FT_ULong",
+          "name": "cvt_size",
+          "offset": 664
+        },
+        {
+          "type": "FT_Short*",
+          "name": "cvt",
+          "offset": 668
+        },
+        {
+          "type": "FT_Int",
+          "name": "num_kern_pairs",
+          "offset": 672
+        },
+        {
+          "type": "FT_Int",
+          "name": "kern_table_index",
+          "offset": 676
+        },
+        {
+          "type": "TT_Kern_0_Pair*",
+          "name": "kern_pairs",
+          "offset": 680
+        },
+        {
+          "type": "TT_Interpreter",
+          "name": "interpreter",
+          "offset": 684
+        },
+        {
+          "type": "FT_Generic",
+          "name": "extra",
+          "offset": 688
+        }
+      ]
+    },
+    {
       "name": "M2Attachment",
       "size": 40,
       "members": [
@@ -62114,6 +69594,32 @@
       ]
     },
     {
+      "name": "FT_StreamRec__descriptor",
+      "members": [
+        {
+          "type": "int32_t",
+          "name": "value"
+        },
+        {
+          "type": "void*",
+          "name": "pointer"
+        }
+      ]
+    },
+    {
+      "name": "FT_StreamRec__pathname",
+      "members": [
+        {
+          "type": "int32_t",
+          "name": "value"
+        },
+        {
+          "type": "void*",
+          "name": "pointer"
+        }
+      ]
+    },
+    {
       "name": "M2Array_C2Vector__data_or_offset",
       "members": [
         {
@@ -62817,6 +70323,40 @@
         {
           "type": "TString*",
           "name": "ts"
+        }
+      ]
+    },
+    {
+      "name": "TT_CMapTable__c",
+      "members": [
+        {
+          "type": "TT_CMap0",
+          "name": "cmap0"
+        },
+        {
+          "type": "TT_CMap2",
+          "name": "cmap2"
+        },
+        {
+          "type": "TT_CMap4",
+          "name": "cmap4"
+        },
+        {
+          "type": "TT_CMap6",
+          "name": "cmap6"
+        }
+      ]
+    },
+    {
+      "name": "TT_Post_Names__names",
+      "members": [
+        {
+          "type": "TT_Post_20",
+          "name": "format_20"
+        },
+        {
+          "type": "TT_Post_25",
+          "name": "format_25"
         }
       ]
     },
