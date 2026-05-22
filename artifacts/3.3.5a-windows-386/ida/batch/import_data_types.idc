@@ -1863,6 +1863,7 @@ static import_data_types() {
 	apply_type(0x00992CB0, "FT_Error __stdcall func(FT_Library library)");
 	apply_type(0x00992D50, "FT_Error __stdcall func(FT_Stream stream, FT_Byte* buffer, FT_ULong count)");
 	apply_type(0x00992D70, "FT_Error __stdcall func(FT_Stream stream, FT_ULong count, FT_Byte** pbytes)");
+	apply_type(0x00992DA0, "FT_Error __stdcall func(FT_Face face, FT_UInt glyph_index, FT_Int load_flags)");
 	apply_type(0x00992F60, "FT_Error __stdcall func(FT_Library library, FT_Open_Args* args, FT_Long face_index, FT_Face* aface)");
 	apply_type(0x009931A0, "FT_Error __stdcall func(FT_Library library, FT_Module_Class* clazz)");
 	apply_type(0x00993370, "FT_Error __stdcall func(FT_Library library, FT_Byte* file_base, FT_Long file_size, FT_Long face_index, FT_Face* aface)");
@@ -1912,6 +1913,7 @@ static import_data_types() {
 	apply_type(0x009961D0, "FT_Error __stdcall func(FT_Face t1_face, FT_Stream stream)");
 	apply_type(0x00996380, "void __usercall func(T1_AFM* afm@<ecx>, FT_UInt glyph@<eax>, FT_UInt glyph2, FT_Vector* kerning)");
 	apply_type(0x00996400, "void __stdcall func(T1_Face face)");
+	apply_type(0x00996530, "FT_Error __stdcall func(FT_Stream stream, T1_Face face, FT_Int face_index, FT_Int num_params, FT_Parameter* params)");
 	apply_type(0x009967E0, "FT_Error __stdcall func(T1_Face face, FT_UInt left_glyph, FT_UInt right_glyph, FT_Vector* kerning)");
 	apply_type(0x00996820, "FT_UInt __stdcall func(TT_CharMap charmap, FT_Long charcode)");
 	apply_type(0x00996870, "FT_Module_Interface __stdcall func(TT_Driver driver, char* interface)");
