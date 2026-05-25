@@ -990,6 +990,10 @@
     },
     {
       "type": "void**",
+      "name": "PProcessor"
+    },
+    {
+      "type": "void**",
       "name": "PS_Adobe_Std_Strings_Func"
     },
     {
@@ -1015,6 +1019,10 @@
     {
       "type": "void**",
       "name": "Pfunc_interface"
+    },
+    {
+      "type": "void**",
+      "name": "SCANNER"
     },
     {
       "type": "long long",
@@ -1281,6 +1289,150 @@
       "name": "WOW_CONN_STATE"
     },
     {
+      "type": "void**",
+      "name": "XML_AttlistDeclHandler"
+    },
+    {
+      "type": "uint8_t",
+      "name": "XML_Bool"
+    },
+    {
+      "type": "char",
+      "name": "XML_Char"
+    },
+    {
+      "type": "void**",
+      "name": "XML_CharacterDataHandler"
+    },
+    {
+      "type": "void**",
+      "name": "XML_CommentHandler"
+    },
+    {
+      "type": "int",
+      "name": "XML_Content_Quant"
+    },
+    {
+      "type": "int",
+      "name": "XML_Content_Type"
+    },
+    {
+      "type": "void**",
+      "name": "XML_DefaultHandler"
+    },
+    {
+      "type": "void**",
+      "name": "XML_ElementDeclHandler"
+    },
+    {
+      "type": "void**",
+      "name": "XML_EndCdataSectionHandler"
+    },
+    {
+      "type": "void**",
+      "name": "XML_EndDoctypeDeclHandler"
+    },
+    {
+      "type": "void**",
+      "name": "XML_EndElementHandler"
+    },
+    {
+      "type": "void**",
+      "name": "XML_EndNamespaceDeclHandler"
+    },
+    {
+      "type": "void**",
+      "name": "XML_EntityDeclHandler"
+    },
+    {
+      "type": "int",
+      "name": "XML_Error"
+    },
+    {
+      "type": "void**",
+      "name": "XML_ExternalEntityRefHandler"
+    },
+    {
+      "type": "int64_t",
+      "name": "XML_Index"
+    },
+    {
+      "type": "char",
+      "name": "XML_LChar"
+    },
+    {
+      "type": "void**",
+      "name": "XML_NotStandaloneHandler"
+    },
+    {
+      "type": "void**",
+      "name": "XML_NotationDeclHandler"
+    },
+    {
+      "type": "void**",
+      "name": "XML_NotationDeclHandlerm"
+    },
+    {
+      "type": "int",
+      "name": "XML_ParamEntityParsing"
+    },
+    {
+      "type": "XML_ParserStruct*",
+      "name": "XML_Parser"
+    },
+    {
+      "type": "void**",
+      "name": "XML_ProcessingInstructionHandler"
+    },
+    {
+      "type": "uint64_t",
+      "name": "XML_Size"
+    },
+    {
+      "type": "void**",
+      "name": "XML_SkippedEntityHandler"
+    },
+    {
+      "type": "void**",
+      "name": "XML_StartCdataSectionHandler"
+    },
+    {
+      "type": "void**",
+      "name": "XML_StartDoctypeDeclHandler"
+    },
+    {
+      "type": "void**",
+      "name": "XML_StartElementHandler"
+    },
+    {
+      "type": "void**",
+      "name": "XML_StartNamespaceDeclHandler"
+    },
+    {
+      "type": "int",
+      "name": "XML_Status"
+    },
+    {
+      "type": "void**",
+      "name": "XML_UnknownEncodingHandler"
+    },
+    {
+      "type": "void**",
+      "name": "XML_UnparsedEntityDeclHandler"
+    },
+    {
+      "type": "void**",
+      "name": "XML_XmlDeclHandler"
+    },
+    {
+      "type": "XML_Char*",
+      "name": "__expat__KEY"
+    },
+    {
+      "type": "void**",
+      "name": "encoding_finder"
+    },
+    {
       "type": "int",
       "name": "expkind"
     },
@@ -1379,6 +1531,10 @@
     {
       "type": "uint32_t",
       "name": "uintptr_t"
+    },
+    {
+      "type": "void**",
+      "name": "unknown_encoding__convert"
     },
     {
       "type": "char*",
@@ -1770,6 +1926,32 @@
     }
   ],
   "structs": [
+    {
+      "name": "ATTRIBUTE",
+      "size": 16,
+      "members": [
+        {
+          "type": "char*",
+          "name": "name",
+          "offset": 0
+        },
+        {
+          "type": "char*",
+          "name": "valuePtr",
+          "offset": 4
+        },
+        {
+          "type": "char*",
+          "name": "valueEnd",
+          "offset": 8
+        },
+        {
+          "type": "char",
+          "name": "normalized",
+          "offset": 12
+        }
+      ]
+    },
     {
       "name": "AchievementRec",
       "size": 56,
@@ -2639,6 +2821,47 @@
           "type": "char*",
           "name": "m_name",
           "offset": 16
+        }
+      ]
+    },
+    {
+      "name": "BINDING",
+      "size": 28,
+      "members": [
+        {
+          "type": "PREFIX*",
+          "name": "prefix",
+          "offset": 0
+        },
+        {
+          "type": "BINDING*",
+          "name": "nextTagBinding",
+          "offset": 4
+        },
+        {
+          "type": "BINDING*",
+          "name": "prevPrefixBinding",
+          "offset": 8
+        },
+        {
+          "type": "ATTRIBUTE_ID*",
+          "name": "attId",
+          "offset": 12
+        },
+        {
+          "type": "XML_Char*",
+          "name": "uri",
+          "offset": 16
+        },
+        {
+          "type": "int32_t",
+          "name": "uriLen",
+          "offset": 20
+        },
+        {
+          "type": "int32_t",
+          "name": "uriAlloc",
+          "offset": 24
         }
       ]
     },
@@ -12266,6 +12489,42 @@
       ]
     },
     {
+      "name": "ELEMENT_TYPE",
+      "size": 24,
+      "members": [
+        {
+          "type": "XML_Char*",
+          "name": "name",
+          "offset": 0
+        },
+        {
+          "type": "PREFIX*",
+          "name": "prefix",
+          "offset": 4
+        },
+        {
+          "type": "ATTRIBUTE_ID*",
+          "name": "idAtt",
+          "offset": 8
+        },
+        {
+          "type": "int32_t",
+          "name": "nDefaultAtts",
+          "offset": 12
+        },
+        {
+          "type": "int32_t",
+          "name": "allocDefaultAtts",
+          "offset": 16
+        },
+        {
+          "type": "DEFAULT_ATTRIBUTE*",
+          "name": "defaultAtts",
+          "offset": 20
+        }
+      ]
+    },
+    {
       "name": "EVENT_DATA_CHAR",
       "size": 12,
       "members": [
@@ -13445,6 +13704,22 @@
           "type": "char*",
           "name": "m_str",
           "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "HASH_TABLE_ITER",
+      "size": 8,
+      "members": [
+        {
+          "type": "NAMED**",
+          "name": "p",
+          "offset": 0
+        },
+        {
+          "type": "NAMED**",
+          "name": "end",
+          "offset": 4
         }
       ]
     },
@@ -24260,6 +24535,32 @@
       ]
     },
     {
+      "name": "OPEN_INTERNAL_ENTITY",
+      "size": 16,
+      "members": [
+        {
+          "type": "char*",
+          "name": "internalEventPtr",
+          "offset": 0
+        },
+        {
+          "type": "char*",
+          "name": "internalEventEndPtr",
+          "offset": 4
+        },
+        {
+          "type": "OPEN_INTERNAL_ENTITY*",
+          "name": "next",
+          "offset": 8
+        },
+        {
+          "type": "ENTITY*",
+          "name": "entity",
+          "offset": 12
+        }
+      ]
+    },
+    {
       "name": "OS_FILE_DATA",
       "size": 268,
       "members": [
@@ -24477,6 +24778,38 @@
       ]
     },
     {
+      "name": "POSITION",
+      "size": 8,
+      "members": [
+        {
+          "type": "uint32_t",
+          "name": "lineNumber",
+          "offset": 0
+        },
+        {
+          "type": "uint32_t",
+          "name": "columnNumber",
+          "offset": 4
+        }
+      ]
+    },
+    {
+      "name": "PREFIX",
+      "size": 8,
+      "members": [
+        {
+          "type": "XML_Char*",
+          "name": "name",
+          "offset": 0
+        },
+        {
+          "type": "BINDING*",
+          "name": "binding",
+          "offset": 4
+        }
+      ]
+    },
+    {
       "name": "PROCESSING",
       "size": 24,
       "members": [
@@ -24494,6 +24827,42 @@
         {
           "type": "int32_t",
           "name": "namelength",
+          "offset": 20
+        }
+      ]
+    },
+    {
+      "name": "PROLOG_STATE",
+      "size": 24,
+      "members": [
+        {
+          "type": "void**",
+          "name": "handler",
+          "offset": 0
+        },
+        {
+          "type": "uint32_t",
+          "name": "level",
+          "offset": 4
+        },
+        {
+          "type": "int32_t",
+          "name": "role_none",
+          "offset": 8
+        },
+        {
+          "type": "uint32_t",
+          "name": "includeLevel",
+          "offset": 12
+        },
+        {
+          "type": "int32_t",
+          "name": "documentEntity",
+          "offset": 16
+        },
+        {
+          "type": "int32_t",
+          "name": "inEntityValue",
           "offset": 20
         }
       ]
@@ -25969,6 +26338,42 @@
           "type": "int32_t",
           "name": "opt28",
           "offset": 40
+        }
+      ]
+    },
+    {
+      "name": "STRING_POOL",
+      "size": 24,
+      "members": [
+        {
+          "type": "BLOCK*",
+          "name": "blocks",
+          "offset": 0
+        },
+        {
+          "type": "BLOCK*",
+          "name": "freeBlocks",
+          "offset": 4
+        },
+        {
+          "type": "XML_Char*",
+          "name": "end",
+          "offset": 8
+        },
+        {
+          "type": "XML_Char*",
+          "name": "ptr",
+          "offset": 12
+        },
+        {
+          "type": "XML_Char*",
+          "name": "start",
+          "offset": 16
+        },
+        {
+          "type": "XML_Memory_Handling_Suite*",
+          "name": "mem",
+          "offset": 20
         }
       ]
     },
@@ -29749,6 +30154,42 @@
           "type": "FT_Byte*",
           "name": "cursor",
           "offset": 8
+        }
+      ]
+    },
+    {
+      "name": "TAG_NAME",
+      "size": 24,
+      "members": [
+        {
+          "type": "XML_Char*",
+          "name": "str",
+          "offset": 0
+        },
+        {
+          "type": "XML_Char*",
+          "name": "localPart",
+          "offset": 4
+        },
+        {
+          "type": "XML_Char*",
+          "name": "prefix",
+          "offset": 8
+        },
+        {
+          "type": "int32_t",
+          "name": "strLen",
+          "offset": 12
+        },
+        {
+          "type": "int32_t",
+          "name": "uriLen",
+          "offset": 16
+        },
+        {
+          "type": "int32_t",
+          "name": "prefixLen",
+          "offset": 20
         }
       ]
     },
@@ -34007,6 +34448,54 @@
         {
           "type": "char*",
           "name": "m_description",
+          "offset": 8
+        }
+      ]
+    },
+    {
+      "name": "XML_Encoding",
+      "size": 1036,
+      "members": [
+        {
+          "type": "int32_t",
+          "name": "map",
+          "arrsize": 256,
+          "offset": 0
+        },
+        {
+          "type": "void*",
+          "name": "data",
+          "offset": 1024
+        },
+        {
+          "type": "void**",
+          "name": "convert",
+          "offset": 1028
+        },
+        {
+          "type": "void**",
+          "name": "release",
+          "offset": 1032
+        }
+      ]
+    },
+    {
+      "name": "XML_Memory_Handling_Suite",
+      "size": 12,
+      "members": [
+        {
+          "type": "void**",
+          "name": "malloc_fcn",
+          "offset": 0
+        },
+        {
+          "type": "void**",
+          "name": "realloc_fcn",
+          "offset": 4
+        },
+        {
+          "type": "void**",
+          "name": "free_fcn",
           "offset": 8
         }
       ]
@@ -42180,6 +42669,94 @@
       ]
     },
     {
+      "name": "ENCODING",
+      "size": 76,
+      "members": [
+        {
+          "type": "SCANNER",
+          "name": "scanners",
+          "arrsize": 4,
+          "offset": 0
+        },
+        {
+          "type": "SCANNER",
+          "name": "literalScanners",
+          "arrsize": 2,
+          "offset": 16
+        },
+        {
+          "type": "void**",
+          "name": "sameName",
+          "offset": 24
+        },
+        {
+          "type": "void**",
+          "name": "nameMatchesAscii",
+          "offset": 28
+        },
+        {
+          "type": "void**",
+          "name": "nameLength",
+          "offset": 32
+        },
+        {
+          "type": "void**",
+          "name": "skipS",
+          "offset": 36
+        },
+        {
+          "type": "void**",
+          "name": "getAtts",
+          "offset": 40
+        },
+        {
+          "type": "void**",
+          "name": "charRefNumber",
+          "offset": 44
+        },
+        {
+          "type": "void**",
+          "name": "predefinedEntityName",
+          "offset": 48
+        },
+        {
+          "type": "void**",
+          "name": "updatePosition",
+          "offset": 52
+        },
+        {
+          "type": "void**",
+          "name": "isPublicId",
+          "offset": 56
+        },
+        {
+          "type": "void**",
+          "name": "utf8Convert",
+          "offset": 60
+        },
+        {
+          "type": "void**",
+          "name": "utf16Convert",
+          "offset": 64
+        },
+        {
+          "type": "int32_t",
+          "name": "minBytesPerChar",
+          "offset": 68
+        },
+        {
+          "type": "char",
+          "name": "isUtf8",
+          "offset": 72
+        },
+        {
+          "type": "char",
+          "name": "isUtf16",
+          "offset": 73
+        }
+      ]
+    },
+    {
       "name": "HMAC_SHA1",
       "size": 224,
       "members": [
@@ -42594,6 +43171,47 @@
           "type": "T1_Token_Type",
           "name": "type",
           "offset": 8
+        }
+      ]
+    },
+    {
+      "name": "TAG",
+      "size": 48,
+      "members": [
+        {
+          "type": "TAG*",
+          "name": "parent",
+          "offset": 0
+        },
+        {
+          "type": "char*",
+          "name": "rawName",
+          "offset": 4
+        },
+        {
+          "type": "int32_t",
+          "name": "rawNameLength",
+          "offset": 8
+        },
+        {
+          "type": "TAG_NAME",
+          "name": "name",
+          "offset": 12
+        },
+        {
+          "type": "char*",
+          "name": "buf",
+          "offset": 36
+        },
+        {
+          "type": "char*",
+          "name": "bufEnd",
+          "offset": 40
+        },
+        {
+          "type": "BINDING*",
+          "name": "bindings",
+          "offset": 44
         }
       ]
     },
@@ -49074,6 +49692,214 @@
       ]
     },
     {
+      "name": "ATTRIBUTE_ID",
+      "size": 12,
+      "members": [
+        {
+          "type": "XML_Char*",
+          "name": "name",
+          "offset": 0
+        },
+        {
+          "type": "PREFIX*",
+          "name": "prefix",
+          "offset": 4
+        },
+        {
+          "type": "XML_Bool",
+          "name": "maybeTokenized",
+          "offset": 8
+        },
+        {
+          "type": "XML_Bool",
+          "name": "xmlns",
+          "offset": 9
+        }
+      ]
+    },
+    {
+      "name": "DEFAULT_ATTRIBUTE",
+      "size": 12,
+      "members": [
+        {
+          "type": "ATTRIBUTE_ID*",
+          "name": "id",
+          "offset": 0
+        },
+        {
+          "type": "XML_Bool",
+          "name": "isCdata",
+          "offset": 4
+        },
+        {
+          "type": "XML_Char*",
+          "name": "value",
+          "offset": 8
+        }
+      ]
+    },
+    {
+      "name": "ENTITY",
+      "size": 32,
+      "members": [
+        {
+          "type": "XML_Char*",
+          "name": "name",
+          "offset": 0
+        },
+        {
+          "type": "XML_Char*",
+          "name": "textPtr",
+          "offset": 4
+        },
+        {
+          "type": "int32_t",
+          "name": "textLen",
+          "offset": 8
+        },
+        {
+          "type": "XML_Char*",
+          "name": "systemId",
+          "offset": 12
+        },
+        {
+          "type": "XML_Char*",
+          "name": "base",
+          "offset": 16
+        },
+        {
+          "type": "XML_Char*",
+          "name": "publicId",
+          "offset": 20
+        },
+        {
+          "type": "XML_Char*",
+          "name": "notation",
+          "offset": 24
+        },
+        {
+          "type": "XML_Bool",
+          "name": "open",
+          "offset": 28
+        },
+        {
+          "type": "XML_Bool",
+          "name": "is_param",
+          "offset": 29
+        },
+        {
+          "type": "XML_Bool",
+          "name": "is_internal",
+          "offset": 30
+        }
+      ]
+    },
+    {
+      "name": "BLOCK",
+      "size": 12,
+      "members": [
+        {
+          "type": "BLOCK*",
+          "name": "next",
+          "offset": 0
+        },
+        {
+          "type": "int32_t",
+          "name": "size",
+          "offset": 4
+        },
+        {
+          "type": "XML_Char",
+          "name": "s",
+          "arrsize": 1,
+          "offset": 8
+        }
+      ]
+    },
+    {
+      "name": "CONTENT_SCAFFOLD",
+      "size": 28,
+      "members": [
+        {
+          "type": "XML_Content_Type",
+          "name": "type",
+          "offset": 0
+        },
+        {
+          "type": "XML_Content_Quant",
+          "name": "quant",
+          "offset": 4
+        },
+        {
+          "type": "XML_Char*",
+          "name": "name",
+          "offset": 8
+        },
+        {
+          "type": "int32_t",
+          "name": "firstchild",
+          "offset": 12
+        },
+        {
+          "type": "int32_t",
+          "name": "lastchild",
+          "offset": 16
+        },
+        {
+          "type": "int32_t",
+          "name": "childcnt",
+          "offset": 20
+        },
+        {
+          "type": "int32_t",
+          "name": "nextsib",
+          "offset": 24
+        }
+      ]
+    },
+    {
+      "name": "XML_Content",
+      "size": 20,
+      "members": [
+        {
+          "type": "XML_Content_Type",
+          "name": "type",
+          "offset": 0
+        },
+        {
+          "type": "XML_Content_Quant",
+          "name": "quant",
+          "offset": 4
+        },
+        {
+          "type": "XML_Char*",
+          "name": "name",
+          "offset": 8
+        },
+        {
+          "type": "uint32_t",
+          "name": "numchildren",
+          "offset": 12
+        },
+        {
+          "type": "XML_Content*",
+          "name": "children",
+          "offset": 16
+        }
+      ]
+    },
+    {
+      "name": "NAMED",
+      "size": 4,
+      "members": [
+        {
+          "type": "__expat__KEY",
+          "name": "name",
+          "offset": 0
+        }
+      ]
+    },
+    {
       "name": "BlockCnt",
       "size": 12,
       "members": [
@@ -50565,6 +51391,37 @@
           "type": "size_t",
           "name": "len",
           "offset": 20
+        }
+      ]
+    },
+    {
+      "name": "HASH_TABLE",
+      "size": 20,
+      "members": [
+        {
+          "type": "NAMED**",
+          "name": "v",
+          "offset": 0
+        },
+        {
+          "type": "size_t",
+          "name": "size",
+          "offset": 4
+        },
+        {
+          "type": "size_t",
+          "name": "used",
+          "offset": 8
+        },
+        {
+          "type": "size_t",
+          "name": "usedLim",
+          "offset": 12
+        },
+        {
+          "type": "XML_Memory_Handling_Suite*",
+          "name": "mem",
+          "offset": 16
         }
       ]
     },
@@ -54990,6 +55847,84 @@
           "type": "M2Array_uint8_t",
           "name": "keys",
           "offset": 0
+        }
+      ]
+    },
+    {
+      "name": "INIT_ENCODING",
+      "size": 80,
+      "members": [
+        {
+          "type": "ENCODING",
+          "name": "initEnc",
+          "offset": 0
+        },
+        {
+          "type": "ENCODING**",
+          "name": "encPtr",
+          "offset": 76
+        }
+      ]
+    },
+    {
+      "name": "normal_encoding",
+      "size": 368,
+      "members": [
+        {
+          "type": "ENCODING",
+          "name": "enc",
+          "offset": 0
+        },
+        {
+          "type": "uint8_t",
+          "name": "type",
+          "arrsize": 256,
+          "offset": 76
+        },
+        {
+          "type": "void**",
+          "name": "isName2",
+          "offset": 332
+        },
+        {
+          "type": "void**",
+          "name": "isName3",
+          "offset": 336
+        },
+        {
+          "type": "void**",
+          "name": "isName4",
+          "offset": 340
+        },
+        {
+          "type": "void**",
+          "name": "isNmstrt2",
+          "offset": 344
+        },
+        {
+          "type": "void**",
+          "name": "isNmstrt3",
+          "offset": 348
+        },
+        {
+          "type": "void**",
+          "name": "isNmstrt4",
+          "offset": 352
+        },
+        {
+          "type": "void**",
+          "name": "isInvalid2",
+          "offset": 356
+        },
+        {
+          "type": "void**",
+          "name": "isInvalid3",
+          "offset": 360
+        },
+        {
+          "type": "void**",
+          "name": "isInvalid4",
+          "offset": 364
         }
       ]
     },
@@ -62516,6 +63451,107 @@
       ]
     },
     {
+      "name": "DTD",
+      "size": 188,
+      "members": [
+        {
+          "type": "HASH_TABLE",
+          "name": "generalEntities",
+          "offset": 0
+        },
+        {
+          "type": "HASH_TABLE",
+          "name": "elementTypes",
+          "offset": 20
+        },
+        {
+          "type": "HASH_TABLE",
+          "name": "attributeIds",
+          "offset": 40
+        },
+        {
+          "type": "HASH_TABLE",
+          "name": "prefixes",
+          "offset": 60
+        },
+        {
+          "type": "STRING_POOL",
+          "name": "pool",
+          "offset": 80
+        },
+        {
+          "type": "STRING_POOL",
+          "name": "entityValuePool",
+          "offset": 104
+        },
+        {
+          "type": "XML_Bool",
+          "name": "keepProcessing",
+          "offset": 128
+        },
+        {
+          "type": "XML_Bool",
+          "name": "hasParamEntityRefs",
+          "offset": 129
+        },
+        {
+          "type": "XML_Bool",
+          "name": "standalone",
+          "offset": 130
+        },
+        {
+          "type": "XML_Bool",
+          "name": "paramEntityRead",
+          "offset": 131
+        },
+        {
+          "type": "HASH_TABLE",
+          "name": "paramEntities",
+          "offset": 132
+        },
+        {
+          "type": "PREFIX",
+          "name": "defaultPrefix",
+          "offset": 152
+        },
+        {
+          "type": "XML_Bool",
+          "name": "in_eldecl",
+          "offset": 160
+        },
+        {
+          "type": "CONTENT_SCAFFOLD*",
+          "name": "scaffold",
+          "offset": 164
+        },
+        {
+          "type": "uint32_t",
+          "name": "contentStringLen",
+          "offset": 168
+        },
+        {
+          "type": "uint32_t",
+          "name": "scaffSize",
+          "offset": 172
+        },
+        {
+          "type": "uint32_t",
+          "name": "scaffCount",
+          "offset": 176
+        },
+        {
+          "type": "int32_t",
+          "name": "scaffLevel",
+          "offset": 180
+        },
+        {
+          "type": "int32_t*",
+          "name": "scaffIndex",
+          "offset": 184
+        }
+      ]
+    },
+    {
       "name": "CGxVertexPBNT2",
       "size": 48,
       "members": [
@@ -64574,6 +65610,39 @@
           "type": "M2Array_M2SequenceKeys_C4Quaternion",
           "name": "sequenceKeys",
           "offset": 12
+        }
+      ]
+    },
+    {
+      "name": "unknown_encoding",
+      "size": 1912,
+      "members": [
+        {
+          "type": "normal_encoding",
+          "name": "normal",
+          "offset": 0
+        },
+        {
+          "type": "unknown_encoding__convert",
+          "name": "convert",
+          "offset": 368
+        },
+        {
+          "type": "void*",
+          "name": "userData",
+          "offset": 372
+        },
+        {
+          "type": "uint16_t",
+          "name": "utf16",
+          "arrsize": 256,
+          "offset": 376
+        },
+        {
+          "type": "char",
+          "name": "utf8",
+          "arrsize": 1024,
+          "offset": 888
         }
       ]
     },
@@ -67847,6 +68916,432 @@
           "type": "float",
           "name": "unk_08C",
           "offset": 140
+        }
+      ]
+    },
+    {
+      "name": "XML_ParserStruct",
+      "size": 656,
+      "members": [
+        {
+          "type": "void*",
+          "name": "m_userData",
+          "offset": 0
+        },
+        {
+          "type": "void*",
+          "name": "m_handlerArg",
+          "offset": 4
+        },
+        {
+          "type": "char*",
+          "name": "m_buffer",
+          "offset": 8
+        },
+        {
+          "type": "XML_Memory_Handling_Suite",
+          "name": "m_mem",
+          "offset": 12
+        },
+        {
+          "type": "char*",
+          "name": "m_bufferPtr",
+          "offset": 24
+        },
+        {
+          "type": "char*",
+          "name": "m_bufferEnd",
+          "offset": 28
+        },
+        {
+          "type": "char*",
+          "name": "m_bufferLim",
+          "offset": 32
+        },
+        {
+          "type": "int32_t",
+          "name": "m_parseEndByteIndex",
+          "offset": 36
+        },
+        {
+          "type": "char*",
+          "name": "m_parseEndPtr",
+          "offset": 40
+        },
+        {
+          "type": "XML_Char*",
+          "name": "m_dataBuf",
+          "offset": 44
+        },
+        {
+          "type": "XML_Char*",
+          "name": "m_dataBufEnd",
+          "offset": 48
+        },
+        {
+          "type": "XML_StartElementHandler",
+          "name": "m_startElementHandler",
+          "offset": 52
+        },
+        {
+          "type": "XML_EndElementHandler",
+          "name": "m_endElementHandler",
+          "offset": 56
+        },
+        {
+          "type": "XML_CharacterDataHandler",
+          "name": "m_characterDataHandler",
+          "offset": 60
+        },
+        {
+          "type": "XML_ProcessingInstructionHandler",
+          "name": "m_processingInstructionHandler",
+          "offset": 64
+        },
+        {
+          "type": "XML_CommentHandler",
+          "name": "m_commentHandler",
+          "offset": 68
+        },
+        {
+          "type": "XML_StartCdataSectionHandler",
+          "name": "m_startCdataSectionHandler",
+          "offset": 72
+        },
+        {
+          "type": "XML_EndCdataSectionHandler",
+          "name": "m_endCdataSectionHandler",
+          "offset": 76
+        },
+        {
+          "type": "XML_DefaultHandler",
+          "name": "m_defaultHandler",
+          "offset": 80
+        },
+        {
+          "type": "XML_StartDoctypeDeclHandler",
+          "name": "m_startDoctypeDeclHandler",
+          "offset": 84
+        },
+        {
+          "type": "XML_EndDoctypeDeclHandler",
+          "name": "m_endDoctypeDeclHandler",
+          "offset": 88
+        },
+        {
+          "type": "XML_UnparsedEntityDeclHandler",
+          "name": "m_unparsedEntityDeclHandler",
+          "offset": 92
+        },
+        {
+          "type": "XML_NotationDeclHandler",
+          "name": "m_notationDeclHandler",
+          "offset": 96
+        },
+        {
+          "type": "XML_StartNamespaceDeclHandler",
+          "name": "m_startNamespaceDeclHandler",
+          "offset": 100
+        },
+        {
+          "type": "XML_EndNamespaceDeclHandler",
+          "name": "m_endNamespaceDeclHandler",
+          "offset": 104
+        },
+        {
+          "type": "XML_NotStandaloneHandler",
+          "name": "m_notStandaloneHandler",
+          "offset": 108
+        },
+        {
+          "type": "XML_ExternalEntityRefHandler",
+          "name": "m_externalEntityRefHandler",
+          "offset": 112
+        },
+        {
+          "type": "void*",
+          "name": "m_externalEntityRefHandlerArg",
+          "offset": 116
+        },
+        {
+          "type": "XML_SkippedEntityHandler",
+          "name": "m_skippedEntityHandler",
+          "offset": 120
+        },
+        {
+          "type": "XML_UnknownEncodingHandler",
+          "name": "m_unknownEncodingHandler",
+          "offset": 124
+        },
+        {
+          "type": "XML_ElementDeclHandler",
+          "name": "m_elementDeclHandler",
+          "offset": 128
+        },
+        {
+          "type": "XML_AttlistDeclHandler",
+          "name": "m_attlistDeclHandler",
+          "offset": 132
+        },
+        {
+          "type": "XML_EntityDeclHandler",
+          "name": "m_entityDeclHandler",
+          "offset": 136
+        },
+        {
+          "type": "XML_XmlDeclHandler",
+          "name": "m_xmlDeclHandler",
+          "offset": 140
+        },
+        {
+          "type": "ENCODING*",
+          "name": "m_encoding",
+          "offset": 144
+        },
+        {
+          "type": "INIT_ENCODING",
+          "name": "m_initEncoding",
+          "offset": 148
+        },
+        {
+          "type": "ENCODING*",
+          "name": "m_internalEncoding",
+          "offset": 228
+        },
+        {
+          "type": "XML_Char*",
+          "name": "m_protocolEncodingName",
+          "offset": 232
+        },
+        {
+          "type": "XML_Bool",
+          "name": "m_ns",
+          "offset": 236
+        },
+        {
+          "type": "XML_Bool",
+          "name": "m_ns_triplets",
+          "offset": 237
+        },
+        {
+          "type": "void*",
+          "name": "m_unknownEncodingMem",
+          "offset": 240
+        },
+        {
+          "type": "void*",
+          "name": "m_unknownEncodingData",
+          "offset": 244
+        },
+        {
+          "type": "void*",
+          "name": "m_unknownEncodingHandlerData",
+          "offset": 248
+        },
+        {
+          "type": "void**",
+          "name": "m_unknownEncodingRelease",
+          "offset": 252
+        },
+        {
+          "type": "PROLOG_STATE",
+          "name": "m_prologState",
+          "offset": 256
+        },
+        {
+          "type": "PProcessor",
+          "name": "m_processor",
+          "offset": 280
+        },
+        {
+          "type": "XML_Error",
+          "name": "m_errorCode",
+          "offset": 284
+        },
+        {
+          "type": "char*",
+          "name": "m_eventPtr",
+          "offset": 288
+        },
+        {
+          "type": "char*",
+          "name": "m_eventEndPtr",
+          "offset": 292
+        },
+        {
+          "type": "char*",
+          "name": "m_positionPtr",
+          "offset": 296
+        },
+        {
+          "type": "OPEN_INTERNAL_ENTITY*",
+          "name": "m_openInternalEntities",
+          "offset": 300
+        },
+        {
+          "type": "XML_Bool",
+          "name": "m_defaultExpandInternalEntities",
+          "offset": 304
+        },
+        {
+          "type": "int32_t",
+          "name": "m_tagLevel",
+          "offset": 308
+        },
+        {
+          "type": "ENTITY*",
+          "name": "m_declEntity",
+          "offset": 312
+        },
+        {
+          "type": "XML_Char*",
+          "name": "m_doctypeName",
+          "offset": 316
+        },
+        {
+          "type": "XML_Char*",
+          "name": "m_doctypeSysid",
+          "offset": 320
+        },
+        {
+          "type": "XML_Char*",
+          "name": "m_doctypePubid",
+          "offset": 324
+        },
+        {
+          "type": "XML_Char*",
+          "name": "m_declAttributeType",
+          "offset": 328
+        },
+        {
+          "type": "XML_Char*",
+          "name": "m_declNotationName",
+          "offset": 332
+        },
+        {
+          "type": "XML_Char*",
+          "name": "m_declNotationPublicId",
+          "offset": 336
+        },
+        {
+          "type": "ELEMENT_TYPE*",
+          "name": "m_declElementType",
+          "offset": 340
+        },
+        {
+          "type": "ATTRIBUTE_ID*",
+          "name": "m_declAttributeId",
+          "offset": 344
+        },
+        {
+          "type": "XML_Bool",
+          "name": "m_declAttributeIsCdata",
+          "offset": 348
+        },
+        {
+          "type": "XML_Bool",
+          "name": "m_declAttributeIsId",
+          "offset": 349
+        },
+        {
+          "type": "DTD",
+          "name": "m_dtd",
+          "offset": 352
+        },
+        {
+          "type": "XML_Char*",
+          "name": "m_curBase",
+          "offset": 540
+        },
+        {
+          "type": "TAG*",
+          "name": "m_tagStack",
+          "offset": 544
+        },
+        {
+          "type": "TAG*",
+          "name": "m_freeTagList",
+          "offset": 548
+        },
+        {
+          "type": "BINDING*",
+          "name": "m_inheritedBindings",
+          "offset": 552
+        },
+        {
+          "type": "BINDING*",
+          "name": "m_freeBindingList",
+          "offset": 556
+        },
+        {
+          "type": "int32_t",
+          "name": "m_attsSize",
+          "offset": 560
+        },
+        {
+          "type": "int32_t",
+          "name": "m_nSpecifiedAtts",
+          "offset": 564
+        },
+        {
+          "type": "int32_t",
+          "name": "m_idAttIndex",
+          "offset": 568
+        },
+        {
+          "type": "ATTRIBUTE*",
+          "name": "m_atts",
+          "offset": 572
+        },
+        {
+          "type": "POSITION",
+          "name": "m_position",
+          "offset": 576
+        },
+        {
+          "type": "STRING_POOL",
+          "name": "m_tempPool",
+          "offset": 584
+        },
+        {
+          "type": "STRING_POOL",
+          "name": "m_temp2Pool",
+          "offset": 608
+        },
+        {
+          "type": "char*",
+          "name": "m_groupConnector",
+          "offset": 632
+        },
+        {
+          "type": "uint32_t",
+          "name": "m_groupSize",
+          "offset": 636
+        },
+        {
+          "type": "XML_Char",
+          "name": "m_namespaceSeparator",
+          "offset": 640
+        },
+        {
+          "type": "XML_Parser",
+          "name": "m_parentParser",
+          "offset": 644
+        },
+        {
+          "type": "XML_Bool",
+          "name": "m_isParamEntity",
+          "offset": 648
+        },
+        {
+          "type": "XML_Bool",
+          "name": "m_useForeignDTD",
+          "offset": 649
+        },
+        {
+          "type": "XML_ParamEntityParsing",
+          "name": "m_paramEntityParsing",
+          "offset": 652
         }
       ]
     },

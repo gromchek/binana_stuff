@@ -680,4 +680,5 @@ static import_functions() {
 	set_func_cmt(0x009A8C60, "BigIntegerModExp(void*, void*, void*, void*)", 0);
 	set_func_cmt(0x009A8C80, "BigIntegerFree(void*)", 0);
 	set_func_cmt(0x009A8C90, "BigIntegerBitLen(void*)", 0);
+	set_func_cmt(0x009B71D0, "ENCODING* enc optimized away?", 0);
 }
