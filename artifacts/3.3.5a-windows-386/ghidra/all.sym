@@ -512,6 +512,7 @@ SFile__Open 00424F80 f end=00424F98
 Blizzard__Util__MD5__Process 004250D0 f end=00425846
 Process 00425850 f end=00425D9A type="void __stdcall func(uint32_t* hash, uint8_t* data)"
 Blizzard__Util__Hash32I 00425DA0 f end=00425DDC
+Bzip2Compress 004269A0 f end=004269E7
 Blizzard__Mopaq__SFileGetLastError 00426A30 f end=00426A36
 Blizzard__Mopaq__SFileSetFilePointer 00426EB0 f end=00426F69
 Blizzard__Mopaq__SFileGetFileSize 00426F70 f end=00426F9E
@@ -625,12 +626,14 @@ Catch_All@0043fd5f 0043FD5F f end=0043FD68 type="void __stdcall func()" auto
 Catch_All@00440025 00440025 f end=0044002E type="void __stdcall func()" auto
 Catch_All@0044065e 0044065E f end=00440667 type="void __stdcall func()" auto
 Catch_All@00440788 00440788 f end=004407AD type="void __stdcall func()" auto
+System_Mopaq__Cache__CleanCache 004408B0 f end=00440910
 Catch_All@00441357 00441357 f end=00441368 type="void __stdcall func()" auto
 Catch_All@0044216a 0044216A f end=0044217B type="void __stdcall func()" auto
 Catch_All@00442cfe 00442CFE f end=00442D07 type="void __stdcall func()" auto
 Catch_All@00442d9e 00442D9E f end=00442DA7 type="void __stdcall func()" auto
 Catch_All@0044315e 0044315E f end=00443167 type="void __stdcall func()" auto
 Catch_All@0044350e 0044350E f end=00443517 type="void __stdcall func()" auto
+System_Mopaq__cache_write 004437D0 f end=00443A88
 Catch_All@00444f5e 00444F5E f end=00444F6F type="void __stdcall func()" auto
 System_Thread__AddToRegistry 00448260 f end=00448313 type="void __stdcall func(Blizzard__Thread__Thread thread)"
 Catch_All@00449457 00449457 f end=00449460 type="void __stdcall func()" auto
@@ -828,6 +831,7 @@ _vorbis_info_clear 0046C1F0 f end=0046C393
 _vorbis_synthesis 0046CB40 f end=0046CCA9
 _vorbis_synthesis_trackonly 0046CCB0 f end=0046CD8A
 _vorbis_packet_blocksize 0046CD90 f end=0046CE0A
+_vorbis_block_init 0046CE10 f end=0046CE3D
 __vorbis_block_alloc 0046CE40 f end=0046CEC2
 __vorbis_block_ripcord 0046CED0 f end=0046CF51
 _vorbis_block_clear 0046CF60 f end=0046CF9C
@@ -842,6 +846,7 @@ __ilog 0046E200 f end=0046E219
 __make_words 0046E220 f end=0046E3AF
 _vorbis_staticbook_clear 0046E670 f end=0046E6CD
 _vorbis_staticbook_destroy 0046E6D0 f end=0046E6F3
+_vorbis_book_clear 0046E700 f end=0046E799
 _sort32a 0046E7A0 f end=0046E7C1
 _vorbis_book_init_decode 0046E7D0 f end=0046ED0F
 _vorbis_staticbook_unpack 0046ED10 f end=0046EFB4
@@ -873,7 +878,9 @@ _ogg_stream_packetout 00473200 f end=00473217
 _oggpack_readinit 00473240 f end=0047325E
 _oggpack_look 00473260 f end=00473303
 _oggpack_read 00473340 f end=00473402
+_BZ2_bzCompress 00473A90 f end=00473BC6
 _BZ2_indexIntoF 004741D0 f end=004741FF
+_BZ2_bzBuffToBuffCompress 004748C0 f end=004749B0
 _BZ2_hbMakeCodeLengths 00478FB0 f end=00479333
 nullsub_2 0047ADD0 f
 CDataStore__GetBufferParams 0047ADE0 f end=0047AE0B type="void __thiscall func(CDataStore* this, void** data, uint32_t* size, uint32_t* alloc)" ; CDataStore::GetBufferParams(void const**, unsigned int*, unsigned int*)
@@ -2263,6 +2270,7 @@ IncTypeId 004D3C40 f end=004D3CA2
 InitObject 004D3FF0 f end=004D4066
 CGUnit_C__IsActiveMover 004D43C0 f end=004D43E1
 SetupObjectStorage 004D45B0 f end=004D474C
+CCommand_ObjUsage 004D49E0 f end=004D4AB8
 ClntObjMgrInitializeShared 004D4AC0 f end=004D4B21
 ClntObjMgrEnumVisibleObjects 004D4B30 f end=004D4BA5
 FindActiveObj 004D4BB0 f end=004D4C1F
@@ -2281,6 +2289,7 @@ ClntObjMgrUnsetTypeMirrorHandler 004D5C40 f end=004D5C71
 ClntObjMgrDestroyShared 004D5C80 f end=004D5D6B
 TSHashTable__CGObject_C__constructor 004D5D70 f end=004D5DCB
 TSHashTable__CGObject_C__InternalDelete 004D5DD0 f end=004D5DF5
+CGObject_C__constructor 004D5E00 f end=004D5E92
 CGObject_C__GetPosition 004D5EA0 f end=004D5EB4
 CGObject_C__GetRawPosition 004D5EC0 f end=004D5ED6
 stub_return_zero_float 004D5EE0 f end=004D5EE3 ; known names: CGObject_C__GetFacing, CGCamera__GetDefaultZoomMinDistance
@@ -2790,6 +2799,7 @@ CGUnit__CanPlayEmote 004F5410 f end=004F54C3
 CGUnit_C__GetResistanceAndBuffs 004F54D0 f end=004F552B
 CGPlayer__TotalFieldsSaved 004F5530 f end=004F553B
 CGPlayer__TotalRemoteFieldsSaved 004F5540 f end=004F554B
+CGDynamicObject__TotalFieldsSaved 004F55B0 f end=004F55B9
 GenerateChairPoints 004F55F0 f end=004F5670
 CGObject__TotalFieldsSaved 004F5670 f end=004F5675
 CGCorpse__TotalFieldsSaved 004F5680 f end=004F5689
@@ -3550,6 +3560,7 @@ Script_AcceptLevelGrant 00523360 f end=00523368
 Script_EndRefund 00523370 f end=005233C5
 Script_EndBoundTradeable 005233D0 f end=0052349D
 SavePlacedFrames 005234A0 f end=00523526
+CGGameUI__NextCinematicInternal 00523530 f end=005235B0
 CGGameUI__StartMovie 005235B0 f end=0052363D
 CGGameUI__CloseLoot 00523640 f end=005237D2
 CGGameUI__OnItemPush 00523900 f end=00523DAF
@@ -3611,6 +3622,7 @@ TSExplicitList_TaintEvent__Clear 00527C80 f end=00527D05
 TSGrowableArray_TSExplicitList_THREATMAP__ReallocData 00527D10 f end=00527E67
 TSExplicitList_CGGameUI__THREATMAP__Clear 00527E70 f end=00527EF5
 Script_InteractUnit 00527F00 f end=00527FD4
+CGGameUI__BeginCinematicInternal 00527FE0 f end=00528005
 CGGameUI__EnterWorld 00528010 f end=005284D0
 CCapturePointUIManager__Update 005284D0 f end=005285F0
 CCapturePointUIManager___DeleteNode 005285F0 f end=00528682
@@ -4907,6 +4919,7 @@ CGMinimapFrame_SetCorpsePOIArrowTexture 00583BC0 f end=00583CDF
 CGMinimapFrame_SetIconTexture 00583CE0 f end=00583DFF
 CGMinimapFrame_SetBlipTexture 00583E00 f end=00583F52
 CGMinimapFrame_SetClassBlipTexture 00583F60 f end=0058407F
+BuybackItemStatsCallback 005840B0 f end=005840C0
 CGMerchantInfo__RefreshList 005840C0 f end=005840DD
 CGMerchantInfo__UpdateItemQuantity 005840E0 f end=00584142
 QSortBuybackTimestamps 005841A0 f end=005841CF
@@ -5378,6 +5391,7 @@ Script_GetSelectedAuctionItem 0059C920 f end=0059C9E4
 Script_CanCancelAuction 0059C9F0 f end=0059CAA1
 Script_SortAuctionApplySort 0059CAB0 f end=0059CB68
 AuctionListItemQueryCallback 0059CB70 f end=0059CBAE
+AuctionOwnedItemQueryCallback 0059CBB0 f end=0059CBDA
 AuctionOwnedSoldItemQueryCallback 0059CBE0 f end=0059CC0C
 AuctionBidItemQueryCallback 0059CC10 f end=0059CC4E
 CGAuctionHouse__GetOwnerList 0059CC50 f end=0059CD89
@@ -9572,6 +9586,7 @@ SaveAccountData 006B9BE0 f end=006B9C5D
 UploadAccountData 006B9C60 f end=006B9C9B
 DownloadAccountData 006B9CA0 f end=006B9CDB
 ChecksumExecutables 006B9CF0 f end=006B9DC1
+IORefcount__Release 006B9DD0 f end=006B9DEC
 GruntFileDownload__constructor 006B9DF0 f end=006B9E7F
 GruntFileDownload__Delete 006B9E80 f end=006B9EEA
 GruntFileDownload__CalculateMD5 006B9F70 f end=006BA018
@@ -9581,9 +9596,17 @@ GruntFileDownload__GetProgress 006BA500 f end=006BA584
 TSGrowableArray_HttpDownload__ReallocData 006BA590 f end=006BA620
 GruntFileDownload__Close 006BA650 f end=006BA6AE
 GruntFileDownload__Initialize 006BA6B0 f end=006BA928
+BattlenetFileDownload__GetStatus 006BAA50 f end=006BAB23
+BattlenetFileDownload__GetProgress 006BAB30 f end=006BABE2
+BattlenetFileDownload__StopDownload 006BABF0 f end=006BAC2C
+BattlenetFileDownload__CompleteDownload 006BAC30 f end=006BAD6C
 TSGrowableArray_HttpDownload__Add 006BADD0 f end=006BAE47
 BattlenetFileDownload__constructor 006BAE80 f end=006BAEDF
 GruntFileDownload__GetReason 006BAEE0 f end=006BAEFC
+BattlenetFileDownload__Accepted 006BAF00 f end=006BAF07
+BattlenetFileDownload__Initialize 006BAF10 f end=006BB14A
+BattlenetFileDownload__Destroy 006BB150 f end=006BB1E3
+BattlenetFileDownload__destructor 006BB1F0 f end=006BB23E
 TSGrowableArray_TSExplicitList_CLightList__ReallocData 006BBBE0 f end=006BBD37
 TSExplicitList_CLightList__Clear 006BBE30 f end=006BBEB5
 TSHashTable__CLightList__constructor 006BC140 f end=006BC19B
@@ -9698,6 +9721,7 @@ BATCHEDRENDERFONTDESC__Shutdown 006C4860 f end=006C48CC
 BATCHEDRENDERFONTDESC__UnlockVertexPtrAndRender 006C48D0 f end=006C49A2
 BATCHEDRENDERFONTDESC__RenderBatch 006C4AD0 f end=006C4CCA
 TEXTLINETEXTURE__destructor 006C4CD0 f end=006C4D7C
+TEXTLINETEXTURE__NewTextLineTexture 006C4D80 f end=006C4E1C
 TSGrowableArray_TSExplicitList_BATCHEDRENDERFONTDES__ReallocData 006C4E20 f end=006C4F77
 TEXTURECACHEROW__EvictGlyph 006C4F80 f end=006C511D
 TEXTURECACHEROW__CreateNewDesc 006C5120 f end=006C539D
@@ -10929,6 +10953,7 @@ CGUnit_C__NamePlateSetResortAll 00715380 f end=0071539B
 CGUnit_C__NamePlateUpdateLevels 007153A0 f end=007153BB
 CGUnit_C__NamePlateUpdateColor 007153C0 f end=007153DB
 CGUnit_C__GetCreatureFamily 007153E0 f end=007153F1
+CGUnit_C__SaveChainSpellLocation 00715400 f end=00715440
 CGUnit_C__UpdateUnitNameText 00715500 f end=00715528
 CGUnit_C__UpdateUnitNameColor 00715530 f end=00715554
 CGUnit_C__ObjectNameVisibilityChanged 00715560 f end=007155C9
@@ -11985,6 +12010,7 @@ WowTime__InRange 0076CF10 f end=0076CF93
 CGameTime__GameTimeSetMinutesPerSecond 0076CFA0 f end=0076CFE6
 CGameTime__GameTimeGetDayProgression 0076CFF0 f end=0076D051
 TSGrowableArray_TSExplicitList_TIMESTAMPSTRUCT__ReallocData 0076D060 f end=0076D1B7
+CGameTime__GameTimeUnregisterCallback 0076D1D0 f end=0076D255
 TSGrowableArray_TSExplicitList_TIMESTAMPSTRUCT__SetCount 0076D260 f end=0076D364
 TSHashTable__TIMESTAMPSTRUCT__constructor 0076D370 f end=0076D3CB
 TSHashTable__TIMESTAMPSTRUCT__Initialize 0076D3D0 f end=0076D42A
@@ -13194,10 +13220,15 @@ TSGrowableArray_FFX__Pass__ReallocData 007E7FF0 f end=007E8080
 FFX__Pass__destructor 007E8080 f end=007E80A8
 PassDeath__constructor 007E86A0 f end=007E8768
 PassDeath__destructor 007E8770 f end=007E87AB
+EffectNetherWorld__End 007E8E20 f end=007E8E32
 PassDeath__destructor 007E9920 f end=007E994B
 TSGrowableArray_FFX__Pass__New 007EA1C0 f end=007EA220
 EffectDeath__constructor 007EA260 f end=007EA416
+EffectDeath__destructor 007EA420 f end=007EA46A
 EffectNetherWorld__constructor 007EA470 f end=007EA592
+EffectNetherWorld__destructor 007EA5A0 f end=007EA5EA
+EffectDeath__destructor 007EA920 f end=007EA94B
+EffectNetherWorld__destructor 007EA950 f end=007EA97B
 CDrawBowString__DrawBowString 007EA9B0 f end=007EAD62
 CDrawBowString__UnitDrawBowStringCB 007EAD70 f end=007EAD79
 CDrawBowString__GlueDrawBowStringCB 007EAD80 f end=007EAD97
@@ -14877,6 +14908,7 @@ ComSat__Manager__PackVariableBitrateData 00880160 f end=00880299
 ComSat__Manager__PackStableBitrateData 008802A0 f end=00880371
 ComSat__Manager__SendVoiceDataToCurrentSession 00880380 f end=00880390
 ComSat__Manager__SendVoiceDataToCurrentSession 00880390 f end=0088044B
+ComSat__Manager__LocalChatDataReady 00880450 f end=00880548
 ComSat__Manager__DeviceError 008805E0 f end=00880622
 ComSat__Manager__LocalTalkerCreate 00880710 f end=00880778
 ComSat__Manager__LocalTalkerDestroy 00880780 f end=00880803
@@ -14887,6 +14919,7 @@ ComSat__Manager__SessionSetTalkerNetworkIdRemote 00880A90 f end=00880ACE
 ComSat__Interface__Destroy 00880B30 f end=00880BA4
 ComSat__Manager__constructor 00880BB0 f end=00880C8F
 ComSat__Manager__destructor 00880C90 f end=00880C98
+ComSat__Manager__destructor 00880CA0 f end=00880CA8
 ComSat__Manager__SessionSetNetworkId 00880CB0 f end=00880CE6
 ComSat__Manager__LocalTalkerSelectSession 00880CF0 f end=00880D64
 ComSat__Manager__SessionRemove 00880D70 f end=00880EA6
@@ -14914,6 +14947,7 @@ ComSat__Sound__Manager__SubmitIncomingFrameTimeData 00882330 f end=00882434
 ComSat__Sound__Manager__SubmitIncomingVoicePacket 00882440 f end=008825C1
 ComSat__Sound__Manager__InitLocalPlayer 00883950 f end=00883A8C
 ComSat__Sound__Manager__SetPlaybackPriorityForPlayerInSession 00883F90 f end=0088402C
+ComSat__Sound__Manager__UnregisterRemoteTalkerFromSession 00884AB0 f end=00884C93
 ComSat__Sound__Manager__Work 00884DB0 f end=00884DDE
 ComSat__Sound__Manager__UnregisterLocalTalkerFromSession 00884F10 f end=008850EC
 ComSat__Sound__Manager__DestroyLocalPlayer 008850F0 f end=008851C8
@@ -14923,15 +14957,18 @@ ComSat__Network__Manager__Work 00885410 f end=0088555E
 ComSat__Network__Manager__DestroySession 00885560 f end=0088558F
 ComSat__Network__Manager__Send 00885590 f end=00885617
 ComSat__Network__Manager__destructor 00885620 f end=008856CC
+ComSat__Network__Manager__CreateSession 008856D0 f end=00885730
 ComSat__BitUnpacker__BitUnpacker 00885730 f end=00885753
 ComSat__BitUnpacker__destructor 00885760 f end=00885767
 ComSat__BitPacker__PackBits 00885770 f end=008858DC
 ComSat__BitPacker__Finalize 008858E0 f end=00885910
 ComSat__BitUnpacker__UnpackBits 00885910 f end=00885A9B
 ComSat__Session__GetNetworkSession 00885AE0 f end=00885AE4
+ComSat__Session__LocalAdd 00885AF0 f end=00885B1A
 ComSat__Session__Add 00885B20 f end=00885B56
+ComSat__Session__Remove 00885B60 f end=00885B7B
 ComSat__Session__Send 00885B80 f end=00885BB2
-ComSat__Session__Session 00885C00 f end=00885C2E
+ComSat__Session__constructor 00885C00 f end=00885C2E
 ComSat__Network__Address__SetPort 00885C40 f end=00885C58
 ComSat__Network__Address__GetPort 00885C60 f end=00885C6E
 ComSat__Network__Address__operator_eq 00885C70 f end=00885CA7
@@ -14942,8 +14979,12 @@ ComSat__Network__Session__Recv 00885D90 f end=00885DB1
 ComSat__Network__Session__Send 00885F20 f end=00885FBB
 ComSat__Network__Session__Work 00885FC0 f end=00886024
 ComSat__Network__Session__Resolve 00886030 f end=008860AB
+ComSat__Network__Session__constructor 00886110 f end=00886165
+ComSat__Network__Session__Remove 00886230 f end=008862F2
+ComSat__Network__Session__LocalAdd 00886300 f end=00886379
 ComSat__Network__Session__Add 00886380 f end=008865FC
 ComSat__RunningAverageCalculator__SubmitData 008866F0 f end=00886724
+ComSat__Sound__CODEC__Create 00886CA0 f end=00886D08
 ComSat__Hash32 00887330 f end=00887359
 ComSat__Sound__IOSoundEngine__EnumerateOutputDevices 00887420 f end=0088746B
 TSGrowableArray_ComSat__Sound__OutputChannel__ReallocData 00887490 f end=00887520
@@ -15139,8 +15180,15 @@ NvAPI_Stereo_DestroyHandle 008A0FB8 f end=008A0FBE type="NvAPI_Status __stdcall 
 NvAPI_Stereo_SetSeparation 008A0FD6 f end=008A0FDC type="NvAPI_Status __stdcall func(StereoHandle stereoHandle, float newSeparationPercentage)"
 NvAPI_Stereo_SetConvergence 008A0FEE f end=008A0FF4 type="NvAPI_Status __stdcall func(StereoHandle stereoHandle, float newConvergence)"
 DownloadFileCallback__Completed 008A1330 f end=008A1346
+HttpDownload__Done 008A1370 f end=008A1388
+HttpDownload__Cancel 008A1390 f end=008A13AB
+HttpDownload__GetBytes 008A13B0 f end=008A13B7
+HttpDownload__Size 008A13C0 f end=008A1406
+HttpDownload__Progress 008A1410 f end=008A1418
 stub_return_one_byte 008A1420 f end=008A1423 ; known names: System_File::Shutdown, CVGxVideoOptionsVersionCallback
 DownloadFileCallback__ReceivedData 008A1440 f end=008A1523
+HttpDownload__destructor 008A1550 f end=008A15D7
+HttpDownload__constructor 008A15E0 f end=008A16B8
 Liquid__CInstance__AddRef 008A1700 f end=008A1705
 Liquid__CInstance__Purge 008A1710 f end=008A171A
 TSGrowableArray_Liquid__CMaterialSettings__ReallocData 008A17D0 f end=008A1860
@@ -15511,6 +15559,7 @@ LightIntBandRec__GetFilename 008BE100 f end=008BE106
 LightFloatBandRec__GetFilename 008BE1A0 f end=008BE1A6
 BSN__BSNPrimitiveEncoder__GetContextSize 008BE480 f end=008BE486
 XMLTree_GetRoot 008BE770 f end=008BE77A
+EffectGlow__Execute 008BFD90 f end=008BFDD8
 EffectGlow__constructor 008BFE80 f end=008C01C2
 EffectGlow__destructor 008C01D0 f end=008C0251
 EffectGlow__destructor 008C0260 f end=008C028B
@@ -16515,6 +16564,7 @@ CMemBlock__SetM_ 009845D0 f end=00984631
 CMemBlock__Resize 009847D0 f end=0098485B
 CAaBox__Transform 00984860 f end=00984926
 CAaBox__Bounding 00984930 f end=00984C6D
+C2iVector__MajorAxis 00984C70 f end=00984C8D
 C4Vector__constructor 00984C90 f end=00984CDC ; C4Vector::C4Vector(CImVector const&)
 NTempest__DistanceSquared 00984CE0 f end=00984DA9
 NTempest__DistanceFromPolygonEdge 00984DB0 f end=00984E41
@@ -17405,7 +17455,7 @@ Battlenet__Tumor__Recv 009C15D0 f end=009C1604
 Battlenet__Tumor__RecvDatagram 009C1610 f end=009C1644
 Battlenet__CreepTendril__Instance__EnumFunctions 009C1B10 f end=009C1B1E
 Battlenet__CreepTendril__Initialize 009C2460 f end=009C252E
-Battlenet__CreepTendril__Instance__Instance 009C25D0 f end=009C275A
+Battlenet__CreepTendril__Instance__constructor 009C25D0 f end=009C275A
 Battlenet__CreepTendril__Instance__Create 009C2840 f end=009C2880
 __mbsnicmp_l 009C3550 f end=009C3719 type="int __cdecl func(uchar* _Str1, uchar* _Str2, size_t _MaxCount, _locale_t _Locale)" auto
 __mbsnicmp 009C3719 f end=009C3730 type="int __cdecl func(uchar* _Str1, uchar* _Str2, size_t _MaxCount)" auto
@@ -18188,6 +18238,9 @@ CGGameUI__m_visible 00AC80A8 l
 CGPartyInfo__m_leaderIndex 00ACC6C4 l
 CGPartyInfo__m_lootMethod 00ACC6C8 l
 CGPartyInfo__m_lootThreshold 00ACC6CC l
+CGWorldMap__m_currentContinent 00ACCF04 l
+CGWorldMap__m_currentZone 00ACCF08 l
+CGWorldMap__m_currentDungeonMap 00ACCF0C l
 CGWorldMap__m_currentOrphanZone 00ACCF10 l
 CGBattlefieldInfo__m_activeIndex 00ACD16C l
 CGBattlefieldInfo__m_logFilterFaction 00ACD170 l
@@ -18198,7 +18251,12 @@ CGCharacterModelBase__s_metatable 00ACF534 l
 CGDressUpModelFrame__s_metatable 00ACF568 l
 CGTabardModelFrame__s_metatable 00ACF584 l
 CGAuctionHouse__m_desiredDelayTime 00ACF628 l
+CGAuctionHouse__m_selectedOwnedItem 00ACF630 l
+CGArenaTeamInfo__m_showOffline 00ACF834 l
+CGTradeSkillInfo__m_subClassFilter 00AD0E00 l
 CGTradeSkillInfo__m_invTypeFilter 00AD0E08 l
+CGTradeSkillInfo__m_collapseFilter 00AD0E0C l
+CGQuestLog__m_questIconOverlapDist 00AD1014 l
 CGCooldown__s_metatable 00AD13CC l
 s_cursorNames 00AD2808 l type="char*[53]"
 CGTooltip__s_metatable 00AD2D08 l
@@ -18602,7 +18660,10 @@ CGlueMgr__m_numChangedOptionWarnings 00B6AF9C l
 CGlueMgr__m_showedDisconnect 00B6AFA0 l
 CCharacterCreation__m_charPreferences 00B6B0D0 l
 CCharacterCreation__m_raceIndex 00B6B180 l
+CCharacterCreation__m_charCustomizeFrame 00B6B184 l
 CCharacterComponent__m_skinIndex 00B6B18C l
+CCharacterCreation__m_character 00B6B1A0 l
+CCharacterCreation__m_nameGen 00B6B1D4 l
 CGlueMgr__m_surveyDownload 00B6B250 l
 CGlueMgr__m_patchDownload 00B6B25C l
 CGlueMgr__m_deleteLocalPatch 00B6B260 l
@@ -18664,17 +18725,28 @@ CGGameUI__m_corpseActualMapID 00BD081C l
 CGGameUI__m_corpseGUID 00BD0828 l
 CGGameUI__m_corpseTransportGUID 00BD0830 l
 CGGameUI__m_areaSpiritHealerGUID 00BD0838 l
+CGGameUI__m_areaSpiritHealerTime 00BD0840 l
+CGGameUI__m_deathReleaseMapID 00BD0844 l
 CGGameUI__m_repopTime 00BD0848 l
 CGGameUI__m_deadNoRepopTimer 00BD084C l
+CGGameUI__m_comboPoints 00BD084D l
+CGGameUI__m_corpseReclaimDelay 00BD0850 l
+CGGameUI__m_instanceBootTime 00BD0854 l
 CGGameUI__m_instanceLockTime 00BD0858 l
 CGGameUI__m_instanceLockComletedMask 00BD085C l
 CGGameUI__m_instanceLockExtending 00BD0860 l
+CGGameUI__m_summonConfirmTime 00BD0864 l
 CGGameUI__m_billingExpireTime 00BD086C l
+CGGameUI__m_summonConfirmGUID 00BD0870 l
 CGGameUI__m_uiLastInstanceTime 00BD0884 l
 CGGameUI__m_iMapID 00BD0888 l
 CGGameUI__m_iCurrentMapID 00BD088C l
 CGGameUI__m_bOwnsInstance 00BD0890 l
+CGGameUI__m_instanceDifficulty 00BD0894 l
+CGGameUI__m_raidDifficulty 00BD089C l
 CGGameUI__m_lastRegenTime 00BD08A0 l
+CGGameUI__m_pendingLevelGranter 00BD08B8 l
+CGGameUI__m_threatWarningEnabled 00BD08C0 l
 g_taintLogCVar 00BD08E4 l type="CVar*"
 g_scriptErrorsCVar 00BD08E8 l type="CVar*"
 g_scriptProfileCVar 00BD08EC l type="CVar*"
@@ -18761,10 +18833,19 @@ g_trackerSortingCVar 00BD0A40 l type="CVar*"
 s_cvShowToastFriendRequest 00BD0A44 l type="CVar*"
 s_cvShowToastOnline 00BD0A48 l type="CVar*"
 s_cvShowToastOffline 00BD0A4C l type="CVar*"
+CGGameUI__m_corpsePos 00BD0A58 l
+CGGameUI__m_deathReleaseLoc 00BD0A64 l
 CGGameUI__m_MirrorTimerInfo 00BD0B80 l
+CGPartyInfo__m_optOutOfLoot 00BD19A0 l
+CGPartyInfo__m_lfgSlot 00BD19A4 l
+CGPartyInfo__m_lfgRestricted 00BD19A8 l
+CGBarberShop__m_currentHairStyle 00BD19AC l
+CGBarberShop__m_currentSkinColor 00BD19B4 l
+CGBarberShop__m_barberShopEnabled 00BD19B8 l
 CGBarberShop__m_initialized 00BD19BA l
 CGTutorial__m_tutorialsCompleated 00BD19F0 l
 CGSpellBook__m_stuckSpell 00BE7D8C l
+CGSpellBook__m_duelSpell 00BE7D90 l
 CGWorldMap__m_numLandmarks 00BE8EE0 l
 CGWorldMap__m_numOverlays 00BE8EE4 l
 CGWorldStateInfo__m_nextUITimeUpdate 00BE8F40 l
@@ -18773,7 +18854,21 @@ CGWorldStateInfo__m_nextUpdateTime 00BE8F48 l
 CGWorldStateInfo__m_areaID 00BE8F50 l
 CGWorldStateInfo__m_mapID 00BE8F54 l
 CGBattlefieldInfo__m_vehicleGuids 00BE9F70 l
+CGBattlefieldInfo__m_teamNames 00BEA0B0 l
+CGBattlefieldInfo__m_playerPositionGuids 00BEA180 l
+CGBattlefieldInfo__m_hasRandomWinToday 00BEA549 l
+CGBattlefieldInfo__m_arenaFaction 00BEA54A l
+CGBattlefieldInfo__m_instanceType 00BEA570 l
+CGBattlefieldInfo__m_instanceExpiration 00BEA574 l
+CGBattlefieldInfo__m_instanceStartTime 00BEA578 l
 CGBattlefieldInfo__m_nextLogUpdate 00BEA584 l
+CGBattlefieldInfo__m_mapDone 00BEA588 l
+CGBattlefieldInfo__m_winner 00BEA58C l
+CGBattlefieldInfo__m_teamRatings 00BEA594 l
+CGBattlefieldInfo__m_newTeamRatings 00BEA59C l
+CGBattlefieldInfo__m_avgMatchmakingRating 00BEA5A4 l
+CGBattlefieldInfo__m_numWorldStateStats 00BEA5AC l
+CGBattlefieldInfo__m_numPlayerPositions 00BEA5B0 l
 CGBattlefieldInfo__m_positionUpdateTime 00BEA5B4 l
 CGBattlefieldInfo__m_numVehicles 00BEA5B8 l
 CGLookingForGroup__m_lastProposalID 00BEAA18 l
@@ -18783,23 +18878,81 @@ CGUIMacros__m_saveMacros 00BEAF40 l
 CGUIMacros__m_macroRunning 00BEAF48 l
 CGUIMacros__m_macroButton 00BEAF4C l
 CGUIMacros__m_numMacros 00BEAF50 l
+CGMailInfo__m_lockSendItems 00BEB1B8 l
+CGMailInfo__m_sendMailShowing 00BEB1B9 l
+CGMailInfo__m_numStationeries 00BEB1C8 l
+CGMailInfo__m_selectedStationery 00BEB1CC l
+CGMailInfo__m_selectedPackage 00BEB1D0 l
+CGMailInfo__m_pendingStationeryCallbacks 00BEB1D4 l
 CGMailInfo__m_numInboxItems 00BEB1D8 l
 CGMailInfo__m_totalInboxItems 00BEB1DC l
+CGMailInfo__m_nextUpdateTime 00BEB1E0 l
+CGMailInfo__m_commandPending 00BEB1E4 l
 CGMailInfo__m_doPendingQuery 00BEB1E8 l
+CGMailInfo__m_autoLooting 00BEB1EC l
 CGRaidInfo__m_members 00BEB568 l
 CGRaidInfo__m_numMembers 00BEB608 l
+CGRaidInfo__m_realNumMembers 00BEB60C l
+CGRaidInfo__m_selectedMember 00BEB610 l
+CGRaidInfo__m_readyCheckTime 00BEB61C l
+CGRaidInfo__m_readyCheckInitiator 00BEB620 l
+CGBankInfo__m_banker 00BEB9A0 l
+CGMerchantInfo__m_buybackSlots 00BF90F8 l
+CGMerchantInfo__m_numBuybackItems 00BFA3F4 l
+CGTradeInfo__m_tradingPlayer 00BFA658 l
+CGTradeInfo__m_supressMoneyEvent 00BFA678 l
 CGLootInfo__m_itemsPending 00BFA688 l
+CGLootInfo__m_lootType 00BFA68C l
 CGLootInfo__m_coins 00BFA8D0 l
 CGLootInfo__m_object 00BFA8DC l
+CGItemText__m_hasItemText 00BFA9F8 l
+CGItemText__m_text 00BFAA00 l
+CGItemText__m_itemGUID 00BFC948 l
+CGGossipInfo__m_gossipText 00C00EF0 l
+CGGossipInfo__m_gossip 00C016F0 l
+CGGossipInfo__m_gossipOptionsCount 00C016FC l
+CGQuestInfo__m_rewardText 00C09D68 l
+CGQuestInfo__m_progressText 00C0A920 l
+CGQuestInfo__m_questLogText 00C0B4D8 l
+CGQuestInfo__m_questText 00C0C090 l
+CGQuestInfo__m_greetingText 00C0CC48 l
+CGQuestInfo__m_questTitle 00C0D448 l
+CGQuestInfo__m_npc 00C0D648 l
+CGQuestInfo__m_npcInform 00C0D650 l
 CGQuestInfo__m_state 00C0D658 l
+CGQuestInfo__m_currentQuest 00C0D65C l
+CGQuestInfo__m_startQuestCheat 00C0D668 l
+CGQuestInfo__m_numQuests 00C0D69C l
+CGQuestInfo__m_numInProgress 00C0D6A0 l
+CGQuestInfo__m_pendingQuest 00C0D6A8 l
+CGQuestInfo__m_responseSent 00C0D6AC l
+CGQuestInfo__m_suggestedGroupNum 00C0D6B0 l
+CGClassTrainer__m_greetingText 00C0DC90 l
 CGClassTrainer__m_trainer 00C0E490 l
 CGClassTrainer__m_trainerType 00C0E498 l
 CGClassTrainer__m_currentSelection 00C0E49C l
 CGClassTrainer__m_numServices 00C0E4A0 l
 CGClassTrainer__m_filteredServices 00C0E4A8 l
 CGClassTrainer__m_skillLineFilter 00C0E4AC l
+CGAuctionHouse__m_bidSortCriteria 00C0E578 l
+CGAuctionHouse__m_ownedSortCriteria 00C0E608 l
+CGAuctionHouse__m_listSortCriteria 00C0E698 l
+CGAuctionHouse__m_inQuery 00C0E734 l
+CGAuctionHouse__m_auctioneer 00C0F3E8 l
+CGAuctionHouse__m_auctionsTabShowing 00C0F3F5 l
+CGAuctionHouse__m_sellItem 00C0F3F8 l
+CGAuctionHouse__m_numTotalItems 00C0F408 l
+CGAuctionHouse__m_numTotalBid 00C0F410 l
+CGAuctionHouse__m_canGetOwnerList 00C0F41C l
+CGAuctionHouse__m_pendingBidItems 00C0F430 l
+CGAuctionHouse__m_havePendingSell 00C0F434 l
+CGStableInfo__m_petList 00C0F4E0 l
+CGStableInfo__m_stableMaster 00C0F6C0 l
+CGArenaTeamInfo__m_nextAllowedQuery 00C0F7F0 l
+CGArenaTeamInfo__m_arenaTeams 00C0F840 l
 CGGuildBankInfo__m_guildBankTabInfo 00C11458 l
 CGGuildBankInfo__m_numTabs 00C1DC0C l
+CGGuildBankInfo__m_banker 00C1DC10 l
 CGGuildBankInfo__m_remainingWithdrawMoney 00C1DC34 l
 CGActionBar__m_slotNoMana 00C1DC98 l type="uint32_t[144]"
 CGActionBar__m_slotUsable 00C1DED8 l type="uint32_t[144]"
@@ -18810,19 +18963,61 @@ CGActionBar__m_bonusBarOffset 00C1E59C l
 CGActionBar__m_tempPageActiveFlags 00C1E5A0 l
 CGGMTicketInfo__m_ticketID 00C1E8D0 l
 CGGMTicketInfo__m_responseID 00C1E8D4 l
+CGGMSurveyInfo__m_surveyAnswerComments 00C1E8D8 l
+CGEquipmentManager__m_ignoredSlots 00C1E908 l
 CGEquipmentManager__m_lastCanUseEquipmentSetsValue 00C1E954 l
+CGEquipmentManager__m_loaded 00C1E955 l
 CGEquipmentManager__m_swapPending 00C1E956 l
 CGEquipmentManager__m_pendingSetID 00C1E958 l
 CGEquipmentManager__s_EquipmentSetHeap 00C1E95C l
+CGAchievementInfo__m_showAchievementUI 00C1F454 l
+CGAchievementInfo__m_inspect 00C1F458 l
 CGCalendar__m_initialize 00C207F0 l
+CGItemSocketInfo__m_gemItemContainer 00C20FB0 l
+CGItemSocketInfo__m_gemItems 00C20FC8 l
+CGItemSocketInfo__m_socketItem 00C20FE0 l
+CGTalentInfo__m_activeTalentGroup 00C20FF4 l
+CGTalentInfo__m_numTalentGroups 00C20FF8 l
 CGTalentInfo_Inspect__m_inspectTarget 00C21008 l
+CGGuildInfo__m_eventLog 00C211E0 l
+CGGuildInfo__m_infoText 00C22090 l
+CGGuildInfo__m_motd 00C22868 l
+CGGuildInfo__m_numEventLogEntries 00C22ACC l
+CGPetitionInfo__m_petitionGUID 00C22B20 l
+CGPetitionInfo__m_signed 00C22B34 l
+CGDuelInfo__m_dueler 00C22B60 l
+CGReputationInfo__m_headers 00C23370 l
+CGReputationInfo__m_numHeaders 00C23470 l
+CGReputationInfo__m_numFactions 00C23474 l
+CGReputationInfo__m_numShownFactions 00C23478 l
+CGReputationInfo__m_selectedFaction 00C2347C l
+CGPetInfo__m_expirationTime 00C234CC l
+CGPetInfo__m_attackingTarget 00C234DC l
+CGContainerInfo__m_containers 00C23540 l
+CGTradeSkillInfo__m_spellID 00C235A0 l
+CGTradeSkillInfo__m_numSkills 00C235B0 l
+CGTradeSkillInfo__m_numSubClasses 00C235B4 l
+CGTradeSkillInfo__m_filteredSkills 00C235B8 l
+CGTradeSkillInfo__m_itemNameFilter 00C235BC l
+CGTradeSkillInfo__m_itemMinLevelFilter 00C235C0 l
+CGTradeSkillInfo__m_itemMaxLevelFilter 00C235C4 l
+CGTradeSkillInfo__m_showOnlyMakeable 00C235C8 l
+CGTradeSkillInfo__m_showOnlySkillUps 00C235CC l
+CGTradeSkillInfo__m_recastSpellID 00C235D4 l
+CGTradeSkillInfo__m_recastTimes 00C235D8 l
+CGTradeSkillInfo__m_pendingRecastSpellID 00C235DC l
+CGTradeSkillInfo__m_linkData 00C235E4 l
 CGQuestLog__m_sortTypes 00C23618 l
 CGQuestLog__m_quests 00C237B0 l
 CGQuestLog__m_numQuest 00C23AD0 l
 CGQuestLog__m_numSortTypes 00C23AD4 l
 CGQuestLog__m_selectedQuest 00C23AD8 l
 CGQuestLog__m_numShownQuests 00C23AE4 l
+CGQuestLog__m_questResetTime 00C23AEC l
 s_cvPOIShiftComplete 00C23AFC l type="CVar*"
+CGCharacterInfo__m_inspectTarget 00C24220 l
+CGCharacterInfo__m_hasHonorData 00C24228 l
+CGInstanceEncounter_C__m_units 00C242FC l
 CGRuneInfo__m_runes 00C24304 l
 CGRuneInfo__m_numRunes 00C24384 l
 CGRuneInfo__m_predictedRunes 00C24388 l
@@ -19014,6 +19209,10 @@ g_fontPixelShader 00C7D2CC l type="CGxShader*"
 g_fontVertexShader 00C7D2D0 l type="CGxShader*"
 BATCHEDRENDERFONTDES__s_indexPool 00C7D2DC l
 BATCHEDRENDERFONTDES__s_indexBuf 00C7D2E0 l
+CGPlayer_C__s_lastVendorListReceived 00C9EA90 l
+CGPlayer_C__s_resurrectOfferer 00C9EAB8 l
+CGPlayer_C__s_resurrectOfferSickness 00C9EAC0 l
+CGPlayer_C__s_resurrectOfferUseTimer 00C9EAC4 l
 s_cvSplineOpt 00C9ECC4 l type="CVar*"
 CMissile__s_inFlightMissileList 00CA0B58 l
 CMissile__s_missileDestroyList 00CA0B5C l
@@ -19164,6 +19363,7 @@ s_cvHwPCF 00CD85D8 l type="CVar*"
 s_cvExtShadowQuality 00CD85DC l type="CVar*"
 s_cvProjectedTextures 00CD85E0 l type="CVar*"
 s_cvGxTextureCacheSize 00CD85E4 l type="CVar*"
+CBarrier__s_sparkles 00CD85F8 l
 CBarrier__s_pattern 00CD8608 l
 CBarrier__s_mask 00CD860C l
 CWorldScene__s_defaultBlendTexture 00CD8614 l
