@@ -122,6 +122,7 @@ static import_symbols() {
 	set_name(0x00409880, "InitializeSpline");
 	set_name(0x0040A690, "LoadingScreenMiniEnable");
 	set_name(0x0040A770, "LoadingScreenMiniUpdate");
+	set_name(0x0040A920, "UpdateProgressBar");
 	set_name(0x0040A990, "InitializeProgressBar");
 	set_name(0x0040AB70, "LoadingScreenEnable");
 	set_name(0x0040AD50, "LoadingScreenEnableShip");
@@ -516,6 +517,8 @@ static import_symbols() {
 	set_name(0x004250D0, "Blizzard__Util__MD5__Process");
 	set_name(0x00425850, "Process");
 	set_name(0x00425DA0, "Blizzard__Util__Hash32I");
+	set_name(0x004268F0, "System_SComp__PkwareBufferRead");
+	set_name(0x00426910, "System_SComp__PkwareBufferWrite");
 	set_name(0x004269A0, "Bzip2Compress");
 	set_name(0x00426A30, "Blizzard__Mopaq__SFileGetLastError");
 	set_name(0x00426EB0, "Blizzard__Mopaq__SFileSetFilePointer");
@@ -662,6 +665,7 @@ static import_symbols() {
 	set_name(0x00453C40, "free_wrap");
 	set_name(0x00453C70, "LzmaDecompress");
 	set_name(0x00453CB0, "Blizzard__Mopaq__SFileEnableDirectAccess");
+	set_name(0x00453D10, "System_SFile__ARCHIVEREC__RemoveInternalArchiveRe");
 	set_name(0x00453E30, "System_SFile__OpenDirectPathAsArchive");
 	set_name(0x00454210, "Blizzard__File__GetLastErrorStack");
 	set_name(0x00454220, "Blizzard__File__SetLastErrorStack");
@@ -697,6 +701,8 @@ static import_symbols() {
 	set_name(0x00457A00, "System_Mopaq__cache_read");
 	set_name(0x00458080, "System_SComp__Compress");
 	set_name(0x004585F0, "System_SComp__Decompress");
+	set_name(0x00458730, "Blizzard__Mopaq__SFileSetBasePath");
+	set_name(0x00458880, "System_SFile__GetArchivePtr");
 	set_name(0x00458980, "Blizzard__Mopaq__SFileCloseArchive");
 	set_name(0x00459050, "Blizzard__Streaming__Transport__ReadIndirectFile");
 	set_name(0x00459400, "Blizzard__Streaming__SourceManifest__ReadIndirectFile");
@@ -709,6 +715,7 @@ static import_symbols() {
 	set_name(0x0045F700, "SFileCreateArchive");
 	set_name(0x00460010, "SFileCreateFile");
 	set_name(0x00461040, "Blizzard__Mopaq__SFileGetIsLocalAmount");
+	set_name(0x00461180, "Blizzard__Mopaq__SetFileSignature");
 	set_name(0x004616A0, "Blizzard__Streaming__InitializeStreaming");
 	set_name(0x00461B00, "OsCloseFile");
 	set_name(0x00461B10, "OsFileExists");
@@ -2182,7 +2189,9 @@ static import_symbols() {
 	set_name(0x004C5A70, "SE2__GetNumInputDrivers_Cached");
 	set_name(0x004C5A80, "SE2__GetOutputDriverName");
 	set_name(0x004C5A90, "SE2__GetInputDriverName_Cached");
+	set_name(0x004C5AA0, "SE2__GetNumInputDrivers");
 	set_name(0x004C5AB0, "SE2__GetNumOutputDrivers_Cached");
+	set_name(0x004C5AC0, "SE2__GetInputDriverName");
 	set_name(0x004C5AF0, "SE2__GetOutputDriverName_Cached");
 	set_name(0x004C5B90, "SE2__Set3DPosition");
 	set_name(0x004C5BE0, "SE2__IsPlaying");
@@ -12154,6 +12163,9 @@ static import_symbols() {
 	set_name(0x00770840, "SRegLoadValue");
 	set_name(0x007708F0, "SRegSaveString");
 	set_name(0x007709A0, "SRegSaveValue");
+	set_name(0x007709F0, "MD5__ToArray");
+	set_name(0x00770A20, "MD5__operator_assign");
+	set_name(0x00770C70, "MD5__constructor");
 	set_name(0x00770F70, "GetErrorString");
 	set_name(0x00771040, "SErrInitialize");
 	set_name(0x00771070, "CanBreakToDebugger");
@@ -12325,6 +12337,7 @@ static import_symbols() {
 	set_name(0x0077F2C0, "World__ObjectSetUpdateCallback");
 	set_name(0x0077F2E0, "World__TickObject");
 	set_name(0x0077F310, "World__Intersect");
+	set_name(0x0077F320, "World__GetFrustumCorners");
 	set_name(0x0077F330, "World__GetFacets");
 	set_name(0x0077F340, "World__GetTris");
 	set_name(0x0077F360, "World__QueryLiquidStatus");
@@ -12492,6 +12505,7 @@ static import_symbols() {
 	set_name(0x0078F1F0, "AreaListZoneHasBreathParticles");
 	set_name(0x0078F510, "CBarrier__Destroy");
 	set_name(0x0078F570, "CWorldScene__ScaleFadeDist");
+	set_name(0x0078FAE0, "CWorldScene__GetFrustumCorners");
 	set_name(0x0078FB00, "CWorldScene__FrustumXform");
 	set_name(0x0078FB20, "CWorldScene__FrustumCull");
 	set_name(0x0078FB50, "CWorldScene__FrustumPop");
@@ -12639,6 +12653,8 @@ static import_symbols() {
 	set_name(0x007A6B40, "CMapObj__SetGroupRenderCallback");
 	set_name(0x007A7630, "CMapObj__CullBatch");
 	set_name(0x007A76C0, "CMapObj__RenderGroupCollidableFaces");
+	set_name(0x007A7E50, "PolyClipVtxLerpTexCoords");
+	set_name(0x007A7F00, "PolyClipVtxLerpDepth");
 	set_name(0x007A8520, "CMapObj__UpdateMaterials");
 	set_name(0x007A8800, "SetRenderModeLight");
 	set_name(0x007A8E90, "TSGrowableArray_CRect__Add");
@@ -12825,6 +12841,7 @@ static import_symbols() {
 	set_name(0x007BA5A0, "CMapRenderChunk__Destroy");
 	set_name(0x007BA600, "CMapRenderChunk__UpdatePools");
 	set_name(0x007BA7C0, "CMapRenderChunk__Destroy@2");
+	set_name(0x007BA8F0, "CShadowQuery__GetSize");
 	set_name(0x007BAC10, "CShadowQuery__GetMatrix");
 	set_name(0x007BAFD0, "CShadowQuery__FrustumCallback");
 	set_name(0x007BB570, "CShadowQuery__Update");
@@ -12911,6 +12928,7 @@ static import_symbols() {
 	set_name(0x007C2700, "CMap__LinkIntersectMapObjDefs");
 	set_name(0x007C28F0, "CMap__LinkStaticEntity");
 	set_name(0x007C2A70, "CMap__LinkStaticEntitySingle2");
+	set_name(0x007C2E40, "CMapDoodadDef__destructor@2");
 	set_name(0x007C2E70, "CMap__LinkStaticEntityMultiple2");
 	set_name(0x007C2F80, "CMap__LinkStaticEntity@2");
 	set_name(0x007C3020, "CMapDoodadDef__Purge");
@@ -12942,6 +12960,7 @@ static import_symbols() {
 	set_name(0x007C5E50, "CMapChunk__destructor");
 	set_name(0x007C6060, "CMapChunk__CreateSoundEmitters");
 	set_name(0x007C6150, "CMapChunk__CreateRefs");
+	set_name(0x007C6480, "CMapChunk__destructor@2");
 	set_name(0x007C64B0, "CMapChunk__Create");
 	set_name(0x007C65A0, "CMapChunk__UpdateLights");
 	set_name(0x007C71E0, "QueryCull");
@@ -13047,6 +13066,10 @@ static import_symbols() {
 	set_name(0x007D49B0, "CMeshGeomFactory__Create");
 	set_name(0x007D49D0, "CChunkGeomFactory__Create");
 	set_name(0x007D4AB0, "CChunkGeomFactory__GetBuffers");
+	set_name(0x007D4F10, "CClientLiquidEnvironment__SetInteriorFog");
+	set_name(0x007D4F20, "CClientLiquidEnvironment__Release");
+	set_name(0x007D4F40, "CClientLiquidEnvironment__SelectLights");
+	set_name(0x007D5120, "CClientLiquidEnvironment__Create");
 	set_name(0x007D59B0, "CMap__LocateViewerMapObjs");
 	set_name(0x007D6980, "CMap__LoadTerrainTexture");
 	set_name(0x007D6A90, "CMapArea__PurgeChunks");
@@ -13057,6 +13080,7 @@ static import_symbols() {
 	set_name(0x007D6EF0, "CMapArea__Create");
 	set_name(0x007D7020, "CMapArea__AsyncLoadCallback");
 	set_name(0x007D7050, "CMapArea__constructor");
+	set_name(0x007D7120, "CMapArea__destructor@2");
 	set_name(0x007D7150, "CMapArea__Load");
 	set_name(0x007D71D0, "CMapBaseObj__destructor");
 	set_name(0x007D7260, "CMapBaseObj__constructor");
@@ -13080,11 +13104,21 @@ static import_symbols() {
 	set_name(0x007D8730, "CMapChunk__Intersect");
 	set_name(0x007D8840, "CMapChunk__Intersect@2");
 	set_name(0x007D8E00, "CMapChunk__Intersect@3");
+	set_name(0x007D91F0, "PolyClipper__PCDataProxy__GetData");
+	set_name(0x007D9230, "PolyClipper__AddVertex");
+	set_name(0x007D9270, "PolyClipper__Begin");
+	set_name(0x007D92F0, "PolyClipper__End");
+	set_name(0x007D9390, "PCResultsIterator__GetVertex");
+	set_name(0x007D9400, "PolyClipper__Next");
+	set_name(0x007D9460, "PCResultsIterator__HasFinished");
+	set_name(0x007D9470, "PolyClipper__Clip");
+	set_name(0x007D9720, "PolyClipper__GetResult");
 	set_name(0x007D9740, "PolyClipper__constructor");
 	set_name(0x007D9990, "CMap__LoadTexture");
 	set_name(0x007D9A20, "CMap__LoadArea");
 	set_name(0x007D9A70, "CMap__PrepareArea");
 	set_name(0x007D9B10, "CMapLight__constructor");
+	set_name(0x007D9B90, "CMapLight__destructor");
 	set_name(0x007D9BD0, "CMap__CreateLight");
 	set_name(0x007D9C80, "CMap__UpdateLightBounds");
 	set_name(0x007D9D50, "CMap__EnableLight");
@@ -14060,6 +14094,7 @@ static import_symbols() {
 	set_name(0x00832EA0, "CM2Model__InitializeLoaded");
 	set_name(0x00834540, "CM2Model__AttachToScene");
 	set_name(0x00834630, "CM2Model__AttachToSceneRecursive");
+	set_name(0x00834660, "CM2Model__GatherModelBatchesShadowMap");
 	set_name(0x00834810, "CM2Model__Initialize");
 	set_name(0x008348D0, "CM2Light__Initialize");
 	set_name(0x00834900, "CM2Lighting__Initialize@2");
@@ -14952,7 +14987,7 @@ static import_symbols() {
 	set_name(0x00878E70, "SE2__SetFMODChannelGroupVolume");
 	set_name(0x00878E90, "TSGrowableArray_SEDriverInfo__ReallocData");
 	set_name(0x00878F30, "TSGrowableArray_SEChannelGroup__ReallocData");
-	set_name(0x00879210, "SE2__GetInputDriverName");
+	set_name(0x00879210, "SE2__GetInputDriverName@2");
 	set_name(0x00879400, "SE2__FadeInNow");
 	set_name(0x00879500, "SE2__StartCapture");
 	set_name(0x00879580, "SE2__StopCapture");
@@ -14998,6 +15033,8 @@ static import_symbols() {
 	set_name(0x00880390, "ComSat__Manager__SendVoiceDataToCurrentSession@2");
 	set_name(0x00880450, "ComSat__Manager__LocalChatDataReady");
 	set_name(0x008805E0, "ComSat__Manager__DeviceError");
+	set_name(0x00880630, "ComSat__Sound__Manager__DebugSetSequenceDelay");
+	set_name(0x00880640, "ComSat__Sound__Manager__DebugSetSoundOutputDelay");
 	set_name(0x00880710, "ComSat__Manager__LocalTalkerCreate");
 	set_name(0x00880780, "ComSat__Manager__LocalTalkerDestroy");
 	set_name(0x00880810, "ComSat__Manager__SessionDestroy");
@@ -15026,6 +15063,7 @@ static import_symbols() {
 	set_name(0x00881390, "ComSat__Sound__Manager__GetMaxEncodedFrameLengt");
 	set_name(0x008813B0, "ComSat__Sound__Manager__EnumerateOutputDevices");
 	set_name(0x008813D0, "ComSat__Sound__Manager__EnumerateCaptureDevices");
+	set_name(0x008813F0, "ComSat__Sound__Manager__AdvancePlayCursorForRemoteTalker");
 	set_name(0x00881CF0, "ComSat__Sound__Manager__constructor");
 	set_name(0x00881E20, "ComSat__Sound__Manager__LocalTalkerEnable");
 	set_name(0x00881F30, "ComSat__Sound__Manager__SessionNumMembers");
@@ -15033,7 +15071,10 @@ static import_symbols() {
 	set_name(0x008821C0, "ComSat__Sound__Manager__RecenterJitterBufferForRemoteTalker");
 	set_name(0x00882330, "ComSat__Sound__Manager__SubmitIncomingFrameTimeData");
 	set_name(0x00882440, "ComSat__Sound__Manager__SubmitIncomingVoicePacket");
+	set_name(0x00882810, "ComSat__Sound__Manager__TransferEncodedVoiceDataForLocalPlayer");
+	set_name(0x00883270, "ComSat__Sound__Manager__EncodeAvailableVoiceDataForLocalPlayer");
 	set_name(0x00883950, "ComSat__Sound__Manager__InitLocalPlayer");
+	set_name(0x00883BD0, "ComSat__Sound__Manager__SessionCreate");
 	set_name(0x00883F90, "ComSat__Sound__Manager__SetPlaybackPriorityForPlayerInSession");
 	set_name(0x00884AB0, "ComSat__Sound__Manager__UnregisterRemoteTalkerFromSession");
 	set_name(0x00884DB0, "ComSat__Sound__Manager__Work");
@@ -15051,6 +15092,7 @@ static import_symbols() {
 	set_name(0x00885770, "ComSat__BitPacker__PackBits");
 	set_name(0x008858E0, "ComSat__BitPacker__Finalize");
 	set_name(0x00885910, "ComSat__BitUnpacker__UnpackBits");
+	set_name(0x00885AD0, "ComSat__Session__SetNetworkSession");
 	set_name(0x00885AE0, "ComSat__Session__GetNetworkSession");
 	set_name(0x00885AF0, "ComSat__Session__LocalAdd");
 	set_name(0x00885B20, "ComSat__Session__Add");
@@ -15072,17 +15114,27 @@ static import_symbols() {
 	set_name(0x00886300, "ComSat__Network__Session__LocalAdd");
 	set_name(0x00886380, "ComSat__Network__Session__Add");
 	set_name(0x008866F0, "ComSat__RunningAverageCalculator__SubmitData");
+	set_name(0x00886730, "ComSat__RunningAverageCalculator__GetCurrentAverage");
+	set_name(0x008867E0, "ComSat__Sound__CODECIPMR6000__LocalPlayer__constructor");
+	set_name(0x00886930, "ComSat__Sound__CODECIPMR6000__LocalPlayer__CompressRawData");
 	set_name(0x00886CA0, "ComSat__Sound__CODEC__Create");
+	set_name(0x00886E10, "ComSat__Sound__CODECIPMR6000__CompressRawData");
+	set_name(0x008871A0, "ComSat__Sound__CODECIPMR6000__InitLocalPlayer");
 	set_name(0x00887330, "ComSat__Hash32");
+	set_name(0x008873D0, "ComSat__Sound__IOSoundEngine__EnumerateCaptureDevices");
 	set_name(0x00887420, "ComSat__Sound__IOSoundEngine__EnumerateOutputDevices");
 	set_name(0x00887490, "TSGrowableArray_ComSat__Sound__OutputChannel__ReallocData");
 	set_name(0x00887780, "SI2__VoiceChat_ShutDownCapture");
 	set_name(0x00887810, "ComSat__Sound__CaptureChannel__CaptureSamples");
+	set_name(0x00887980, "ComSat__Sound__IOSoundEngine__GetRemainingPlaybackBytes");
+	set_name(0x008879D0, "ComSat__Sound__IOSoundEngine__GetAvailableDataBytes");
 	set_name(0x00887A10, "ComSat__Sound__IOSoundEngine__constructor");
 	set_name(0x00887AC0, "ComSat__Sound__IOSoundEngine__destructor");
 	set_name(0x00887B10, "ComSat__Sound__IO__Create");
 	set_name(0x00887B70, "ComSat__Sound__IOSoundEngine__InitCapture");
 	set_name(0x00887D10, "ComSat__Sound__IOSoundEngine__InitLocalPlayer");
+	set_name(0x00887DE0, "ComSat__Sound__LevelCalculator16Bit__CalculateLevelForFrame");
+	set_name(0x00887E80, "ComSat__Sound__LevelCalculator16Bit__GetMaxDecibelLevel");
 	set_name(0x00887EA0, "ComSat__MD5__ProcessBlock");
 	set_name(0x008885D0, "ComSat__MD5__Prepare");
 	set_name(0x00888600, "ComSat__MD5__Process");
@@ -15257,6 +15309,20 @@ static import_symbols() {
 	set_name(0x00895A62, "__frnd");
 	set_name(0x00895A73, "__87except");
 	set_name(0x00895B6F, "__chsize_nolock");
+	set_name(0x00896120, "_SPIRIT_IP_MR_V3_1_Init");
+	set_name(0x00896180, "_SPIRIT_IP_MR_V3_1_Encode");
+	set_name(0x00896820, "_SPIRIT_IP_MR_V3_NAME_194");
+	set_name(0x00896DD0, "_SPIRIT_IP_MR_V3_NAME_197");
+	set_name(0x00896ED0, "_SPIRIT_IP_MR_V3_NAME_195");
+	set_name(0x00897110, "_SPIRIT_IP_MR_V3_NAME_190");
+	set_name(0x008971D0, "_SPIRIT_IP_MR_V3_NAME_334");
+	set_name(0x00897A00, "_SPIRIT_IP_MR_V3_NAME_46");
+	set_name(0x00897A30, "_SPIRIT_IP_MR_V3_NAME_44");
+	set_name(0x00897A60, "_SPIRIT_IP_MR_V3_NAME_400");
+	set_name(0x00897FD0, "_SPIRIT_IP_MR_V3_NAME_66");
+	set_name(0x00898030, "_SPIRIT_IP_MR_V3_NAME_323");
+	set_name(0x00899CD0, "_SPIRIT_IP_MR_V3_NAME_31");
+	set_name(0x0089A2C0, "_SPIRIT_IP_MR_V3_NAME_107");
 	set_name(0x008A09BA, "NvAPI_Initialize");
 	set_name(0x008A0A54, "NvAPI_GetErrorMessage");
 	set_name(0x008A0F88, "NvAPI_Stereo_CreateConfigurationProfileRegistryKey");
@@ -15293,6 +15359,7 @@ static import_symbols() {
 	set_name(0x008A28F0, "Liquid__CSettingsBank__GetSettings");
 	set_name(0x008A2E20, "Liquid__CreateProceduralTextures");
 	set_name(0x008A3090, "Liquid__GetInstanceDesc");
+	set_name(0x008A32C0, "CClientLiquidEnvironment__destructor");
 	set_name(0x008A65D0, "SpellRec__GetFilename");
 	set_name(0x008A7FC0, "ItemDisplayInfoRec__GetFilename");
 	set_name(0x008A7FD0, "ItemDisplayInfoRec__Read");
@@ -18223,6 +18290,7 @@ static import_symbols() {
 	set_name(0x00A3FFD0, "TSHashTable__CStreamingEntry__vtable");
 	set_name(0x00A402E4, "TSHashTable__CMapDoodadDef__vtable");
 	set_name(0x00A402F4, "TSHashTable__CMapObjDef__vtable");
+	set_name(0x00A4061C, "CMap__s_subVertexIndexFlat");
 	set_name(0x00A40A74, "TSHashTable__TALKINGPLAYER__vtable");
 	set_name(0x00A40A84, "TSHashTable__MUTEDPLAYER__vtable");
 	set_name(0x00A40F5C, "TSHashTable__DECLINEDWORD__vtable");
@@ -18322,6 +18390,7 @@ static import_symbols() {
 	set_name(0x00AC4220, "CCharacterCreation__m_selectedClassID");
 	set_name(0x00AC4224, "CCharacterCreation__m_existingCharacterIndex");
 	set_name(0x00AC467C, "CSimpleModelFFX__s_metatable");
+	set_name(0x00AC7A3C, "CGChat__m_guildRecruitmentMode");
 	set_name(0x00AC80A8, "CGGameUI__m_visible");
 	set_name(0x00ACC6C4, "CGPartyInfo__m_leaderIndex");
 	set_name(0x00ACC6C8, "CGPartyInfo__m_lootMethod");
@@ -18626,6 +18695,7 @@ static import_symbols() {
 	set_name(0x00ADFC30, "CMap__s_mapRenderChunkUpdateList");
 	set_name(0x00ADFC3C, "CMap__s_mapChunkLiquidUpdateList");
 	set_name(0x00AEEDAC, "CMap__mapChunkPointer");
+	set_name(0x00AEEDF0, "CMapStaticEntity__s_interiorSunDir");
 	set_name(0x00AEEE58, "CMapObjGroup__vertexVBList");
 	set_name(0x00AEEE80, "CMapObjGroup__indexVBList");
 	set_name(0x00AF4998, "g_lightSkyboxDB");
@@ -18774,7 +18844,11 @@ static import_symbols() {
 	set_name(0x00B75A60, "CGChat__m_chatHistory");
 	set_name(0x00BCEB60, "CGChat__m_whisperDstHistory");
 	set_name(0x00BCEF60, "CGChat__m_whisperSrcHistory");
+	set_name(0x00BCEFE8, "CGChat__m_registered");
+	set_name(0x00BCEFEC, "CGChat__m_afk");
 	set_name(0x00BCEFF4, "CGChat__m_currentChatIndex");
+	set_name(0x00BCEFFC, "CGChat__m_complaintsSystemStatus");
+	set_name(0x00BCF004, "CGChat__m_voiceChatSystemStatus");
 	set_name(0x00BCFB8C, "CGGameUI__m_hasControl");
 	set_name(0x00BCFB90, "CGGameUI__m_lastErrorMessage");
 	set_name(0x00BD0748, "CGGameUI__m_cursorItemType");
@@ -18995,6 +19069,7 @@ static import_symbols() {
 	set_name(0x00BFA8DC, "CGLootInfo__m_object");
 	set_name(0x00BFA9F8, "CGItemText__m_hasItemText");
 	set_name(0x00BFAA00, "CGItemText__m_text");
+	set_name(0x00BFC940, "CGItemText__m_currentPage");
 	set_name(0x00BFC948, "CGItemText__m_itemGUID");
 	set_name(0x00C00EF0, "CGGossipInfo__m_gossipText");
 	set_name(0x00C016F0, "CGGossipInfo__m_gossip");
@@ -19039,6 +19114,7 @@ static import_symbols() {
 	set_name(0x00C0F7F0, "CGArenaTeamInfo__m_nextAllowedQuery");
 	set_name(0x00C0F840, "CGArenaTeamInfo__m_arenaTeams");
 	set_name(0x00C11458, "CGGuildBankInfo__m_guildBankTabInfo");
+	set_name(0x00C1DBF0, "CGGuildBankInfo__m_numLogEntries");
 	set_name(0x00C1DC0C, "CGGuildBankInfo__m_numTabs");
 	set_name(0x00C1DC10, "CGGuildBankInfo__m_banker");
 	set_name(0x00C1DC34, "CGGuildBankInfo__m_remainingWithdrawMoney");
@@ -19060,7 +19136,13 @@ static import_symbols() {
 	set_name(0x00C1E95C, "CGEquipmentManager__s_EquipmentSetHeap");
 	set_name(0x00C1F454, "CGAchievementInfo__m_showAchievementUI");
 	set_name(0x00C1F458, "CGAchievementInfo__m_inspect");
+	set_name(0x00C207E8, "CGCalendar__m_contextSelectedEventInfo");
 	set_name(0x00C207F0, "CGCalendar__m_initialize");
+	set_name(0x00C207F1, "CGCalendar__m_openedCalendar");
+	set_name(0x00C207F3, "CGCalendar__m_actionPending");
+	set_name(0x00C207F4, "CGCalendar__m_numInitialPending");
+	set_name(0x00C207F8, "CGCalendar__m_lastInviteTime");
+	set_name(0x00C207FC, "CGCalendar__m_lastEventTime");
 	set_name(0x00C20FB0, "CGItemSocketInfo__m_gemItemContainer");
 	set_name(0x00C20FC8, "CGItemSocketInfo__m_gemItems");
 	set_name(0x00C20FE0, "CGItemSocketInfo__m_socketItem");
@@ -19079,6 +19161,7 @@ static import_symbols() {
 	set_name(0x00C23474, "CGReputationInfo__m_numFactions");
 	set_name(0x00C23478, "CGReputationInfo__m_numShownFactions");
 	set_name(0x00C2347C, "CGReputationInfo__m_selectedFaction");
+	set_name(0x00C234C8, "CGPetInfo__m_petMode");
 	set_name(0x00C234CC, "CGPetInfo__m_expirationTime");
 	set_name(0x00C234DC, "CGPetInfo__m_attackingTarget");
 	set_name(0x00C23540, "CGContainerInfo__m_containers");
@@ -19110,6 +19193,7 @@ static import_symbols() {
 	set_name(0x00C24384, "CGRuneInfo__m_numRunes");
 	set_name(0x00C24388, "CGRuneInfo__m_predictedRunes");
 	set_name(0x00C2491C, "s_addons");
+	set_name(0x00C24954, "CGInputControl__s_inputControl");
 	set_name(0x00C2495C, "s_cvCinematicJoystick");
 	set_name(0x00C24970, "s_cvCameraSmoothTimeMax");
 	set_name(0x00C24974, "s_cvCameraSmoothTimeMin");
@@ -19485,6 +19569,7 @@ static import_symbols() {
 	set_name(0x00CFBECC, "CMapObjRenderGroupInterior_ptr");
 	set_name(0x00D1BED8, "CMapObj__gRenderCallback");
 	set_name(0x00D1BEDC, "CMapObj__gRenderUserParam");
+	set_name(0x00D1BEE0, "s_smolVertCacheSize");
 	set_name(0x00D1C40C, "CMapObj__occluderHeap");
 	set_name(0x00D1C410, "CMapObj__bPoolsDirty");
 	set_name(0x00D1C418, "CMapObj__sMinimapTag");

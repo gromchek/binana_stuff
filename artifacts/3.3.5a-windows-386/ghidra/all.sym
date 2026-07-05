@@ -118,6 +118,7 @@ CGxDevice__RsPush 00409670 f end=004096CC type="void __thiscall func(CGxDevice* 
 InitializeSpline 00409880 f end=00409B01
 LoadingScreenMiniEnable 0040A690 f end=0040A765
 LoadingScreenMiniUpdate 0040A770 f end=0040A783
+UpdateProgressBar 0040A920 f end=0040A98F
 InitializeProgressBar 0040A990 f end=0040AB12
 LoadingScreenEnable 0040AB70 f end=0040AD50
 LoadingScreenEnableShip 0040AD50 f end=0040AE21
@@ -512,6 +513,8 @@ SFile__Open 00424F80 f end=00424F98
 Blizzard__Util__MD5__Process 004250D0 f end=00425846
 Process 00425850 f end=00425D9A type="void __stdcall func(uint32_t* hash, uint8_t* data)"
 Blizzard__Util__Hash32I 00425DA0 f end=00425DDC
+System_SComp__PkwareBufferRead 004268F0 f end=00426903
+System_SComp__PkwareBufferWrite 00426910 f end=00426937
 Bzip2Compress 004269A0 f end=004269E7
 Blizzard__Mopaq__SFileGetLastError 00426A30 f end=00426A36
 Blizzard__Mopaq__SFileSetFilePointer 00426EB0 f end=00426F69
@@ -658,6 +661,7 @@ alloc_wrap 00453BF0 f end=00453C3A
 free_wrap 00453C40 f end=00453C69
 LzmaDecompress 00453C70 f end=00453CA5
 Blizzard__Mopaq__SFileEnableDirectAccess 00453CB0 f end=00453D04
+System_SFile__ARCHIVEREC__RemoveInternalArchiveRe 00453D10 f end=00453E2F
 System_SFile__OpenDirectPathAsArchive 00453E30 f end=00453FB6
 Blizzard__File__GetLastErrorStack 00454210 f end=0045421E
 Blizzard__File__SetLastErrorStack 00454220 f end=0045424B type="void __stdcall func(Blizzard__Debug__ErrorStack err)" ; Blizzard::File::SetLastErrorStack(Blizzard::Debug::ErrorStackRecord*)
@@ -693,6 +697,8 @@ System_File__write_locked 00457910 f end=004579F4
 System_Mopaq__cache_read 00457A00 f end=00457CF9
 System_SComp__Compress 00458080 f end=0045856F
 System_SComp__Decompress 004585F0 f end=004586DD
+Blizzard__Mopaq__SFileSetBasePath 00458730 f end=0045887D
+System_SFile__GetArchivePtr 00458880 f end=00458973
 Blizzard__Mopaq__SFileCloseArchive 00458980 f end=004589ED
 Blizzard__Streaming__Transport__ReadIndirectFile 00459050 f end=0045923E
 Blizzard__Streaming__SourceManifest__ReadIndirectFile 00459400 f end=004595EE
@@ -705,6 +711,7 @@ Blizzard__Streaming__FileManifest__ReadDirectFileFromBuffer 0045D1E0 f end=0045D
 SFileCreateArchive 0045F700 f end=0045F7C5
 SFileCreateFile 00460010 f end=004609A6
 Blizzard__Mopaq__SFileGetIsLocalAmount 00461040 f end=004610C7
+Blizzard__Mopaq__SetFileSignature 00461180 f end=00461286
 Blizzard__Streaming__InitializeStreaming 004616A0 f end=00461AF8
 OsCloseFile 00461B00 f end=00461B09 type="void __stdcall func(HOSFILE fileHandle)"
 OsFileExists 00461B10 f end=00461B27 type="int32_t __stdcall func(char* path)"
@@ -2178,7 +2185,9 @@ SE2SoundKitProperties__ResetToDefaults 004C5990 f end=004C5A18
 SE2__GetNumInputDrivers_Cached 004C5A70 f end=004C5A79
 SE2__GetOutputDriverName 004C5A80 f end=004C5A89
 SE2__GetInputDriverName_Cached 004C5A90 f end=004C5A99
+SE2__GetNumInputDrivers 004C5AA0 f end=004C5AA9
 SE2__GetNumOutputDrivers_Cached 004C5AB0 f end=004C5AB9
+SE2__GetInputDriverName 004C5AC0 f end=004C5AE3
 SE2__GetOutputDriverName_Cached 004C5AF0 f end=004C5B13
 SE2__Set3DPosition 004C5B90 f end=004C5BBB
 SE2__IsPlaying 004C5BE0 f end=004C5BEF
@@ -12150,6 +12159,9 @@ SRegLoadString 00770720 f end=0077083B
 SRegLoadValue 00770840 f end=007708E9 type="int32_t __stdcall func(char* keyname, char* valuename, uint32_t flags, uint32_t* value)"
 SRegSaveString 007708F0 f end=0077099C
 SRegSaveValue 007709A0 f end=007709E8 type="int32_t __stdcall func(char* keyname, char* valuename, uint32_t flags, char* string)"
+MD5__ToArray 007709F0 f end=00770A14
+MD5__operator_assign 00770A20 f end=00770C61
+MD5__constructor 00770C70 f end=00770C86
 GetErrorString 00770F70 f end=00770F9E
 SErrInitialize 00771040 f end=00771061
 CanBreakToDebugger 00771070 f end=007710A5
@@ -12321,6 +12333,7 @@ World__SetObjectCollisionCallback 0077F2B0 f end=0077F2BD
 World__ObjectSetUpdateCallback 0077F2C0 f end=0077F2DA
 World__TickObject 0077F2E0 f end=0077F2EC
 World__Intersect 0077F310 f end=0077F319
+World__GetFrustumCorners 0077F320 f end=0077F329
 World__GetFacets 0077F330 f end=0077F339
 World__GetTris 0077F340 f end=0077F349
 World__QueryLiquidStatus 0077F360 f end=0077F38C
@@ -12488,6 +12501,7 @@ AreaListRegisterLocation 0078F020 f end=0078F1EC
 AreaListZoneHasBreathParticles 0078F1F0 f end=0078F2E5
 CBarrier__Destroy 0078F510 f end=0078F56C
 CWorldScene__ScaleFadeDist 0078F570 f end=0078F6A0
+CWorldScene__GetFrustumCorners 0078FAE0 f end=0078FAF8
 CWorldScene__FrustumXform 0078FB00 f end=0078FB20
 CWorldScene__FrustumCull 0078FB20 f end=0078FB47
 CWorldScene__FrustumPop 0078FB50 f end=0078FB58
@@ -12635,6 +12649,8 @@ CMap__QueryTris 007A6AF0 f end=007A6B35
 CMapObj__SetGroupRenderCallback 007A6B40 f end=007A6B56
 CMapObj__CullBatch 007A7630 f end=007A76BF
 CMapObj__RenderGroupCollidableFaces 007A76C0 f end=007A7920
+PolyClipVtxLerpTexCoords 007A7E50 f end=007A7EF1
+PolyClipVtxLerpDepth 007A7F00 f end=007A7F57
 CMapObj__UpdateMaterials 007A8520 f end=007A85D1
 SetRenderModeLight 007A8800 f end=007A8938
 TSGrowableArray_CRect__Add 007A8E90 f end=007A8F1D
@@ -12821,6 +12837,7 @@ CMapRenderChunk__DestroyBufs 007BA3D0 f end=007BA5A0
 CMapRenderChunk__Destroy 007BA5A0 f end=007BA600
 CMapRenderChunk__UpdatePools 007BA600 f end=007BA7B6
 CMapRenderChunk__Destroy 007BA7C0 f end=007BA7C5
+CShadowQuery__GetSize 007BA8F0 f end=007BA958
 CShadowQuery__GetMatrix 007BAC10 f end=007BAFCE
 CShadowQuery__FrustumCallback 007BAFD0 f end=007BB3DA
 CShadowQuery__Update 007BB570 f end=007BB668
@@ -12907,6 +12924,7 @@ CMap__LinkIntersectMapObjDef 007C25D0 f end=007C26FB
 CMap__LinkIntersectMapObjDefs 007C2700 f end=007C28E6
 CMap__LinkStaticEntity 007C28F0 f end=007C2A67
 CMap__LinkStaticEntitySingle2 007C2A70 f end=007C2BE1
+CMapDoodadDef__destructor 007C2E40 f end=007C2E6B
 CMap__LinkStaticEntityMultiple2 007C2E70 f end=007C2F76
 CMap__LinkStaticEntity 007C2F80 f end=007C2FE4
 CMapDoodadDef__Purge 007C3020 f end=007C30A6
@@ -12938,6 +12956,7 @@ CMapChunk__constructor 007C5C50 f end=007C5E4B
 CMapChunk__destructor 007C5E50 f end=007C6059
 CMapChunk__CreateSoundEmitters 007C6060 f end=007C6144
 CMapChunk__CreateRefs 007C6150 f end=007C647D
+CMapChunk__destructor 007C6480 f end=007C64AB
 CMapChunk__Create 007C64B0 f end=007C659D
 CMapChunk__UpdateLights 007C65A0 f end=007C65FE ; public: void __thiscall CMapChunk::UpdateLights(void)
 QueryCull 007C71E0 f end=007C7226
@@ -13043,6 +13062,10 @@ CMeshGeomFactory__destructor 007D4980 f end=007D49AB
 CMeshGeomFactory__Create 007D49B0 f end=007D49CD
 CChunkGeomFactory__Create 007D49D0 f end=007D4AAC
 CChunkGeomFactory__GetBuffers 007D4AB0 f end=007D4F06
+CClientLiquidEnvironment__SetInteriorFog 007D4F10 f end=007D4F1D
+CClientLiquidEnvironment__Release 007D4F20 f end=007D4F3C
+CClientLiquidEnvironment__SelectLights 007D4F40 f end=007D50F7
+CClientLiquidEnvironment__Create 007D5120 f end=007D514F
 CMap__LocateViewerMapObjs 007D59B0 f end=007D5CC9
 CMap__LoadTerrainTexture 007D6980 f end=007D6A8F
 CMapArea__PurgeChunks 007D6A90 f end=007D6B2F
@@ -13053,6 +13076,7 @@ CMapArea__destructor 007D6E10 f end=007D6EED
 CMapArea__Create 007D6EF0 f end=007D7015
 CMapArea__AsyncLoadCallback 007D7020 f end=007D7045
 CMapArea__constructor 007D7050 f end=007D711F
+CMapArea__destructor 007D7120 f end=007D714B
 CMapArea__Load 007D7150 f end=007D71CD
 CMapBaseObj__destructor 007D71D0 f end=007D7258
 CMapBaseObj__constructor 007D7260 f end=007D7293 ; CMapBaseObj::CMapBaseObj()
@@ -13076,11 +13100,21 @@ CMapObj__ReadGroup 007D85E0 f end=007D872B
 CMapChunk__Intersect 007D8730 f end=007D883E
 CMapChunk__Intersect 007D8840 f end=007D8DF6
 CMapChunk__Intersect 007D8E00 f end=007D91E5
+PolyClipper__PCDataProxy__GetData 007D91F0 f end=007D9229
+PolyClipper__AddVertex 007D9230 f end=007D9264
+PolyClipper__Begin 007D9270 f end=007D92E8
+PolyClipper__End 007D92F0 f end=007D9328
+PCResultsIterator__GetVertex 007D9390 f end=007D9400
+PolyClipper__Next 007D9400 f end=007D9458
+PCResultsIterator__HasFinished 007D9460 f end=007D9464
+PolyClipper__Clip 007D9470 f end=007D9718
+PolyClipper__GetResult 007D9720 f end=007D973A
 PolyClipper__constructor 007D9740 f end=007D977A
 CMap__LoadTexture 007D9990 f end=007D9A1C
 CMap__LoadArea 007D9A20 f end=007D9A6B
 CMap__PrepareArea 007D9A70 f end=007D9B0E
 CMapLight__constructor 007D9B10 f end=007D9B8F ; public: __thiscall CMapLight::CMapLight(void)
+CMapLight__destructor 007D9B90 f end=007D9BC7
 CMap__CreateLight 007D9BD0 f end=007D9C7B ; CMap::CreateLight(bool, bool)
 CMap__UpdateLightBounds 007D9C80 f end=007D9D4F ; public: static void __cdecl CMap::UpdateLightBounds(class CMapLight *)
 CMap__EnableLight 007D9D50 f end=007D9D66 ; public: static void __cdecl CMap::EnableLight(class CMapLight *)
@@ -14056,6 +14090,7 @@ CM2Model__SetBoneSequence 00832AB0 f end=00832DCD ; CM2Model::SetBoneSequence(un
 CM2Model__InitializeLoaded 00832EA0 f end=008344DC ; CM2Model::InitializeLoaded()
 CM2Model__AttachToScene 00834540 f end=00834628 ; CM2Model::AttachToScene(CM2Scene*)
 CM2Model__AttachToSceneRecursive 00834630 f end=0083465C ; CM2Model::AttachToSceneRecursive(CM2Scene*)
+CM2Model__GatherModelBatchesShadowMap 00834660 f end=0083480E
 CM2Model__Initialize 00834810 f end=008348CA ; CM2Model::Initialize(CM2Scene*, CM2Shared*, CM2Model*, unsigned int)
 CM2Light__Initialize 008348D0 f end=008348F2 ; CM2Light::Initialize(CM2Scene*)
 CM2Lighting__Initialize 00834900 f end=0083493E ; CM2Lighting::Initialize(CM2Scene*, CAaSphere const&)
@@ -14994,6 +15029,8 @@ ComSat__Manager__SendVoiceDataToCurrentSession 00880380 f end=00880390
 ComSat__Manager__SendVoiceDataToCurrentSession 00880390 f end=0088044B
 ComSat__Manager__LocalChatDataReady 00880450 f end=00880548
 ComSat__Manager__DeviceError 008805E0 f end=00880622
+ComSat__Sound__Manager__DebugSetSequenceDelay 00880630 f end=0088063C
+ComSat__Sound__Manager__DebugSetSoundOutputDelay 00880640 f end=0088064C
 ComSat__Manager__LocalTalkerCreate 00880710 f end=00880778
 ComSat__Manager__LocalTalkerDestroy 00880780 f end=00880803
 ComSat__Manager__SessionDestroy 00880810 f end=00880911
@@ -15022,6 +15059,7 @@ ComSat__Sound__Manager__GetMinEncodedFrameLength 00881380 f end=00881386
 ComSat__Sound__Manager__GetMaxEncodedFrameLengt 00881390 f end=00881396
 ComSat__Sound__Manager__EnumerateOutputDevices 008813B0 f end=008813CA
 ComSat__Sound__Manager__EnumerateCaptureDevices 008813D0 f end=008813EA
+ComSat__Sound__Manager__AdvancePlayCursorForRemoteTalker 008813F0 f end=00881479
 ComSat__Sound__Manager__constructor 00881CF0 f end=00881E16
 ComSat__Sound__Manager__LocalTalkerEnable 00881E20 f end=00881EB1
 ComSat__Sound__Manager__SessionNumMembers 00881F30 f end=00882023
@@ -15029,7 +15067,10 @@ ComSat__Sound__Manager__SessionGetTalkerByIndex 00882030 f end=008821B8
 ComSat__Sound__Manager__RecenterJitterBufferForRemoteTalker 008821C0 f end=00882323
 ComSat__Sound__Manager__SubmitIncomingFrameTimeData 00882330 f end=00882434
 ComSat__Sound__Manager__SubmitIncomingVoicePacket 00882440 f end=008825C1
+ComSat__Sound__Manager__TransferEncodedVoiceDataForLocalPlayer 00882810 f end=008828D4
+ComSat__Sound__Manager__EncodeAvailableVoiceDataForLocalPlayer 00883270 f end=008834BD
 ComSat__Sound__Manager__InitLocalPlayer 00883950 f end=00883A8C
+ComSat__Sound__Manager__SessionCreate 00883BD0 f end=00883C8F
 ComSat__Sound__Manager__SetPlaybackPriorityForPlayerInSession 00883F90 f end=0088402C
 ComSat__Sound__Manager__UnregisterRemoteTalkerFromSession 00884AB0 f end=00884C93
 ComSat__Sound__Manager__Work 00884DB0 f end=00884DDE
@@ -15047,6 +15088,7 @@ ComSat__BitUnpacker__destructor 00885760 f end=00885767
 ComSat__BitPacker__PackBits 00885770 f end=008858DC
 ComSat__BitPacker__Finalize 008858E0 f end=00885910
 ComSat__BitUnpacker__UnpackBits 00885910 f end=00885A9B
+ComSat__Session__SetNetworkSession 00885AD0 f end=00885ADD
 ComSat__Session__GetNetworkSession 00885AE0 f end=00885AE4
 ComSat__Session__LocalAdd 00885AF0 f end=00885B1A
 ComSat__Session__Add 00885B20 f end=00885B56
@@ -15068,17 +15110,27 @@ ComSat__Network__Session__Remove 00886230 f end=008862F2
 ComSat__Network__Session__LocalAdd 00886300 f end=00886379
 ComSat__Network__Session__Add 00886380 f end=008865FC
 ComSat__RunningAverageCalculator__SubmitData 008866F0 f end=00886724
+ComSat__RunningAverageCalculator__GetCurrentAverage 00886730 f end=0088674B
+ComSat__Sound__CODECIPMR6000__LocalPlayer__constructor 008867E0 f end=008868B5
+ComSat__Sound__CODECIPMR6000__LocalPlayer__CompressRawData 00886930 f end=00886A44
 ComSat__Sound__CODEC__Create 00886CA0 f end=00886D08
+ComSat__Sound__CODECIPMR6000__CompressRawData 00886E10 f end=00886E8E
+ComSat__Sound__CODECIPMR6000__InitLocalPlayer 008871A0 f end=00887274
 ComSat__Hash32 00887330 f end=00887359
+ComSat__Sound__IOSoundEngine__EnumerateCaptureDevices 008873D0 f end=0088741B
 ComSat__Sound__IOSoundEngine__EnumerateOutputDevices 00887420 f end=0088746B
 TSGrowableArray_ComSat__Sound__OutputChannel__ReallocData 00887490 f end=00887520
 SI2__VoiceChat_ShutDownCapture 00887780 f end=008877D8
 ComSat__Sound__CaptureChannel__CaptureSamples 00887810 f end=00887839
+ComSat__Sound__IOSoundEngine__GetRemainingPlaybackBytes 00887980 f end=008879AE
+ComSat__Sound__IOSoundEngine__GetAvailableDataBytes 008879D0 f end=008879F0
 ComSat__Sound__IOSoundEngine__constructor 00887A10 f end=00887ABD
 ComSat__Sound__IOSoundEngine__destructor 00887AC0 f end=00887B06
 ComSat__Sound__IO__Create 00887B10 f end=00887B41
 ComSat__Sound__IOSoundEngine__InitCapture 00887B70 f end=00887D0D
 ComSat__Sound__IOSoundEngine__InitLocalPlayer 00887D10 f end=00887D4B
+ComSat__Sound__LevelCalculator16Bit__CalculateLevelForFrame 00887DE0 f end=00887E73
+ComSat__Sound__LevelCalculator16Bit__GetMaxDecibelLevel 00887E80 f end=00887E93
 ComSat__MD5__ProcessBlock 00887EA0 f end=008885C1
 ComSat__MD5__Prepare 008885D0 f end=008885FA
 ComSat__MD5__Process 00888600 f end=008886D5
@@ -15253,6 +15305,20 @@ __mbsnbcmp 00895A4B f end=00895A62 type="int __cdecl func(uchar* _Str1, uchar* _
 __frnd 00895A62 f end=00895A73 type="float10 __stdcall func(double param_1)" auto
 __87except 00895A73 f end=00895B6F type="void __stdcall func(int param_1, int* param_2, ushort* param_3)" auto
 __chsize_nolock 00895B6F f end=00895D23 type="int __cdecl func(int _FileHandle, longlong _Size)" auto
+_SPIRIT_IP_MR_V3_1_Init 00896120 f end=0089617A
+_SPIRIT_IP_MR_V3_1_Encode 00896180 f end=0089620B
+_SPIRIT_IP_MR_V3_NAME_194 00896820 f end=008968AF
+_SPIRIT_IP_MR_V3_NAME_197 00896DD0 f end=00896E42
+_SPIRIT_IP_MR_V3_NAME_195 00896ED0 f end=008970D8
+_SPIRIT_IP_MR_V3_NAME_190 00897110 f end=0089712F
+_SPIRIT_IP_MR_V3_NAME_334 008971D0 f end=008971E9
+_SPIRIT_IP_MR_V3_NAME_46 00897A00 f end=00897A25
+_SPIRIT_IP_MR_V3_NAME_44 00897A30 f end=00897A5E
+_SPIRIT_IP_MR_V3_NAME_400 00897A60 f end=00897BFA
+_SPIRIT_IP_MR_V3_NAME_66 00897FD0 f end=00897FF6
+_SPIRIT_IP_MR_V3_NAME_323 00898030 f end=0089818C
+_SPIRIT_IP_MR_V3_NAME_31 00899CD0 f end=00899E52
+_SPIRIT_IP_MR_V3_NAME_107 0089A2C0 f end=0089A78E
 NvAPI_Initialize 008A09BA f end=008A0A54
 NvAPI_GetErrorMessage 008A0A54 f end=008A0A5A type="NvAPI_Status __stdcall func(int32_t nr, char* szDesc)"
 NvAPI_Stereo_CreateConfigurationProfileRegistryKey 008A0F88 f end=008A0F8E type="NvAPI_Status __stdcall func(NV_StereoRegistryProfileType registryProfileType)"
@@ -15289,6 +15355,7 @@ Liquid__CSettingsBank__UpdateRecord 008A27C0 f end=008A28F0
 Liquid__CSettingsBank__GetSettings 008A28F0 f end=008A2974
 Liquid__CreateProceduralTextures 008A2E20 f end=008A2EF5
 Liquid__GetInstanceDesc 008A3090 f end=008A30A8
+CClientLiquidEnvironment__destructor 008A32C0 f end=008A32E8
 SpellRec__GetFilename 008A65D0 f end=008A65D6
 ItemDisplayInfoRec__GetFilename 008A7FC0 f end=008A7FC6
 ItemDisplayInfoRec__Read 008A7FD0 f end=008A834F
@@ -18219,6 +18286,7 @@ TSHashTable__CMapObj__vtable 00A3FEF4 l
 TSHashTable__CStreamingEntry__vtable 00A3FFD0 l
 TSHashTable__CMapDoodadDef__vtable 00A402E4 l
 TSHashTable__CMapObjDef__vtable 00A402F4 l
+CMap__s_subVertexIndexFlat 00A4061C l
 TSHashTable__TALKINGPLAYER__vtable 00A40A74 l
 TSHashTable__MUTEDPLAYER__vtable 00A40A84 l
 TSHashTable__DECLINEDWORD__vtable 00A40F5C l
@@ -18318,6 +18386,7 @@ ClientServices__m_loginState 00AC3DA4 l
 CCharacterCreation__m_selectedClassID 00AC4220 l
 CCharacterCreation__m_existingCharacterIndex 00AC4224 l
 CSimpleModelFFX__s_metatable 00AC467C l
+CGChat__m_guildRecruitmentMode 00AC7A3C l
 CGGameUI__m_visible 00AC80A8 l
 CGPartyInfo__m_leaderIndex 00ACC6C4 l
 CGPartyInfo__m_lootMethod 00ACC6C8 l
@@ -18622,6 +18691,7 @@ CMap__bPreload 00ADFBC8 l
 CMap__s_mapRenderChunkUpdateList 00ADFC30 l
 CMap__s_mapChunkLiquidUpdateList 00ADFC3C l
 CMap__mapChunkPointer 00AEEDAC l
+CMapStaticEntity__s_interiorSunDir 00AEEDF0 l
 CMapObjGroup__vertexVBList 00AEEE58 l
 CMapObjGroup__indexVBList 00AEEE80 l
 g_lightSkyboxDB 00AF4998 l type="WowClientDB_LightSkyboxRec" ; 0x15F
@@ -18770,7 +18840,11 @@ CGChat__s_displayChannels 00B74468 l
 CGChat__m_chatHistory 00B75A60 l
 CGChat__m_whisperDstHistory 00BCEB60 l
 CGChat__m_whisperSrcHistory 00BCEF60 l
+CGChat__m_registered 00BCEFE8 l
+CGChat__m_afk 00BCEFEC l
 CGChat__m_currentChatIndex 00BCEFF4 l
+CGChat__m_complaintsSystemStatus 00BCEFFC l
+CGChat__m_voiceChatSystemStatus 00BCF004 l
 CGGameUI__m_hasControl 00BCFB8C l
 CGGameUI__m_lastErrorMessage 00BCFB90 l
 CGGameUI__m_cursorItemType 00BD0748 l
@@ -18991,6 +19065,7 @@ CGLootInfo__m_coins 00BFA8D0 l
 CGLootInfo__m_object 00BFA8DC l
 CGItemText__m_hasItemText 00BFA9F8 l
 CGItemText__m_text 00BFAA00 l
+CGItemText__m_currentPage 00BFC940 l
 CGItemText__m_itemGUID 00BFC948 l
 CGGossipInfo__m_gossipText 00C00EF0 l
 CGGossipInfo__m_gossip 00C016F0 l
@@ -19035,6 +19110,7 @@ CGStableInfo__m_stableMaster 00C0F6C0 l
 CGArenaTeamInfo__m_nextAllowedQuery 00C0F7F0 l
 CGArenaTeamInfo__m_arenaTeams 00C0F840 l
 CGGuildBankInfo__m_guildBankTabInfo 00C11458 l
+CGGuildBankInfo__m_numLogEntries 00C1DBF0 l
 CGGuildBankInfo__m_numTabs 00C1DC0C l
 CGGuildBankInfo__m_banker 00C1DC10 l
 CGGuildBankInfo__m_remainingWithdrawMoney 00C1DC34 l
@@ -19056,7 +19132,13 @@ CGEquipmentManager__m_pendingSetID 00C1E958 l
 CGEquipmentManager__s_EquipmentSetHeap 00C1E95C l
 CGAchievementInfo__m_showAchievementUI 00C1F454 l
 CGAchievementInfo__m_inspect 00C1F458 l
+CGCalendar__m_contextSelectedEventInfo 00C207E8 l
 CGCalendar__m_initialize 00C207F0 l
+CGCalendar__m_openedCalendar 00C207F1 l
+CGCalendar__m_actionPending 00C207F3 l
+CGCalendar__m_numInitialPending 00C207F4 l
+CGCalendar__m_lastInviteTime 00C207F8 l
+CGCalendar__m_lastEventTime 00C207FC l
 CGItemSocketInfo__m_gemItemContainer 00C20FB0 l
 CGItemSocketInfo__m_gemItems 00C20FC8 l
 CGItemSocketInfo__m_socketItem 00C20FE0 l
@@ -19075,6 +19157,7 @@ CGReputationInfo__m_numHeaders 00C23470 l
 CGReputationInfo__m_numFactions 00C23474 l
 CGReputationInfo__m_numShownFactions 00C23478 l
 CGReputationInfo__m_selectedFaction 00C2347C l
+CGPetInfo__m_petMode 00C234C8 l
 CGPetInfo__m_expirationTime 00C234CC l
 CGPetInfo__m_attackingTarget 00C234DC l
 CGContainerInfo__m_containers 00C23540 l
@@ -19106,6 +19189,7 @@ CGRuneInfo__m_runes 00C24304 l
 CGRuneInfo__m_numRunes 00C24384 l
 CGRuneInfo__m_predictedRunes 00C24388 l
 s_addons 00C2491C l type="TSHashTable_UIADDON_HASHKEY_STRI"
+CGInputControl__s_inputControl 00C24954 l
 s_cvCinematicJoystick 00C2495C l type="CVar*"
 s_cvCameraSmoothTimeMax 00C24970 l type="CVar*"
 s_cvCameraSmoothTimeMin 00C24974 l type="CVar*"
@@ -19481,6 +19565,7 @@ CMapObjRenderGroupExterior_ptr 00CFBEC4 l
 CMapObjRenderGroupInterior_ptr 00CFBECC l
 CMapObj__gRenderCallback 00D1BED8 l
 CMapObj__gRenderUserParam 00D1BEDC l
+s_smolVertCacheSize 00D1BEE0 l
 CMapObj__occluderHeap 00D1C40C l
 CMapObj__bPoolsDirty 00D1C410 l
 CMapObj__sMinimapTag 00D1C418 l
