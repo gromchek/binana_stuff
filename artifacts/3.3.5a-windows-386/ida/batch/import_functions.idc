@@ -18,7 +18,6 @@ static import_functions() {
 	set_func_cmt(0x00427560, "Blizzard::File::Move(char const*, char const*)", 0);
 	set_func_cmt(0x00427720, "Blizzard::File::Read(Blizzard::File::StreamRecord*, void*, long long, int*, int)", 0);
 	set_func_cmt(0x004278B0, "Blizzard::File::SetEOF(Blizzard::File::StreamRecord*, long long, int)", 0);
-	set_func_cmt(0x00428300, "WowConnection::AddRef()", 0);
 	set_func_cmt(0x00429790, "Compiler magic converted this OOP constructor into a variadic __stdcall\\nBlizzard::String::QuickFormat<1024>::QuickFormat()", 0);
 	set_func_cmt(0x00433510, "Blizzard::String::JoinPath(char*, int, char const*, char const*)", 0);
 	set_func_cmt(0x00433650, "Blizzard::StringConversion_CodepageToUTF8::ToNative::ToNative(const char*)", 0);
