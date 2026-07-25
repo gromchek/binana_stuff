@@ -921,7 +921,6 @@ static import_data_types() {
 	apply_type(0x006C8C10, "int32_t __usercall func@<eax>(uint32_t code@<eax>, bool monochrome@<bl>, FT_Face face@<esi>)");
 	apply_type(0x006CA180, "void __thiscall func(SHA1* this, void* data, uint32_t bytes)");
 	apply_type(0x006CA270, "void __thiscall func(SHA1* this, SHA1__Digest* digest)");
-	apply_type(0x006D7BA0, "NetClient__HELDMESSAGE* __thiscall func(TSList_NetClient__HELDMESSAGE* this)");
 	apply_type(0x00742220, "void __stdcall func()");
 	apply_type(0x00763680, "void __stdcall func(CONSOLELINE* node)");
 	apply_type(0x00763730, "void __stdcall func(char* text)");
