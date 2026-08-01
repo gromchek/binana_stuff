@@ -569,7 +569,6 @@ static import_data_types() {
 	apply_type(0x0054EFE0, "void __fastcall func(TSGrowableArray_C2iVector* this, C2iVector* resolution)");
 	apply_type(0x0057C340, "void __thiscall func(CGxMatrixStack* this)");
 	apply_type(0x0057FDD0, "void __thiscall func(TSGrowableArray_C2Vector* this, uint32_t count)");
-	apply_type(0x005BD800, "void __thiscall func(TSList_NetClient__HELDMESSAGE* this)");
 	apply_type(0x005F7410, "char* __stdcall func(char* name)");
 	apply_type(0x00615860, "void __stdcall func()");
 	apply_type(0x006160B0, "int32_t __usercall func@<eax>(uint32_t** image@<eax>, MipBits* mipImages@<ecx>, uint32_t width@<edx>, uint32_t height)");
