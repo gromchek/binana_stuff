@@ -2977,7 +2977,7 @@ static import_data_types() {
 	apply_type(0x00918D70, "FMOD_RESULT __thiscall func(FMOD__DSPFFT* this, int32_t bits)");
 	apply_type(0x009190A0, "FMOD_RESULT __thiscall func(FMOD__DSPFFT* this, float* pcmbuffer, uint32_t pcmposition, uint32_t pcmlength, float* spectrum, int32_t length, int32_t channel, int32_t numchannels, FMOD_DSP_FFT_WINDOW windowtype)");
 	apply_type(0x00919720, "FMOD_RESULT __thiscall func(FMOD__DSPFilter* this, float* inbuffer, float** outbuffer, uint32_t* length, int32_t inchannels, int32_t* outchannels, FMOD_SPEAKERMODE speakermode)");
-	apply_type(0x00919C00, "FMOD_RESULT __thiscall func(FMOD__DSPFilter* this, uint32_t bufferchannels)");
+	apply_type(0x00919C00, "FMOD_RESULT __thiscall func(FMOD__DSPFilter* this, uint32_t historylength)");
 	apply_type(0x00919CA0, "FMOD_RESULT __thiscall func(FMOD__DSPFilter* this, float** buffer, uint32_t* position, uint32_t* length)");
 	apply_type(0x00919CE0, "void __thiscall func(FMOD__DSPFilter* this, bool freethis)");
 	apply_type(0x00919D30, "void __thiscall func(FMOD__GeometryI* this)");
@@ -3049,7 +3049,7 @@ static import_data_types() {
 	apply_type(0x0091EAE0, "FMOD_RESULT __thiscall func(FMOD__ChannelStream* this, float volume)");
 	apply_type(0x0091EB60, "FMOD_RESULT __thiscall func(FMOD__ChannelStream* this, float frequency)");
 	apply_type(0x0091EBA0, "FMOD_RESULT __thiscall func(FMOD__ChannelStream* this, float pan, float fbpan)");
-	apply_type(0x0091EC10, "FMOD_RESULT __thiscall func(FMOD__ChannelStream* this, uint32_t a2, uint32_t a3)");
+	apply_type(0x0091EC10, "FMOD_RESULT __thiscall func(FMOD__ChannelStream* this, uint32_t delayhi, uint32_t delaylo)");
 	apply_type(0x0091EC50, "FMOD_RESULT __thiscall func(FMOD__ChannelStream* this, float frontleft, float frontright, float center, float lfe, float backleft, float backright, float sideleft, float sideright)");
 	apply_type(0x0091ECC0, "FMOD_RESULT __thiscall func(FMOD__ChannelStream* this, int32_t speaker, float* levels, int32_t numlevels)");
 	apply_type(0x0091ED00, "FMOD_RESULT __thiscall func(FMOD__ChannelStream* this, uint32_t loopstart, uint32_t looplength)");
@@ -3455,7 +3455,7 @@ static import_data_types() {
 	apply_type(0x00943A10, "FMOD_RESULT __thiscall func(FMOD__ChannelReal* this, bool a2, bool a3)");
 	apply_type(0x00943A70, "FMOD_RESULT __thiscall func(FMOD__ChannelReal* this, bool paused)");
 	apply_type(0x00943A90, "FMOD_RESULT __thiscall func(FMOD__ChannelReal* this, bool* paused)");
-	apply_type(0x00943AC0, "FMOD_RESULT __thiscall func(FMOD__ChannelReal* this, uint32_t a2, uint32_t a3)");
+	apply_type(0x00943AC0, "FMOD_RESULT __thiscall func(FMOD__ChannelReal* this, uint32_t delayhi, uint32_t delaylo)");
 	apply_type(0x00943AE0, "FMOD_RESULT __thiscall func(FMOD__ChannelReal* this, float frontleft, float frontright, float center, float lfe, float backleft, float backright, float sideleft, float sideright)");
 	apply_type(0x00943DA0, "FMOD_RESULT __thiscall func(FMOD__ChannelReal* this, int32_t speaker, float* levels, int32_t numlevels)");
 	apply_type(0x00943DC0, "FMOD_RESULT __thiscall func(FMOD__ChannelReal* this, float volume)");

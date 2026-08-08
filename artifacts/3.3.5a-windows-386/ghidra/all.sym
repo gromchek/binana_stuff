@@ -61,6 +61,7 @@ NewWorldHandler 00403D10 f end=00403DDB
 WowClientInit 00404130 f end=004042BC
 InitializeEngineCallback 004047E0 f end=00404923
 ListInterfaceArchive 00404A80 f end=00404AC3
+ShutdownFileAccess 00404AD0 f end=00404AFD
 LogZoneInfo 00404B00 f end=00404B71
 WowLogHeader 00404B80 f end=00404ED6
 ClientBeginTaxiBenchmarkMode 00404EE0 f end=00404F52
@@ -168,6 +169,7 @@ SFile__InitializeStreaming 00422100 f end=00422125
 SFile__IsStreamingMode 00422130 f end=00422139
 SFile__IsStreamingMode 00422140 f end=00422149
 SFile__GetErrorDetails 00422150 f end=0042215F
+_SFileSetFileBlockEntryMD5 00422170 f end=0042219E
 SFile__Read 00422530 f end=004227D4
 SFile__Close 00422910 f end=004229AB
 SFile__RebuildHash 00423D70 f end=00423DBD
@@ -326,6 +328,7 @@ System_Thread__InitThreadSystem 0044CCE0 f end=0044CD27 type="void __stdcall fun
 Blizzard__File__RemoveDirectoryAndContents__Internal__Callback 0044FA10 f end=0044FB29 type="bool __stdcall func(Blizzard__File__ProcessDirParms* dirwalkparms)" ; Blizzard::File::RemoveDirectoryAndContents(char const*, bool)::Internal::Callback(Blizzard::File::ProcessDirParms const&)
 Blizzard__Streaming__ManifestInfo__HandleBaseTag 004500B0 f end=0045057A
 Blizzard__Streaming__ManifestInfo__GetRandomServerLocation 00450580 f end=004508AC
+Blizzard__Thread__Create 00450AC0 f end=00450B76
 Blizzard__File__RemoveDirectoryAndContents 004518C0 f end=004519A7
 System_Log__Acquire 004519B0 f end=00451A29
 Blizzard__Log__Printf 00451BB0 f end=00451C0B
@@ -428,6 +431,7 @@ CGlueMgr__PatchDownloadExecuteCommand 00462190 f end=004621EB
 Tracker__GetTrackerAddress 00462280 f end=00462308
 Tracker__SetLocale 00462310 f end=00462335
 Tracker__SetBuildnum 00462340 f end=0046234D
+Tracker__MakeTrackerURL 00462970 f end=00462E06
 _LzmaDecode 00463590 f end=00463FC6
 LzmaMemDecode 00463FD0 f end=00464085
 Startup_StringsRec__GetFilename 00464090 f end=00464096
@@ -2064,6 +2068,7 @@ SE2__IsLoopingOrPeriodic 004C5C40 f end=004C5C53
 SE2__GetNumSoundsInSoundKit 004C5C60 f end=004C5C7A
 SE2__StopAllSounds 004C5CC0 f end=004C5CD9
 SE2__StopSound 004C6390 f end=004C6410
+SI2__ForceUpdateZoneSounds 004C6710 f end=004C6808
 SI2__GetChunkLocation 004C6810 f end=004C68D5
 SI2__OverrideZoneSounds 004C68E0 f end=004C69EC
 SE2__PlaySoundKit 004C6A40 f end=004C713B
@@ -2171,6 +2176,7 @@ SI2__PlayItemSound 004D0020 f end=004D008B
 SI2__PlayItemSound 004D0090 f end=004D0102
 SI2__UpdateTaxiSounds 004D0110 f end=004D032D
 SI2__PlayParrySound 004D0540 f end=004D0657
+SI2__PlayWeaponSwooshSound 004D0720 f end=004D07AC
 SI2__PlaySheatheSound 004D07B0 f end=004D0850
 SI2__PlayMissedSound 004D0850 f end=004D089E
 TSGrowableArray_IMPACTSOUNDARRAY__ReallocData 004D0910 f end=004D0A62
@@ -2709,6 +2715,7 @@ TSHashTable__CACHEENTRY__destructor 004F35D0 f end=004F35FB
 TSHashTable__CACHEENTRY__Initialize 004F3600 f end=004F365A
 TSHashTable__CACHEENTRY__GrowListArray 004F3660 f end=004F382B
 TSHashTable__CACHEENTRY__MonitorFullness 004F3830 f end=004F38C6
+TSHashTable__CACHEENTRY__InternalLinkNode 004F38D0 f end=004F3923
 TextureCacheCreateTexture 004F3930 f end=004F3999
 ComponentFlagsMatch 004F39A0 f end=004F3A15
 GetSelectionFromContext 004F3A40 f end=004F3A80
@@ -3880,6 +3887,7 @@ TSList_SPELLBYNAME__DeleteNode 0053EF20 f end=0053EF98
 TSGrowableArray_TSExplicitList_SPELLSBYNAME__ReallocData 0053EFA0 f end=0053F0F7
 TSExplicitList_SPELLSBYNAME__Clear 0053F160 f end=0053F1E5
 CGSpellBook__InitializeGame 0053F1F0 f end=0053F28F
+TSHashTable__SPELLBYNAME__HASHKEY_UTF8I__Ptr 0053F3B0 f end=0053F43C
 TSGrowableArray_TSExplicitList_SPELLSBYNAME__SetCount 0053F440 f end=0053F544
 CGSpellBook__DelSpellFromNameCache 0053F550 f end=0053F5D5
 CGSpellBook__FindSpellByName 0053F5E0 f end=0053F666
@@ -12859,6 +12867,7 @@ TSHashTable__CMapObj__destructor 007B0960 f end=007B098B
 TSHashTable__CMapObj__Initialize 007B0990 f end=007B09EA
 TSHashTable__CMapObj__GrowListArray 007B09F0 f end=007B0BBC
 TSHashTable__CMapObj__MonitorFullness 007B0BC0 f end=007B0C56
+TSHashTable__CMapObj__InternalLinkNode 007B0C60 f end=007B0CB4
 CMapObj__Create 007B0CC0 f end=007B0D37 ; CMapObj::Create(char const*)
 TSGrowableArray_CDetailDoodadInstAdd__ReallocData 007B0D60 f end=007B0DEF
 TSGrowableArray_CDetailDoodadData__ReallocData 007B0DF0 f end=007B0E80
@@ -12993,6 +13002,7 @@ TSHashTable__CMapObjDef__GrowListArray 007BE760 f end=007BE92C
 TSHashTable__CMapDoodad__MonitorFullness 007BE930 f end=007BE9C6
 TSHashTable__CMapObjDef__MonitorFullness 007BE9D0 f end=007BEA66
 TSHashTable__CMapDoodad__Insert 007BEA70 f end=007BEAD2
+TSHashTable__CMapObjDef__InternalLinkNode 007BEAE0 f end=007BEB34
 CMap__CreateDoodadDef 007BEB40 f end=007BECCA
 CMap__CreateDoodadDef 007BECD0 f end=007BEF32
 CMap__CreateDoodadDef 007BEF40 f end=007BF120
@@ -14926,6 +14936,7 @@ _deflateReset 00864D20 f end=00864DB3
 _deflateInit_ 00864FF0 f end=00865015
 _inflateInit2_ 00865080 f end=0086514E
 _inflateInit_ 00865150 f end=0086516B
+_inflate 00865270 f end=008665DC
 _inflateEnd 00866660 f end=008666AE
 _compressBound 00866750 f end=00866768
 init_block 00866820 f end=0086688E
@@ -15160,7 +15171,9 @@ FSoundAllocCallback 008780B0 f end=008780C9 type="void* __stdcall func(uint32_t 
 FSoundReallocCallback 008780D0 f end=008780ED type="void* __stdcall func(void* ptr, uint32_t size, char* sourcestr)"
 FSoundFreeCallback 008780F0 f end=00878109 type="void __stdcall func(void* ptr, char* sourcestr)"
 SESeekCallback 00878200 f end=0087821A
+SE2__CaptureWork 008787E0 f end=0087892D
 SE2__SetUserMonitorDSPCallback 00878930 f end=0087893D
+SE2__AttachMonitorDSP 00878940 f end=00878959
 _MonitorDSPCallback 00878960 f end=00878998
 _CreateMonitorDSP 008789A0 f end=00878A11
 SE2__SetPrimaryCaptureCallback 00878A20 f end=00878A2D
@@ -15177,11 +15190,15 @@ SE2__EnableDSP 00878D60 f end=00878D72
 SE2__ConnectDspToChannelGroup 00878DA0 f end=00878DEE
 SE2__GetChannelGroupNumChannels 00878DF0 f end=00878E0F
 SE2__CreateChannelGroup 00878E10 f end=00878E36
+SE2__DestroyChannelGroup 00878E40 f end=00878E4E
+SE2__AddChannelToChannelGroup 00878E50 f end=00878E62
 SE2__SetFMODChannelGroupVolume 00878E70 f end=00878E85
 TSGrowableArray_SEDriverInfo__ReallocData 00878E90 f end=00878F22
 TSGrowableArray_SEChannelGroup__ReallocData 00878F30 f end=00878FCD
 SE2__GetInputDriverName 00879210 f end=00879287
+SE2__SetListenerAttributes 00879320 f end=0087934C
 SE2__FadeInNow 00879400 f end=0087940F
+SE2__SetReverb 008794E0 f end=008794FE
 SE2__StartCapture 00879500 f end=00879577
 SE2__StopCapture 00879580 f end=008795E5
 TSGrowableArray_SEDriverInfo__SetCount 008798B0 f end=008798F9
@@ -15199,6 +15216,7 @@ TSHashTable__SOUND_INTERNAL_LOOKUP__Initialize 0087C1D0 f end=0087C22A
 TSHashTable__SOUND_INTERNAL_LOOKUP__GrowListArray 0087C230 f end=0087C3FB
 SE2__HeartBeat 0087C4B0 f end=0087C53B
 SE2__ShutDownCapture 0087C540 f end=0087C580
+SE2__DestroyChatSystem 0087C580 f end=0087C66C
 TSHashTable__SOUND_INTERNAL_LOOKUP__MonitorFullness 0087C670 f end=0087C706
 SESound__Init 0087C710 f end=0087DECE type="void __stdcall func(int32_t maxChannels, int32_t* a2, int32_t enableReverb, int32_t enableSoftwareHRTF, int32_t* numChannels, int32_t* outputDriverIndex, char* outputDriverName, void* a8, int32_t a9)"
 SI2__InitCapture 0087E020 f end=0087EBBD
@@ -15374,24 +15392,84 @@ fread 0088CE11 f end=0088CE2C type="void __stdcall func(void* param_1, size_t pa
 floor 0088CE30 f end=0088CF51 type="double __stdcall func(double X)"
 _CIpow 0088D0C0 f end=0088D114 type="double __usercall func@<st0>(double x@<st0>, uint64_t y@<st1>)" ; Calculates x raised to the y power based on the top values in the stack.
 strtod 0088E9C1 f end=0088E9D4 type="double __stdcall func(char* str, char** endptr)"
+_SPIRIT_IP_MR_V3_1_GenerateTables 00896100 f end=00896120
 _SPIRIT_IP_MR_V3_1_Init 00896120 f end=0089617A
 _SPIRIT_IP_MR_V3_1_Encode 00896180 f end=0089620B
+_SPIRIT_IP_MR_V3_1_Decode 00896210 f end=0089627A
+_SPIRIT_IP_MR_V3_NAME_201 00896330 f end=008967AB
 _SPIRIT_IP_MR_V3_NAME_194 00896820 f end=008968AF
+_SPIRIT_IP_MR_V3_NAME_192 00896AB0 f end=00896D10
 _SPIRIT_IP_MR_V3_NAME_197 00896DD0 f end=00896E42
 _SPIRIT_IP_MR_V3_NAME_195 00896ED0 f end=008970D8
+_SPIRIT_IP_MR_V3_NAME_191 008970E0 f end=00897110
 _SPIRIT_IP_MR_V3_NAME_190 00897110 f end=0089712F
+_SPIRIT_IP_MR_V3_NAME_189 00897130 f end=00897152
+_SPIRIT_IP_MR_V3_NAME_333 00897160 f end=00897184
+_SPIRIT_IP_MR_V3_NAME_314 00897190 f end=008971AB
+_SPIRIT_IP_MR_V3_NAME_332 008971B0 f end=008971C3
 _SPIRIT_IP_MR_V3_NAME_334 008971D0 f end=008971E9
+_SPIRIT_IP_MR_V3_NAME_179 008971F0 f end=00897215
+_SPIRIT_IP_MR_V3_NAME_180 00897220 f end=0089726B
+_SPIRIT_IP_MR_V3_NAME_386 00897270 f end=008972A7
+_SPIRIT_IP_MR_V3_NAME_322 008972B0 f end=008972FB
+_SPIRIT_IP_MR_V3_NAME_321 00897300 f end=00897325
+_SPIRIT_IP_MR_V3_NAME_248 00897330 f end=00897367
 _SPIRIT_IP_MR_V3_NAME_114 008974F0 f end=00897554
+_SPIRIT_IP_MR_V3_NAME_144 00897560 f end=00897593
+_GetMedian 008975A0 f end=00897683
 _SPIRIT_IP_MR_V3_NAME_46 00897A00 f end=00897A25
 _SPIRIT_IP_MR_V3_NAME_44 00897A30 f end=00897A5E
 _SPIRIT_IP_MR_V3_NAME_400 00897A60 f end=00897BFA
+_SPIRIT_IP_MR_V3_NAME_399 00897C00 f end=00897C8A
+_SPIRIT_IP_MR_V3_NAME_42 00897C90 f end=00897F8E
 _SPIRIT_IP_MR_V3_NAME_66 00897FD0 f end=00897FF6
+_SPIRIT_IP_MR_V3_NAME_65 00898000 f end=0089802D
 _SPIRIT_IP_MR_V3_NAME_323 00898030 f end=0089818C
+_SPIRIT_IP_MR_V3_NAME_387 008981A0 f end=00898215
+_SPIRIT_IP_MR_V3_NAME_61 00898220 f end=008982B2
 _SPIRIT_IP_MR_V3_NAME_309 008982C0 f end=00898405
 _SPIRIT_IP_MR_V3_NAME_311 00898420 f end=00898441
+_SPIRIT_IP_MR_V3_NAME_85 00898540 f end=008985D5
 _SPIRIT_IP_MR_V3_NAME_199 00898940 f end=008989AA
+_SPIRIT_IP_MR_V3_NAME_60 008989B0 f end=00898C57
+_SPIRIT_IP_MR_V3_NAME_200 00898C60 f end=00898CA7
+_SPIRIT_IP_MR_V3_NAME_115 00898E90 f end=00899074
+_SPIRIT_IP_MR_V3_NAME_116 00899080 f end=00899132
+_SPIRIT_IP_MR_V3_NAME_324 008992E0 f end=00899829
+_SPIRIT_IP_MR_V3_NAME_152 00899A80 f end=00899B71
+_SPIRIT_IP_MR_V3_NAME_68 00899B80 f end=00899C18
 _SPIRIT_IP_MR_V3_NAME_31 00899CD0 f end=00899E52
+_SPIRIT_IP_MR_V3_NAME_38 00899EFF f end=0089A0A8
+_SPIRIT_IP_MR_V3_NAME_67 0089A0B0 f end=0089A2B7
 _SPIRIT_IP_MR_V3_NAME_107 0089A2C0 f end=0089A78E
+_SPIRIT_IP_MR_V3_NAME_155 0089A78E f end=0089AB25
+_SPIRIT_IP_MR_V3_NAME_181 0089AB30 f end=0089B07C
+_SPIRIT_IP_MR_V3_NAME_137 0089B090 f end=0089B11C
+_SPIRIT_IP_MR_V3_NAME_148 0089B120 f end=0089B1FE
+_SPIRIT_IP_MR_V3_NAME_389 0089B200 f end=0089B387
+_SPIRIT_IP_MR_V3_NAME_390 0089B390 f end=0089B44B
+_SPIRIT_IP_MR_V3_NAME_215 0089B760 f end=0089BA93
+_SPIRIT_IP_MR_V3_NAME_391 0089BAA0 f end=0089BB1B
+_SPIRIT_IP_MR_V3_NAME_216 0089BB20 f end=0089BB62
+_SPIRIT_IP_MR_V3_NAME_205 0089BB70 f end=0089BC28
+_SPIRIT_IP_MR_V3_NAME_330 0089C670 f end=0089C6E6
+_SPIRIT_IP_MR_V3_NAME_121 0089C6F0 f end=0089CB6D
+_SPIRIT_IP_MR_V3_NAME_29 0089D840 f end=0089D858
+_SPIRIT_IP_MR_V3_NAME_147 0089D860 f end=0089D9CC
+_SPIRIT_IP_MR_V3_NAME_146 0089D9D0 f end=0089DAB8
+_SPIRIT_IP_MR_V3_NAME_157 0089DAC0 f end=0089DB36
+_SPIRIT_IP_MR_V3_NAME_28 0089DB40 f end=0089DB8C
+_SPIRIT_IP_MR_V3_NAME_35 0089DE80 f end=0089DF27
+_SPIRIT_IP_MR_V3_NAME_158 0089DFB0 f end=0089E0A3
+_SPIRIT_IP_MR_V3_NAME_109 0089E0B0 f end=0089E25D
+_SPIRIT_IP_MR_V3_NAME_156 0089E260 f end=0089E394
+_SPIRIT_IP_MR_V3_NAME_59 0089E800 f end=0089EAD2
+_SPIRIT_IP_MR_V3_NAME_111 0089EDE0 f end=0089F0A5
+_SPIRIT_IP_MR_V3_NAME_79 0089F5E0 f end=0089F6D1
+_SPIRIT_IP_MR_V3_NAME_34 0089F6E0 f end=0089F760
+_SPIRIT_IP_MR_V3_NAME_153 0089F760 f end=0089F86D
+_SPIRIT_IP_MR_V3_NAME_15 0089FCF0 f end=0089FD8D
+_SPIRIT_IP_MR_V3_NAME_331 0089FF30 f end=008A0945
 NvAPI_Initialize 008A09BA f end=008A0A54
 NvAPI_GetErrorMessage 008A0A54 f end=008A0A5A type="NvAPI_Status __stdcall func(int32_t nr, char* szDesc)"
 NvAPI_Stereo_CreateConfigurationProfileRegistryKey 008A0F88 f end=008A0F8E type="NvAPI_Status __stdcall func(NV_StereoRegistryProfileType registryProfileType)"
@@ -17030,7 +17108,7 @@ FMOD__DSPFFT__constructor 00918D30 f end=00918D6A type="FMOD__DSPFFT* __thiscall
 FMOD__DSPFFT__process 00918D70 f end=00919076 type="FMOD_RESULT __thiscall func(FMOD__DSPFFT* this, int32_t bits)"
 FMOD__DSPFFT__getSpectrum 009190A0 f end=00919698 type="FMOD_RESULT __thiscall func(FMOD__DSPFFT* this, float* pcmbuffer, uint32_t pcmposition, uint32_t pcmlength, float* spectrum, int32_t length, int32_t channel, int32_t numchannels, FMOD_DSP_FFT_WINDOW windowtype)"
 FMOD__DSPFilter__execute 00919720 f end=00919BF4 type="FMOD_RESULT __thiscall func(FMOD__DSPFilter* this, float* inbuffer, float** outbuffer, uint32_t* length, int32_t inchannels, int32_t* outchannels, FMOD_SPEAKERMODE speakermode)" ; TODO confirm this
-FMOD__DSPFilter__startBuffering 00919C00 f end=00919C94 type="FMOD_RESULT __thiscall func(FMOD__DSPFilter* this, uint32_t bufferchannels)"
+FMOD__DSPFilter__startBuffering 00919C00 f end=00919C94 type="FMOD_RESULT __thiscall func(FMOD__DSPFilter* this, uint32_t historylength)"
 FMOD__DSPFilter__getHistoryBuffer 00919CA0 f end=00919CD6 type="FMOD_RESULT __thiscall func(FMOD__DSPFilter* this, float** buffer, uint32_t* position, uint32_t* length)"
 FMOD__DSPFilter__release 00919CE0 f end=00919D24 type="void __thiscall func(FMOD__DSPFilter* this, bool freethis)"
 FMOD__GeometryI__updateSpatialData 00919D30 f end=00919EBA type="void __thiscall func(FMOD__GeometryI* this)"
@@ -17102,7 +17180,7 @@ FMOD__ChannelStream__setPaused 0091EAA0 f end=0091EAD3 type="FMOD_RESULT __thisc
 FMOD__ChannelStream__setVolume 0091EAE0 f end=0091EB53 type="FMOD_RESULT __thiscall func(FMOD__ChannelStream* this, float volume)"
 FMOD__ChannelStream__setFrequency 0091EB60 f end=0091EB96 type="FMOD_RESULT __thiscall func(FMOD__ChannelStream* this, float frequency)"
 FMOD__ChannelStream__setPan 0091EBA0 f end=0091EC0F type="FMOD_RESULT __thiscall func(FMOD__ChannelStream* this, float pan, float fbpan)"
-FMOD__ChannelStream__setDelay 0091EC10 f end=0091EC47 type="FMOD_RESULT __thiscall func(FMOD__ChannelStream* this, uint32_t a2, uint32_t a3)"
+FMOD__ChannelStream__setDelay 0091EC10 f end=0091EC47 type="FMOD_RESULT __thiscall func(FMOD__ChannelStream* this, uint32_t delayhi, uint32_t delaylo)"
 FMOD__ChannelStream__setSpeakerMix 0091EC50 f end=0091ECB9 type="FMOD_RESULT __thiscall func(FMOD__ChannelStream* this, float frontleft, float frontright, float center, float lfe, float backleft, float backright, float sideleft, float sideright)"
 FMOD__ChannelStream__setSpeakerLevels 0091ECC0 f end=0091ECFB type="FMOD_RESULT __thiscall func(FMOD__ChannelStream* this, int32_t speaker, float* levels, int32_t numlevels)"
 FMOD__ChannelStream__setLoopPoints 0091ED00 f end=0091ED39 type="FMOD_RESULT __thiscall func(FMOD__ChannelStream* this, uint32_t loopstart, uint32_t looplength)"
@@ -17510,7 +17588,7 @@ FMOD__ChannelReal__alloc 009439F0 f end=00943A05 type="FMOD_RESULT __thiscall fu
 FMOD__ChannelReal__stop 00943A10 f end=00943A61 type="FMOD_RESULT __thiscall func(FMOD__ChannelReal* this, bool a2, bool a3)"
 FMOD__ChannelReal__setPaused 00943A70 f end=00943A8D type="FMOD_RESULT __thiscall func(FMOD__ChannelReal* this, bool paused)"
 FMOD__ChannelReal__getPaused 00943A90 f end=00943AB4 type="FMOD_RESULT __thiscall func(FMOD__ChannelReal* this, bool* paused)"
-FMOD__ChannelReal__setDelay 00943AC0 f end=00943ADB type="FMOD_RESULT __thiscall func(FMOD__ChannelReal* this, uint32_t a2, uint32_t a3)"
+FMOD__ChannelReal__setDelay 00943AC0 f end=00943ADB type="FMOD_RESULT __thiscall func(FMOD__ChannelReal* this, uint32_t delayhi, uint32_t delaylo)"
 FMOD__ChannelReal__setSpeakerMix 00943AE0 f end=00943D78 type="FMOD_RESULT __thiscall func(FMOD__ChannelReal* this, float frontleft, float frontright, float center, float lfe, float backleft, float backright, float sideleft, float sideright)"
 FMOD__ChannelReal__setSpeakerLevels 00943DA0 f end=00943DC0 type="FMOD_RESULT __thiscall func(FMOD__ChannelReal* this, int32_t speaker, float* levels, int32_t numlevels)"
 FMOD__ChannelReal__updateSpeakerLevels 00943DC0 f end=00943FEE type="FMOD_RESULT __thiscall func(FMOD__ChannelReal* this, float volume)"
@@ -18706,7 +18784,10 @@ SI2__UnregisterScriptFunctions 00985ED0 f end=00985EEF
 Script_VoiceChat_StartCapture 00985EF0 f end=00985F6B
 SI2__StopGlueAmbience 00985F70 f end=00985FA2
 SI2__StartGlueAmbience 00985FB0 f end=0098607C
+SI2__GlueMusicUpdate 00986080 f end=009860DD
 SI2__StopGlueMusic 009860E0 f end=00986128
+SI2__CreditsMusicUpdate 00986130 f end=0098618D
+SI2__StopCreditsMusic 00986190 f end=009861BB
 SI2__StartGlueMusic 009861C0 f end=009862BE
 SI2__StartCreditMusic 009862C0 f end=0098638F
 SI2__VoiceChat_IsPlayingLoopbackSound 00986410 f end=0098641E
