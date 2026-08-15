@@ -2127,7 +2127,7 @@ static import_data_types() {
 	apply_type(0x008D6380, "FMOD_RESULT __thiscall func(FMOD__SystemI* this, int32_t recorddriver)");
 	apply_type(0x008D63D0, "FMOD_RESULT __thiscall func(FMOD__SystemI* this, FMOD__SoundI* sound, bool loop)");
 	apply_type(0x008D65E0, "FMOD_RESULT __thiscall func(FMOD__SystemI* this)");
-	apply_type(0x008D67D0, "FMOD_RESULT __thiscall func(FMOD__SystemI* this, char* name_or_data, FMOD_MODE mode, FMOD_CREATESOUNDEXINFO* exinfo, bool calledfromasync, FMOD__SoundI** sound)");
+	apply_type(0x008D67D0, "FMOD_RESULT __thiscall func(FMOD__SystemI* this, char* name_or_data, FMOD_MODE mode_in, FMOD_CREATESOUNDEXINFO* exinfo, bool calledfromasync, FMOD__SoundI** sound)");
 	apply_type(0x008D8A10, "FMOD__SystemI* __thiscall func(FMOD__SystemI* this)");
 	apply_type(0x008D8FD0, "FMOD_RESULT __thiscall func(FMOD__SystemI* this)");
 	apply_type(0x008D91D0, "FMOD_RESULT __thiscall func(FMOD__SystemI* this, char* name_or_data, FMOD_MODE mode_in, FMOD_CREATESOUNDEXINFO* exinfo, FMOD__SoundI** sound)");
@@ -2602,7 +2602,7 @@ static import_data_types() {
 	apply_type(0x008F3B60, "FMOD_RESULT __thiscall func(FMOD__PluginFactory* this, FMOD_OUTPUT_DESCRIPTION_EX* description, FMOD_PLUGINTYPE* plugintype, int32_t* handle)");
 	apply_type(0x008F3D00, "FMOD_RESULT __thiscall func(FMOD__PluginFactory* this, int32_t* numcodecs)");
 	apply_type(0x008F3D50, "FMOD_RESULT __thiscall func(FMOD__PluginFactory* this, int32_t* numdsps)");
-	apply_type(0x008F3DA0, "FMOD_RESULT __thiscall func(FMOD__PluginFactory* this, int* numoutputs)");
+	apply_type(0x008F3DA0, "FMOD_RESULT __thiscall func(FMOD__PluginFactory* this, int32_t* numoutputs)");
 	apply_type(0x008F3DF0, "FMOD_RESULT __thiscall func(FMOD__PluginFactory* this, int32_t handle, FMOD_CODEC_DESCRIPTION_EX** codecdesc)");
 	apply_type(0x008F3E60, "FMOD_RESULT __thiscall func(FMOD__PluginFactory* this, int32_t handle, FMOD_DSP_DESCRIPTION_EX** dspdesc)");
 	apply_type(0x008F3ED0, "FMOD_RESULT __thiscall func(FMOD__PluginFactory* this, int32_t index, FMOD_OUTPUT_DESCRIPTION_EX** handle)");
@@ -2990,7 +2990,7 @@ static import_data_types() {
 	apply_type(0x0091AA20, "FMOD_RESULT __thiscall func(FMOD__OutputSoftware* this)");
 	apply_type(0x0091AA70, "int32_t __stdcall func(FMOD_OUTPUT_STATE* output, FMOD_MODE mode, FMOD_SOUND_FORMAT format)");
 	apply_type(0x0091AA80, "FMOD__OutputSoftware* __thiscall func(FMOD__OutputSoftware* this)");
-	apply_type(0x0091AB00, "FMOD_RESULT __stdcall func(FMOD__OutputSoftware* this, FMOD_CODEC_WAVEFORMAT* waveformat, FMOD__Sample** sample)");
+	apply_type(0x0091AB00, "FMOD_RESULT __thiscall func(FMOD__OutputSoftware* this, FMOD_MODE mode, FMOD_CODEC_WAVEFORMAT* waveformat, FMOD__Sample** sample)");
 	apply_type(0x0091AF20, "FMOD__Sample* __thiscall func(FMOD__Sample* this)");
 	apply_type(0x0091AF50, "FMOD_RESULT __thiscall func(FMOD__Sample* this, uint32_t offset, uint32_t length, void** ptr1, void** ptr2, uint32_t* len1, uint32_t* len2)");
 	apply_type(0x0091AF60, "FMOD_RESULT __thiscall func(FMOD__Sample* this, void* data)");

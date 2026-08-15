@@ -144,6 +144,10 @@ qsort 0040BE50 f end=0040C0F7
 memcpy 0040CB10 f end=0040CE75
 nullsub_1 0040D3B5 f
 FT_Stream_Pos 0041D190 f end=0041D19B type="FT_Long __stdcall func(FT_Stream stream)"
+std__basic_string__int8___Grow 0041D3B0 f end=0041D4B0
+std__basic_string__int8__assign 0041D680 f end=0041D766
+std__basic_string__int8__assign 0041D770 f end=0041D837
+std__string__constructor 0041D930 f end=0041D96D
 SFile__CloseArchive 00421720 f end=0042173A
 SFile__DisableSFileCheckDisk 00421750 f end=00421758
 SFile__EnableDirectAccess 00421760 f end=0042179B
@@ -153,6 +157,7 @@ SFile__GetBasePath 00421880 f end=004218A1 type="int32_t __stdcall func(char* bu
 SFile__GetDataPath 004218B0 f end=004218B6
 SFile__GetFileSize 004218C0 f end=00421948
 SFile__OpenArchive 00421950 f end=00421A05
+SFile__OpenPathAsArchive 00421A10 f end=00421A7B
 SFile__SetBasePath 00421A80 f end=00421AE5
 SFile__SetDataPath 00421AF0 f end=00421B4A
 SFile__SetDataPathAlternate 00421B50 f end=00421BAA
@@ -172,7 +177,10 @@ SFile__GetErrorDetails 00422150 f end=0042215F
 _SFileSetFileBlockEntryMD5 00422170 f end=0042219E
 SFile__Read 00422530 f end=004227D4
 SFile__Close 00422910 f end=004229AB
+std__string__constructor 00422CE0 f end=00422D10
 SFile__RebuildHash 00423D70 f end=00423DBD
+System_SFile2__AddDirectoryToHash 00424280 f end=00424607
+System_SFile2__BuildFileSystemHash 00424690 f end=0042477C
 System_SFile2__FindFile 00424780 f end=00424B0B
 SFile__FileExistsEx 00424B10 f end=00424B41
 SFile__OpenEx 00424B50 f end=00424E44
@@ -232,6 +240,8 @@ Blizzard__Streaming__IsStreamingMode 00428010 f end=0042802B
 Blizzard__File__IsDirectory 004281D0 f end=004281EB
 Blizzard__File__IsFile 004281F0 f end=0042820B
 Blizzard__File__SimpleGlob 00428210 f end=004282F2 type="bool __stdcall func(char* name, char* pattern)"
+Blizzard__Lock__Atomic__Increment 00428300 f end=0042830B
+Blizzard__Lock__EventSet 00428340 f end=00428351
 Blizzard__Lock__MutexEnter 004283B0 f end=004283BF
 Blizzard__Lock__MutexLeave 004283C0 f end=004283CF
 Blizzard__Memory__Free 00428480 f end=004284A4
@@ -240,6 +250,7 @@ Blizzard__String__FindExtension 00428600 f end=00428613
 Blizzard__String__FirstPathSeparator 00428640 f end=00428668
 Blizzard__String__Copy 00428670 f end=004286BB type="int32_t __stdcall func(char* dst, char* src, int32_t count)"
 Blizzard__String__Append 004286C0 f end=00428721 type="int32_t __stdcall func(char* dst, char* src, int32_t count)"
+Blizzard__String__Equal 00428730 f end=0042877E
 Blizzard__String__EqualI 00428780 f end=004287A8
 Blizzard__String__Length 004287E0 f end=004287FD
 Blizzard__String__MemCopy 004288E0 f end=00428917
@@ -290,6 +301,7 @@ Blizzard__Streaming__Manifests__TimeslotItem__HandleTag 00432720 f end=004327CA
 System_File__LoadFile 00432CF0 f end=00432D8B
 Blizzard__Log__Expand 00432F00 f end=0043321D
 Blizzard__String__JoinPath 00433510 f end=0043356B type="void __stdcall func(char* a1, int32_t a2, char* a3, char* a4)" ; Blizzard::String::JoinPath(char*, int, char const*, char const*)
+Blizzard__String__Duplicate 00433570 f end=0043358B
 System_File__FromNativeName 00433590 f end=00433650 type="void __stdcall func(uint8_t* buffer, uint32_t buffersize, char* str)"
 Blizzard__StringConversion_CodepageToUTF8__ToNative__constructor 00433650 f end=0043375A type="void __thiscall func(Blizzard__StringConversion_CodepageToUTF8__ToNative* this, char* str)" ; Blizzard::StringConversion_CodepageToUTF8::ToNative::ToNative(const char*)
 System_Thread__AllocateLocalStorage 00433760 f end=004337B7 type="bool __stdcall func(Blizzard__Thread__TLSSlot* slot, Blizzard__Thread__TLSDestructor destructorFn)"
@@ -305,7 +317,6 @@ System_File__LoadFile 00435B30 f end=00435BA4
 System_Time__Init 00435C80 f end=00435D74
 Blizzard__Time__GetTimestamp 00435D80 f end=00435E20
 Blizzard__Streaming__Transport__ReadFile 00437C20 f end=00437D15
-CSimpleAnim__GetScriptObjectParent 004383C0 f end=004383C4
 System_Streaming__HttpCallback__SetTimeOutValue 004383D0 f end=004383DD
 System_Log__DefaultPreamble 004383E0 f end=004384AD
 System_Log__DefaultDayHeader 004384B0 f end=00438555
@@ -313,11 +324,15 @@ System_Log__Reopen 00438560 f end=004387F7
 System_Log__FlushLogs 00438800 f end=004388CF
 System_Log__LogThread 004388D0 f end=004389B9
 Blizzard__Process__GetProcessDirectory 004389C0 f end=00438AC4
+std__string__append 00438F20 f end=00439022
+std__basic_string__int8__assign 00439030 f end=004390DB
 System_Streaming__HttpCallback__constructor 00439ED0 f end=00439F7F
 System_Streaming__HttpCallback__destructor 00439F80 f end=00439FD3
 System_Log__IVPrintf 00439FE0 f end=0043A06A
 System_Log__Init 0043A070 f end=0043A26F
+std__string__append 0043A270 f end=0043A375
 System_Streaming__HttpCallback__ReceivedData 0043B060 f end=0043B086
+std__vector___Xlen 0043C250 f end=0043C2B5
 System_Mopaq__Cache__CleanCache 004408B0 f end=00440910
 System_Mopaq__cache_write 004437D0 f end=00443A88
 System_Thread__AddToRegistry 00448260 f end=00448313 type="void __stdcall func(Blizzard__Thread__Thread thread)"
@@ -334,6 +349,10 @@ System_Log__Acquire 004519B0 f end=00451A29
 Blizzard__Log__Printf 00451BB0 f end=00451C0B
 Blizzard__Log__Flush 00451C10 f end=00451C3A
 System_Thread__InternalSetLocalStorage 00451C40 f end=00451C89 type="void __stdcall func(Blizzard__Thread__TLSSlot* slot, void* value)"
+System_MPQGlobals__GetArchiveList 00451D00 f end=00451D54
+System_MPQGlobals__GetArchiveLock 00451D60 f end=00451DB4
+System_MPQGlobals__GetMopaqGlobals 00451DC0 f end=00451E14
+System_MPQGlobals__GetMopaqGlobalsLock 00451E20 f end=00451E74
 Blizzard__Streaming__FileManifest__GetIsStreamingTrial 00453480 f end=00453507 type="bool __stdcall func()"
 _zlib_compress 004539A0 f end=00453AA4
 _zlib_decompress 00453B20 f end=00453BAF
@@ -342,8 +361,10 @@ alloc_wrap 00453BF0 f end=00453C3A
 free_wrap 00453C40 f end=00453C69
 LzmaDecompress 00453C70 f end=00453CA5
 Blizzard__Mopaq__SFileEnableDirectAccess 00453CB0 f end=00453D04
-System_SFile__ARCHIVEREC__RemoveInternalArchiveRe 00453D10 f end=00453E2F
+System_SFile__ARCHIVEREC__RemoveInternalArchiveRef 00453D10 f end=00453E2F
 System_SFile__OpenDirectPathAsArchive 00453E30 f end=00453FB6
+System_SFile__ConvertRelativePathName 00454070 f end=0045411E
+CheckFileExistsOnDisk 00454120 f end=004541AA
 Blizzard__File__GetLastErrorStack 00454210 f end=0045421E
 Blizzard__File__SetLastErrorStack 00454220 f end=0045424B type="void __stdcall func(Blizzard__Debug__ErrorStack err)" ; Blizzard::File::SetLastErrorStack(Blizzard::Debug::ErrorStackRecord*)
 Blizzard__File__AddToLastErrorStack 00454250 f end=004542A9 type="void __stdcall func(int32_t errCode, char* errStr, int32_t category)"
@@ -394,8 +415,12 @@ Blizzard__Mopaq__SFileReadFile 0045A4B0 f end=0045A607
 Blizzard__Mopaq__SFileLoadFile 0045B5A0 f end=0045B69E
 System_SFile__ARCHIVEREC__ConvertToNewHashTableFormat 0045B830 f end=0045B8B0
 System_SFile__ARCHIVEREC__InitializeTables 0045B8B0 f end=0045BEC4
+System_SFile__s_OpenArchive 0045BFE0 f end=0045C3CE
+Blizzard__Mopaq__SFileOpenArchive 0045C3D0 f end=0045C479
 Blizzard__Mopaq__SFileOpenArchive 0045C480 f end=0045C5BA
+Blizzard__Mopaq__SFileOpenArchiveView 0045C5C0 f end=0045C880
 Blizzard__Streaming__FileManifest__ReadDirectFileFromBuffer 0045D1E0 f end=0045D85E
+System_SFile__RebuildHashTable 0045DC50 f end=0045E080
 SFileCreateArchive 0045F700 f end=0045F7C5
 FindFileInOneArchive 0045F7D0 f end=0045FA0D
 GetFileBlockEntry 0045FA10 f end=0045FC1D
@@ -428,9 +453,17 @@ OsFileGetDownloadFolder 00461F70 f end=00461F91 type="char* __stdcall func()"
 OsCreateFile 00461FA0 f end=00461FFA type="HOSFILE __stdcall func(char* fileName, uint32_t desiredAccess, uint32_t shareMode, uint32_t createDisposition, uint32_t flagsAndAttributes, uint32_t extendedFileType)"
 OsFileList 00462000 f end=0046209C
 CGlueMgr__PatchDownloadExecuteCommand 00462190 f end=004621EB
+Tracker__TrackerHttpDataDownloadCallBack__Completed 004621F0 f end=004621FD
 Tracker__GetTrackerAddress 00462280 f end=00462308
 Tracker__SetLocale 00462310 f end=00462335
 Tracker__SetBuildnum 00462340 f end=0046234D
+Tracker__TrackerHttpDataDownloadCallBack__GetTimeout 00462570 f end=00462574
+Tracker__TrackerHttpDataDownloadCallBack__SetTimeOutValue 00462590 f end=0046259D
+Tracker__TrackerHttpDataDownloadCallBack__destructor 00462610 f end=00462631
+Tracker__TrackerHttpDataDownloadCallBack__ReceivedData 00462640 f end=00462659
+Tracker__ByteToHex 00462660 f end=00462722
+Tracker__BytesToHex 004627D0 f end=0046286A
+Tracker__Quote 00462870 f end=00462962
 Tracker__MakeTrackerURL 00462970 f end=00462E06
 _LzmaDecode 00463590 f end=00463FC6
 LzmaMemDecode 00463FD0 f end=00464085
@@ -793,6 +826,8 @@ SynthesizePaint 0047DC50 f end=0047DC8D
 EventForceIdleProcessing 0047DCA0 f end=0047DE09
 TSGrowableArray_SThread__New 0047DE50 f end=0047DE99
 IEvtSchedulerDestroy 0047DEA0 f end=0047E117
+CSBasePriorityQueue__Enqueue 0047E120 f end=0047E1C3
+CSBasePriorityQueue__Remove 0047E1D0 f end=0047E2E7
 SynthesizeDestroy 0047E2F0 f end=0047E3C5 type="void __usercall func(EvtContext* context@<esi>)"
 GetNextContext 0047E5A0 f end=0047E5FA type="EvtContext* __usercall func@<eax>(uint32_t hThread@<edi>)"
 EvtThread__destructor 0047E600 f end=0047E67D
@@ -839,6 +874,7 @@ InputObserverDestroy 00480E70 f end=00480E98
 EventDestroy_cleanup 00480EA0 f end=00480ED9
 TSGrowableArray_EvtTimer__ReallocData 00480EE0 f end=00480F70
 IEvtTimerGetNextTime 00480F70 f end=00480FCA
+TSGrowableArray_uint32__New 00480FD0 f end=00481030
 TSGrowableArray_EvtTimer__GrowToFit 00481080 f end=004810F3
 IEvtTimerDispatch 00481100 f end=00481289
 IEvtTimerKill 00481290 f end=0048138F
@@ -943,8 +979,10 @@ CRenderBatch__Clear 00485F00 f end=00485F35
 CSimpleTexture__LoadXML 00485F40 f end=00486B11 ; CSimpleTexture::LoadXML(XMLNode*, CStatus*)
 CSimpleFontString__UpdateString 00486B20 f end=00486E2A
 CSimpleFontString__OnFrameSizeChanged 00486E30 f end=00486FB8
+CRenderBatch__destructor 00486FC0 f end=00487084
 CSimpleFontString__SetSpacing 004870D0 f end=00487122
 CSimpleFontString__SetShadowColor 00487130 f end=00487158
+CRenderBatch__destructor 00487160 f end=0048718B
 CSimpleFontString__LoadXML 004873E0 f end=0048798A
 CSimpleRegion__SetVertexColor 00487A10 f type="void __thiscall func(CSimpleRegion* this, CImVector* color)"
 CSimpleRegion__GetVertexColor 00487AB0 f type="void __thiscall func(CSimpleRegion* this, CImVector* color)"
@@ -1284,6 +1322,7 @@ CSimpleScaleAnim__GetScale 004980D0 f end=004980EF
 CSimpleControlPoint__SetOffset 004981F0 f end=0049822B
 CSimplePathAnim__GetControlPoint 00498230 f end=00498251
 CSimplePathAnim__GetMaxControlPointOrder 00498260 f end=0049827D
+CSimpleAlphaAnim__SetChange 004982E0 f end=00498322
 FrameScript_Object__LoadFunction 00498370 f end=0049857B
 CSimpleAnimGroup__Finish 00498580 f end=0049859A
 CSimpleAnimGroup__SetInitialOffset 004985A0 f end=004985E7
@@ -2175,6 +2214,7 @@ SI2__PlaySpellFizzleSound 004CFF30 f end=004D0012
 SI2__PlayItemSound 004D0020 f end=004D008B
 SI2__PlayItemSound 004D0090 f end=004D0102
 SI2__UpdateTaxiSounds 004D0110 f end=004D032D
+GenerateWeaponSwingCombatSounds 004D04E0 f end=004D0540
 SI2__PlayParrySound 004D0540 f end=004D0657
 SI2__PlayWeaponSwooshSound 004D0720 f end=004D07AC
 SI2__PlaySheatheSound 004D07B0 f end=004D0850
@@ -2320,6 +2360,7 @@ CGlueMgr__CancelLogin 004D99E0 f end=004D99EF
 CGlueMgr__DeclineCharacter 004D9A40 f end=004D9BCE
 CGlueMgr__EnterWorld 004D9BD0 f end=004D9F4F
 CGlueMgr__AddChangedOptionWarning 004D9F50 f end=004D9FA5
+ClientServices__GetLoginServerType 004D9FE0 f end=004D9FFD
 CGlueMgr__AgreementsURLCallback 004DA040 f end=004DA086
 CGlueMgr__OnCharRenameResult 004DA090 f end=004DA189
 CGlueMgr__OnCharDeclineResult 004DA190 f end=004DA23D
@@ -2667,11 +2708,25 @@ CCharacterComponent__Prep 004EFED0 f end=004EFF09
 CCharacterComponent__CreateBaseTexture 004EFF10 f end=004EFF97
 CCharacterComponent__SetNextHairStyle 004F0490 f end=004F062B
 CCharacterComponent__SetPrevHairStyle 004F0630 f end=004F07CA
+CCharacterComponent__PasteFromSkin 004F07D0 f end=004F0899
+CCharacterComponent__PasteToSection 004F08A0 f end=004F0977
 CCharacterComponent__AllocComponent 004F0980 f end=004F09CC
+CCharacterComponent__RenderPrepAU 004F09D0 f end=004F0A27
+CCharacterComponent__RenderPrepAL 004F0A30 f end=004F0A87
+CCharacterComponent__RenderPrepHA 004F0A90 f end=004F0ACD
+CCharacterComponent__RenderPrepHU 004F0AD0 f end=004F0B6A
+CCharacterComponent__RenderPrepHL 004F0B70 f end=004F0C0A
+CCharacterComponent__RenderPrepTU 004F0C10 f end=004F0C94
+CCharacterComponent__RenderPrepTL 004F0CA0 f end=004F0CF7
+CCharacterComponent__RenderPrepLU 004F0D00 f end=004F0DAE
+CCharacterComponent__RenderPrepLL 004F0DB0 f end=004F0E39
+CCharacterComponent__RenderPrepFO 004F0E40 f end=004F0E7D
 CCharacterComponent__ProcessFinishedRequest 004F0E80 f end=004F0EE0
+CCharacterComponent__ProcessComponentRequest 004F0EE0 f end=004F0F70
 CCharacterComponent__CreateComponentFreeLists 004F0F70 f end=004F10DB
 CCharacterComponent__AllocComponentRequest 004F10E0 f end=004F1176
 CCharacterComponent__ProcessComponentFinishedList 004F1180 f end=004F12A6
+CCharacterComponent__ThreadProc 004F12B0 f end=004F149D
 CCharacterComponent__RenderPrepSections 004F14A0 f end=004F1514
 CCharacterComponent__RenderPrep 004F1520 f end=004F15DF
 CCharacterComponent__FreeComponent 004F16C0 f end=004F16E8
@@ -2950,6 +3005,7 @@ Script_ChannelSilenceAll 00501250 f end=005012E7
 Script_ChannelUnSilenceVoice 005012F0 f end=005013F6
 Script_ChannelUnSilenceAll 00501400 f end=00501497
 TSGrowableArray_PENDINGUSERLIST__ReallocData 005014A0 f end=005015F4
+PENDINGCHAT__destructor 00501710 f end=00501795
 CGChat__ClientExpectedSpamRecordsHandler 00501C70 f end=00501DA5
 Script_AddChatWindowChannel 00501DB0 f end=00501EF8
 Script_ResetChatWindows 00501F00 f end=00502264
@@ -3751,6 +3807,7 @@ Script_IsBNLogin 00530F20 f end=00530F58
 BattlenetUI__SendScriptEvent 005326D0 f end=005326F2
 BattlenetUI__QSortDisambiguateFriendListCB 00532800 f end=00532847
 CGxDevice__Caps 00532AF0 f end=00532AF7 type="CGxCaps* __thiscall func(CGxDevice* this)" ; public: class CGxCaps const & __thiscall CGxDevice::Caps(void)const
+BattlenetAPI_SetPresenceValue 00533600 f end=00533733
 BattlenetUI__AddToFriendList 00533D40 f end=00533F03
 BattlenetUI__UpdateAutoComplete 00533F10 f end=00533F9E
 BattlenetUI__QSortFriendListCB 00533FF0 f end=00534084
@@ -4194,7 +4251,13 @@ Script_KBSystem_GetServerNotice 00551FF0 f end=0055200C
 KnowledgeBase_RegisterScriptFunctions 00552010 f end=00552036
 KnowledgeBase_UnregisterScriptFunctions 00552040 f end=0055205F
 CKBIterator__GoToChild 00552060 f end=005520A7
+CKBSetup__SendSuccessEvent 00552100 f end=00552119
+CKBSetup__SendFailureEvent 00552120 f end=00552139
 CKBQuery__BeginLoading 00552140 f end=005522F3
+CKBQuery__SendSuccessEvent 00552300 f end=00552319
+CKBQuery__SendFailureEvent 00552320 f end=00552339
+CKBArticle__SendSuccessEvent 00552340 f end=00552359
+CKBArticle__SendFailureEvent 00552360 f end=00552379
 CKBSystem__Initialize 00552380 f end=00552395
 Script_KBSetup_GetSubCategoryCount 005523A0 f end=00552439
 Script_KBSetup_GetSubCategoryData 00552440 f end=0055257D
@@ -4455,6 +4518,10 @@ TSHashTable__KEYBINDING__InternalNewNode 00562700 f end=0056275B
 TSHashTable__OVERRIDEKEYBINDING__InternalNewNode 00562760 f end=005627BB
 TSHashTable__MODIFIEDCLICK__InternalNewNode 005627C0 f end=0056281B
 CGUIBindings__Shutdown 00562820 f end=00562861
+TSHashTable__KEYCOMMAND__New 00562870 f end=005628C5
+TSHashTable__KEYBINDING__New 005628D0 f end=00562925
+TSHashTable__KEYCOMMAND__New 00562930 f end=00562957
+TSHashTable__KEYBINDING__New 00562960 f end=00562987
 GetClickFrame 00562990 f end=00562B77
 CGUIBindings__CopyBindings 00562B80 f end=00562D5E
 CGUIBindings__FinishLoadBindings 00562D60 f end=00562DC7
@@ -7011,6 +7078,7 @@ CGCamera__SetDesiredVehiclePitchOffset 005FE8D0 f end=005FE90F
 CGCamera__SetVehicleExitZoomDistance 005FE920 f end=005FE937
 CGCamera__ClearVehicleExitZoomDistance 005FE940 f end=005FE948
 CGCamera__GetCollisionQueryFlags 005FEC50 f end=005FEC67
+C3Vector__Cross 005FEC70 f end=005FECAC
 CFacet__constructor 005FED80 f end=005FEDDC
 CSimpleCamera__FOV 005FEE70 f end=005FEE74
 CSimpleCamera__Forward 005FEE80 f end=005FEE9B
@@ -7611,6 +7679,7 @@ NETEVENTQUEUE__AddEvent 00633650 f end=0063372A type="void __thiscall func(NETEV
 NETEVENTQUEUE__destructor 00633730 f end=00633797 type="void __thiscall func(NETEVENTQUEUE* this)" ; NETEVENTQUEUE::~NETEVENTQUEUE()
 GetPhysicalDamageClassID 006337A0 f end=006337A6
 GetPhysicalDamageClassMask 006337B0 f end=006337BE
+ClientDBGetUnarmedWeapon 006337C0 f end=006337C9
 StaticDBLoadAll 006337D0 f end=0063478E ; 00005400
 TSGrowableArray_ResistancesRec__ReallocData 00634790 f end=00634820
 TSGrowableArray_ItemSubClassRec__ReallocData 00634820 f end=006348B0
@@ -9196,6 +9265,7 @@ TSGrowableArray_TSExplicitList_CGxShader__ReallocData 00688040 f end=00688197
 TSExplicitList_CGxShader__Clear 006881A0 f end=00688225
 CGxPool__Invalidate 00688230 f end=00688251 type="void __thiscall func(CGxPool* this)"
 CGxPool__Discard 00688260 f end=00688284
+CGxDevice__BufDestroy 00688290 f end=0068833C
 CGxDevice__PoolDestroy 00688340 f end=00688372 type="void __thiscall func(CGxDevice* this, CGxPool* pool)"
 TSHashTable__CGxShader__InternalDelete 00688380 f end=006883A2
 TSList_CGxShader__NewNode 006883B0 f end=0068842F
@@ -9259,13 +9329,20 @@ CGxDeviceOpenGl__DeviceReadDepths 0068C070 f end=0068C1E6
 CGxDeviceOpenGl__DeviceDestroyPoolAPI 0068C1F0 f end=0068C21E
 CGxDevice__NewD3d9Ex 0068C220 f end=0068C244 type="CGxDevice* __stdcall func()"
 CGxDevice__OpenGlAdapterFormats 0068C250 f end=0068C541
+CGxDeviceOpenGl__IDevSetFocus 0068C860 f end=0068C9A5
 CGxDeviceOpenGl__SetFormatMode 0068C9B0 f end=0068CA76
+CGxDeviceOpenGl__IDevRemoveGlContext 0068CA80 f end=0068CB3F
 CGxDeviceOpenGl__DeviceDestroy 0068CB40 f end=0068CBF5
 CGxDeviceOpenGl__DeviceSetBaseMipLevel 0068CC00 f end=0068CC1B
 CGxDeviceOpenGl__DeviceSetGamma 0068CC20 f end=0068CC54
 CGxDeviceOpenGl__DeviceSetGamma 0068CC60 f end=0068CC91
+CGxDeviceOpenGl__DeviceWindow 0068CCA0 f end=0068CCA7
+CGxDeviceOpenGl__ICreateWindow 0068CCB0 f end=0068CE40
+CGxDeviceOpenGl__DeviceCreatePbuffer 0068CE40 f end=0068CF20
+CGxDeviceOpenGl__WindowProcGl 0068D050 f end=0068D407
 CGxDeviceOpenGl__DeviceCreate 0068D610 f end=0068D6C6
 CGxDeviceOpenGl__DeviceSetFormat 0068D6D0 f end=0068D7AF
+CGxDeviceOpenGl__CapsWindowSizeInScreenCoords 0068D950 f end=0068DA04
 CGxDeviceOpenGl__DeviceCreate 0068DAA0 f end=0068DB37
 CGxDeviceD3d__IUnloadD3dLib 0068E140 f end=0068E174 type="void __stdcall func(HINSTANCE* hInstance, LPDIRECT3D9* d3dLib)" ; void CGxDeviceD3d::IUnloadD3dLib(HINSTANCE& d3dLib, LPDIRECT3D9& d3d)
 CGxDeviceD3d__ICreateD3dIB 0068E180 f end=0068E1E8 type="LPDIRECT3DINDEXBUFFER9 __thiscall func(CGxDeviceD3d* this, EGxPoolUsage usage, uint32_t size)" ; LPDIRECT3DINDEXBUFFER9 CGxDeviceD3d::ICreateD3dIB(EGxPoolUsage usage, uint32_t size)
@@ -9320,8 +9397,12 @@ CGxDeviceOpenGl__IStateSyncViewport 006920E0 f end=006921C7
 CGxDeviceOpenGl__IStateSyncEnables 006921D0 f end=00692233
 CGxDeviceOpenGl__IStateSyncScissorRect 006922C0 f end=00692398
 CGxDeviceOpenGl__BindTexture 0069D5D0 f end=0069D61D
+CGxDeviceOpenGl__ITexSetFlags 0069D620 f end=0069D71A
 CGxDeviceOpenGl__TexDestroy 0069D720 f end=0069D74A
 CGxDeviceOpenGl__ITexForceRecreation 0069D820 f end=0069D911
+CGxDeviceOpenGl__ITexDownload 0069D920 f end=0069DE4C
+CGxDeviceOpenGl__ITexMarkAsUpdated 0069DE60 f end=0069E118
+CGxDeviceOpenGl__ITexMarkAsUpdated 0069E120 f end=0069E136
 CGxDeviceOpenGl__SceneClear 0069E150 f end=0069E220
 CGxDeviceOpenGl__ScenePresent 0069E220 f end=0069E27A
 CGxDeviceOpenGl__IXformSetProjection 0069E280 f end=0069E410
@@ -9334,27 +9415,51 @@ CGxDeviceOpenGl__IShaderCreateVertex 0069EC10 f end=0069ED35
 CGxDeviceOpenGl__IVertexShaderPatch 0069ED50 f end=0069F266
 CGxDeviceOpenGl__IShaderCreate 0069F2D0 f end=0069F36F
 CGxDeviceOpenGl__IShaderDestroy 0069F370 f end=0069F3B0
+CGxDeviceOpenGl__IShaderCreate 0069F730 f end=0069F756
 CGxDeviceD3d__Sub69FAA0 0069FAA0 f end=0069FAFE type="int32_t __thiscall func(CGxDeviceD3d* this, D3DFORMAT format)"
 CGxDeviceD3d__ICreateD3dVB 0069FB00 f end=0069FB68 type="LPDIRECT3DVERTEXBUFFER9 __thiscall func(EGxPoolUsage usage, uint32_t size)"
 CGxDeviceD3d__CreatePoolAPI 0069FB70 f end=0069FBB8 type="int32_t __thiscall func(CGxDeviceD3d* this, CGxPool* pool)"
+CGxDeviceD3d9Ex__ISetPresentParms 0069FBC0 f end=0069FDA8
+CGxDeviceD3d9Ex__DeviceEvictResources 0069FDC0 f end=0069FE0E
 CGxDeviceD3d__ISetWindowFocus 0069FE10 f end=0069FE57 type="void __thiscall func(CGxDeviceD3d* this, int32_t focus)" ; UC (invented name)
+CGxDeviceD3d9Ex__DeviceSetBaseMipLevel 0069FE60 f end=0069FE7D
 CGxDeviceD3d__DeviceSetGamma 0069FE80 f end=0069FEC4 type="void __thiscall func(CGxDeviceD3d* this, CGxGammaRamp* ramp)"
 CGxDeviceD3d__DeviceWindow 0069FED0 f end=0069FED7 type="void* __thiscall func(CGxDeviceD3d* this)"
 CGxDeviceD3d__DeviceOverride 0069FF40 f end=0069FF7F type="void __thiscall func(CGxDeviceD3d* this, EGxOverride override, uint32_t value)"
 CGxDeviceD3d__PoolSizeSet 0069FF80 f end=0069FFCD type="void __thiscall func(CGxDeviceD3d* this, CGxPool* pool, uint32_t size)"
+CGxDeviceD3d9Ex__ICursorDraw 0069FFD0 f end=006A00B2
 CGxDeviceD3d__ICursorDestroy 006A00C0 f end=006A0102 type="void __thiscall func(CGxDeviceD3d* this)"
 CGxDeviceD3d__StereoGetConvergence 006A0110 f end=006A0117 type="float __thiscall func(CGxDeviceD3d* this)"
 CGxDeviceD3d__StereoGetSeparation 006A0120 f end=006A0127 type="float __thiscall func(CGxDeviceD3d* this)"
 CGxDeviceD3d__StereoEnabled 006A0130 f end=006A013D type="bool __thiscall func(CGxDeviceD3d* this)"
+CGxDeviceD3d9Ex__QueryCreate 006A0140 f end=006A018A
 CGxDeviceD3d__QueryDestroy 006A0190 f end=006A01C0 type="bool __thiscall func(CGxDeviceD3d* this, CGxQuery** query)"
+CGxDeviceD3d9Ex__QueryBegin 006A01C0 f end=006A0231
 CGxDeviceD3d__QueryEnd 006A0240 f end=006A0272 type="bool __thiscall func(CGxDeviceD3d* this, CGxQuery* query)"
+CGxDeviceD3d9Ex__QueryGetParam 006A0280 f end=006A030D
 CGxDeviceD3d__QueryGetData 006A0310 f end=006A035F type="bool __thiscall func(CGxDeviceD3d* this, CGxQuery* query, uint32_t* data)"
 CGxDeviceD3d__WindowProcD3d 006A0360 f end=006A0834 type="LRESULT __stdcall func(HWND hWnd, UINT uMsg, WPARAM wParam, LPARAM lParam)"
+WindowClassCreate 006A0840 f end=006A08C8
+CGxDeviceD3d9Ex__ICreateWindow 006A08D0 f end=006A0A98
+CGxDeviceD3d9Ex__ILoadD3dLib 006A0AA0 f end=006A0B33
+CGxDeviceD3d9Ex__ISetCaps 006A0B40 f end=006A1075
+CGxDeviceD3d9Ex__ICreateD3dDevice 006A1080 f end=006A12C7
+CGxDeviceD3d9Ex__DeviceSetRenderTarget 006A13A0 f end=006A1522
+CGxDeviceD3d9Ex__DeviceResolveDepthBuffer 006A1530 f end=006A157A
+CGxDeviceD3d9Ex__DeviceCopyTex 006A1580 f end=006A168E
 CGxDeviceD3d__IReleaseD3dQueries 006A1690 f end=006A16CC type="void __thiscall func(CGxDeviceD3d* this, int32_t freeQueries)"
 CGxDeviceD3d__DeviceReadPixels 006A16D0 f end=006A1930
 CGxDeviceD3d__DeviceReadDepths 006A1950 f end=006A19C4 type="void __thiscall func(CGxDeviceD3d* this, CiRect* rect, TSGrowableArray_float* depths)"
 CGxDeviceD3d9Ex__constructor 006A1A90 f end=006A1C24
 CGxDeviceD3d__IReleaseD3dPools 006A1C60 f end=006A1CDC type="void __thiscall func(CGxDeviceD3d* this, int32_t freePools)"
+CGxDeviceD3d9Ex__IReleaseD3d9ExResources 006A1CE0 f end=006A1DB3
+CGxDeviceD3d9Ex__DeviceWM 006A1DC0 f end=006A1F1D
+CGxDeviceD3d9Ex__IDestroyD3d9Ex 006A1F40 f end=006A203B
+CGxDeviceD3d9Ex__DeviceSetFormat 006A2040 f end=006A2158
+CGxDeviceD3d9Ex__DeviceDestroy 006A2160 f end=006A21E9
+CGxDeviceD3d9Ex__ICreateD3d9Ex 006A21F0 f end=006A22B2
+CGxDeviceD3d9Ex__DeviceCreate 006A22C0 f end=006A2391
+CGxDeviceD3d9Ex__DeviceCreate 006A23A0 f end=006A2407
 SetupPixelFormat 006A2410 f end=006A2632
 CGxDeviceD3d__ITexForceRecreation 006A2AA0 f end=006A2BA3
 CGxDeviceD3d__TexDestroy 006A2BB0 f end=006A2BF1 type="void __thiscall func(CGxDeviceD3d* this, CGxTex* texId)"
@@ -9399,18 +9504,48 @@ CGxDeviceD3d__IShaderReload 006A5D50 f end=006A5E07 type="void __thiscall func(C
 CGxDeviceD3d__IShaderCreate 006A5E10 f end=006A5E36 type="void __thiscall func(CGxDeviceD3d* this, CGxShader* shader)"
 CGxDeviceD3d__IReleaseD3dShaders 006A5E40 f end=006A5EEC type="void __thiscall func(CGxDeviceD3d* this, int32_t freeShaders)"
 CGxDevice__ITexWHDStartEnd 006A5EF0 f end=006A5FDF type="void __thiscall func(CGxDevice* this, CGxTex* texId, uint32_t* width, uint32_t* height, uint32_t* baseMip, uint32_t* mipCount)"
+CGxDeviceD3d9Ex__ITexUpload 006A63E0 f end=006A66BD
+CGxDeviceD3d9Ex__ITexForceRecreation 006A68F0 f end=006A6B1A
+CGxDeviceD3d9Ex__TexDestroy 006A6B20 f end=006A6BBD
+CGxDeviceD3d9Ex__ITexCreate 006A7070 f end=006A70F5
+CGxDeviceD3d9Ex__ITexMarkAsUpdated 006A7100 f end=006A715F
+CGxDeviceD3d9Ex__TexCopy 006A7160 f end=006A7266
+CGxDeviceD3d9Ex__TexStretch 006A7270 f end=006A73D9
+CGxDeviceD3d9Ex__ISceneBegin 006A73E0 f end=006A74A7
 CGxDeviceD3d__SceneClear 006A74B0 f end=006A7538 type="void __thiscall func(CGxDeviceD3d* this, uint32_t mask, CImVector color)"
+CGxDeviceD3d9Ex__ScenePresent 006A7610 f end=006A77B1
+CGxDeviceD3d9Ex__Draw 006A77C0 f end=006A78B6
+CGxDeviceD3d9Ex__ISetVertexBuffer 006A78C0 f end=006A7939
 CGxDeviceD3d__Sub6A7940 006A7940 f end=006A79F1 type="void __thiscall func(CGxDeviceD3d* this, uint32_t width, uint32_t height)"
+CGxDeviceD3d9Ex__IStateSetD3DDefaults 006A7A00 f end=006A7BD4
+CGxDeviceD3d9Ex__DsSet 006A7BE0 f end=006A7F49
+CGxDeviceD3d9Ex__ISetTexCoordIndex 006A80A0 f end=006A8111
+CGxDeviceD3d9Ex__ISetColorOp 006A8130 f end=006A818C
+CGxDeviceD3d9Ex__ISetAlphaOp 006A8190 f end=006A81EC
+CGxDeviceD3d9Ex__ISetMaterial 006A81F0 f end=006A833B
+CGxDeviceD3d9Ex__IStateSyncLights 006A8340 f end=006A8669
+CGxDeviceD3d9Ex__IStateSyncMaterial 006A8670 f end=006A87B6
+CGxDeviceD3d9Ex__IStateSyncXforms 006A87C0 f end=006A886E
+CGxDeviceD3d9Ex__ISetTexture 006A8870 f end=006A8A5B
+CGxDeviceD3d9Ex__ISetTexCoord 006A8A60 f end=006A8A8F
+CGxDeviceD3d9Ex__ISetTexGen 006A8A90 f end=006A8BCB
+CGxDeviceD3d9Ex__IRsSendToHw 006A8BD0 f end=006A9368
 TSGrowableArray_CGxDeviceD3d9Ex__GxVertexDecl__ReallocData 006A9440 f end=006A94D2
+CGxDeviceD3d9Ex__ICreateD3dVertexDecl 006A94E0 f end=006A9531
+CGxDeviceD3d9Ex__IStateSyncVertexPtrs 006A9620 f end=006A9854
+CGxDeviceD3d9Ex__IStateSync 006A9860 f end=006A9915
 CGxDeviceD3d__CapsWindowSizeInScreenCoords 006A9920 f end=006A99D4 type="void __thiscall func(CGxDeviceD3d* this, CRect* dst)"
 CGxDeviceD3d__IXformSetViewport 006A99E0 f end=006A9B35 type="void __thiscall func(CGxDeviceD3d* this)"
 CGxDeviceD3d__XformSetProjection 006A9B40 f end=006A9D88 type="void __thiscall func(CGxDeviceD3d* this, C44Matrix* matrix)"
+CGxDeviceD3d9Ex__IXformSetWorld 006A9D90 f end=006A9DF2
 CGxDeviceD3d__XformSetView 006A9E00 f end=006A9E09 type="void __thiscall func(CGxDeviceD3d* this, C44Matrix* matrix)"
+CGxDeviceD3d9Ex__IXformSetTex 006A9E10 f end=006A9FD5
 CGxDeviceD3d__IShaderConstantsFlush 006A9FE0 f end=006AA06D type="void __thiscall func(CGxDeviceD3d* this)"
 CGxDeviceD3d__IShaderCreatePixel 006AA070 f end=006AA0C5 type="void __thiscall func(CGxDeviceD3d* this, CGxShader* shader)"
 CGxDeviceD3d__IShaderCreateVertex 006AA0D0 f end=006AA125 type="void __thiscall func(CGxDeviceD3d* this, CGxShader* shader)"
 CGxDeviceD3d__ShaderCreate 006AA130 f end=006AA18A type="void __thiscall func(CGxDeviceD3d* this, CGxShader** shaders, EGxShTarget target, char* a3, char* a4, int32_t permutations)"
 CGxDeviceD3d__ShaderDestroy 006AA190 f end=006AA207 type="void __thiscall func(CGxDeviceD3d* this, CGxShader** shader)"
+CGxDeviceD3d9Ex__IBindPixelShader 006AA210 f end=006AA2E8
 CGxDeviceD3d__IBindVertexShader 006AA2F0 f end=006AA346 type="void __thiscall func(CGxDeviceD3d* this, CGxShader* vs)"
 CTgaFile__ColorMapEntryBytes 006AA350 f end=006AA379 ; UC
 CTgaFile__ColorMapBytes 006AA380 f end=006AA3B0
@@ -9488,6 +9623,7 @@ ClientConnection__constructor 006B0250 f end=006B02B5
 LogConnectionStatus 006B02C0 f end=006B06FB
 ClientConnection__Cleanup 006B0850 f end=006B086B
 ClientConnection__HandleLogoutResponse 006B08B0 f end=006B08FB
+ClientConnection__HandleLogoutAbortAck 006B0900 f end=006B0924
 ClientConnection__Disconnect 006B0940 f end=006B095E ; ClientConnection::Disconnect(DISCONNECT_REASON)
 nullsub_154 006B0960 f
 ClientServices__Connection 006B0970 f end=006B098A
@@ -9510,6 +9646,7 @@ ClientServices__GetSelectedRealmName 006B0DC0 f end=006B0DF0
 ClientServices__GetRealmList 006B0E10 f end=006B0EC2
 ClientServices__GetSelectedRealm 006B0ED0 f end=006B0EDF
 ClientServices__FileData 006B0EE0 f end=006B0EF7
+ClientServices__GetLoginServer 006B0F00 f end=006B0F28
 ClientServices__LaunchURL 006B0F30 f end=006B0F39
 ClientServices__GetErrorToken 006B0F40 f end=006B0F5E
 ClientServices__ValidDisconnect 006B0F60 f end=006B0F8F
@@ -9531,11 +9668,13 @@ ClientConnection__HandleDisconnect 006B12D0 f end=006B1311
 ClientConnection__HandleCantConnect 006B1320 f end=006B1383
 ClientConnection__Connect 006B1390 f end=006B1450 ; ClientConnection::Connect()
 ClientConnection__GetCharacterList 006B14C0 f end=006B1553 ; ClientConnection::GetCharacterList()
+ClientConnection__HandleCharacterCreate 006B15C0 f end=006B161A
 ClientServices__RequestCharacterCreate 006B1620 f end=006B1785
 ClientConnection__CharacterLogin 006B1790 f end=006B183F
 ClientServices__CharacterSetInGame 006B1840 f end=006B18B8
 ClientConnection__CharacterAbortLogout 006B18C0 f end=006B192C
 ClientServices__CharacterLogout 006B1930 f end=006B1A02
+ClientConnection__HandleCharacterDelete 006B1A10 f end=006B1A6A
 ClientServices__RequestCharacterDelete 006B1A70 f end=006B1B62
 nullsub_151 006B1B80 f
 nullsub_6 006B1B90 f
@@ -9545,15 +9684,18 @@ ClientServices__GetClientStamp 006B1C70 f end=006B1DFE
 ClientServices__LoginServerStatus 006B1E00 f end=006B1EE9
 TSGrowableArray_Grunt__CdKey__Info__ReallocData 006B1EF0 f end=006B1F7F
 ConsoleCommand_Logout 006B2030 f end=006B2064
+ClientConnection__HandleCharacterLoginFailed 006B2070 f end=006B2157
 ClientConnection__HandleLogoutComplete 006B2180 f end=006B21E6
 ClientServices__CharacterForceLogout 006B21F0 f end=006B21FA
 ClientServices__Initialize 006B2200 f end=006B22A0
 ClientServices__Report 006B22A0 f end=006B2A36
+TSGrowableArray_Grunt__CdKey__Info__New 006B2A40 f end=006B2A8B
 ClientServices__Logon 006B2A90 f end=006B2CC9
 ClientServices__SetSelectedRealmInfo 006B2CF0 f end=006B2DED
 ClientServices__SelectRealm 006B2DF0 f end=006B2E2C
 ClientServices__ConnectToSelectedServer 006B2E30 f end=006B2EAC
 ClientServices__GetRealmInfoByIndex 006B2EB0 f end=006B2F12
+ClientServices__GetCdKeys 006B2F20 f end=006B2F5B
 ClientServices__JoinRealmResult 006B3070 f end=006B318F
 FriendList__constructor 006B3190 f end=006B323E
 FriendList__destructor 006B3240 f end=006B3277
@@ -9611,6 +9753,7 @@ FriendList__AddOrDelVoiceIgnore 006B6130 f end=006B62BD
 FriendList__AddVoiceIgnore 006B62C0 f end=006B6401
 FriendList__DelVoiceIgnore 006B6410 f end=006B6488
 FriendList__IgnoreRemoved 006B6490 f end=006B653A
+FriendList__IgnoreRemove 006B6540 f end=006B662B
 FriendListNameCallbackWithSort 006B6760 f end=006B68A1
 Script_AddFriend 006B6AF0 f end=006B6B44
 Script_SendWho 006B6B50 f end=006B6BA0
@@ -9927,6 +10070,7 @@ OnSpellDispelLog 006CE3B0 f end=006CE3C9
 CGPlayer_C__PlayerShutdownMessageHandlers 006CE480 f end=006CEAF0
 CGPlayer_C__GetNewContinentID 006CEAF0 f end=006CEAF5
 CGPlayer_C__CanDualWield 006CEB00 f end=006CEB0C
+CGPlayer_C__GetLootItem 006CEB80 f end=006CEBA9
 CGPlayer_C__OnLootMoneyNotify 006CECA0 f end=006CED79
 CGPlayer_C__OnLootItemNotify 006CED80 f end=006CEDCF
 CGPlayer_C__ClearLootingObject 006CEDD0 f end=006CEDE7
@@ -10059,6 +10203,7 @@ CGPlayer_C__StartTaxiExpress 006D6430 f end=006D64D4
 CGPlayer_C__GetClientStandState 006D64E0 f end=006D6515
 SoulStoneCompare 006D6560 f end=006D6640
 CGPlayer_C__GetSoulstone 006D6640 f end=006D6655
+CGPlayer_C__GetAttackSkillRank 006D6660 f end=006D66D8
 CGPlayer_C__OnLevelChange 006D66E0 f end=006D6720
 CGPlayer_C__ReportBagItemSubtypeMismatch 006D6720 f end=006D67D2
 CGPlayer_C__StartGiftWrap 006D67E0 f end=006D6813
@@ -10166,6 +10311,8 @@ CGPlayer_C__HideCloak 006DD1B0 f end=006DD262
 CGPlayer_C__OnRenamePetition 006DD270 f end=006DD353
 GuildCharterTurnInCallback 006DD360 f end=006DD392
 CGPlayer_C__TurnInGuildCharter 006DD3A0 f end=006DD62B
+GuildCharterTurnInCallback 006DD630 f end=006DD67B
+CGPlayer_C__TurnInGuildCharter 006DD680 f end=006DD9D3
 CGPlayer_C__SendTextEmote 006DD9E0 f end=006DDBAF
 CGPlayer_C__HandleInteraction 006DDBB0 f end=006DE130
 CGPlayer_C__UnitIsTrivial 006DE130 f end=006DE1C0
@@ -10674,6 +10821,7 @@ CMissile__CallMotionScriptFunction 00700350 f end=0070054E
 CMissile__ApplyMotionScriptFunctionTranslation 00700550 f end=007006FF
 CMissile__BeginWaitingForModelFX 00700700 f end=0070087F
 CMissile__InitializeTrajectory 00700880 f end=00700C7B
+TSGrowableArray_uint64__Set 00700C80 f end=00700CEE
 TSGrowableArray_SpellCastTargetPoint__SetCount 00700CF0 f end=00700E1C
 CMissile__HitTargetAreaEffect 00700E20 f end=00701228
 CMissile__ComputeModelMatrix 00701230 f end=007015CE
@@ -10867,7 +11015,9 @@ CGGameObject_C_Type_DestructibleBuilding__AmbientSequenceFinishedHandler 0070B87
 CGGameObject_C_Type_DestructibleBuilding__MovedDoodadSequenceHandler 0070B8B0 f end=0070B90C
 CGGameObject_C__Animate 0070B930 f end=0070B951
 CGGameObject_C__ShouldRender 0070B960 f end=0070B993
+CGGameObject_C__GetBaseAlpha 0070B9A0 f end=0070B9AD
 CGGameObject_C__GetPropertyValue 0070B9B0 f end=0070B9D3
+CGGameObject_C__ShouldFadeIn 0070B9E0 f end=0070B9F1
 CGGameObject_C__CanUse 0070BA00 f end=0070BA0D
 CGGameObject_C__CanUseNow 0070BA10 f end=0070BA24
 CGGameObject_C__CheckRange 0070BA30 f end=0070BA3D
@@ -12697,6 +12847,7 @@ CWorldScene__CullChunks 00799D40 f end=00799F71
 CWorldScene__CullMapObjDefGroups 0079A160 f end=0079A259
 CWorldScene__CullSortTable 0079A790 f end=0079A861
 CWorldScene__Render 0079A870 f end=0079ADBB
+CAaBspDigestCache__GenerateDigest 0079AE80 f end=0079B069
 CAaBsp__constructor 0079B070 f end=0079B0C8
 CAaBsp__Free 0079B0D0 f end=0079B15D
 CAaBspDigestCache__constructor 0079B160 f end=0079B1B6
@@ -14118,6 +14269,7 @@ TSGrowableArray_M2Element__ReallocData 0081CDC0 f end=0081CE57
 CM2Scene__AnimateThread 0081CE70 f end=0081CF14 ; CM2Scene::AnimateThread(void*)
 CM2Scene__ComputeRayDirAndLen 0081CF20 f end=0081CFE5
 CM2Scene__SphereTestModels 0081CFF0 f end=0081D2B1
+CM2Scene__HitTestFacets 0081D510 f end=0081D678
 CM2Scene__HitTestGeometry 0081DAF0 f end=0081DD4B
 CM2Scene__HitTestCollision 0081DD50 f end=0081DF0E
 CM2Scene__EndHitTest 0081DF10 f end=0081E10B
@@ -14202,6 +14354,7 @@ CM2Model__DetachFromParent 008274F0 f end=00827553
 CM2Model__DetachAllChildrenById 00827560 f end=008275E9 ; CM2Model::DetachAllChildrenById(unsigned int)
 CM2Model__HasEvent 008275F0 f end=0082766F
 CM2Model__GetEventPivot 008276F0 f end=00827774
+CM2Model__GetEventSequenceTime 00827780 f end=008278D2
 CM2Model__HasCamera 008278E0 f end=00827951
 CM2Model__GetCameraById 00827960 f end=008279E3 ; CM2Model::GetCameraById(unsigned int)
 CM2Model__SetEmittersEnabled 008279F0 f end=00827A88
@@ -15323,6 +15476,7 @@ ComSat__Network__Session__Send 00885F20 f end=00885FBB
 ComSat__Network__Session__Work 00885FC0 f end=00886024
 ComSat__Network__Session__Resolve 00886030 f end=008860AB
 ComSat__Network__Session__constructor 00886110 f end=00886165
+ComSat__Network__Session__destructor 00886170 f end=00886229
 ComSat__Network__Session__Remove 00886230 f end=008862F2
 ComSat__Network__Session__LocalAdd 00886300 f end=00886379
 ComSat__Network__Session__Add 00886380 f end=008865FC
@@ -15392,6 +15546,8 @@ fread 0088CE11 f end=0088CE2C type="void __stdcall func(void* param_1, size_t pa
 floor 0088CE30 f end=0088CF51 type="double __stdcall func(double X)"
 _CIpow 0088D0C0 f end=0088D114 type="double __usercall func@<st0>(double x@<st0>, uint64_t y@<st1>)" ; Calculates x raised to the y power based on the top values in the stack.
 strtod 0088E9C1 f end=0088E9D4 type="double __stdcall func(char* str, char** endptr)"
+_String_base___Xlen 00895D23 f end=00895D62
+_String_base___Xran 00895D62 f end=00895DA1
 _SPIRIT_IP_MR_V3_1_GenerateTables 00896100 f end=00896120
 _SPIRIT_IP_MR_V3_1_Init 00896120 f end=0089617A
 _SPIRIT_IP_MR_V3_1_Encode 00896180 f end=0089620B
@@ -16256,7 +16412,7 @@ FMOD__SystemI__playSound 008D61A0 f end=008D6376 type="FMOD_RESULT __thiscall fu
 FMOD__SystemI__setRecordDriver 008D6380 f end=008D63C7 type="FMOD_RESULT __thiscall func(FMOD__SystemI* this, int32_t recorddriver)"
 FMOD__SystemI__recordStart 008D63D0 f end=008D65DF type="FMOD_RESULT __thiscall func(FMOD__SystemI* this, FMOD__SoundI* sound, bool loop)"
 FMOD__SystemI__update3DReverbs 008D65E0 f end=008D67C7 type="FMOD_RESULT __thiscall func(FMOD__SystemI* this)"
-FMOD__SystemI__createSoundInternal 008D67D0 f end=008D87E8 type="FMOD_RESULT __thiscall func(FMOD__SystemI* this, char* name_or_data, FMOD_MODE mode, FMOD_CREATESOUNDEXINFO* exinfo, bool calledfromasync, FMOD__SoundI** sound)"
+FMOD__SystemI__createSoundInternal 008D67D0 f end=008D87E8 type="FMOD_RESULT __thiscall func(FMOD__SystemI* this, char* name_or_data, FMOD_MODE mode_in, FMOD_CREATESOUNDEXINFO* exinfo, bool calledfromasync, FMOD__SoundI** sound)"
 FMOD__SystemI__constructor 008D8A10 f end=008D8FC3 type="FMOD__SystemI* __thiscall func(FMOD__SystemI* this)"
 FMOD__SystemI__update 008D8FD0 f end=008D91C5 type="FMOD_RESULT __thiscall func(FMOD__SystemI* this)"
 FMOD__SystemI__createSound 008D91D0 f end=008D9517 type="FMOD_RESULT __thiscall func(FMOD__SystemI* this, char* name_or_data, FMOD_MODE mode_in, FMOD_CREATESOUNDEXINFO* exinfo, FMOD__SoundI** sound)"
@@ -16732,7 +16888,7 @@ FMOD__PluginFactory__registerDSP 008F3A30 f end=008F3B5C type="FMOD_RESULT __thi
 FMOD__PluginFactory__registerOutput 008F3B60 f end=008F3CF5 type="FMOD_RESULT __thiscall func(FMOD__PluginFactory* this, FMOD_OUTPUT_DESCRIPTION_EX* description, FMOD_PLUGINTYPE* plugintype, int32_t* handle)"
 FMOD__PluginFactory__getNumCodecs 008F3D00 f end=008F3D4B type="FMOD_RESULT __thiscall func(FMOD__PluginFactory* this, int32_t* numcodecs)"
 FMOD__PluginFactory__getNumDSPs 008F3D50 f end=008F3D9B type="FMOD_RESULT __thiscall func(FMOD__PluginFactory* this, int32_t* numdsps)"
-FMOD__PluginFactory__getNumOutputs 008F3DA0 f end=008F3DEB type="FMOD_RESULT __thiscall func(FMOD__PluginFactory* this, int* numoutputs)"
+FMOD__PluginFactory__getNumOutputs 008F3DA0 f end=008F3DEB type="FMOD_RESULT __thiscall func(FMOD__PluginFactory* this, int32_t* numoutputs)"
 FMOD__PluginFactory__getCodec 008F3DF0 f end=008F3E55 type="FMOD_RESULT __thiscall func(FMOD__PluginFactory* this, int32_t handle, FMOD_CODEC_DESCRIPTION_EX** codecdesc)"
 FMOD__PluginFactory__getDSP 008F3E60 f end=008F3EC5 type="FMOD_RESULT __thiscall func(FMOD__PluginFactory* this, int32_t handle, FMOD_DSP_DESCRIPTION_EX** dspdesc)"
 FMOD__PluginFactory__getOutput 008F3ED0 f end=008F3F35 type="FMOD_RESULT __thiscall func(FMOD__PluginFactory* this, int32_t index, FMOD_OUTPUT_DESCRIPTION_EX** handle)"
@@ -17121,7 +17277,7 @@ FMOD__OutputSoftware__init 0091A930 f end=0091AA17 type="FMOD_RESULT __thiscall 
 FMOD__OutputSoftware__release 0091AA20 f end=0091AA6C type="FMOD_RESULT __thiscall func(FMOD__OutputSoftware* this)"
 comdat_folded_fmod_output_getSampleMaxChannelsCallback 0091AA70 f end=0091AA78 type="int32_t __stdcall func(FMOD_OUTPUT_STATE* output, FMOD_MODE mode, FMOD_SOUND_FORMAT format)"
 FMOD__OutputSoftware__constructor 0091AA80 f end=0091AAF3 type="FMOD__OutputSoftware* __thiscall func(FMOD__OutputSoftware* this)"
-FMOD__OutputSoftware__createSample 0091AB00 f end=0091AE4D type="FMOD_RESULT __stdcall func(FMOD__OutputSoftware* this, FMOD_CODEC_WAVEFORMAT* waveformat, FMOD__Sample** sample)" ; first argument (FMOD_MODE mode) seems to be missing here; perhaps optimized out?
+FMOD__OutputSoftware__createSample 0091AB00 f end=0091AE4D type="FMOD_RESULT __thiscall func(FMOD__OutputSoftware* this, FMOD_MODE mode, FMOD_CODEC_WAVEFORMAT* waveformat, FMOD__Sample** sample)"
 FMOD__Sample__constructor 0091AF20 f end=0091AF43 type="FMOD__Sample* __thiscall func(FMOD__Sample* this)"
 FMOD__Sample__lockInternal 0091AF50 f end=0091AF58 type="FMOD_RESULT __thiscall func(FMOD__Sample* this, uint32_t offset, uint32_t length, void** ptr1, void** ptr2, uint32_t* len1, uint32_t* len2)"
 FMOD__Sample__setBufferData 0091AF60 f end=0091AF68 type="FMOD_RESULT __thiscall func(FMOD__Sample* this, void* data)"
@@ -18043,6 +18199,7 @@ CSimpleEditBox__GrowText 00962F20 f end=00962F8D
 CSimpleEditBox__DeleteSubstring 00962F90 f end=0096313E ; DeleteSubString(int, int, int)
 CSimpleEditBox__HighlightText 00963140 f end=009631A0 ; HighlightText(int, int)
 CSimpleEditBox__ExtendHighlight 009631A0 f end=0096325D
+CSimpleEditBox__DeleteHighlight 00963260 f end=009632CC
 CSimpleEditBox__CopyToClipboard 009632D0 f end=0096334C
 CSimpleEditBox__SetCursorPosition 00963350 f end=0096338A
 CSimpleEditBox__CreateClauseHighlight 00963570 f end=00963604
@@ -18050,6 +18207,9 @@ CSimpleEditBox__UpdateClauseInfo 009636A0 f end=00963735
 CSimpleEditBox__UpdateSizes 00963740 f end=00963946
 CSimpleEditBox__Delete 00963950 f end=009639AA
 CSimpleEditBox__DeleteForward 009639B0 f end=00963A04
+CSimpleEditBox__DeleteForwardWord 00963A10 f end=00963B04
+CSimpleEditBox__DeleteBackward 00963B10 f end=00963B60
+CSimpleEditBox__DeleteBackwardWord 00963B60 f end=00963C58
 CSimpleEditBox__DeleteToStart 00963C60 f end=00963C8B
 CSimpleEditBox__DeleteToEnd 00963C90 f end=00963CC2
 CSimpleEditBox__AddHistoryLine 00964690 f end=0096471E
@@ -18713,6 +18873,7 @@ CParticleEmitter__DecRef 009822F0 f end=0098230E
 C4Quaternion__constructor 00982340 f end=009823FB
 C4Quaternion__Slerp 00982460 f end=0098256C ; C4Quaternion::Slerp(float, C4Quaternion const&, C4Quaternion const&)
 C4Quaternion__Nlerp 00982630 f end=0098269F ; C4Quaternion::Nlerp(float, C4Quaternion const&, C4Quaternion const&)
+C4Quaternion__FromRotationMatrixInv 009827B0 f end=009828A8
 C4Quaternion__FromRotationMatrix 00982910 f end=00982943
 C3Vector__C3Vector 00982950 f end=0098296C
 C3Vector__constructor 00982970 f end=009829AD ; C3Vector::C3Vector(CImVector const&)
@@ -19639,8 +19800,10 @@ Battlenet__TumorManager__Create 009C0A10 f end=009C0AE7
 Battlenet__Teardown 009C0D20 f end=009C0D2B
 Battlenet__Tumor__AllocTendrilId 009C0D30 f end=009C0D93
 Battlenet__Tumor__Process 009C0DA0 f end=009C0DD2
+Battlenet__Tumor__Subscribe 009C1190 f end=009C11B7
 Battlenet__Tumor__AllocAdapter 009C11C0 f end=009C1250
 Battlenet__Tumor__AllocEventAdapter 009C1250 f end=009C12E6
+Battlenet__Tumor__RemoveTendril 009C12F0 f end=009C13F3
 Battlenet__Tumor__Resolved 009C1520 f end=009C155A
 Battlenet__Tumor__Connected 009C1560 f end=009C1585
 Battlenet__Tumor__Disconnected 009C1590 f end=009C15C6

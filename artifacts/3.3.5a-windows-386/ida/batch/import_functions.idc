@@ -598,7 +598,6 @@ static import_functions() {
 	set_func_cmt(0x008E4A90, "FMOD::DSPI::getSystemObject, FMOD::ChannelGroupI::getDSPHead", 0);
 	set_func_cmt(0x008E5250, "known names Script_ToggleTris, CLayoutFrame::IsAttachmentOrigin()", 0);
 	set_func_cmt(0x00919720, "TODO confirm this", 0);
-	set_func_cmt(0x0091AB00, "first argument (FMOD_MODE mode) seems to be missing here; perhaps optimized out?", 0);
 	set_func_cmt(0x00921A00, "This can be any method that sets the first object member to 0/nullptr e.g. SSyncObject::SSyncObject", 0);
 	set_func_cmt(0x00922B00, "FMOD::OutputPolled* this = this - 0x270", 0);
 	set_func_cmt(0x00923D50, "TODO confirm this", 0);
