@@ -351,7 +351,6 @@ static import_data_types() {
 	apply_type(0x0041CF6F, "undefined4 __stdcall func()");
 	apply_type(0x0041CF9F, "undefined4 __stdcall func()");
 	apply_type(0x0041CFCF, "undefined4 __stdcall func()");
-	apply_type(0x0041CFFF, "undefined4 __stdcall func()");
 	apply_type(0x0041D190, "FT_Long __stdcall func(FT_Stream stream)");
 	apply_type(0x0041D420, "undefined* __stdcall func()");
 	apply_type(0x0041D4B0, "void __stdcall func()");
