@@ -38,6 +38,7 @@ static import_symbols() {
 	set_name(0x00402410, "BatchDoodadsCallback");
 	set_name(0x00402470, "BatchParticlesCallback");
 	set_name(0x004024D0, "ForceAdditiveParticleSortCallback");
+	set_name(0x00402530, "SetDefaults");
 	set_name(0x00402670, "AsyncFileReadThreadSleepCallback");
 	set_name(0x00402690, "AsyncFileReadHandlerTimeoutCallback");
 	set_name(0x004026B0, "AsyncFileInitialize");
@@ -938,7 +939,7 @@ static import_symbols() {
 	set_name(0x00482A40, "GxDraw");
 	set_name(0x00482AF0, "CScriptObject__IsA");
 	set_name(0x00482B10, "CScriptObject__IsA@2");
-	set_name(0x00482B40, "CScriptRegion__GetScriptObjectParen");
+	set_name(0x00482B40, "CScriptRegion__GetScriptObjectParent");
 	set_name(0x00482B50, "CScriptRegion__IsA");
 	set_name(0x00482B80, "CScriptRegion__IsA@2");
 	set_name(0x00482C20, "CSimpleRegion__Hide");
@@ -2049,6 +2050,7 @@ static import_symbols() {
 	set_name(0x004C12B0, "CameraSetCoord");
 	set_name(0x004C1360, "CameraSetFloat");
 	set_name(0x004C1510, "CRndSeed__SetSeed");
+	set_name(0x004C1830, "operator_ne__C44Matrix_C44Matrix");
 	set_name(0x004C1930, "C44Matrix__Determinant");
 	set_name(0x004C1B30, "C44Matrix__Translate");
 	set_name(0x004C1B90, "C44Matrix__Scale");
@@ -3047,7 +3049,11 @@ static import_symbols() {
 	set_name(0x005012F0, "Script_ChannelUnSilenceVoice");
 	set_name(0x00501400, "Script_ChannelUnSilenceAll");
 	set_name(0x005014A0, "TSGrowableArray_PENDINGUSERLIST__ReallocData");
+	set_name(0x005016B0, "THROTTLEDCHAT__destructor");
 	set_name(0x00501710, "PENDINGCHAT__destructor");
+	set_name(0x00501800, "ChatWindowInfo__Init");
+	set_name(0x005019D0, "ChatWindowInfo__Clear");
+	set_name(0x00501A70, "ChatWindowInfo__AddChannel");
 	set_name(0x00501C70, "CGChat__ClientExpectedSpamRecordsHandler");
 	set_name(0x00501DB0, "Script_AddChatWindowChannel");
 	set_name(0x00501F00, "Script_ResetChatWindows");
@@ -3286,6 +3292,9 @@ static import_symbols() {
 	set_name(0x00512730, "GuildShowOfflineCallback");
 	set_name(0x00512770, "ShowClassColorInNameplateCallback");
 	set_name(0x005127A0, "SetCalendarFilterCVarCallback");
+	set_name(0x00512830, "AutoCompleteOptionSortMoreRecentFirstCVarCallback");
+	set_name(0x00512850, "AutoCompleteOptionCompleteWhenEditingFromCenterCVarCallback");
+	set_name(0x00512870, "AutoCompleteOptionUseContextCVarCallback");
 	set_name(0x00512890, "SaveGameCVarsCallback");
 	set_name(0x00512920, "UpdateAllPortraits");
 	set_name(0x005129F0, "CGGameUI__IsPartyMember");
@@ -3340,6 +3349,7 @@ static import_symbols() {
 	set_name(0x00513A00, "CGGameUI__SetLastEnchantSpellID");
 	set_name(0x00513A10, "CGGameUI__SetLastItemSpellTarget");
 	set_name(0x00513A30, "CGGameUI__SetRepopTimeLeft");
+	set_name(0x00513A80, "CGGameUI__SetCorpseReclaimDelay");
 	set_name(0x00513AD0, "CGGameUI__SetInstanceBootTime");
 	set_name(0x00513B20, "CGGameUI__SetInstanceLockTime");
 	set_name(0x00513BF0, "CGGameUI__SetSummonRequest");
@@ -3452,10 +3462,12 @@ static import_symbols() {
 	set_name(0x00517D20, "Script_DeclineLevelGrant");
 	set_name(0x00517D30, "Script_IsThreatWarningEnabled");
 	set_name(0x00517D70, "Script_CanMapChangeDifficulty");
+	set_name(0x00517E00, "PlacedFrameCallback");
 	set_name(0x00518280, "PlaceFrame");
 	set_name(0x005186A0, "CGGameUI__ResetCamera");
 	set_name(0x00518870, "CGGameUI__StopMovie");
 	set_name(0x00518920, "PrintTaintEvent");
+	set_name(0x00518B60, "SetUiScaleCallback");
 	set_name(0x00518BD0, "CGGameUI__UnitHighlightsCVarCallback");
 	set_name(0x00518CE0, "CGGameUI__GetRaidMemberPet");
 	set_name(0x00518D50, "CGGameUI__ClearInteractTarget");
@@ -3625,6 +3637,7 @@ static import_symbols() {
 	set_name(0x00523530, "CGGameUI__NextCinematicInternal");
 	set_name(0x005235B0, "CGGameUI__StartMovie");
 	set_name(0x00523640, "CGGameUI__CloseLoot");
+	set_name(0x005237E0, "SetUseUiScaleCallback");
 	set_name(0x00523900, "CGGameUI__OnItemPush");
 	set_name(0x00523DB0, "CGGameUI__SetCorpseLocation");
 	set_name(0x00523E80, "CGGameUI__GetCorpseLocation");
@@ -3735,6 +3748,7 @@ static import_symbols() {
 	set_name(0x0052B470, "Script_RegisterForSave");
 	set_name(0x0052B4E0, "Script_RegisterForSavePerCharacter");
 	set_name(0x0052B550, "CGGameUI__InitializeGame");
+	set_name(0x0052BB10, "CGPartyInfo__OnInstanceSave");
 	set_name(0x0052BC10, "CGPartyInfo__ShutdownGame");
 	set_name(0x0052BC50, "CGPartyInfo__GetMember");
 	set_name(0x0052BC80, "CGPartyInfo__SetLeader");
@@ -3930,6 +3944,7 @@ static import_symbols() {
 	set_name(0x0053B170, "BattlenetUI__Init");
 	set_name(0x0053B370, "BattlenetUI__EnterRealm");
 	set_name(0x0053B3E0, "BattlenetUI__EnterRealm@2");
+	set_name(0x0053B3F0, "CGSpellBook__ClearPetSpells");
 	set_name(0x0053B410, "CGSpellBook__GetCompanionType");
 	set_name(0x0053B440, "CGSpellBook__SendCompanionUpdate");
 	set_name(0x0053B480, "CGSpellBook__UpdateSelection");
@@ -3992,6 +4007,7 @@ static import_symbols() {
 	set_name(0x0053EFA0, "TSGrowableArray_TSExplicitList_SPELLSBYNAME__ReallocData");
 	set_name(0x0053F160, "TSExplicitList_SPELLSBYNAME__Clear");
 	set_name(0x0053F1F0, "CGSpellBook__InitializeGame");
+	set_name(0x0053F290, "CGSpellBook__ShutdownGame");
 	set_name(0x0053F3B0, "TSHashTable__SPELLBYNAME__HASHKEY_UTF8I__Ptr");
 	set_name(0x0053F440, "TSGrowableArray_TSExplicitList_SPELLSBYNAME__SetCount");
 	set_name(0x0053F550, "CGSpellBook__DelSpellFromNameCache");
@@ -4351,6 +4367,7 @@ static import_symbols() {
 	set_name(0x00553F50, "Script_SetLFGComment");
 	set_name(0x00553F90, "Script_GetLFGQueueStats");
 	set_name(0x00554160, "Script_LeaveLFG");
+	set_name(0x00554170, "CGLookingForGroup__GetLFGProposal");
 	set_name(0x00554370, "Script_GetLFGProposal");
 	set_name(0x00554380, "CGLookingForGroup__GetLFGProposalEncounter");
 	set_name(0x00554440, "Script_GetLFGProposalEncounter");
@@ -4423,6 +4440,7 @@ static import_symbols() {
 	set_name(0x00558D70, "LFG_SLOT_INFO__destructor");
 	set_name(0x00558ED0, "CGLookingForGroup__JoinLFGSearch");
 	set_name(0x00558F90, "CGLookingForGroup__LeaveLFGSearch");
+	set_name(0x00559050, "CGLookingForGroup__ReadLFGPlayer");
 	set_name(0x00559310, "CGLookingForGroup__JoiningParty");
 	set_name(0x00559400, "Script_SearchLFGJoin");
 	set_name(0x005594E0, "Script_SearchLFGLeave");
@@ -4514,6 +4532,8 @@ static import_symbols() {
 	set_name(0x0055FFD0, "TSGrowableArray_TSExplicitList_OVERRIDEKEYBINDING__SetCount");
 	set_name(0x005600E0, "TSGrowableArray_TSExplicitList_MODIFIEDCLICK__SetCount");
 	set_name(0x005601F0, "TSGrowableArray_TSExplicitList_CLICKFRAME__SetCount");
+	set_name(0x00560300, "OVERRIDEKEYBINDING__destructor");
+	set_name(0x005603D0, "OVERRIDEKEYBINDING__SetOverrideBinding");
 	set_name(0x005604F0, "CGUIBindings__ClearOverrideBindings");
 	set_name(0x00560560, "Script_ClearOverrideBindings");
 	set_name(0x005605F0, "TSHashTable__KEYCOMMAND__constructor");
@@ -4734,6 +4754,7 @@ static import_symbols() {
 	set_name(0x0056BD40, "TSGrowableArray_CGCommentator__MapInfo__ReallocData");
 	set_name(0x0056BF30, "CGCommentator__OnReceiveMapInfo");
 	set_name(0x0056C150, "CGCommentator__InitializeGame");
+	set_name(0x0056C220, "CGUnit_C__IsUsingVehicle");
 	set_name(0x0056C340, "CGChatBubbleFrame__Render");
 	set_name(0x0056C500, "CGChatBubbleFrame__Update");
 	set_name(0x0056C7A0, "CGChatBubbleFrame__OnWorldRender");
@@ -4909,6 +4930,7 @@ static import_symbols() {
 	set_name(0x00576EF0, "SpellParserPluralConditional");
 	set_name(0x00577030, "SpellParserVerifyConditional");
 	set_name(0x005770D0, "WorldStateParseText");
+	set_name(0x00577350, "floor");
 	set_name(0x00577410, "TSGrowableArray_SpellVariables__ReallocData");
 	set_name(0x00577530, "CFormula__CompileElement");
 	set_name(0x005777A0, "CFormula__CompileMult");
@@ -4947,6 +4969,7 @@ static import_symbols() {
 	set_name(0x0057B080, "CGAutoCompleteName__RemoveFlagsByName");
 	set_name(0x0057B0D0, "CGAutoCompleteName__RemoveFlagsFromAllNodes");
 	set_name(0x0057B2C0, "CGAutoCompleteName__GetPresenceID");
+	set_name(0x0057B330, "CGAutoCompleteName__ResortAll");
 	set_name(0x0057B3A0, "Script_GetAutoCompleteResults");
 	set_name(0x0057B500, "Script_GetAutoCompletePresenceID");
 	set_name(0x0057B580, "AutoCompleteNameQueryCallback");
@@ -5393,6 +5416,8 @@ static import_symbols() {
 	set_name(0x005963C0, "CGClassTrainer__ShutdownGame");
 	set_name(0x00596450, "CGClassTrainer__AddServices");
 	set_name(0x00596B00, "CGClassTrainer__RefreshList");
+	set_name(0x005970B0, "CGCharacterModelBase__destructor");
+	set_name(0x005970D0, "CGCharacterModelBase__GetObjectTypeName");
 	set_name(0x005970E0, "CGCharacterModelBase__GetScriptMetaTable");
 	set_name(0x005970F0, "CGCharacterModelBase__RotateModel");
 	set_name(0x005971B0, "CGCharacterModelBase__UpdateModel");
@@ -5402,7 +5427,7 @@ static import_symbols() {
 	set_name(0x005972D0, "CGCharacterModelBase__IsA");
 	set_name(0x00597310, "CGCharacterModelBase__IsA@2");
 	set_name(0x00597370, "CGCharacterModelBase__constructor");
-	set_name(0x00597460, "CGCharacterModelBase__destructor");
+	set_name(0x00597460, "CGCharacterModelBase__destructor@2");
 	set_name(0x005974A0, "CGCharacterModelBase__ConfigureCamera");
 	set_name(0x00597700, "CGCharacterModelBase__SetUpModel");
 	set_name(0x005977C0, "CGCharacterModelBase__OnModelLoaded");
@@ -5440,12 +5465,16 @@ static import_symbols() {
 	set_name(0x00598F30, "Script_CloseTabardCreation");
 	set_name(0x00598F40, "CGTabardCreationFrame__LeaveWorld");
 	set_name(0x00598F50, "CGTabardModelFrame__constructor");
+	set_name(0x00598F80, "CGTabardModelFrame__GetObjectTypeName");
 	set_name(0x00598F90, "CGTabardModelFrame__GetScriptMetaTable");
 	set_name(0x00598FA0, "CGTabardModelFrame_CanSaveTabardNow");
 	set_name(0x00598FE0, "CGTabardModelFrame__RegisterScriptMethods");
 	set_name(0x00599000, "CGTabardModelFrame__DestroyScriptMetaTable");
 	set_name(0x00599030, "TSGrowableArray_CImVector__ReallocData");
+	set_name(0x005990D0, "CGTabardModelFrame__IsA");
+	set_name(0x00599120, "CGTabardModelFrame__IsA@2");
 	set_name(0x00599160, "EmblemTextureUpdate");
+	set_name(0x00599190, "CGTabardModelFrame__destructor");
 	set_name(0x005991D0, "CGTabardModelFrame_GetUpperBackgroundFileName");
 	set_name(0x00599240, "CGTabardModelFrame_GetLowerBackgroundFileName");
 	set_name(0x005992B0, "CGTabardModelFrame_GetUpperEmblemFileName");
@@ -5574,6 +5603,7 @@ static import_symbols() {
 	set_name(0x005A1F70, "Script_GetNumPetitionItems");
 	set_name(0x005A1FB0, "Script_GetPetitionItemInfo");
 	set_name(0x005A20F0, "PetitionVendorRegisterScriptFunctions");
+	set_name(0x005A2120, "PetitionVendorUnregisterScriptFunctions");
 	set_name(0x005A2200, "Script_ClickPetitionButton");
 	set_name(0x005A24F0, "Script_ClosePetitionVendor");
 	set_name(0x005A2530, "Script_BuyPetition");
@@ -6140,6 +6170,7 @@ static import_symbols() {
 	set_name(0x005C4660, "ItemSocketInfoUnregisterScriptFunctions");
 	set_name(0x005C4680, "CGItemSocketInfo__SetItem");
 	set_name(0x005C4780, "CGItemSocketInfo__SetGem");
+	set_name(0x005C4970, "CGItem_C__IsBoundForTrade");
 	set_name(0x005C49C0, "Script_CloseSocketInfo");
 	set_name(0x005C49D0, "Script_GetSocketItemInfo");
 	set_name(0x005C4AF0, "Script_GetNumSockets");
@@ -6255,6 +6286,7 @@ static import_symbols() {
 	set_name(0x005CA380, "GuildInfoRegisterScriptFunctions");
 	set_name(0x005CA3B0, "GuildInfoUnregisterScriptFunctions");
 	set_name(0x005CA3D0, "TSGrowableArray_GuildMemberInfo__ReallocData");
+	set_name(0x005CA490, "QSortRoster@2");
 	set_name(0x005CA870, "CGGuildInfo__SetShowOffline");
 	set_name(0x005CA9B0, "CGGuildInfo__QueryRosterAndRanks");
 	set_name(0x005CAA40, "CGGuildInfo__QueryPermissions");
@@ -6302,6 +6334,7 @@ static import_symbols() {
 	set_name(0x005CD0B0, "CGGuildInfo__InitializeGame");
 	set_name(0x005CD1B0, "Script_GetNumSkillLines");
 	set_name(0x005CD1F0, "SkillInfoRegisterScriptFunctions");
+	set_name(0x005CD220, "SkillInfoUnregisterScriptFunctions");
 	set_name(0x005CD240, "TSGrowableArray_SkillLineInfo__ReallocData");
 	set_name(0x005CD2D0, "TSGrowableArray_SkillTypeInfo__ReallocData");
 	set_name(0x005CD820, "Script_CancelSkillUps");
@@ -6377,6 +6410,7 @@ static import_symbols() {
 	set_name(0x005D08D0, "CGReputationInfo__AddVisibleFaction");
 	set_name(0x005D0A10, "CGReputationInfo__SetAtWar");
 	set_name(0x005D0BA0, "CGReputationInfo__SetWatchedFaction");
+	set_name(0x005D0C70, "CGReputationInfo__IsWatchedFaction");
 	set_name(0x005D0DA0, "GetFactionInfoHelper");
 	set_name(0x005D1150, "Script_GetFactionInfo");
 	set_name(0x005D11E0, "Script_GetFactionInfoByID");
@@ -6416,6 +6450,7 @@ static import_symbols() {
 	set_name(0x005D2E30, "CGReputationInfo__OnInitializeFactions");
 	set_name(0x005D2EB0, "CGReputationInfo__InitializeGame");
 	set_name(0x005D2F90, "CGPetInfo__ShutdownGame");
+	set_name(0x005D2FF0, "CGPetInfo__SetPetMode");
 	set_name(0x005D3020, "CGPetInfo__SetPetOrders");
 	set_name(0x005D3050, "CGPetInfo__GetModeToken");
 	set_name(0x005D3070, "CGPetInfo__ShowGrid");
@@ -6656,6 +6691,7 @@ static import_symbols() {
 	set_name(0x005E0590, "Script_QuestPOIGetIconInfo");
 	set_name(0x005E06D0, "Script_GetQuestLogCompletionText");
 	set_name(0x005E0800, "TSGrowableArray_CGQuestLog__QUESTPOI__Set");
+	set_name(0x005E08A0, "CGQuestLog__OnQueryTimeResponse");
 	set_name(0x005E08F0, "QSortQuestSortTypes@2");
 	set_name(0x005E0B80, "CGQuestLog__FilterAndSortQuests");
 	set_name(0x005E0C00, "CGQuestLog__CollapseHeader");
@@ -6726,6 +6762,7 @@ static import_symbols() {
 	set_name(0x005E70D0, "CGQuestLog__UpdateQuestPOIFromUserServer");
 	set_name(0x005E7170, "UpdateQuestPOIHandler");
 	set_name(0x005E71A0, "CGQuestLog__InitializeGame");
+	set_name(0x005E7370, "CGQuestLog__OnQuestPOIResponse");
 	set_name(0x005E7640, "ArenaTeamCacheCallback@2");
 	set_name(0x005E7690, "CGCharacterInfo__ShutdownGame");
 	set_name(0x005E76B0, "CGCharacterInfo__SetInspectTarget");
@@ -6740,6 +6777,7 @@ static import_symbols() {
 	set_name(0x005E7A00, "CGCharacterInfo__CanInspect");
 	set_name(0x005E7A50, "CGCharacterInfo__OnInspectHonorStats");
 	set_name(0x005E7B00, "CGCharacterInfo__OnInspectArenaTeams");
+	set_name(0x005E7C00, "GetSlotFromLua");
 	set_name(0x005E7CF0, "GetUnitAndSlotFromLua");
 	set_name(0x005E7D60, "Script_GetInventorySlotInfo");
 	set_name(0x005E7E60, "Script_GetInventoryItemCooldown");
@@ -6783,6 +6821,7 @@ static import_symbols() {
 	set_name(0x005EAF30, "CGCharacterInfo__EnterWorld");
 	set_name(0x005EAF70, "CGCharacterInfo__LeaveWorld");
 	set_name(0x005EB040, "CGCooldown__destructor");
+	set_name(0x005EB0A0, "CGCooldown__GetObjectTypeName");
 	set_name(0x005EB0B0, "CGCooldown__GetScriptMetaTable");
 	set_name(0x005EBD20, "CGCooldown__OnFrameRender");
 	set_name(0x005EBE10, "CGCooldown__RegisterScriptMethods");
@@ -6804,6 +6843,7 @@ static import_symbols() {
 	set_name(0x005ECD70, "CGCooldown__SetCooldown");
 	set_name(0x005ECE80, "CGCooldown_SetCooldown");
 	set_name(0x005ECF60, "RegisterHandlers");
+	set_name(0x005ED020, "UnregisterHandlers");
 	set_name(0x005ED080, "DisableFadingScreen");
 	set_name(0x005ED120, "FadingScreenPaint");
 	set_name(0x005ED480, "EnableFadingScreen");
@@ -6979,6 +7019,7 @@ static import_symbols() {
 	set_name(0x005F66B0, "TSHashTable__UIADDON__METADATA__GrowListArray");
 	set_name(0x005F6880, "TSHashTable__ADDONSTATE__GrowListArray");
 	set_name(0x005F6A50, "TSHashTable__UIADDON__GrowListArray");
+	set_name(0x005F6C20, "UIADDON__constructor");
 	set_name(0x005F6CF0, "UIADDON__destructor");
 	set_name(0x005F7060, "TSHashTable__UIADDON__METADATA__MonitorFullness");
 	set_name(0x005F7100, "TSHashTable__ADDONSTATE__MonitorFullness");
@@ -7174,10 +7215,12 @@ static import_symbols() {
 	set_name(0x005FF2C0, "Script_FlipCameraYaw");
 	set_name(0x005FF320, "CGCamera__SaveCameraSettings");
 	set_name(0x005FF440, "CGCamera__SetPositionAndTargetWithRoll");
+	set_name(0x005FF500, "CGCamera__FOV");
 	set_name(0x005FF670, "CreateFrustum");
 	set_name(0x005FF950, "CGCamera__ZoomIn");
 	set_name(0x005FFA60, "CGCamera__ZoomOut");
 	set_name(0x005FFB70, "CGCamera__ZoomToDistance");
+	set_name(0x005FFC20, "CGCamera__UpdatePitch");
 	set_name(0x00600090, "CGCamera__UpdateBobbingState");
 	set_name(0x006000E0, "CGCamera__UpdateMotion");
 	set_name(0x00600530, "CGCamera__CameraTeleported");
@@ -7212,6 +7255,7 @@ static import_symbols() {
 	set_name(0x00602DC0, "CGCamera__UpdateTrackingState");
 	set_name(0x00602EB0, "CGCamera__UpdateUncontrolledState");
 	set_name(0x00602F30, "CGCamera__RunBobs");
+	set_name(0x006030E0, "CGCamera__SetDesiredFoVOffset");
 	set_name(0x00603330, "CGCamera__SetView");
 	set_name(0x006038A0, "CGCamera__CommentatorSetViewAndPosition");
 	set_name(0x00603900, "CGCamera__BarberShopSetView");
@@ -7283,6 +7327,7 @@ static import_symbols() {
 	set_name(0x0060A450, "Script_IsLoggedIn");
 	set_name(0x0060A490, "Script_GetPlayerFacing");
 	set_name(0x0060A510, "Script_FillLocalizedClassList");
+	set_name(0x0060A5D0, "CGPlayer_C__GetCurrentXP");
 	set_name(0x0060A630, "Script_GetGUIDFromString");
 	set_name(0x0060AAA0, "ParseTrailingTokens");
 	set_name(0x0060ABF0, "Script_GetGUIDFromToken");
@@ -7563,6 +7608,7 @@ static import_symbols() {
 	set_name(0x0061B4C0, "CGTooltip__DestroyScriptMetaTable");
 	set_name(0x0061B4F0, "CGTooltip__FormatStringForXML");
 	set_name(0x0061B5B0, "CGItemStatsSummary__Clear");
+	set_name(0x0061B9E0, "CGItemStats_C__DistributeItemStat");
 	set_name(0x0061BA90, "CGItemStatsSummary__Finalize");
 	set_name(0x0061BB20, "CGItemStatsSummary__GetStatIntGlobalString");
 	set_name(0x0061BD20, "TSFixedArray_CSimpleFontString__ReallocData");
@@ -7760,6 +7806,7 @@ static import_symbols() {
 	set_name(0x00634910, "ClientDBStringLookup");
 	set_name(0x00634950, "GetMapDifficultyRec");
 	set_name(0x006349F0, "GetLfgDungeonExpansionRec");
+	set_name(0x00634AB0, "GetMapAdjustedMaxPlayers");
 	set_name(0x00634C60, "ClientDBShutdown");
 	set_name(0x00634CC0, "InitWeaponSubclasses");
 	set_name(0x00634E00, "ClientDBInitialize");
@@ -9191,6 +9238,7 @@ static import_symbols() {
 	set_name(0x00681EE0, "GxTexCreate@3");
 	set_name(0x00681F20, "GxTexUpdate@2");
 	set_name(0x00681F60, "GxXformSetViewport");
+	set_name(0x00682130, "GxXformViewProj");
 	set_name(0x00682200, "GxLogCrashInfo");
 	set_name(0x006822B0, "TSGrowableArray_CGxFormat__ReallocData");
 	set_name(0x00682340, "GxDrawLockedElements@2");
@@ -9413,6 +9461,7 @@ static import_symbols() {
 	set_name(0x0068CCA0, "CGxDeviceOpenGl__DeviceWindow");
 	set_name(0x0068CCB0, "CGxDeviceOpenGl__ICreateWindow");
 	set_name(0x0068CE40, "CGxDeviceOpenGl__DeviceCreatePbuffer");
+	set_name(0x0068CF60, "CGxDeviceOpenGl__IDevAttachGlContext");
 	set_name(0x0068D050, "CGxDeviceOpenGl__WindowProcGl");
 	set_name(0x0068D610, "CGxDeviceOpenGl__DeviceCreate");
 	set_name(0x0068D6D0, "CGxDeviceOpenGl__DeviceSetFormat");
@@ -9836,6 +9885,8 @@ static import_symbols() {
 	set_name(0x006B5030, "PrintWho");
 	set_name(0x006B51B0, "FriendList__Destroy");
 	set_name(0x006B52E0, "FriendList__IsIgnored");
+	set_name(0x006B5350, "FriendList__IsMuted");
+	set_name(0x006B53B0, "FriendList__IsIgnoredOrMuted");
 	set_name(0x006B5400, "FriendList__AddFriend");
 	set_name(0x006B54C0, "FriendList__RemoveFriend");
 	set_name(0x006B5540, "FriendList__SetFriendNotes");
@@ -9993,6 +10044,7 @@ static import_symbols() {
 	set_name(0x006C1430, "InternalGetTextExtent");
 	set_name(0x006C1710, "InternalGetMaxCharsWithinWidth");
 	set_name(0x006C21A0, "CalcWrapPoint");
+	set_name(0x006C2270, "CGxFont__GetPixelSize");
 	set_name(0x006C22F0, "CGxFont__UpdateDimensions");
 	set_name(0x006C2480, "CGxFont__GetGlyphData");
 	set_name(0x006C24F0, "CGxFont__GetGlyphBearing");
@@ -10004,6 +10056,7 @@ static import_symbols() {
 	set_name(0x006C29A0, "CGxFont__CheckStringGlyphs");
 	set_name(0x006C2AC0, "TSExplicitList_KERNNODE__Clear");
 	set_name(0x006C2BE0, "TSHashTable__CHARCODEDESC__constructor");
+	set_name(0x006C2C40, "CHARCODEDESC__constructor");
 	set_name(0x006C2C80, "TSHashTable__CHARCODEDESC__InternalDelete");
 	set_name(0x006C2CB0, "TSHashTable__CHARCODEDESC__InternalNew");
 	set_name(0x006C2D30, "TSHashTable__CHARCODEDESC__destructor");
@@ -10029,11 +10082,14 @@ static import_symbols() {
 	set_name(0x006C3C50, "TSHashTable__KERNNODE__InternalNewNode");
 	set_name(0x006C3CB0, "CGxFont__Initialize");
 	set_name(0x006C3D40, "CGxFont__ComputeStep");
+	set_name(0x006C3E80, "CGxFont__ComputeStepFixedWidth");
 	set_name(0x006C3FC0, "CGxFont__NewCodeDesc");
+	set_name(0x006C4190, "GLYPHBITMAPDATA__CopyFrom");
 	set_name(0x006C41D0, "TSGrowableArray_21__CalcChunkSize");
 	set_name(0x006C4210, "TSFixedArray_VERT__ReallocData");
 	set_name(0x006C4340, "GLYPHBITMAPDATA__constructor");
 	set_name(0x006C4360, "GLYPHBITMAPDATA__destructor");
+	set_name(0x006C4380, "CHARCODEDESC__GenerateTextureCoords");
 	set_name(0x006C4440, "TEXTLINETEXTURE__WriteGeometry");
 	set_name(0x006C47B0, "BATCHEDRENDERFONTDESC__Initialize");
 	set_name(0x006C47F0, "BATCHEDRENDERFONTDESC__InitializeIndexBuff");
@@ -10092,6 +10148,7 @@ static import_symbols() {
 	set_name(0x006C80A0, "FontFaceCloseHandle");
 	set_name(0x006C80E0, "CGxFont__GetName");
 	set_name(0x006C8100, "TSHashTable__FACEDATA__HASHKEY_STRI__Ptr");
+	set_name(0x006C8190, "HFACE__constructor");
 	set_name(0x006C8220, "TSGrowableArray_TSExplicitList_FACEDATA__ReallocData");
 	set_name(0x006C8380, "TSExplicitList_FACEDATA__Clear");
 	set_name(0x006C8410, "TSGrowableArray_TSExplicitList_FACEDATA__SetCount");
@@ -10105,8 +10162,10 @@ static import_symbols() {
 	set_name(0x006C87B0, "TSHashTable__FACEDATA__GrowListArray");
 	set_name(0x006C8980, "TSHashTable__FACEDATA__MonitorFullness");
 	set_name(0x006C8A20, "TSHashTable__FACEDATA__Insert");
+	set_name(0x006C8AB0, "TSHashTable__FACEDATA__New");
 	set_name(0x006C8AE0, "FontFaceGetHandle");
 	set_name(0x006C8C10, "FREETYPE_RenderGlyph");
+	set_name(0x006C8C60, "CalculateYOffset");
 	set_name(0x006C8CC0, "IGxuFontGlyphRenderGlyph");
 	set_name(0x006C9D50, "TEXTURECACHE__UpdateDirty");
 	set_name(0x006C9D90, "TEXTURECACHE__AllocateNewGlyph");
@@ -10125,12 +10184,14 @@ static import_symbols() {
 	set_name(0x006CB990, "RandomRollNameQueryCallback");
 	set_name(0x006CBA60, "CGPlayer_C__BuildPartyMemberStatsChanges");
 	set_name(0x006CBC50, "OnQuestConfirm");
+	set_name(0x006CBCB0, "OnQuestPOIResponse");
 	set_name(0x006CBCF0, "OnSummonCancel");
 	set_name(0x006CBD10, "OnGroupCancel");
 	set_name(0x006CBD40, "OnGroupDecline");
 	set_name(0x006CBD70, "OnGroupNewLeader");
 	set_name(0x006CBE10, "OnGroupUninvite");
 	set_name(0x006CBE40, "OnGroupDestroy");
+	set_name(0x006CBE80, "OnGroupActionThrottled");
 	set_name(0x006CBEC0, "OnGroupCommandResult");
 	set_name(0x006CC3B0, "OnGuildInvite");
 	set_name(0x006CC410, "OnGuildDecline");
@@ -10167,6 +10228,7 @@ static import_symbols() {
 	set_name(0x006CE140, "AreaTriggerContains");
 	set_name(0x006CE260, "OnSpellInstakillLog");
 	set_name(0x006CE3B0, "OnSpellDispelLog");
+	set_name(0x006CE3D0, "OnSpellOrDamageImmuneHandler");
 	set_name(0x006CE480, "CGPlayer_C__PlayerShutdownMessageHandlers");
 	set_name(0x006CEAF0, "CGPlayer_C__GetNewContinentID");
 	set_name(0x006CEB00, "CGPlayer_C__CanDualWield");
@@ -10187,6 +10249,7 @@ static import_symbols() {
 	set_name(0x006CF290, "CGPlayer_C__GetPendingMovie");
 	set_name(0x006CF2D0, "CGPlayer_C__GetCombatModeFlashDuration");
 	set_name(0x006CF300, "CGPlayer_C__StopDance");
+	set_name(0x006CF350, "CGUnit_C__GetModelScale");
 	set_name(0x006CF440, "CGPlayer_C__GetPlayedTime");
 	set_name(0x006CF470, "CGPlayer_C__SetPlayedTime");
 	set_name(0x006CF4A0, "TSGrowableArray_InitialSpellStruct__ReallocData");
@@ -10246,6 +10309,7 @@ static import_symbols() {
 	set_name(0x006D2D40, "CGPlayer_C__SellItem");
 	set_name(0x006D2DE0, "CGPlayer_C__XBuyItem");
 	set_name(0x006D2F70, "AreaTriggersInitialize");
+	set_name(0x006D3200, "OnSpellMissLog");
 	set_name(0x006D3730, "OnSpellExecuteLog");
 	set_name(0x006D3750, "OnSpellDamageShield");
 	set_name(0x006D3C10, "OnSpellNonMeleeDamageLog");
@@ -10302,6 +10366,7 @@ static import_symbols() {
 	set_name(0x006D63A0, "CGPlayer_C__StartTaxi");
 	set_name(0x006D6430, "CGPlayer_C__StartTaxiExpress");
 	set_name(0x006D64E0, "CGPlayer_C__GetClientStandState");
+	set_name(0x006D6520, "CGPlayer_C__OnLootGameObject");
 	set_name(0x006D6560, "SoulStoneCompare");
 	set_name(0x006D6640, "CGPlayer_C__GetSoulstone");
 	set_name(0x006D6660, "CGPlayer_C__GetAttackSkillRank");
@@ -10506,6 +10571,7 @@ static import_symbols() {
 	set_name(0x006E6020, "CGPlayer_C__Disable");
 	set_name(0x006E6150, "CGPlayer_C__Reenable");
 	set_name(0x006E61B0, "CGPlayer_C__QueueItemEnchantTime");
+	set_name(0x006E6250, "CGItem_C__GetPendingEnchantTime");
 	set_name(0x006E6330, "OnItemEvent");
 	set_name(0x006E64C0, "TSHashTable__TRADESKILLLINE__constructor");
 	set_name(0x006E6520, "TSHashTable__TRADESKILLLINE__InternalNew");
@@ -10528,6 +10594,7 @@ static import_symbols() {
 	set_name(0x006E6EF0, "CGUnit_C__GetPosition");
 	set_name(0x006E6F10, "CGUnit_C__GetRawPosition");
 	set_name(0x006E6F40, "CGUnit_C__GetFacing");
+	set_name(0x006E6F60, "CGUnit_C__GetRawFacing");
 	set_name(0x006E6F80, "CGUnit_C__GetObjectModel");
 	set_name(0x006E6FA0, "CGUnit_C__UpdateObjectNameString");
 	set_name(0x006E6FC0, "CGUnit_C__GetPitch");
@@ -10537,6 +10604,7 @@ static import_symbols() {
 	set_name(0x006E7440, "TSHashTable__PROFICIENCYSPELL__Initialize");
 	set_name(0x006E74A0, "TSHashTable__TRADESKILL__GrowListArray");
 	set_name(0x006E7670, "TSHashTable__PROFICIENCYSPELL__GrowListArray");
+	set_name(0x006E7840, "OnUnlearnedSpells");
 	set_name(0x006E78D0, "CGPlayer_C__destructor@2");
 	set_name(0x006E7900, "TSHashTable__TRADESKILL__MonitorFullness");
 	set_name(0x006E79A0, "TSHashTable__PROFICIENCYSPELL__MonitorFullness");
@@ -10615,6 +10683,7 @@ static import_symbols() {
 	set_name(0x006EBF70, "CMovement_C__OnSwimStart");
 	set_name(0x006EBF90, "TSList_CPlayerMoveEvent__Clear");
 	set_name(0x006EC000, "CMovementShared__StopAllLogging");
+	set_name(0x006EC090, "CPlayerMoveQueue__Enqueue");
 	set_name(0x006EC1F0, "CPlayerMoveQueue__FreeAll");
 	set_name(0x006EC2C0, "MovementInitialize");
 	set_name(0x006EC390, "CMovementData_C__Disable");
@@ -10889,11 +10958,14 @@ static import_symbols() {
 	set_name(0x006FBF80, "CGUnit_C__PitchMissileTrajectoryTargetingNextFrame");
 	set_name(0x006FBF90, "CGUnit_C__SetMissileTrajectoryTargetingSpell");
 	set_name(0x006FC0F0, "CMissileCollision__RemoveUnitFromSystem");
+	set_name(0x006FC210, "CGUnit_C__CorrectTrajectoryOfPendingMissiles");
 	set_name(0x006FC290, "CUnit_C__SetRemoteMissileTrajectoryCollision");
+	set_name(0x006FC360, "CMissileCollision__ComputeSegmentImpactTimeFromSphereList");
 	set_name(0x006FC4A0, "CMissileCollision__ComputeUnitRank");
 	set_name(0x006FC8E0, "CGUnit_C__InitMissileTrajectorySystem");
 	set_name(0x006FC920, "CMissileCollision__Alloc");
 	set_name(0x006FC950, "CMissileCollision__Free");
+	set_name(0x006FC9B0, "CMissileCollision__ComputeSegmentImpactTime");
 	set_name(0x006FCA40, "CMissileCollision__MaybeAddUnitToSystem");
 	set_name(0x006FCAA0, "CMissileCollision__MaybeAddUnitToWorkingList");
 	set_name(0x006FCB60, "CMissileCollision__Init");
@@ -10911,10 +10983,12 @@ static import_symbols() {
 	set_name(0x006FF210, "CMissile__AdjustAllMissileTrajectoryDurations");
 	set_name(0x006FF250, "CMissile__StartFizzling");
 	set_name(0x006FF2C0, "CMissile__OnRemoteMissileTrajectoryCollision");
+	set_name(0x006FF320, "CMissile__GetImpactPos");
 	set_name(0x006FF410, "CMissile__ClearTargetingEffects");
 	set_name(0x006FF4C0, "ChaserImplementation");
 	set_name(0x006FF5C0, "TSGrowableArray_SpellCastTargetPoint__Set");
 	set_name(0x006FF630, "TSGrowableArray_MISS_REASON__Set");
+	set_name(0x006FF6A0, "C2Vector__Normalize");
 	set_name(0x006FF6C0, "CMissile__SetReadyToFire");
 	set_name(0x006FF6D0, "CMissile__UpdateImpactPos");
 	set_name(0x006FFBB0, "CMissile__DetermineMissType");
@@ -10946,6 +11020,7 @@ static import_symbols() {
 	set_name(0x00703810, "CMissile__WaitForModelFX");
 	set_name(0x00703900, "CMissile__UpdateAttachments");
 	set_name(0x00703A80, "CMissile__ClearInFlightMissilesWithTarget");
+	set_name(0x00703AE0, "CMissile__ScriptManagerCallback");
 	set_name(0x00703B00, "CMissile__UpdateStaticLists");
 	set_name(0x00703B80, "CMissile__Initialize");
 	set_name(0x00703BE0, "CMissile__Destroy");
@@ -10954,6 +11029,7 @@ static import_symbols() {
 	set_name(0x00703CD0, "CGTradeInfo__ShutdownGame");
 	set_name(0x00703CF0, "CGTradeInfo__InitiateTrade");
 	set_name(0x00703E00, "CGTradeInfo__BeginTrade");
+	set_name(0x00703F50, "Trade_C__AcceptTrade");
 	set_name(0x00704040, "CGTradeInfo__CancelTrade");
 	set_name(0x007040B0, "Trade_C_AddItem");
 	set_name(0x007041A0, "Trade_C_RemoveItem");
@@ -10961,6 +11037,7 @@ static import_symbols() {
 	set_name(0x00704320, "CGTradeInfo__RemoveMoney");
 	set_name(0x007043C0, "CGTradeInfo__SetMoney");
 	set_name(0x007044A0, "CGTradeInfo__OnTradeStatus@2");
+	set_name(0x00704680, "CGTradeInfo__OnTradeUpdated");
 	set_name(0x007048D0, "CGTradeInfo__Initialize");
 	set_name(0x00704910, "CGDynamicObject_C__SetFrameOfReference");
 	set_name(0x00704940, "CGDynamicObject_C__Disable");
@@ -11030,6 +11107,7 @@ static import_symbols() {
 	set_name(0x00707070, "CGItem_C__UpdateExpirationTime");
 	set_name(0x007070B0, "CGItem_C__GetExpirationTimeLeft");
 	set_name(0x007070E0, "CGItem_C__UpdateEnchantmentTime");
+	set_name(0x00707150, "CGItem_C__GetSelectionHighlightColor");
 	set_name(0x00707180, "CGItem_C__GetPageTextId");
 	set_name(0x007071D0, "CGItem_C__GetItemName");
 	set_name(0x00707220, "CGItem_C__GetClassID");
@@ -11039,6 +11117,7 @@ static import_symbols() {
 	set_name(0x00707300, "CGItem_C__GetDisplayID");
 	set_name(0x00707330, "CGItem_C__GetSheatheType");
 	set_name(0x00707360, "CGItem_C__GetStats");
+	set_name(0x007075A0, "CGItem_C__GetRandomPropertyPoints");
 	set_name(0x00707720, "OnUpdateStackCount");
 	set_name(0x00707880, "OnUpdateSpellCharges");
 	set_name(0x007078E0, "ItemIDChangedCacheCallback");
@@ -11067,7 +11146,7 @@ static import_symbols() {
 	set_name(0x007093F0, "CGItem_C__ConfirmBindOnUse");
 	set_name(0x00709440, "CGItem_C__Initialize");
 	set_name(0x007094E0, "CGItem_C__GetNumSockets");
-	set_name(0x00709550, "CGItem_C__IsBoundForTrade");
+	set_name(0x00709550, "CGItem_C__IsBoundForTrade@2");
 	set_name(0x00709580, "TSGrowableArray_TSExplicitList_INVENTORYART__ReallocData");
 	set_name(0x007096E0, "TSGrowableArray_TSExplicitList_ITEMBYNAME__ReallocData");
 	set_name(0x00709840, "CGItem_C__constructor");
@@ -11146,6 +11225,7 @@ static import_symbols() {
 	set_name(0x0070C2E0, "CGGameObject_C_TypeBase__GetRawPosition");
 	set_name(0x0070C310, "CGGameObject_C_TypeBase__GetFacing");
 	set_name(0x0070C330, "CGGameObject_C_TypeBase__GetRawFacing");
+	set_name(0x0070C340, "CGGameObject_C_Type_Null__DebugStatus");
 	set_name(0x0070C350, "CGGameObject_C_TypeAnimated__Disable");
 	set_name(0x0070C370, "CGGameObject_C_TypeAnimated__PostInit");
 	set_name(0x0070C3C0, "CGGameObject_C_TypeAnimated__Animate");
@@ -11210,6 +11290,7 @@ static import_symbols() {
 	set_name(0x0070FA70, "CGGameObject_C_TypeBase__CheckRange");
 	set_name(0x0070FCE0, "CGGameObject_C_TypeAnimated__PostReenable");
 	set_name(0x0070FD10, "CGGameObject_C_TypeAnimated__OnUpdateAnimProgress");
+	set_name(0x0070FD50, "CGGameObject_C_Type_Door__IsDoorAtRest");
 	set_name(0x0070FDE0, "CGGameObject_C_Type_QuestGiver__CanChangeCursor");
 	set_name(0x0070FE10, "CGGameObject_C_Type_QuestGiver__StartInteraction");
 	set_name(0x0070FF20, "CGGameObject_C_Type_QuestGiver__CloseInteraction");
@@ -11225,6 +11306,7 @@ static import_symbols() {
 	set_name(0x00710460, "CGGameObject_C_Type_TrapDoor__UpdateState");
 	set_name(0x00710640, "CGGameObject_C_Type_Transport__GetSequenceTimeFromRealTime");
 	set_name(0x007106D0, "CGGameObject_C_Type_Transport__Interpolate");
+	set_name(0x00710820, "CGGameObject_C_Type_Transport__UpdateState");
 	set_name(0x007108D0, "CGGameObject_C_Type_MeetingStone__AddToolTipInfo");
 	set_name(0x00710940, "CGGameObject_C_Type_CapturePoint__Reenable");
 	set_name(0x00710A50, "CGGameObject_C_Type_DungeonDifficulty__UpdateDisabled");
@@ -11270,6 +11352,7 @@ static import_symbols() {
 	set_name(0x007127E0, "CGGameObject_C_Type_CapturePoint__constructor");
 	set_name(0x00712820, "CGGameObject_C_Type_DungeonDifficulty__constructor");
 	set_name(0x007128D0, "CGGameObject_C_Type_DestructibleBuilding__constructor");
+	set_name(0x00712980, "CGGameObject_C_Type_DestructibleBuilding__destructor");
 	set_name(0x00712AC0, "CGGameObject_C_Type_GuildBank__constructor");
 	set_name(0x00712AE0, "GameObjectStatsCallback");
 	set_name(0x00712B40, "OnUpdateDynamicFlags@2");
@@ -11297,6 +11380,7 @@ static import_symbols() {
 	set_name(0x00713820, "CGGameObject_C_Type_Transport__constructor");
 	set_name(0x00713990, "CGGameObject_C_Type_Transport__GetSequenceTimeFromRealTime@2");
 	set_name(0x007139E0, "CGGameObject_C_Type_Transport__UpdateMovement");
+	set_name(0x00713D70, "CGGameObject_C_Type_DestructibleBuilding__destructor@2");
 	set_name(0x00713DA0, "ApplyGameObjectArtKit");
 	set_name(0x00713ED0, "OnUpdateArtKit");
 	set_name(0x00713F20, "CGGameObject_C__destructor");
@@ -11363,6 +11447,7 @@ static import_symbols() {
 	set_name(0x00716300, "TSGrowableArray_AuraData__ReallocData");
 	set_name(0x007163B0, "TSGrowableArray_SortedAuraInfo__ReallocData");
 	set_name(0x00716470, "CGUnit_C__GetGroundNormal");
+	set_name(0x00716510, "AuraData__Unpack");
 	set_name(0x00716650, "CGUnit_C__ShouldFadeIn");
 	set_name(0x00716710, "CGUnit_C__IsClientControlled");
 	set_name(0x00716860, "DisplayIDUpdateHandler");
@@ -11370,6 +11455,7 @@ static import_symbols() {
 	set_name(0x00716940, "OnSplineSyncEvent");
 	set_name(0x00716B10, "OnUnitReaction");
 	set_name(0x00716B90, "OnUnitPetActionSound");
+	set_name(0x00716CD0, "OnForceDisplayUpdate");
 	set_name(0x00716D80, "OnUnitPreResurrect");
 	set_name(0x00716DB0, "CGUnit_C__SetVehicleRecID");
 	set_name(0x00716E20, "CGUnit_C__ApplyComponentItemsFromEffects");
@@ -11462,6 +11548,7 @@ static import_symbols() {
 	set_name(0x0071B740, "CGUnit_C__GetRangedAttackSkillRank");
 	set_name(0x0071B770, "CGUnit_C__CalcBaseMaxPower");
 	set_name(0x0071B7F0, "CGUnit_C__IsOutdoors");
+	set_name(0x0071B810, "CGUnit_C__GetCanFly");
 	set_name(0x0071B820, "CGUnit_C__IsInMeleeRange");
 	set_name(0x0071B8D0, "CGUnit_C__GetHPModifier");
 	set_name(0x0071B960, "CGUnit_C__GetPowerModifier");
@@ -11488,6 +11575,7 @@ static import_symbols() {
 	set_name(0x0071C9D0, "NPCFlagsHandler");
 	set_name(0x0071CA10, "HoverHeightChangeHandler");
 	set_name(0x0071CA50, "OnLootList");
+	set_name(0x0071CAB0, "CGUnit_C__ClientMoveSkipTimeHandler");
 	set_name(0x0071CBA0, "CGUnit_C__CreateRipple");
 	set_name(0x0071CFA0, "CGUnit_C__InitializeActivePlayerComponent");
 	set_name(0x0071D010, "CGUnit_C__BuildComponentObject");
@@ -11547,7 +11635,7 @@ static import_symbols() {
 	set_name(0x007226B0, "CGUnit_C__IsPetBarUsed");
 	set_name(0x00722760, "CGUnit_C__ConnectToLightningThisFrame");
 	set_name(0x00722950, "CGUnit_C__SetPrecastMissileModel");
-	set_name(0x00722AE0, "CGUnit_C__GetModelScale");
+	set_name(0x00722AE0, "CGUnit_C__GetModelScale@2");
 	set_name(0x00722B50, "CGUnit_C__GetMatrix");
 	set_name(0x00722C50, "CGUnit_C__SetPredictedPowerSlot");
 	set_name(0x00722CF0, "CGUnit_C__ModifyPredictedPower");
@@ -11557,6 +11645,7 @@ static import_symbols() {
 	set_name(0x007233C0, "TSGrowableArray_AuraData__SetCount");
 	set_name(0x00723410, "TSGrowableArray_int__Add");
 	set_name(0x00723680, "UnitFactionUpdateHandler");
+	set_name(0x007236C0, "OnUnitPowerUpdate");
 	set_name(0x00723730, "CGUnit_C__RefreshComponentItem");
 	set_name(0x007237F0, "CGUnit_C__Reenable");
 	set_name(0x00723A50, "CGUnit_C__FootstepAnimEventHit");
@@ -11605,6 +11694,7 @@ static import_symbols() {
 	set_name(0x00728880, "CGUnit_C__CheckApplyPeriodicClientTriggers");
 	set_name(0x007289C0, "CGUnit_C__GetAuraIndex");
 	set_name(0x00728A20, "CGUnit_C__DoPowerRegen@2");
+	set_name(0x00728CA0, "NameQueryCallback@2");
 	set_name(0x00728D20, "UnitPvPFlagUpdateHandler");
 	set_name(0x00728D60, "UnitCharmedUpdateHandler");
 	set_name(0x00728E20, "VirtualItemIDMirrorHandler");
@@ -11702,6 +11792,7 @@ static import_symbols() {
 	set_name(0x00732100, "CGUnit_C__CreateItemModel");
 	set_name(0x00732400, "CGUnit_C__CreateItemModel@2");
 	set_name(0x00732450, "OnForceMoveChange");
+	set_name(0x007324B0, "OnReceiveMirrorImageDataFromServer");
 	set_name(0x00732500, "CGUnit_C__ExchangeSheathedWeapon");
 	set_name(0x00732650, "CGUnit_C__HandleAnimEvent");
 	set_name(0x00734390, "CGUnit_C__UpdateDisplay");
@@ -11818,6 +11909,7 @@ static import_symbols() {
 	set_name(0x00743530, "CGObject_C__ShouldRenderObjectName");
 	set_name(0x00743550, "nullsub_152");
 	set_name(0x00743560, "nullsub_153");
+	set_name(0x00743570, "CGObject_C__PlaySpellVisualKit_DelayLightningEffects");
 	set_name(0x00743580, "CGObject_C__EffectDecayHandler");
 	set_name(0x007435A0, "CGObject_C__LoopEffectHandler");
 	set_name(0x00743640, "CGObject_C__SetStorage");
@@ -11882,6 +11974,7 @@ static import_symbols() {
 	set_name(0x00746540, "CGUnit_C__PlayParrySound");
 	set_name(0x007465E0, "CGUnit_C__PlayStandSound");
 	set_name(0x00746610, "CGUnit_C__PlayDeathThud");
+	set_name(0x00746720, "CGUnit_C__PlaySplashSound");
 	set_name(0x007467F0, "CGUnit_C__CheckLoopSound");
 	set_name(0x00746900, "CGUnit_C__GetNewNPCSoundCount");
 	set_name(0x007469C0, "CGUnit_C__PlayAISound");
@@ -12190,6 +12283,7 @@ static import_symbols() {
 	set_name(0x0075AF40, "CVehicleCamera_C__Update");
 	set_name(0x0075B1A0, "CVehicleCamera_C__Create");
 	set_name(0x0075B3E0, "GuildStats_C__Unpack");
+	set_name(0x0075B5B0, "CAaBox__Contains");
 	set_name(0x0075B710, "ClipPolygonToPlane");
 	set_name(0x0075BC50, "ExtrudeTriangle");
 	set_name(0x0075CA80, "CMovement_C__BuildCollisionVolume");
@@ -12282,9 +12376,10 @@ static import_symbols() {
 	set_name(0x007659C0, "OnIdle@2");
 	set_name(0x00765AF0, "OnKeyDown");
 	set_name(0x00765FF0, "RegisterHandlers@2");
-	set_name(0x007660D0, "UnregisterHandlers");
+	set_name(0x007660D0, "UnregisterHandlers@2");
 	set_name(0x00766140, "ConsoleScreenInitialize");
 	set_name(0x007662A0, "ConsoleScreenDestroy");
+	set_name(0x00766320, "s_CreatePathDirectories");
 	set_name(0x007663F0, "CVar__ArchiveCodeRegisteredOnly");
 	set_name(0x00766400, "CVar__Load");
 	set_name(0x00766530, "CVar__Load@2");
@@ -12381,6 +12476,7 @@ static import_symbols() {
 	set_name(0x00769C90, "ConsoleDeviceStereoInitialize");
 	set_name(0x00769D00, "ConsoleGetHardware");
 	set_name(0x00769D10, "ConsoleDeviceHardwareChanged");
+	set_name(0x00769D30, "ConsoleDeviceGetDefaultSettings");
 	set_name(0x00769D40, "ConsoleDeviceDestroy");
 	set_name(0x00769D80, "TSGrowableArray_OPTION_PAGE__ReallocData");
 	set_name(0x00769E10, "ValidateFormatMonitor");
@@ -12390,6 +12486,7 @@ static import_symbols() {
 	set_name(0x0076A220, "CVGxResolutionCallback");
 	set_name(0x0076A580, "CVGxRefreshCallback");
 	set_name(0x0076A630, "RegisterGxCVars");
+	set_name(0x0076AAB0, "AddConsoleDeviceDefaultCallback");
 	set_name(0x0076AAF0, "RemoveConsoleDeviceDefaultCallback");
 	set_name(0x0076AB80, "ConsoleDeviceInitialize");
 	set_name(0x0076B2A0, "AddLineToExecFile");
@@ -12759,6 +12856,7 @@ static import_symbols() {
 	set_name(0x0077F7E0, "CCommand_ShowShadow");
 	set_name(0x0077F820, "CCommand_ShowLowDetail");
 	set_name(0x0077F870, "CCommand_ShowSimpleDoodads");
+	set_name(0x0077F980, "CWorldScene__RenderBarriers");
 	set_name(0x0077FBF0, "World__QueryOutdoors");
 	set_name(0x0077FCD0, "World__ObjectIsDrawable");
 	set_name(0x0077FD10, "World__ObjectIsLoaded");
@@ -12800,6 +12898,7 @@ static import_symbols() {
 	set_name(0x007826E0, "World__ObjectDestroy@2");
 	set_name(0x00782740, "World__TriDataToFacetData");
 	set_name(0x00782E40, "CWorldScene__ClearObjectFadeoutList@2");
+	set_name(0x00782F20, "CWorldScene__UpdateObjectFadeouts");
 	set_name(0x00783180, "World__UnloadMap");
 	set_name(0x007831A0, "World__PrepareUpdate");
 	set_name(0x00783500, "World__ObjectCreate@2");
@@ -12810,6 +12909,7 @@ static import_symbols() {
 	set_name(0x00783A60, "World__ObjectSetRenderEnabled");
 	set_name(0x00783B60, "Weather__GetType");
 	set_name(0x00783B90, "Weather__FillInDefaultPrecipTexturePath");
+	set_name(0x00784040, "ValidateWeatherDensity");
 	set_name(0x007840B0, "Rain__SetStormIntensity");
 	set_name(0x00784140, "Rain__GetMotionBlurMatrix");
 	set_name(0x007842D0, "Rain__RealizePacket");
@@ -13557,7 +13657,7 @@ static import_symbols() {
 	set_name(0x007DB280, "Script_SetActiveVoiceChannelBySessionID");
 	set_name(0x007DB370, "Script_GetNumVoiceSessionMembersBySessionID");
 	set_name(0x007DB400, "ComSatClient_FindSessionByTypeAndName");
-	set_name(0x007DB4A0, "NameQueryCallback@2");
+	set_name(0x007DB4A0, "NameQueryCallback@3");
 	set_name(0x007DB4D0, "ComSatClient_SendEvent");
 	set_name(0x007DB580, "ComSatClient_IsCurrentSession");
 	set_name(0x007DB5C0, "ComSatClient_GetCurrentSessionType");
@@ -15675,7 +15775,7 @@ static import_symbols() {
 	set_name(0x0088B9C0, "_ftol2_sse");
 	set_name(0x0088B9F6, "_ftol2");
 	set_name(0x0088CE11, "fread");
-	set_name(0x0088CE30, "floor");
+	set_name(0x0088CE30, "floor@2");
 	set_name(0x0088D0C0, "_CIpow");
 	set_name(0x0088E9C1, "strtod");
 	set_name(0x00895D23, "_String_base___Xlen");
@@ -20737,6 +20837,7 @@ static import_symbols() {
 	set_name(0x00B23770, "result");
 	set_name(0x00B23778, "NvAPI__s_interface_table");
 	set_name(0x00B24E80, "FMOD__gGlobal");
+	set_name(0x00B24F1C, "FMOD_OS_CheckDriverList__lastNumDrivers");
 	set_name(0x00B24F24, "FMOD__File__gFileThreadHead");
 	set_name(0x00B24F30, "FMOD__usercodec");
 	set_name(0x00B24F80, "FMOD__dspsfxreverb_param");

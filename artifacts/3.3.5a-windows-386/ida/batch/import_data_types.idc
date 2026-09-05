@@ -2604,7 +2604,7 @@ static import_data_types() {
 	apply_type(0x008F3DA0, "FMOD_RESULT __thiscall func(FMOD__PluginFactory* this, int32_t* numoutputs)");
 	apply_type(0x008F3DF0, "FMOD_RESULT __thiscall func(FMOD__PluginFactory* this, int32_t handle, FMOD_CODEC_DESCRIPTION_EX** codecdesc)");
 	apply_type(0x008F3E60, "FMOD_RESULT __thiscall func(FMOD__PluginFactory* this, int32_t handle, FMOD_DSP_DESCRIPTION_EX** dspdesc)");
-	apply_type(0x008F3ED0, "FMOD_RESULT __thiscall func(FMOD__PluginFactory* this, int32_t index, FMOD_OUTPUT_DESCRIPTION_EX** handle)");
+	apply_type(0x008F3ED0, "FMOD_RESULT __thiscall func(FMOD__PluginFactory* this, int32_t index, FMOD_OUTPUT_DESCRIPTION_EX** outputdesc)");
 	apply_type(0x008F3F40, "FMOD__DSPFilter* __thiscall func(FMOD__DSPFilter* this)");
 	apply_type(0x008F3F60, "FMOD__DSPResamplerMultiInput* __thiscall func(FMOD__DSPResamplerMultiInput* this)");
 	apply_type(0x008F3F80, "FMOD__DSPSoundCard* __thiscall func(FMOD__DSPSoundCard* this)");
@@ -2844,7 +2844,7 @@ static import_data_types() {
 	apply_type(0x0090E6D0, "FMOD_RESULT __thiscall func(FMOD__CodecOggVorbis* this, FMOD_MODE usermode, FMOD_CREATESOUNDEXINFO* userexinfo)");
 	apply_type(0x0090EB00, "FMOD_RESULT __stdcall func(FMOD_CODEC_STATE* codec, FMOD_MODE usermode, FMOD_CREATESOUNDEXINFO* userexinfo)");
 	apply_type(0x0090EB40, "FMOD_CODEC_DESCRIPTION_EX* __stdcall func()");
-	apply_type(0x0090EBC0, "FMOD_RESULT __thiscall func(FMOD__CodecWAV* this, FMOD_MODE usermode, FMOD_CREATESOUNDEXINFO* userexinfo)");
+	apply_type(0x0090EBC0, "FMOD_RESULT __thiscall func(FMOD__CodecWav* this, FMOD_MODE usermode, FMOD_CREATESOUNDEXINFO* userexinfo)");
 	apply_type(0x0090F550, "FMOD_RESULT __thiscall func(FMOD__CodecWav* this)");
 	apply_type(0x0090F650, "FMOD_RESULT __thiscall func(FMOD__CodecWav* this, void* buffer, uint32_t sizebytes, uint32_t* bytesread)");
 	apply_type(0x0090FAF0, "FMOD_RESULT __thiscall func(FMOD__CodecWav* this, int32_t subsound, FMOD_SOUND* sound)");
@@ -2978,7 +2978,7 @@ static import_data_types() {
 	apply_type(0x00919720, "FMOD_RESULT __thiscall func(FMOD__DSPFilter* this, float* inbuffer, float** outbuffer, uint32_t* length, int32_t inchannels, int32_t* outchannels, FMOD_SPEAKERMODE speakermode)");
 	apply_type(0x00919C00, "FMOD_RESULT __thiscall func(FMOD__DSPFilter* this, uint32_t historylength)");
 	apply_type(0x00919CA0, "FMOD_RESULT __thiscall func(FMOD__DSPFilter* this, float** buffer, uint32_t* position, uint32_t* length)");
-	apply_type(0x00919CE0, "void __thiscall func(FMOD__DSPFilter* this, bool freethis)");
+	apply_type(0x00919CE0, "FMOD_RESULT __thiscall func(FMOD__DSPFilter* this, bool freethis)");
 	apply_type(0x00919D30, "void __thiscall func(FMOD__GeometryI* this)");
 	apply_type(0x00919EC0, "bool __cdecl func(FMOD__OctreeNode* item, void* data)");
 	apply_type(0x0091A2C0, "FMOD_RESULT __thiscall func(FMOD__GeometryI* this)");
@@ -3155,7 +3155,7 @@ static import_data_types() {
 	apply_type(0x00927130, "void __thiscall func(ASfxDsp* this)");
 	apply_type(0x009271B0, "bool __thiscall func(ASfxDsp* this, int32_t newMaxBlockSize)");
 	apply_type(0x00927220, "void __thiscall func(ASfxDsp* this)");
-	apply_type(0x00927340, "void __thiscall func(ASfxDsp* this, uint sampframes, int channels, float* inAudio, float rate)");
+	apply_type(0x00927340, "void __thiscall func(ASfxDsp* this, uint32_t sampframes, int32_t channels, float* inAudio, float rate)");
 	apply_type(0x00927400, "void __thiscall func(ASfxDsp* this, float refPlusRevDelaySec, float nextLengthSec, float delayRatio, float rate)");
 	apply_type(0x00927470, "void __thiscall func(ASfxDsp* this, float rate)");
 	apply_type(0x009274C0, "void __thiscall func(ASfxDsp* this, float nextLengthSec, float delayRatio, float nextLengthBSec, float delayRatioB, float rate)");
@@ -5222,6 +5222,7 @@ static import_data_types() {
 	apply_type(0x00B23770, "int32_t");
 	apply_type(0x00B23778, "NvAPI_InterfaceTable[253]");
 	apply_type(0x00B24E80, "FMOD__Global");
+	apply_type(0x00B24F1C, "int32_t");
 	apply_type(0x00B24F24, "FMOD__LinkedListNode");
 	apply_type(0x00B24F30, "FMOD_CODEC_DESCRIPTION_EX");
 	apply_type(0x00B24F80, "FMOD_DSP_PARAMETERDESC[15]");
