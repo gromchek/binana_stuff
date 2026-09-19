@@ -3097,7 +3097,7 @@ static import_data_types() {
 	apply_type(0x00921FC0, "void __stdcall func(void* data)");
 	apply_type(0x00921FD0, "FMOD__AsyncThread* __thiscall func(FMOD__AsyncThread* this)");
 	apply_type(0x00922040, "FMOD_RESULT __stdcall func()");
-	apply_type(0x009220A0, "FMOD_RESULT __thiscall func(FMOD__AsyncThread* this, bool owned, FMOD__SystemI* system)");
+	apply_type(0x009220A0, "FMOD_RESULT __thiscall func(FMOD__AsyncThread* this, bool owned)");
 	apply_type(0x00922130, "FMOD_RESULT __stdcall func(FMOD__SoundI* sound)");
 	apply_type(0x00922210, "FMOD__OutputEmulated* __thiscall func(FMOD__OutputEmulated* this)");
 	apply_type(0x00922250, "FMOD_RESULT __thiscall func(FMOD__OutputEmulated* this, int32_t maxchannels)");
@@ -3188,11 +3188,11 @@ static import_data_types() {
 	apply_type(0x009297E0, "FMOD_RESULT __thiscall func(FMOD__DSPResamplerMultiInput* this, float* inbuffer, float** outbuffer, uint32_t* length, int32_t inchannels, int32_t* outchannels, FMOD_SPEAKERMODE speakermode)");
 	apply_type(0x00929BD0, "FMOD_RESULT __thiscall func(FMOD__DSPResamplerMultiInput* this, FMOD__DSPI* target)");
 	apply_type(0x00929C20, "FMOD_RESULT __thiscall func(FMOD__DSPSoundCard* this, FMOD_DSP_DESCRIPTION_EX* description)");
-	apply_type(0x00929CB0, "void __thiscall func(FMOD__DSPSoundCard* this, bool freethis)");
+	apply_type(0x00929CB0, "FMOD_RESULT __thiscall func(FMOD__DSPSoundCard* this, bool freethis)");
 	apply_type(0x00929D00, "FMOD_RESULT __thiscall func(FMOD__DSPSoundCard* this, void* inbuffer, void** outbuffer, uint32_t* length, int32_t inchannels, int32_t* outchannels, FMOD_SPEAKERMODE speakermode)");
 	apply_type(0x00929DA0, "FMOD_RESULT __thiscall func(FMOD__DSPWaveTable* this, FMOD_DSP_DESCRIPTION_EX* description)");
 	apply_type(0x00929DE0, "FMOD_RESULT __thiscall func(FMOD__DSPWaveTable* this, FMOD__DSPI* target)");
-	apply_type(0x00929DF0, "FMOD_RESULT __thiscall func(FMOD__DSPWaveTable* this, float* a2, float** a3, uint32_t* a4, int32_t a5, int32_t* a6, FMOD_SPEAKERMODE speakermode)");
+	apply_type(0x00929DF0, "FMOD_RESULT __thiscall func(FMOD__DSPWaveTable* this, float* inbuffer, float** outbuffer, uint32_t* length, int32_t inchannels, int32_t* outchannels, FMOD_SPEAKERMODE speakermode)");
 	apply_type(0x0092A1E0, "FMOD_RESULT __thiscall func(FMOD__DSPWaveTable* this, float frequency)");
 	apply_type(0x0092A250, "FMOD_RESULT __stdcall func(FMOD_DSP_STATE* dsp, uint32_t position)");
 	apply_type(0x0092A2A0, "FMOD_RESULT __stdcall func(FMOD_DSP_STATE* dsp, int32_t index, float value)");
@@ -3434,7 +3434,7 @@ static import_data_types() {
 	apply_type(0x0093CB50, "FMOD_RESULT __stdcall func(FMOD_OUTPUT_STATE* output, int32_t selecteddriver, FMOD_INITFLAGS flags, int32_t* outputrate, int32_t outputchannels, FMOD_SOUND_FORMAT* outputformat, FMOD_SPEAKERMODE* speakermode, int32_t dspbufferlength, int32_t dspnumbuffers, int32_t max2dchannels, int32_t max3dchannels, void* extradriverdata)");
 	apply_type(0x0093CBA0, "FMOD_RESULT __stdcall func(FMOD_OUTPUT_STATE* output, uint32_t* pcm)");
 	apply_type(0x0093CBD0, "FMOD_OUTPUT_DESCRIPTION_EX* __stdcall func()");
-	apply_type(0x0093CD10, "FMOD_RESULT __thiscall func(FMOD__DSPI* this, void* outbuffer, void* inbuffer, FMOD_SOUND_FORMAT outformat, FMOD_SOUND_FORMAT informat, uint32_t length, int32_t destchannelstep, int32_t srcchannelstep, float volume)");
+	apply_type(0x0093CD10, "FMOD_RESULT __stdcall func(void* outbuffer, void* inbuffer, FMOD_SOUND_FORMAT outformat, FMOD_SOUND_FORMAT informat, uint32_t length, int32_t destchannelstep, int32_t srcchannelstep, float volume)");
 	apply_type(0x0093D7F0, "FMOD__SampleSoftware* __thiscall func(FMOD__SampleSoftware* this)");
 	apply_type(0x0093D820, "FMOD_RESULT __thiscall func(FMOD__SampleSoftware* this, bool freethis)");
 	apply_type(0x0093D8F0, "FMOD_RESULT __thiscall func(FMOD__SampleOpenAL* this)");

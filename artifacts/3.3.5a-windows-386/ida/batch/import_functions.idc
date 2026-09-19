@@ -204,7 +204,6 @@ static import_functions() {
 	set_func_cmt(0x00659910, "WowClientDB<Cfg_CategoriesRec>::LoadRecords(SFile*, char const*, int)", 0);
 	set_func_cmt(0x00659B80, "WowClientDB<CharBaseInfoRec>::LoadRecords(SFile*, char const*, int)", 0);
 	set_func_cmt(0x0065C290, "00005410", 0);
-	set_func_cmt(0x0065F520, "WowClientDB<AchievementRec>::GetRecordByIndex(int, void*)", 0);
 	set_func_cmt(0x006811D0, "00005410", 0);
 	set_func_cmt(0x006811F0, "GxAdapterID(unsigned short&, unsigned short&, unsigned int&, unsigned int&)", 0);
 	set_func_cmt(0x00681BE0, "UC", 0);

@@ -1844,6 +1844,7 @@ static import_symbols() {
 	set_name(0x004B4F90, "SysMsgAdd@2");
 	set_name(0x004B5040, "SysMsgPrintf");
 	set_name(0x004B50C0, "TexturePixelFormatToGxTexFormat");
+	set_name(0x004B51C0, "OsPathFindExtensionWithDot");
 	set_name(0x004B5280, "GetDefaultTexture");
 	set_name(0x004B5340, "TextureCreateOpenFile");
 	set_name(0x004B5390, "TextureEnableAtlas");
@@ -2009,6 +2010,7 @@ static import_symbols() {
 	set_name(0x004BE360, "TSGrowableArray_TSExplicitList_FONTHASHOBJ__SetCount");
 	set_name(0x004BE470, "TSHashTable__FONTHASHOBJ__constructor");
 	set_name(0x004BE4D0, "TSHashTable__FONTHASHOBJ__InternalDelete");
+	set_name(0x004BE500, "FONTHASHOBJ__destructor");
 	set_name(0x004BE550, "TSHashTable__FONTHASHOBJ__InternalNew");
 	set_name(0x004BE5C0, "TSHashTable__FONTHASHOBJ__destructor");
 	set_name(0x004BE660, "TSHashTable__FONTHASHOBJ__Destroy");
@@ -2131,6 +2133,7 @@ static import_symbols() {
 	set_name(0x004C5C40, "SE2__IsLoopingOrPeriodic");
 	set_name(0x004C5C60, "SE2__GetNumSoundsInSoundKit");
 	set_name(0x004C5CC0, "SE2__StopAllSounds");
+	set_name(0x004C5DC0, "SI2__OnFocusChanged");
 	set_name(0x004C6390, "SE2__StopSound");
 	set_name(0x004C66B0, "_HandleSoundDeviceChange");
 	set_name(0x004C6710, "SI2__ForceUpdateZoneSounds");
@@ -2156,6 +2159,9 @@ static import_symbols() {
 	set_name(0x004C97F0, "TSHashTable__TIMESTAMPSTRUCT__destructor@2");
 	set_name(0x004C9820, "TSHashTable__TIMESTAMPSTRUCT__InternalDelete");
 	set_name(0x004C9850, "IsDayTime");
+	set_name(0x004C9910, "ZoneSoundsUpdate");
+	set_name(0x004C9BD0, "SI2__InitZoneSoundsHandler");
+	set_name(0x004C9BF0, "SI2__ShutdownZoneSoundsHandler");
 	set_name(0x004CA310, "TSList_SuppressorSound__Clear");
 	set_name(0x004CA380, "TSGrowableArray_TSExplicitList_VSOUND_LOOKUP__ReallocData");
 	set_name(0x004CA720, "TSExplicitList_VSOUND_LOOKUP__Clear");
@@ -2248,6 +2254,10 @@ static import_symbols() {
 	set_name(0x004D07B0, "SI2__PlaySheatheSound");
 	set_name(0x004D0850, "SI2__PlayMissedSound");
 	set_name(0x004D0910, "TSGrowableArray_IMPACTSOUNDARRAY__ReallocData");
+	set_name(0x004D0BC0, "EnableReverbHandler");
+	set_name(0x004D0CB0, "VoiceChatInputDriverIndexHandler");
+	set_name(0x004D0D40, "VoiceChatOutputDriverIndexHandler");
+	set_name(0x004D0DD0, "OutputDriverIndexHandler");
 	set_name(0x004D1050, "SI2__RegisterCVars");
 	set_name(0x004D1600, "SI2__RegisterCVars@2");
 	set_name(0x004D2780, "ChangeHeapAllocTracking");
@@ -2364,6 +2374,7 @@ static import_symbols() {
 	set_name(0x004D84A0, "CGlueMgr__HandleBattlenetDisconnect");
 	set_name(0x004D8540, "CGlueMgr__HandleScreenshot");
 	set_name(0x004D8570, "CGlueMgr__ShowChangedOptionWarnings");
+	set_name(0x004D8630, "CM2Model__SetWorldTransform");
 	set_name(0x004D8650, "CGlueMgr__ProcessAgreements");
 	set_name(0x004D8860, "CGlueMgr__HandleDisplaySizeChanged");
 	set_name(0x004D8930, "CGlueMgr__Suspend");
@@ -2539,6 +2550,7 @@ static import_symbols() {
 	set_name(0x004DFCA0, "Script_GetRandomName");
 	set_name(0x004DFD00, "CharacterCreateRegisterScriptFunctions");
 	set_name(0x004DFD30, "CharacterCreateUnregisterScriptFunctions");
+	set_name(0x004DFDA0, "ComponentData__constructor");
 	set_name(0x004DFF10, "CCharacterCreation__GetRandomRaceAndSex");
 	set_name(0x004DFFC0, "CCharacterCreation__OnHide");
 	set_name(0x004E0040, "CCharacterCreation__SetCharCustomizeModel");
@@ -2575,6 +2587,7 @@ static import_symbols() {
 	set_name(0x004E1B70, "Script_PaidChange_GetName");
 	set_name(0x004E1BD0, "TSGrowableArray_int32__SetCount");
 	set_name(0x004E1C20, "CCharacterCreation__Initialize");
+	set_name(0x004E1E20, "CCharacterCreation__Shutdown");
 	set_name(0x004E1ED0, "CCharacterCreation__CalcClasses");
 	set_name(0x004E1FD0, "CCharacterCreation__ResetCharCustomizeInfoo");
 	set_name(0x004E20B0, "CCharacterCreation__SetSelectedRace");
@@ -2636,8 +2649,10 @@ static import_symbols() {
 	set_name(0x004E5F00, "CSimpleModelFFX__LoadXML");
 	set_name(0x004E5F50, "CSimpleModelFFX__OnLayerShow");
 	set_name(0x004E5F70, "CSimpleModelFFX__constructor");
+	set_name(0x004E60B0, "CSimpleModel__IsDrawable");
 	set_name(0x004E60D0, "CSimpleModel__IsA");
 	set_name(0x004E6110, "CSimpleModel__IsA@2");
+	set_name(0x004E6150, "CSimpleModel__GetObjectTypeName");
 	set_name(0x004E6170, "CSimpleModelFFX__GetScriptMetaTable");
 	set_name(0x004E6190, "CSimpleModelFFX__Render");
 	set_name(0x004E6230, "CSimpleModelFFX__destructor");
@@ -2797,6 +2812,7 @@ static import_symbols() {
 	set_name(0x004F2D80, "TextureCacheHasMips");
 	set_name(0x004F2DB0, "TextureCacheResetLoadCount@2");
 	set_name(0x004F2DC0, "TextureCacheComputeLoadProgress");
+	set_name(0x004F2E20, "TextureCacheDestroy");
 	set_name(0x004F2EF0, "CACHEENTRY__destructor");
 	set_name(0x004F2F60, "CACHEENTRY__constructor");
 	set_name(0x004F2FB0, "TSGrowableArray_TSExplicitList_CACHEENTRY__ReallocData");
@@ -2869,7 +2885,11 @@ static import_symbols() {
 	set_name(0x004F5D30, "CGWorldFrame__OnMouseModeRelative");
 	set_name(0x004F5D80, "CGWorldFrame__SetNamePlateUpdate");
 	set_name(0x004F5E20, "CM2Model__GetBoundingBox");
+	set_name(0x004F5FB0, "KeyCodeToString");
 	set_name(0x004F61D0, "CGUnit_C__GetDistanceToPos");
+	set_name(0x004F6210, "CGUnit_C__GetVehicleRecAsVehicle");
+	set_name(0x004F6230, "CGUnit_C__GetStoredRootVehicleUnit");
+	set_name(0x004F6250, "CGUnit_C__IsRidingVehicle");
 	set_name(0x004F6270, "CGWorldFrame__AddObjectToHitTestList");
 	set_name(0x004F6450, "CGWorldFrame__GetLineSegment");
 	set_name(0x004F6560, "ObjectCollisionProc");
@@ -2885,6 +2905,7 @@ static import_symbols() {
 	set_name(0x004F6F50, "CGWorldFrame__SetCameraTarget");
 	set_name(0x004F7020, "CGWorldFrame__SetScreenEffect");
 	set_name(0x004F71A0, "TSList__LinkNode");
+	set_name(0x004F7310, "CGPlayer_C__GetFarSightGUID");
 	set_name(0x004F7350, "CGWorldFrame__IsUnitLegalSelection");
 	set_name(0x004F7530, "CGWorldFrame__IsLegalSelection");
 	set_name(0x004F7650, "CGWorldFrame__GetHitTestFilterFlags");
@@ -2898,6 +2919,7 @@ static import_symbols() {
 	set_name(0x004F8850, "CGUnit_C__GetAuraCount");
 	set_name(0x004F8870, "CGUnit_C__GetAuraSpellId");
 	set_name(0x004F88B0, "CGWorldFrame__UpdateScreenEffect");
+	set_name(0x004F8A40, "DrawSpellCursorShadow");
 	set_name(0x004F8D10, "CGWorldFrame__UpdateObject");
 	set_name(0x004F8EA0, "CGWorldFrame__OnWorldRender");
 	set_name(0x004F92A0, "TSList_CModelRecord__Clear");
@@ -2969,6 +2991,7 @@ static import_symbols() {
 	set_name(0x004FCF20, "ChatUnregisterScriptFunctions");
 	set_name(0x004FCFC0, "TSGrowableArray_ChatColorInfo__ReallocData");
 	set_name(0x004FD050, "TSGrowableArray_RaidInstanceInfo__ReallocData");
+	set_name(0x004FD0E0, "CGUnit_C__GetUnitNameExposed");
 	set_name(0x004FD150, "TSGrowableArray_LanguageWordsRec__ReallocData");
 	set_name(0x004FD200, "ItemRecSparse_C__GetName");
 	set_name(0x004FD220, "NameCache__FullName");
@@ -3365,6 +3388,7 @@ static import_symbols() {
 	set_name(0x00513EA0, "CGGameUI__CancelMirrorTimers");
 	set_name(0x00513F20, "CGGameUI__MirrorTimerGetInfo");
 	set_name(0x00513F50, "TotemInfo__GetSpawnTimeLeft");
+	set_name(0x005140A0, "CGUnit_C__GetVehicleUnitAsPassenger");
 	set_name(0x00514100, "TSGrowableArray_NearestUnitData__ReallocData");
 	set_name(0x005141A0, "TSGrowableArray_TaintStackFrame__ReallocData");
 	set_name(0x00514230, "CGMinimapFrame__Create");
@@ -6466,6 +6490,7 @@ static import_symbols() {
 	set_name(0x005D3220, "PetInfoUnregisterScriptFunctions");
 	set_name(0x005D3240, "PetTempActionBarCallback");
 	set_name(0x005D3260, "TSGrowableArray_PetAction__ReallocData");
+	set_name(0x005D3340, "CGUnit_C__GetVehicleSeatRecAsVehicle");
 	set_name(0x005D3360, "CGPetInfo__LeaveWorld");
 	set_name(0x005D3390, "CGPetInfo__GetPet");
 	set_name(0x005D33C0, "CGPetInfo__GetTarget");
@@ -8096,6 +8121,7 @@ static import_symbols() {
 	set_name(0x006596A0, "WowClientDB__BarberShopStyleRec__LoadRecords");
 	set_name(0x006597A0, "WowClientDB__BarberShopStyleRec__destructor");
 	set_name(0x006597B0, "WowClientDB__BattlemasterListRec__LoadRecords");
+	set_name(0x006598B0, "WowClientDB_comdat_folded_type_size_0x40__GetRecordByIndex");
 	set_name(0x006598F0, "WowClientDB__BattlemasterListRec__destructor");
 	set_name(0x00659900, "WowClientDB__CameraShakesRec__destructor");
 	set_name(0x00659910, "WowClientDB__Cfg_CategoriesRec__LoadRecords");
@@ -8116,6 +8142,7 @@ static import_symbols() {
 	set_name(0x0065A220, "WowClientDB__ChatChannelsRec__destructor");
 	set_name(0x0065A230, "WowClientDB__ChatProfanityRec__destructor");
 	set_name(0x0065A240, "WowClientDB__ChrClassesRec__LoadRecords");
+	set_name(0x0065A340, "WowClientDB_comdat_folded_type_size_0x30__GetRecordByIndex");
 	set_name(0x0065A380, "WowClientDB__ChrClassesRec__destructor");
 	set_name(0x0065A390, "WowClientDB__ChrRacesRec__LoadRecords");
 	set_name(0x0065A490, "WowClientDB__ChrRacesRec__destructor");
@@ -8123,6 +8150,7 @@ static import_symbols() {
 	set_name(0x0065A5B0, "WowClientDB__CinematicSequencesRec__LoadRecords");
 	set_name(0x0065A6B0, "WowClientDB__CinematicSequencesRec__destructor");
 	set_name(0x0065A6C0, "WowClientDB__CreatureDisplayInfoExtraRec__LoadRecords");
+	set_name(0x0065A7C0, "WowClientDB_comdat_folded_type_size_0x54__GetRecordByIndex");
 	set_name(0x0065A800, "WowClientDB__CreatureDisplayInfoExtraRec__destructor");
 	set_name(0x0065A810, "WowClientDB__CreatureDisplayInfoRec__LoadRecords");
 	set_name(0x0065A910, "WowClientDB__CreatureDisplayInfoRec__destructor");
@@ -8133,6 +8161,7 @@ static import_symbols() {
 	set_name(0x0065AB70, "WowClientDB__CreatureModelDataRec__destructor");
 	set_name(0x0065AB80, "WowClientDB__CreatureMovementInfoRec__destructor");
 	set_name(0x0065AB90, "WowClientDB__CreatureSoundDataRec__LoadRecords");
+	set_name(0x0065AC90, "WowClientDB_comdat_folded_type_size_0x98__GetRecordByIndex");
 	set_name(0x0065ACD0, "WowClientDB__CreatureSoundDataRec__destructor");
 	set_name(0x0065ACE0, "WowClientDB__CreatureSpellDataRec__LoadRecords");
 	set_name(0x0065AE20, "WowClientDB__CreatureSpellDataRec__destructor");
@@ -8152,6 +8181,7 @@ static import_symbols() {
 	set_name(0x0065B4C0, "WowClientDB__DungeonMapRec__destructor");
 	set_name(0x0065B4D0, "WowClientDB__DungeonMapChunkRec__destructor");
 	set_name(0x0065B4E0, "WowClientDB__DurabilityCostsRec__LoadRecords");
+	set_name(0x0065B5E0, "WowClientDB_comdat_folded_type_size_0x78__GetRecordByIndex");
 	set_name(0x0065B620, "WowClientDB__DurabilityCostsRec__destructor");
 	set_name(0x0065B630, "WowClientDB__DurabilityQualityRec__destructor");
 	set_name(0x0065B640, "WowClientDB__EmotesRec__destructor");
@@ -8175,6 +8205,7 @@ static import_symbols() {
 	set_name(0x0065BD40, "WowClientDB__GameObjectArtKitRec__LoadRecords");
 	set_name(0x0065BE40, "WowClientDB__GameObjectArtKitRec__destructor");
 	set_name(0x0065BE50, "WowClientDB__GameObjectDisplayInfoRec__LoadRecords");
+	set_name(0x0065BF50, "WowClientDB_comdat_folded_type_size_0x4C__GetRecordByIndex");
 	set_name(0x0065BF90, "WowClientDB__GameObjectDisplayInfoRec__destructor");
 	set_name(0x0065BFA0, "WowClientDB__GameTablesRec__LoadRecords");
 	set_name(0x0065C0A0, "WowClientDB__GameTablesRec__destructor");
@@ -8189,6 +8220,7 @@ static import_symbols() {
 	set_name(0x0065C170, "WowClientDB__GMTicketCategoryRec__destructor");
 	set_name(0x0065C280, "WowClientDB__GroundEffectDoodadRec__destructor");
 	set_name(0x0065C290, "WowClientDB__GetRecord");
+	set_name(0x0065C2C0, "WowClientDB_comdat_folded_type_size_0x2C__GetRecordByIndex");
 	set_name(0x0065C300, "WowClientDB__GroundEffectTextureRec__destructor");
 	set_name(0x0065C310, "WowClientDB__gtBarberShopCostBaseRec__destructor");
 	set_name(0x0065C320, "WowClientDB__gtCombatRatingsRec__destructor");
@@ -8226,6 +8258,7 @@ static import_symbols() {
 	set_name(0x0065CE70, "WowClientDB__ItemRandomPropertiesRec__LoadRecords");
 	set_name(0x0065CF70, "WowClientDB__ItemRandomPropertiesRec__destructor");
 	set_name(0x0065CF80, "WowClientDB__ItemRandomSuffixRec__LoadRecords");
+	set_name(0x0065D080, "WowClientDB_comdat_folded_type_size_0x34__GetRecordByIndex");
 	set_name(0x0065D0C0, "WowClientDB__ItemRandomSuffixRec__destructor");
 	set_name(0x0065D0D0, "WowClientDB__ItemSetRec__LoadRecords");
 	set_name(0x0065D1D0, "WowClientDB__ItemSetRec__GetRecordByIndex");
@@ -8300,13 +8333,14 @@ static import_symbols() {
 	set_name(0x0065F310, "WowClientDB__SkillCostsDataRec__LoadRecords");
 	set_name(0x0065F410, "WowClientDB__SkillCostsDataRec__destructor");
 	set_name(0x0065F420, "WowClientDB__SkillLineAbilityRec__LoadRecords");
-	set_name(0x0065F520, "WowClientDB__AchievementRec__GetRecordByIndex");
 	set_name(0x0065F560, "WowClientDB__SkillLineAbilityRec__destructor");
 	set_name(0x0065F570, "WowClientDB__SkillLineRec__LoadRecords");
 	set_name(0x0065F670, "WowClientDB__SkillLineRec__destructor");
 	set_name(0x0065F680, "WowClientDB__SkillLineCategoryRec__destructor");
+	set_name(0x0065F690, "WowClientDB_comdat_folded_type_size_0x20__GetRecordByIndex");
 	set_name(0x0065F6D0, "WowClientDB__SkillRaceClassInfoRec__destructor");
 	set_name(0x0065F6E0, "WowClientDB__SkillTiersRec__LoadRecords");
+	set_name(0x0065F7E0, "WowClientDB_comdat_folded_type_size_0x84__GetRecordByIndex");
 	set_name(0x0065F820, "WowClientDB__SkillTiersRec__destructor");
 	set_name(0x0065F830, "WowClientDB__SoundAmbienceRec__LoadRecords");
 	set_name(0x0065F930, "WowClientDB__SoundAmbienceRec__destructor");
@@ -8323,6 +8357,7 @@ static import_symbols() {
 	set_name(0x0065FEA0, "WowClientDB__SpellCastTimesRec__destructor");
 	set_name(0x0065FEB0, "WowClientDB__SpellCategoryRec__destructor");
 	set_name(0x0065FEC0, "WowClientDB__SpellChainEffectsRec__LoadRecords");
+	set_name(0x0065FFC0, "WowClientDB_comdat_folded_type_size_0xB4__GetRecordByIndex");
 	set_name(0x00660000, "WowClientDB__SpellChainEffectsRec__destructor");
 	set_name(0x00660010, "WowClientDB__SpellDescriptionVariablesRec__destructor");
 	set_name(0x00660120, "WowClientDB__SpellDifficultyRec__destructor");
@@ -8333,8 +8368,10 @@ static import_symbols() {
 	set_name(0x006602A0, "WowClientDB__SpellFocusObjectRec__destructor");
 	set_name(0x006602B0, "WowClientDB__SpellIconRec__destructor");
 	set_name(0x006602C0, "WowClientDB__SpellItemEnchantmentRec__LoadRecords");
+	set_name(0x006603C0, "WowClientDB_comdat_folded_type_size_0x58__GetRecordByIndex");
 	set_name(0x00660400, "WowClientDB__SpellItemEnchantmentRec__destructor");
 	set_name(0x00660410, "WowClientDB__SpellItemEnchantmentConditionRec__LoadRecords");
+	set_name(0x00660510, "WowClientDB_comdat_folded_type_size_0x48__GetRecordByIndex");
 	set_name(0x00660550, "WowClientDB__SpellItemEnchantmentConditionRec__destructor");
 	set_name(0x00660560, "WowClientDB__SpellMechanicRec__destructor");
 	set_name(0x00660570, "WowClientDB__SpellMissileRec__LoadRecords");
@@ -8364,6 +8401,7 @@ static import_symbols() {
 	set_name(0x006611A0, "WowClientDB__StringLookupsRec__destructor");
 	set_name(0x006611B0, "WowClientDB__SummonPropertiesRec__destructor");
 	set_name(0x006611C0, "WowClientDB__TalentRec__LoadRecords");
+	set_name(0x006612C0, "WowClientDB_comdat_folded_type_size_0x5C__GetRecordByIndex");
 	set_name(0x00661300, "WowClientDB__TalentRec__destructor");
 	set_name(0x00661310, "WowClientDB__TalentTabRec__LoadRecords");
 	set_name(0x00661410, "WowClientDB__TalentTabRec__destructor");
@@ -8394,6 +8432,7 @@ static import_symbols() {
 	set_name(0x00661ED0, "WowClientDB__VehicleUIIndicatorRec__destructor");
 	set_name(0x00661EE0, "WowClientDB__VehicleUIIndSeatRec__destructor");
 	set_name(0x00661EF0, "WowClientDB__VocalUISoundsRec__LoadRecords");
+	set_name(0x00661FF0, "WowClientDB_comdat_folded_type_size_0x1C__GetRecordByIndex");
 	set_name(0x00662030, "WowClientDB__VocalUISoundsRec__destructor");
 	set_name(0x00662040, "WowClientDB__WeaponImpactSoundsRec__LoadRecords");
 	set_name(0x00662140, "WowClientDB__WeaponImpactSoundsRec__destructor");
@@ -8405,11 +8444,14 @@ static import_symbols() {
 	set_name(0x00662490, "WowClientDB__WorldMapContinentRec__LoadRecords");
 	set_name(0x00662590, "WowClientDB__WorldMapContinentRec__destructor");
 	set_name(0x006625A0, "WowClientDB__WorldMapOverlayRec__LoadRecords");
+	set_name(0x006626A0, "WowClientDB_comdat_folded_type_size_0x44__GetRecordByIndex");
 	set_name(0x006626E0, "WowClientDB__WorldMapOverlayRec__destructor");
 	set_name(0x006627F0, "WowClientDB__WorldMapTransformsRec__destructor");
 	set_name(0x00662800, "WowClientDB__WorldSafeLocsRec__LoadRecords");
+	set_name(0x00662900, "WowClientDB_comdat_folded_type_size_0x18__GetRecordByIndex");
 	set_name(0x00662950, "WowClientDB__WorldSafeLocsRec__destructor");
 	set_name(0x00662960, "WowClientDB__WorldStateUIRec__LoadRecords");
+	set_name(0x00662A60, "WowClientDB_comdat_folded_type_size_0x3C__GetRecordByIndex");
 	set_name(0x00662AA0, "WowClientDB__WorldStateUIRec__destructor");
 	set_name(0x00662AB0, "WowClientDB__NamesProfanityRec__destructor");
 	set_name(0x00662AC0, "WowClientDB__NamesReservedRec__destructor");
@@ -8424,6 +8466,7 @@ static import_symbols() {
 	set_name(0x00662F10, "WowClientDB__WorldChunkSoundsRec__LoadRecords");
 	set_name(0x00663010, "WowClientDB__WorldChunkSoundsRec__destructor");
 	set_name(0x00663020, "WowClientDB__SoundEntriesAdvancedRec__LoadRecords");
+	set_name(0x00663120, "WowClientDB_comdat_folded_type_size_0x60__GetRecordByIndex");
 	set_name(0x00663160, "WowClientDB__SoundEntriesAdvancedRec__destructor");
 	set_name(0x00663170, "WowClientDB__ObjectEffectRec__LoadRecords");
 	set_name(0x00663270, "WowClientDB__ObjectEffectRec__destructor");
@@ -12918,6 +12961,8 @@ static import_symbols() {
 	set_name(0x00784580, "Sand__SetStormIntensity");
 	set_name(0x007846A0, "Weather__SetType");
 	set_name(0x00784850, "Weather__SetStormIntensity");
+	set_name(0x00784AB0, "CHMMgr__constructor");
+	set_name(0x00784B80, "CHMMgr__destructor");
 	set_name(0x00785140, "Rain__InitDrop");
 	set_name(0x00785640, "Rain__UpdatePacket");
 	set_name(0x00785880, "Snow__InitFlake");
@@ -13044,6 +13089,7 @@ static import_symbols() {
 	set_name(0x00793FD0, "TSGrowableArray_CGxVertexPC__SetCount");
 	set_name(0x007940F0, "TSGrowableArray_CPortalView__Add");
 	set_name(0x00794190, "TSGrowableArray_CPortalView__SetCount");
+	set_name(0x00794250, "CSortTable__Clear");
 	set_name(0x007944C0, "CBarrier__AddAxisAlignedWall");
 	set_name(0x007946D0, "CBarrier__AddBarrier");
 	set_name(0x00794B50, "CBarrier__Render");
@@ -13064,6 +13110,7 @@ static import_symbols() {
 	set_name(0x0079A160, "CWorldScene__CullMapObjDefGroups");
 	set_name(0x0079A790, "CWorldScene__CullSortTable");
 	set_name(0x0079A870, "CWorldScene__Render");
+	set_name(0x0079ADC0, "CAaBsp__Set");
 	set_name(0x0079AE80, "CAaBspDigestCache__GenerateDigest");
 	set_name(0x0079B070, "CAaBsp__constructor");
 	set_name(0x0079B0D0, "CAaBsp__Free");
@@ -13101,6 +13148,7 @@ static import_symbols() {
 	set_name(0x0079F6F0, "CWorldMath__MakeAaBox");
 	set_name(0x0079F980, "TSGrowableArray_CGxVertexPT0T1__SetCount");
 	set_name(0x0079FA70, "CMap__NewFootprint");
+	set_name(0x0079FCC0, "CMap__RenderFootprints");
 	set_name(0x007A01C0, "TSGrowableArray_CMapFootprintTexture__ReallocData");
 	set_name(0x007A02F0, "TSGrowableArray_CMapFootprintTexture__SetCount");
 	set_name(0x007A03C0, "CMap__FootprintInitialize");
@@ -13862,6 +13910,7 @@ static import_symbols() {
 	set_name(0x007EBC50, "WowClientDB__LightRec__Load");
 	set_name(0x007EBEA0, "TSGrowableArray_LightRef__ReallocData");
 	set_name(0x007EC510, "WowClientDB__LightSkyboxRec__destructor");
+	set_name(0x007EC520, "WowClientDB_comdat_folded_type_size_0x88__LoadRecords");
 	set_name(0x007EC7A0, "WowClientDB__LightParamsRec__LoadRecords");
 	set_name(0x007EC8A0, "WowClientDB__LightParamsRec__destructor");
 	set_name(0x007EC8B0, "WowClientDB__LightRec__LoadRecords");
@@ -14561,7 +14610,7 @@ static import_symbols() {
 	set_name(0x00824FC0, "CM2Model__IsDrawable");
 	set_name(0x00825170, "CM2Model__UpdateLoaded");
 	set_name(0x008251B0, "CM2Model__SetLoadedCallback");
-	set_name(0x008251D0, "CM2Model__SetWorldTransform");
+	set_name(0x008251D0, "CM2Model__SetWorldTransform@2");
 	set_name(0x00825260, "CM2Model__ReplaceTexture");
 	set_name(0x00825410, "CM2Model__ReplaceParticleColor");
 	set_name(0x00825750, "CM2Model__GetCurrentBoundingBox");
@@ -14614,7 +14663,7 @@ static import_symbols() {
 	set_name(0x0082DAC0, "TSGrowableArray_CRibbonMat__SetCount");
 	set_name(0x0082DB70, "TSGrowableArray_M2ModelCallback__New");
 	set_name(0x0082DBC0, "TSGrowableArray_M2ModelCallback__SetCount");
-	set_name(0x0082DD80, "CM2Model__SetWorldTransform@2");
+	set_name(0x0082DD80, "CM2Model__SetWorldTransform@3");
 	set_name(0x0082E140, "CM2Model__AnimateMTSimple");
 	set_name(0x0082E550, "CM2Model__AnimateAttachmentsMT");
 	set_name(0x0082E720, "CM2Model__SequenceCallback");
